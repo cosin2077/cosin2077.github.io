@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            再学习之HTML+CSS | 
+        
+        柯南的日常
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="柯南君,Full Stack">
+    <meta name="keywords" content=",CSS">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="柯南的日常">
+    <meta name="msapplication-starturl" content="/2016/08/08/再学习之HTML+CSS/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="柯南的日常">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="/2016/08/08/再学习之HTML+CSS/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="再学习之HTML+CSS | 柯南的日常">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="柯南君,Full Stack">
+    <meta property="og:article:tag" content="CSS"> 
+
+    
+        <meta property="article:published_time" content="Mon Aug 08 2016 05:56:58 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jul 13 2018 13:18:32 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="/2016/08/08/再学习之HTML+CSS/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "/2016/08/08/再学习之HTML+CSS/index.html",
+    "headline": "再学习之HTML+CSS",
+    "datePublished": "Mon Aug 08 2016 05:56:58 GMT+0800",
+    "dateModified": "Fri Jul 13 2018 13:18:32 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "conan",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "你好，欢迎光临柯南的博客"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "柯南的日常",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",CSS",
+    "description": "柯南君,Full Stack",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.</span> <span class="post-toc-text">我是h6</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#undefined"><span class="post-toc-number"></span> <span class="post-toc-text">我是h5</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number"></span> <span class="post-toc-text">我是h2</span></a>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 73 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                再学习之HTML+CSS
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>conan</strong>
+        <span>8月 08, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/CSS/">CSS</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=再学习之HTML+CSS&url=/2016/08/08/再学习之HTML+CSS/index.html&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=再学习之HTML+CSS&url=/2016/08/08/再学习之HTML+CSS/index.html&via=conan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=/2016/08/08/再学习之HTML+CSS/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=/2016/08/08/再学习之HTML+CSS/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>由于之前在一两天之后学完了html和css，现再重新温习一遍。<br>1.html属性为html元素提供更多的信息，属性总是以名称/值的形式出现，得要有引号。<br><a title="default.html" href="default.html">This a link</a></p>
+<p></p><h6>我是h6</h6><p></p>
+<p></p><h5>我是h5</h5><p></p>
+<p></p><h2>我是h2</h2><br>一般h1对应36px<p></p>
+<p>h2对应30px;</p>
+<p>h3对应24px;</p>
+<p>h4对应18px;</p>
+<p>h5对应14px;</p>
+<p>h6对应12px;</p>
+<p>普通文本为16px，一般也就能用到h3罢了。</p>
+<p>html的注释方法&lt;!–内容–&gt;</p>
+<p>浏览器中连续的空格被当做一个空格，换行被当做一个空格，两者叠加也被当做一个空格。</p>
+<p>HTML的文本格式化：<br>定义各种字体：<br>粗体：<b>粗体</b><br>大号字体：<big>大号字体</big><br>着重文字：<em>着重文字</em><br>斜体：<i>斜体</i><br>小号字体：<small>小号字体</small><br>加重语气：<strong>加重语气</strong><br>下标：<sub>下标</sub><br>上标：<sup>上标</sup><br>插入字：<ins>插入字</ins><br>删除字：<del>删除字</del></p>
+<p>HTML计算机输出标签：<br>计算机代码：<code>计算机代码</code><br>键盘码：<kbd>键盘码</kbd><br>计算机代码样本：<samp>即使按季代码样本</samp><br>打字机代码：<tt>打字机代码</tt><br>变量：<var>变量</var><br>预格式文本：</p>
+<p><pre>预格式文本</pre><br>HTML应用、术语定义：<br>缩写：<abbr title="dfa">define first alphabet缩写</abbr><br>首字母缩写：<acronym>首字母缩写</acronym><br>地址：</p>
+<p><address>地址</address>文字方向：<bdo dir="rtl">文字方向</bdo><br>长的引用：</p>
+<p><blockquote>长的引用</blockquote><br>短的引用：<q>短的引用</q><br>引用、引证：<cite>引用、引证</cite><br>定义项目：<dfn>定义项目</dfn></p>
+<p>HTML标签语义话，大多数的标签都是有具体语义的，如果仅仅为了改变样式，应该用样式表来改变样式，而HTML表达语义。</p>
+<p>样式，外部样式表、内部样式表、内连样式表<br>外部：head里插入</p>
+<p><pre>&lt;link type=”text/css” rel=”stylesheet” href=”style.css”&gt;</pre><br>超链接<a href="aim.html">我就是超链接</a><br>属性target=”_blank”新窗口打开<br>属性target=”_top”跳出框架到首页去<br>锚（anchor）先设定锚，然后就能指定锚了<br>&lt;a name=”anchor”&gt;锚&lt;/a&gt;设定锚<br>指定锚&lt;a href=”#anchor”&gt;指定锚&lt;/a&gt;<br>创建电子邮件链接：<br><a href="mailto:conanskyforce@163.com?subject=Hello&amp;bcc=conansky163@163.com&amp;body=Are20%You20%Ok" target="_blank" rel="noopener">发送邮件</a><br>&lt;a href=”mailto:<a href="mailto:conanskyforce@163.com" target="_blank" rel="noopener">conanskyforce@163.com</a>?subject=Hello&amp;<a href="mailto:bcc=conansky163@163.com" target="_blank" rel="noopener">bcc=conansky163@163.com</a>&amp;body=Are20%You20%Ok”&gt;</p>
+<p>插入图像：</p>
+<p>&lt;img src=”xxx.jpg” alt=”this is a pic”/&gt;</p>
+<p>表格：&lt;table&gt;、&lt;th&gt;、&lt;tr&gt;、&lt;td&gt;</p>
+<p><table></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>一行一列</td></p>
+<p><td>一行二列</td><br></p>
+<p><tr></tr></p>
+<p><td>二行一列</td></p>
+<p><td>二行二列</td><br><br><br><br>&lt;table&gt;:定义表格<br>&lt;caption&gt;:定义标题<br>&lt;th&gt;:定义表头<br>&lt;tr&gt;:定义行<br>&lt;td&gt;:定义列</p>
+<p>块级元素（block level element）和内联元素（inline element）<br>块级元素会以新行和新列来开始和结束如&lt;h1&gt;、&lt;p&gt;、&lt;ul&gt;、&lt;table&gt;、&lt;div&gt;<br>内联元素不会新行开始如&lt;b&gt;、&lt;td&gt;、&lt;a&gt;、&lt;img&gt;、&lt;span&gt;</p>
+<p>HTML表单和输入：&lt;form&gt;<br>输入&lt;input&gt;<br>类型为文本域type=”text”,&lt;input type=”text” name=”name”&gt;:<br>name:<input type="text"><br>类型为单选按钮type=”radio”,&lt;input type=”radio” name=”sex” value=”female”/&gt;:</p>
+<p><input name="sex" type="radio" value="male">male</p>
+<p><input name="sex" type="radio" value="female">female<br>类型为复选按钮type=”checkboxs”,&lt;input type=”checkboxs” name=”car” /&gt;</p>
+<p><input name="car" type="checkbox">volve</p>
+<p><input name="car" type="checkbox">benz</p>
+<p><input name="car" type="checkbox">bmw<br>文本域：&lt;textarea&gt;</p>
+<textarea style="margin: 0px; width: 142px; height: 32px;">文本域</textarea>
+
+<p>表单动作属性和确认按钮<br>&lt;form name=”input” action=”xxxx.asp” method=”get”&gt;<br>&lt;input type=”text” name=”name”/&gt;<br>&lt;inupt type=”submit” value=”提交按钮”/&gt;</p>
+<p><form action="xxx.asp" method="get" name="input">user:<input name="user" type="text" placeholder="husingcapital"><input type="submit" value="提交按钮"></form><form><select name="cars"></select></form></p>
+<p><option value="benz">benz</option></p>
+<p><option value="bmw">bmw</option></p>
+<p><option selected="selected" value="volve">volve</option></p>
+<p><option value="audi">audi</option><br></p>
+<p><input type="button" value="点击我">框架，浏览器中显示不止一个页面<br>&lt;frameset&gt;<br>&lt;frame src=”aaa.html”/&gt;<br>&lt;frame src=”bbb.html”/&gt;<br>&lt;frameset/&gt;<br>iframe用于网页内显示网页<br>&lt;iframe src=”aaa.html” width=”” height=””&gt;&lt;iframe&gt;</p>
+<p>216web安全色被用来确保:当计算机使用 256 色调色板时,所有的计算机能够正确地显示所有的颜色。</p>
+<p><table border="1" width="100%"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#000000">000000</td></p>
+<p><td align="center" bgcolor="#000033">000033</td></p>
+<p><td align="center" bgcolor="#000066">000066</td></p>
+<p><td align="center" bgcolor="#000099">000099</td></p>
+<p><td align="center" bgcolor="#0000cc">0000CC</td></p>
+<p><td align="center" bgcolor="#0000ff">0000FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#003300">003300</td></p>
+<p><td align="center" bgcolor="#003333">003333</td></p>
+<p><td align="center" bgcolor="#003366">003366</td></p>
+<p><td align="center" bgcolor="#003399">003399</td></p>
+<p><td align="center" bgcolor="#0033cc">0033CC</td></p>
+<p><td align="center" bgcolor="#0033ff">0033FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#006600">006600</td></p>
+<p><td align="center" bgcolor="#006633">006633</td></p>
+<p><td align="center" bgcolor="#006666">006666</td></p>
+<p><td align="center" bgcolor="#006699">006699</td></p>
+<p><td align="center" bgcolor="#0066cc">0066CC</td></p>
+<p><td align="center" bgcolor="#0066ff">0066FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#009900">009900</td></p>
+<p><td align="center" bgcolor="#009933">009933</td></p>
+<p><td align="center" bgcolor="#009966">009966</td></p>
+<p><td align="center" bgcolor="#009999">009999</td></p>
+<p><td align="center" bgcolor="#0099cc">0099CC</td></p>
+<p><td align="center" bgcolor="#0099ff">0099FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#00cc00">00CC00</td></p>
+<p><td align="center" bgcolor="#00cc33">00CC33</td></p>
+<p><td align="center" bgcolor="#00cc66">00CC66</td></p>
+<p><td align="center" bgcolor="#00cc99">00CC99</td></p>
+<p><td align="center" bgcolor="#00cccc">00CCCC</td></p>
+<p><td align="center" bgcolor="#00ccff">00CCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#00ff00">00FF00</td></p>
+<p><td align="center" bgcolor="#00ff33">00FF33</td></p>
+<p><td align="center" bgcolor="#00ff66">00FF66</td></p>
+<p><td align="center" bgcolor="#00ff99">00FF99</td></p>
+<p><td align="center" bgcolor="#00ffcc">00FFCC</td></p>
+<p><td align="center" bgcolor="#00ffff">00FFFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#330000">330000</td></p>
+<p><td align="center" bgcolor="#330033">330033</td></p>
+<p><td align="center" bgcolor="#330066">330066</td></p>
+<p><td align="center" bgcolor="#330099">330099</td></p>
+<p><td align="center" bgcolor="#3300cc">3300CC</td></p>
+<p><td align="center" bgcolor="#3300ff">3300FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#333300">333300</td></p>
+<p><td align="center" bgcolor="#333333">333333</td></p>
+<p><td align="center" bgcolor="#333366">333366</td></p>
+<p><td align="center" bgcolor="#333399">333399</td></p>
+<p><td align="center" bgcolor="#3333cc">3333CC</td></p>
+<p><td align="center" bgcolor="#3333ff">3333FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#336600">336600</td></p>
+<p><td align="center" bgcolor="#336633">336633</td></p>
+<p><td align="center" bgcolor="#336666">336666</td></p>
+<p><td align="center" bgcolor="#336699">336699</td></p>
+<p><td align="center" bgcolor="#3366cc">3366CC</td></p>
+<p><td align="center" bgcolor="#3366ff">3366FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#339900">339900</td></p>
+<p><td align="center" bgcolor="#339933">339933</td></p>
+<p><td align="center" bgcolor="#339966">339966</td></p>
+<p><td align="center" bgcolor="#339999">339999</td></p>
+<p><td align="center" bgcolor="#3399cc">3399CC</td></p>
+<p><td align="center" bgcolor="#3399ff">3399FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#33cc00">33CC00</td></p>
+<p><td align="center" bgcolor="#33cc33">33CC33</td></p>
+<p><td align="center" bgcolor="#33cc66">33CC66</td></p>
+<p><td align="center" bgcolor="#33cc99">33CC99</td></p>
+<p><td align="center" bgcolor="#33cccc">33CCCC</td></p>
+<p><td align="center" bgcolor="#33ccff">33CCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#33ff00">33FF00</td></p>
+<p><td align="center" bgcolor="#33ff33">33FF33</td></p>
+<p><td align="center" bgcolor="#33ff66">33FF66</td></p>
+<p><td align="center" bgcolor="#33ff99">33FF99</td></p>
+<p><td align="center" bgcolor="#33ffcc">33FFCC</td></p>
+<p><td align="center" bgcolor="#33ffff">33FFFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#660000">660000</td></p>
+<p><td align="center" bgcolor="#660033">660033</td></p>
+<p><td align="center" bgcolor="#660066">660066</td></p>
+<p><td align="center" bgcolor="#660099">660099</td></p>
+<p><td align="center" bgcolor="#6600cc">6600CC</td></p>
+<p><td align="center" bgcolor="#6600ff">6600FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#663300">663300</td></p>
+<p><td align="center" bgcolor="#663333">663333</td></p>
+<p><td align="center" bgcolor="#663366">663366</td></p>
+<p><td align="center" bgcolor="#663399">663399</td></p>
+<p><td align="center" bgcolor="#6633cc">6633CC</td></p>
+<p><td align="center" bgcolor="#6633ff">6633FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#666600">666600</td></p>
+<p><td align="center" bgcolor="#666633">666633</td></p>
+<p><td align="center" bgcolor="#666666">666666</td></p>
+<p><td align="center" bgcolor="#666699">666699</td></p>
+<p><td align="center" bgcolor="#6666cc">6666CC</td></p>
+<p><td align="center" bgcolor="#6666ff">6666FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#669900">669900</td></p>
+<p><td align="center" bgcolor="#669933">669933</td></p>
+<p><td align="center" bgcolor="#669966">669966</td></p>
+<p><td align="center" bgcolor="#669999">669999</td></p>
+<p><td align="center" bgcolor="#6699cc">6699CC</td></p>
+<p><td align="center" bgcolor="#6699ff">6699FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#66cc00">66CC00</td></p>
+<p><td align="center" bgcolor="#66cc33">66CC33</td></p>
+<p><td align="center" bgcolor="#66cc66">66CC66</td></p>
+<p><td align="center" bgcolor="#66cc99">66CC99</td></p>
+<p><td align="center" bgcolor="#66cccc">66CCCC</td></p>
+<p><td align="center" bgcolor="#66ccff">66CCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#66ff00">66FF00</td></p>
+<p><td align="center" bgcolor="#66ff33">66FF33</td></p>
+<p><td align="center" bgcolor="#66ff66">66FF66</td></p>
+<p><td align="center" bgcolor="#66ff99">66FF99</td></p>
+<p><td align="center" bgcolor="#66ffcc">66FFCC</td></p>
+<p><td align="center" bgcolor="#66ffff">66FFFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#990000">990000</td></p>
+<p><td align="center" bgcolor="#990033">990033</td></p>
+<p><td align="center" bgcolor="#990066">990066</td></p>
+<p><td align="center" bgcolor="#990099">990099</td></p>
+<p><td align="center" bgcolor="#9900cc">9900CC</td></p>
+<p><td align="center" bgcolor="#9900ff">9900FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#993300">993300</td></p>
+<p><td align="center" bgcolor="#993333">993333</td></p>
+<p><td align="center" bgcolor="#993366">993366</td></p>
+<p><td align="center" bgcolor="#993399">993399</td></p>
+<p><td align="center" bgcolor="#9933cc">9933CC</td></p>
+<p><td align="center" bgcolor="#9933ff">9933FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#996600">996600</td></p>
+<p><td align="center" bgcolor="#996633">996633</td></p>
+<p><td align="center" bgcolor="#996666">996666</td></p>
+<p><td align="center" bgcolor="#996699">996699</td></p>
+<p><td align="center" bgcolor="#9966cc">9966CC</td></p>
+<p><td align="center" bgcolor="#9966ff">9966FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#999900">999900</td></p>
+<p><td align="center" bgcolor="#999933">999933</td></p>
+<p><td align="center" bgcolor="#999966">999966</td></p>
+<p><td align="center" bgcolor="#999999">999999</td></p>
+<p><td align="center" bgcolor="#9999cc">9999CC</td></p>
+<p><td align="center" bgcolor="#9999ff">9999FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#99cc00">99CC00</td></p>
+<p><td align="center" bgcolor="#99cc33">99CC33</td></p>
+<p><td align="center" bgcolor="#99cc66">99CC66</td></p>
+<p><td align="center" bgcolor="#99cc99">99CC99</td></p>
+<p><td align="center" bgcolor="#99cccc">99CCCC</td></p>
+<p><td align="center" bgcolor="#99ccff">99CCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#99ff00">99FF00</td></p>
+<p><td align="center" bgcolor="#99ff33">99FF33</td></p>
+<p><td align="center" bgcolor="#99ff66">99FF66</td></p>
+<p><td align="center" bgcolor="#99ff99">99FF99</td></p>
+<p><td align="center" bgcolor="#99ffcc">99FFCC</td></p>
+<p><td align="center" bgcolor="#99ffff">99FFFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#cc0000">CC0000</td></p>
+<p><td align="center" bgcolor="#cc0033">CC0033</td></p>
+<p><td align="center" bgcolor="#cc0066">CC0066</td></p>
+<p><td align="center" bgcolor="#cc0099">CC0099</td></p>
+<p><td align="center" bgcolor="#cc00cc">CC00CC</td></p>
+<p><td align="center" bgcolor="#cc00ff">CC00FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#cc3300">CC3300</td></p>
+<p><td align="center" bgcolor="#cc3333">CC3333</td></p>
+<p><td align="center" bgcolor="#cc3366">CC3366</td></p>
+<p><td align="center" bgcolor="#cc3399">CC3399</td></p>
+<p><td align="center" bgcolor="#cc33cc">CC33CC</td></p>
+<p><td align="center" bgcolor="#cc33ff">CC33FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#cc6600">CC6600</td></p>
+<p><td align="center" bgcolor="#cc6633">CC6633</td></p>
+<p><td align="center" bgcolor="#cc6666">CC6666</td></p>
+<p><td align="center" bgcolor="#cc6699">CC6699</td></p>
+<p><td align="center" bgcolor="#cc66cc">CC66CC</td></p>
+<p><td align="center" bgcolor="#cc66ff">CC66FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#cc9900">CC9900</td></p>
+<p><td align="center" bgcolor="#cc9933">CC9933</td></p>
+<p><td align="center" bgcolor="#cc9966">CC9966</td></p>
+<p><td align="center" bgcolor="#cc9999">CC9999</td></p>
+<p><td align="center" bgcolor="#cc99cc">CC99CC</td></p>
+<p><td align="center" bgcolor="#cc99ff">CC99FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#cccc00">CCCC00</td></p>
+<p><td align="center" bgcolor="#cccc33">CCCC33</td></p>
+<p><td align="center" bgcolor="#cccc66">CCCC66</td></p>
+<p><td align="center" bgcolor="#cccc99">CCCC99</td></p>
+<p><td align="center" bgcolor="#cccccc">CCCCCC</td></p>
+<p><td align="center" bgcolor="#ccccff">CCCCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ccff00">CCFF00</td></p>
+<p><td align="center" bgcolor="#ccff33">CCFF33</td></p>
+<p><td align="center" bgcolor="#ccff66">CCFF66</td></p>
+<p><td align="center" bgcolor="#ccff99">CCFF99</td></p>
+<p><td align="center" bgcolor="#ccffcc">CCFFCC</td></p>
+<p><td align="center" bgcolor="#ccffff">CCFFFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ff0000">FF0000</td></p>
+<p><td align="center" bgcolor="#ff0033">FF0033</td></p>
+<p><td align="center" bgcolor="#ff0066">FF0066</td></p>
+<p><td align="center" bgcolor="#ff0099">FF0099</td></p>
+<p><td align="center" bgcolor="#ff00cc">FF00CC</td></p>
+<p><td align="center" bgcolor="#ff00ff">FF00FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ff3300">FF3300</td></p>
+<p><td align="center" bgcolor="#ff3333">FF3333</td></p>
+<p><td align="center" bgcolor="#ff3366">FF3366</td></p>
+<p><td align="center" bgcolor="#ff3399">FF3399</td></p>
+<p><td align="center" bgcolor="#ff33cc">FF33CC</td></p>
+<p><td align="center" bgcolor="#ff33ff">FF33FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ff6600">FF6600</td></p>
+<p><td align="center" bgcolor="#ff6633">FF6633</td></p>
+<p><td align="center" bgcolor="#ff6666">FF6666</td></p>
+<p><td align="center" bgcolor="#ff6699">FF6699</td></p>
+<p><td align="center" bgcolor="#ff66cc">FF66CC</td></p>
+<p><td align="center" bgcolor="#ff66ff">FF66FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ff9900">FF9900</td></p>
+<p><td align="center" bgcolor="#ff9933">FF9933</td></p>
+<p><td align="center" bgcolor="#ff9966">FF9966</td></p>
+<p><td align="center" bgcolor="#ff9999">FF9999</td></p>
+<p><td align="center" bgcolor="#ff99cc">FF99CC</td></p>
+<p><td align="center" bgcolor="#ff99ff">FF99FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ffcc00">FFCC00</td></p>
+<p><td align="center" bgcolor="#ffcc33">FFCC33</td></p>
+<p><td align="center" bgcolor="#ffcc66">FFCC66</td></p>
+<p><td align="center" bgcolor="#ffcc99">FFCC99</td></p>
+<p><td align="center" bgcolor="#ffcccc">FFCCCC</td></p>
+<p><td align="center" bgcolor="#ffccff">FFCCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ffff00">FFFF00</td></p>
+<p><td align="center" bgcolor="#ffff33">FFFF33</td></p>
+<p><td align="center" bgcolor="#ffff66">FFFF66</td></p>
+<p><td align="center" bgcolor="#ffff99">FFFF99</td></p>
+<p><td align="center" bgcolor="#ffffcc">FFFFCC</td></p>
+<p><td align="center" bgcolor="#ffffff">FFFFFF</td><br><br><br><br>&nbsp;</p>
+<p>&lt;!doctype&gt;声明</p>
+<p>&lt;!doctype html&gt;html5声明</p>
+<p>HTML头部元素&lt;head&gt;里的元素有：</p>
+<p>&lt;title&gt;标题</p>
+<p>&lt;base&gt;新窗口打开标签</p>
+<p>&lt;link&gt;链接样式表、JavaScript等</p>
+<p>&lt;meta&gt;描述文档、定义关键词，</p>
+<p>&lt;meta name=”keywords” content=”html,css,xmlx”/&gt;</p>
+<p>&lt;meta name=”author” content=”Kai.Huang”/&gt;</p>
+<p>&lt;meta http-equiv=”Refresh” content=”300;url=xxx.html”/ &gt;300秒刷新页面，并重新定向xxx.html</p>
+<p>&lt;meta charset=”utf=8”/&gt;设置支持中文</p>
+<p>&lt;script&gt;内部脚本</p>
+<p>&lt;style&gt;内部样式表</p>
+<p>&nbsp;</p>
+<p>HTML实体字符</p>
+<p>空格：&amp;nbsp;</p>
+<p>小于号：&amp;lt;</p>
+<p>大于号：&amp;gt;</p>
+<p>和号：&amp;amp;</p>
+<p>版权：&amp;copy;</p>
+<p>注册商标：&amp;reg;</p>
+<p>&nbsp;</p>
+<p>HTML统一资源定位符URL（Unicode Resource Locator）</p>
+<p>schme://host.domain:port/path/filename</p>
+<p>服务类型://定义域主机默认(www).域名:端口默认(80)/服务器路径/资源名称</p>
+<p>http:超文本传输协议(hypertext transport protocol)</p>
+<p>https:安全超文本传输协议(hypertext transport protocol safety)</p>
+<p>ftp:文件传输协议(file transport protocol)</p>
+<p>URL以ASCII字符集来传送信息。ASCII字符集之外的字符要先转换为ASCII格式。</p>
+<p>今天在重新复习一下FreeCodeCamp的一百多个小codegame：</p>
+<p>border-radius:50%圆形框</p>
+<p>&lt;input type=”text” placeholder=”占位”&gt;</p>
+<p>两种提交按钮：</p>
+<p>&lt;button type=”submit”&gt;submit&lt;/button&gt;</p>
+<p>&lt;input type=”submit” value=”submit”/&gt;</p>
+<p>&lt;input type=”text” name=”url” placeholder=”xxx.com” required=”required”&gt;必填项目</p>
+<p>checked=”checked”→对于单选、复选</p>
+<p>selected=”selected” select option→对于下拉菜单</p>
+<p>样式继承：</p>
+<p>!important&gt;内联样式&gt;内部样式表最下边一个</p>
+<p>bootstrap响应式设计：</p>
+<p>&lt;link rel=”stylesheet” href=”//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css”/&gt;</p>
+<p>图片添加class为img-responsive属性，完美适配屏幕大小。</p>
+<p>button class=”btn”属性，bootstrap自带的按钮风格（其实就是Twitter的），bootstrap其实就是Twitter的轮子吧</p>
+<p>class=”btn btn-block”按钮变为块属性</p>
+<p>class=”btn btn-block btn-primary”按钮变为块属性+基本蓝色（Twitter风格）</p>
+<p><span style="color: #ff0000;">块级元素放在一行：整体在div class=”row”属性下，每一项div class=”col-xs-4”,一行十二格,占4格,共3列</span></p>
+<p>bootstrap内置css：</p>
+<p>text-primary文本蓝色风格</p>
+<p>btn-primary蓝色like按钮</p>
+<p>btn-info淡蓝色info按钮</p>
+<p>btn-danger红色删除按钮</p>
+<p>img-responsive图片响应式</p>
+<p>bootstrap十二栅格布局：</p>
+<p><img src="https://i.imgur.com/FaYuui8.png"></p>
+<p>class属性：col-xs-*很小的屏幕布局（手机）</p>
+<p>class属性：col-md-*：中等屏幕大小（pad？）</p>
+<p>bootstrap图标库：</p>
+<p>&lt;link rel=”stylesheet” href=”//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css”/&gt;</p>
+<p>图标库中i为图标</p>
+<p>&lt;i class=”fa fa-thumb-up”&gt;like&lt;/i&gt;</p>
+<p>&lt;i class=”fa fa-info-circle”&gt;info&lt;/i&gt;</p>
+<p>&lt;i class=”fa fa-trash”&gt;delete&lt;/i&gt;</p>
+<p>&lt;i class=”fa fa-paper-plane”&gt;submit&lt;/i&gt;</p>
+<p>div class=”well”这个框有井效果（凹框）</p>
+<p>JQuery:</p>
+<p>&lt;script&gt;<br>$(document).ready(function() {<br>$(“button”).addClass(“animated bounce”);//$(选择)button(元素),add(添加)Class(属性)animated(动画)bounce(跳动)</p>
+<p>$(“.well”).addClass(“animated shake”);//$(选择).well(well类),add(添加)Class(属性)animated(动画)shake(震动)</p>
+<p>$(“#target3”).addClass(“animated fadeout”)//$(选择)#target3(id为target3),add(添加)Class(属性)animated(动画)fadeout(渐消)</p>
+<p>$(“#target1”).css(“color”,”red”);//$(选择)#target1(id为target1),add(添加)css(属性)color(颜色)red(红色)</p>
+<p>$(“#target1”).prop(“disabled”, “true”);//$(选择)#target1(id为target1),prop(属性)disable(不可选)true(真)</p>
+<p>$(“#target4”).html(“&lt;em&gt;#target4&lt;/em&gt;”);//$(选择)#target4(id为target4)的html的内容被&lt;em&gt;#target4&lt;/em&gt;代替</p>
+<p>$(“#target4”).remove( );//$(选择)#target4(id为target4)的元素被移除</p>
+<p>$(“#target2”).appendTo(“#right-well”);//$(选择)#target2(id为target2)的元素被移动到id为right-well的div中</p>
+<p>$(“#target5”).clone().appendTo(“#left-well”)//$(选择)#target5(id为target5)的元素复制，然后移动到id为left-well的div中</p>
+<p>$(“#target1”).parent().css(“background-color”,”red”)//$(选择)#target1(id为target1)的元素，的父元素，设定样式，背景颜色为红色</p>
+<p>$(“#right-well”).children().css(“color”,”orange”)//$(选择)#right-well(id为right-well)的元素，的子元素，设定样式，颜色为橙色</p>
+<p>$(.target:nth-child(n))选择器//类元素(.target)的子元素,2n-偶数,2n+1基数,n为2第二个子元素</p>
+<p>$(“.target:even”).addClass(“animated shake”)//target属性为偶数的元素，添加效果，震动；odd为奇数</p>
+<p>$(“body”).addClass(“animated hinge”)//给body元素添加 hinge(折挂)动画效果</p>
+<p>&lt;/script&gt;</p>
+<p>$(bling)符号来选择元素，然后添加操作。</p>
+<p>.addClass添加class属性</p>
+<p>.css改变css样式</p>
+<p>.prop改变属性（可选不可选）</p>
+<p>.html改变选中者的内容</p>
+<p>.remove()移除选中者</p>
+<p>.appendTo()把元素从一个div移动到另一个div中</p>
+<p>.clone()克隆元素</p>
+<p>.parent()选中元素的父元素</p>
+<p>.children()选中元素的子元素</p>
+<p>element:nth-child(n)第n个element元素的子元素</p>
+<p>freecodecamp第一个项目爱因斯坦简单主页：</p>
+<p><a href="https://codepen.io/conanskyforce/pen/yJKpRg" target="_blank" rel="noopener">https://codepen.io/conanskyforce/pen/yJKpRg</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/08/09/日本经济盛衰史/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/08/06/天幕红尘/" id="post_nav-older" class="next-content">
+            舊篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="conan's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        conanskyforce@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                首頁
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    過往
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">三月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主題 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/kevinconan" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>柯南的日常
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            上帝掷骰子吗 | 
+        
+        柯南的日常
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="柯南君,Full Stack">
+    <meta name="keywords" content=",读书">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="柯南的日常">
+    <meta name="msapplication-starturl" content="/2016/08/06/上帝掷骰子吗/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="柯南的日常">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="/2016/08/06/上帝掷骰子吗/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="上帝掷骰子吗 | 柯南的日常">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="柯南君,Full Stack">
+    <meta property="og:article:tag" content="读书"> 
+
+    
+        <meta property="article:published_time" content="Sat Aug 06 2016 19:04:37 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jul 13 2018 10:46:04 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="/2016/08/06/上帝掷骰子吗/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "/2016/08/06/上帝掷骰子吗/index.html",
+    "headline": "上帝掷骰子吗",
+    "datePublished": "Sat Aug 06 2016 19:04:37 GMT+0800",
+    "dateModified": "Fri Jul 13 2018 10:46:04 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "conan",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "你好，欢迎光临柯南的博客"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "柯南的日常",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",读书",
+    "description": "柯南君,Full Stack",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 73 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                上帝掷骰子吗
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>conan</strong>
+        <span>8月 06, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/读书/">读书</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=上帝掷骰子吗&url=/2016/08/06/上帝掷骰子吗/index.html&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=上帝掷骰子吗&url=/2016/08/06/上帝掷骰子吗/index.html&via=conan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=/2016/08/06/上帝掷骰子吗/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=/2016/08/06/上帝掷骰子吗/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <div>以前的人们以为光传播的介质是“以太”！</div><br><div>牛顿 关于光的微粒说</div><br><div>胡克和牛顿，有点惨啊，胡克完全活在牛顿的阴影下。</div><br><div>托马斯杨双缝干涉实验——波动说</div><br><div>菲涅尔——圆盘衍射和泊松亮斑</div><br><div>傅科关于光速测量实验的报告，光在水中的速度小于真空中的光速</div><br><div>随后麦克斯韦关于电磁波的预言</div><br><div>1887年，赫兹证明了麦克斯韦的电磁波存在！也证明了光就是电磁波的一种！</div><br><div>1900年，19世纪的两朵乌云</div><br><div>以太假设有问题</div><br><div>黑体辐射实验和理论不一致</div><br><div>物理学实验的意外所发现的东西：</div><br><div>1.拉瓦锡推翻燃素学说，建立近代化学</div><br><div>2.瑞利制取氮气发现惰性气体</div><br><div>3.贝克勒尔意外发现放射性</div><br><div></div><br><div>普朗克量子物理奠基（黑体方程）</div><br><div>量子 为最小单位，不可分割！能量的传输不是连续的！</div><br><div>最小单位约为6.626×10^-34焦耳*秒！为普朗克常数，用h表示。</div><br><div>量子论告诉我们，“无限分割”的概念只是一种数学上的理想，而不可能在现实中来实现，一切都是不连续的！</div><br><div></div><br><div>1900年12月14日，普朗克在柏林宣读了关于黑体辐射的论文，宣告了量子的诞生。那一年，他 42岁。</div><br><div>同年，一个名叫阿尔伯特·爱因斯坦（Albert Einstein）的青年从苏黎世联邦工业大学（eth）毕业，正在为将来的生活发愁。他在大学了旷了无穷多的课，以致于他的教授闵可夫斯基（minkowski）愤愤的骂他是“懒狗”。没有一个人肯留他在校做理论或者实验方面的工作，一个失业的年轻人的黯淡前途正等待着这位不修边幅的年轻人。</div><br><div><span style="font-family: 'courier new', courier, monospace;">在丹麦，15岁的尼尔斯·波尔（Niels bohr）正在哥本哈根的中学里读书。波尔有着好动的性格，每次打架或者争论，总是少不了他。在学习方面，他在数学和科学方面显示出了非凡的天才，但是他的笨拙的口齿和惨不忍睹的作文却是全校有名的笑柄。特别是作为最后的总结。往往使得波尔头痛半天，在他看来，这种无意义的重复而已。有一次他写一篇关于金属的论文，最后总结到：in conclusion，i would like to mention uranium（总而言之，我想说的是铀）。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">埃尔文·薛定谔（Erwin Schrodinger）比波尔下两岁，当时也在维也纳的一间著名的高级中学上学。这间中学也是物理前辈玻尔兹曼，著名剧作家施尼茨勒（Arthur Schnitzler）和齐威格（Stefanie Zweig）的母校。对于刚入校的学生来说，拉丁文是最重要的工科，每周要占8小时。而数学和物理只用3小时。不过对薛定谔来说，一切都是小菜一碟，他热爱古文、戏剧和你是，每次在班上都是第一。小埃尔文长得非常帅气，穿上礼服和紧身裤，俨然一个偏偏小公子。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">马克思·波恩（Max Born）和薛定谔有着现实的教育背景，经过了家庭教育，高级中学的过程进入了布雷斯劳大学。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">路易斯·德布罗意（Louis de Broglie</span><span style="font-family: 'courier new', courier, monospace;">）当时8岁，正在他那显赫的贵族家庭里接受良好的幼年教育。他对历史表现出浓厚的兴趣，并乐意把自己的时间花在这上面。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">沃尔夫冈·恩斯特·泡利（Wolfgang Ernst Pauli）才出生8个月，可怜的小家伙似乎一出生就和科学结缘了。他的middle name：ernst，就是因为他父亲崇拜著名的科学家恩斯特·马赫（Ernst Mach）才给他取的。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">而再过12个月，维尔兹堡的以为著名希腊文献教授就要喜滋滋 的看着他的宝贝儿子小海森堡（Werner Karl Heisenberg）呱呱坠地。稍早前，罗马的一位公务员把他的孩子命名为克里恩·费米（Enrico Fermi）。20个月后，保罗·狄拉克（Paul Dirac）也将出生在英国的布里斯托尔港。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">好了，演员都到齐了，好戏也该上演了。</span></div><br><div>光点效应</div><br><div>奇迹年annus mirabilis</div><br><div>1666年，牛顿发明了微积分，完成了光分解的实验分析，以及万有引力的开创性工作，在那一年，他为数学、力学和光学三大学科分别打下了基础，而其中的任何一项工作，都足以使他名列有史以来最伟大的科学家之列。</div><br><div>1905年，在专利局我局的爱因斯坦发表了6片论文。3月18日，发表了光电效应的论文，成为量子论的奠基石之一。4月30日，发表 了关于测量分子大小的论文，这为他赢得了博士学位。5月11日和后来的12月19日，两篇关于布朗运动的论文成为分子论的里程碑。6月30日，发表题为《论运动物理的电动力学》的论文，这个不起眼的题目后来被加上一个如雷贯耳的名称，叫“狭义相对论”。9月27日，关于物体惯性和能量的关系的论文，这是狭义相对论的进一步说明，并且在其中提出了著名的质能方程E=mc^2。</div><br><div>J.J.汤姆逊（Joseph John Thomson）发现电子 提出了葡萄干布丁的原子假说。</div><br><div>恩内斯特·卢瑟福（Ernest Rutherford）用α粒子轰击金箔，提出了原子行星模型。</div><br><div>卢瑟福——诺贝尔奖得主的幼儿园，培养了至少10位诺贝尔奖得主！ 新西兰货币100元上就是他！</div><br><div>卢瑟福假说面临问题，如果模型是这样的，那么电子运行轨道会衰减直至撞到原子上去。</div><br><div>波尔提出了能级说。</div><br><div>人们发现，一个原子的化学性质，主要取决于它最外层的电子数量，并由此表现出周期性来，但是人们也十分疑惑，那就是对于拥有众多电子的重元素来说，为什么它的一些电子能够长期的占据外层的电子轨道，而不会失去能量落到靠近原子核的低层轨道上去。这个疑问有泡利在1925年作出了解答，即一层对到所你能能够包容的不同状态，其数目是有限的，也就是说，一个轨道有着一定的容量。——泡利不相容原理。</div><br><div>P60 4.2 波尔王朝的衰败</div><br><div>路易斯·维克托·皮雷·雷蒙·德布罗意王子（prince Louis Victor Pierre Raymond de broglie）将告诉大家，电子，是一种波。</div><br><div>傅里叶展开，将一个混合的音波分解成一系列的简谐波。</div><br><div>matrix！海森堡！</div><br><div>矩阵算数！</div><br><div>I×II≠II×I！！！</div><br><div>发明矩阵的最初目的是为了求解某些微分方程组！</div><br><div>p×q≠q×p！</div><br><div>P94 6.3波恩笑谈骰子</div><br><div>是的，科学家知道过去；似地，科学家明白现在；似地科学家了解未来。只要掌握了定律，只要手机足够多的情报，只要能够处理足够大的运算量，科学家就能如同上帝一般无所不知。整个宇宙不过是一台精密的机器，它的每个部件都按照定律一丝不苟的运行，这种想法就是古典的，严格决定论（determinism）。宇宙从出生的那一刹那起，就有一个缺点的命运。我们现在无法了解它，只是因为我们说知道的信息太少了而已。</div><br><div></div><br><div>矜持的决定论在20世纪首先找到了量子论的严重跳战，随后混沌动力学的兴起使它彻底被打垮了。</div><br><div></div><br><div>决定论的垮塌是否注定了足有一直的兴起？这在哲学上市很值得探讨的。事实上，在量子论之后，物理学越来越陷于形而上学的争论中。也许形而上学应该改革名字叫“量子论之后”。</div><br><div></div><br><div>“但是，我们现在在谈论电子！他是如此的小而轻，以至于光子对它的撞击决不能忽略不计。测量一个电子的位置？好，我们派遣一个光子去自信这个任务，它回来怎么报告呢？是的，我接触到了这个电子，但是它给我狠狠撞了一下后，飞到不知什么地方去了，它现在的速度我可什么都说不上来。看，为了测量他的位置，我们剧烈的改变了他的速度，也就是动量。我们没法同时既准确的知道一个电子的位置，同时又准确的了解他的动量。”</div><br><div>△p×△q＞h/2π。</div><br><div>p动量和q位置为共轭量，有你无我，无法同时测得。</div><br><div>海德堡测不准原理uncertainty principle（不确定性原理）</div><br><div>△E×△t＞h/2π</div><br><div>能量和时间也是对共轭量。</div><br><div>波尔的“互补原理”，波恩的概率解释，海森堡的不确定性，三者构成了量子论的“哥本哈根解释”。——波粒二象性。</div><br><div></div><br><div>量子派的物理学家现在逐渐领悟到了事情的真相：我们的结论和我们的观测行为本身大有联系。人看到马是白色的，但蜜蜂看到的却是蓝色的。</div><br><div>事实上，没有什么“客观真相”。讨论马本质上“到底是什么颜色”，正如我们已经指出过的，是很无聊的行为。根本不存在一个绝对的所谓的“本色”，除非你先定义观测的方式。</div><br><div>在量子世界，我们的测量对象是如此微小，以至于我们的接入对其产生了致命的干预。我们本色的劳动使得我们的测量中充满了不确定性，从原则上都无法克服。采取的不同的手段，往往会得到不同的答案，我们随着不确定性原理摇摇摆摆，你根本不能说有一个客观的答案在那里。在量子论中没有外部世界和我之分，我们和客观世界天人合一，融合成为一体，我们和观测物相互影响，使得车辆行为成为一种难以把握的手段在量子世界，一个电子并没有什么“客观动量”，我们能谈论的，只有它的“测量动量”，而这又和我们的测量手段密切相关。</div><br><div>波尔—“如果谁不为量子论而感到困惑，那他就是没有理解量子论”。</div><br><div></div><br><div>如果不定义一个测量动量的方式，那我们谈论电子动量就是没有意义的？这听上去师傅是一种唯心主义的说法。难道我们无法测量电子，它们就没有动量了吗？让我们非常惊讶和尴尬的是，波尔和海森堡两个人对此大点其头。一点也不错，加入一个屋里概念是无法测量的，它就是没有意义的。我们要时时刻刻注意，在量子论中，观测者适合外部宇宙结合在一起的，它们之间已经没有明确的分界线，是一个整体。在经典理论中，我们脱离一个绝对客观的外部世界而存在，我们也许不了解这个世界的某些因素，但这不影响其他客观性。可如今我们自己一人融入这个世界了，对于这个物我合一的世界来说，任何东西都应该是可以测量和感知的。只有可观测的量才是存在的！</div><br><div></div><br><div>事实上，同时具有p和q的电子是不存在！p和q也像波和微粒一样，在不确定原理和互补原理的通知下以一种此消彼长的方式生存。对于一些测量手段来说，电子成像出一个准确的p，对于另一些测量手段来说，电子呈现出准确的q。我们能够测量到的电子才是唯一的实在，这后面不存在一个“客观”的，或者“实际上”的电子！</div><br><div>换言之，不存在一个库管的，绝对的世界。唯一存在的，就是我们能够观测到的世界。物理学的全部意义，不在于它能够揭示出自然“是什么”，而在于它能够明确，关于自然我们能“说什么”。没有一个脱离观测而存在的绝对自然，只有我们和那些复杂的测量关系，熙熙攘攘纵横交错，构成了这个令人心醉的宇宙的全部。测量是新物理学的核心，测量行为创造了整个世界。</div><br><div></div><br><div>奥卡姆剃刀</div><br><div>当两种说法都能接相同的事实时，应该相信假设少的那个，比如，地球“本来”是放的，但观测时显示出圆形。这和地球“本来就是园的”说明的是同一件事。但前者引入了一个墨明棋妙的不必要假设，所以前者是胡说。同样，“电子本来有准确的p和q，但是观测时只有一个显示”，这和“只存在具有p或者具有q的电子”说明的也是同一回事，但前者多了一个假设，我们应该相信后者。“存在但观测不到”，这和“不存在”根本就是一回事。</div><br><div></div><br><div>150亿光年外的宇宙（150亿光年这个距离你被称作“视界”）。</div><br><div></div><br><div>量子论的不确定性大概就是反对决定论的最好证明了吧。</div><br><div>但是，同样，概率云也告诉我们，你也有机会掌控一些东西。</div><br><div></div><br><div>哥本哈根解释：电子在没有观察的时候什么也不是，谈论他是没有意义的，只有数学可以描述——波函数！不观测的时候，根本没有个实在！自然也就没有实在的电子。事实上，不存在“电子”这个东西，只存在，“我们与电子之间的观测关系”。</div><br><div></div><br><div>爱因斯坦—波尔之争！</div><br><div>物理全明星</div><br><div>量子纠缠！（EPR佯谬）</div><br><div>薛定谔的猫！</div><br><div></div><br><div>加强版的人择原理惠勒的“延迟实验”。</div><br><div>宇宙本身由一个有意识的观测者创造出来也不是什么不可能的事。虽然宇宙的 行为在道理上已经眼花了几百亿年，但某种“延迟”使得它知道被一个高级生物所观察才成为确定。我们的观测行为本身参与了宇宙的创造过程！这就是所谓的“参与性宇宙”模型。宇宙本身没有一个确定的答案，而其中的生物参与了这个谜题答案的构建本身！</div><br><div>这实际上是某种增强版的“人择原理”。人择原理是说，我们存在这个事实本身，决定了宇宙的某些性质为什么是这样的而不是那样的。也就是说，我们讨论所有问题的前提是：事实上已经存在了一些像我们这样的智能生物来讨论这些问题。我们回忆一下笛卡尔的“第一原理”：不管我怀疑什么也好，有一点我是不能怀疑的，那就是“我在怀疑”本身。“我思故我在”！类似的原则也适用于人择原理：不管这个宇宙有什么样的性质也好，它必须要使得只能生物可能存在其中，不然就没有人来问“宇宙为什么是这样？”这个问题了。随便什么问题也好，你首先得保证有一个“人”来问问题，不然就没意义了。</div><br><div></div><br><div>参与性宇宙是增强的人择原理，它不仅表明我们的存在影响了宇宙的性质，更甚，我们的存在创造了宇宙和它的历史本身！可以想象这样一种情形：各种宇宙参数首先是一个不确定的叠加，只有被观测者观察后才变成确定。但这样一来他们又必须保持在某些精确的范围内，一遍创造一个好的环境，令观测者有可能在宇宙中存在并观察它们！这似乎是一个逻辑循环：我们选择了宇宙，宇宙又创造了我们。这件怪事叫做“自指”或者“自激活”（self-exciting），意识的存在反过来又创造了它自身的过去！</div><br><div></div><br><div>冯·诺依曼（John Von Neumann）这位现代计算机的奠基人之一，20世纪最杰出的数学家，百年难得一遇的天才。从集合论到数学基础方面的研究，从算子环到遍历理论，从博弈论到数值分析，从计算机结构到自动机理论，每一项都可以大书特书。</div>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/08/06/天幕红尘/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/08/02/16节生死课告诉你前世今生/" id="post_nav-older" class="next-content">
+            舊篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="conan's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        conanskyforce@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                首頁
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    過往
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">三月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主題 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/kevinconan" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>柯南的日常
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

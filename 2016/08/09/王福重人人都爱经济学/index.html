@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            王福重人人都爱经济学 | 
+        
+        柯南的日常
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="柯南君,Full Stack">
+    <meta name="keywords" content=",笔记">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="柯南的日常">
+    <meta name="msapplication-starturl" content="/2016/08/09/王福重人人都爱经济学/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="柯南的日常">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="/2016/08/09/王福重人人都爱经济学/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="王福重人人都爱经济学 | 柯南的日常">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="柯南君,Full Stack">
+    <meta property="og:article:tag" content="笔记"> 
+
+    
+        <meta property="article:published_time" content="Tue Aug 09 2016 23:27:45 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jul 13 2018 13:19:18 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="/2016/08/09/王福重人人都爱经济学/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "/2016/08/09/王福重人人都爱经济学/index.html",
+    "headline": "王福重人人都爱经济学",
+    "datePublished": "Tue Aug 09 2016 23:27:45 GMT+0800",
+    "dateModified": "Fri Jul 13 2018 13:19:18 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "conan",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "你好，欢迎光临柯南的博客"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "柯南的日常",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",笔记",
+    "description": "柯南君,Full Stack",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 73 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                王福重人人都爱经济学
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>conan</strong>
+        <span>8月 09, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/笔记/">笔记</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=王福重人人都爱经济学&url=/2016/08/09/王福重人人都爱经济学/index.html&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=王福重人人都爱经济学&url=/2016/08/09/王福重人人都爱经济学/index.html&via=conan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=/2016/08/09/王福重人人都爱经济学/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=/2016/08/09/王福重人人都爱经济学/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <div>（边际效益）边际效益递减原则</div><br><div>机会成本，会计学认为任何一个项目都可能有利润。而经济学认为只有一个项目才有利润。（机会成本）</div><br><div>那么资源配置到哪里，就是非常重要的！</div><br><div>所以，我们不只要看做某件事情得到了什么了，更重要的是看因为做这件事，我们失去了什么。如果失去的比得到的还多，这件事就不值得做。</div><br><div>市场能进行资源的最佳配置。</div><br><div>（纳什均衡）</div><br><div>比较边际效益与边际成本</div><br><div></div><br><div>理性人假设</div><br><div>看不见的手，为自己谋利，整个社会就会发展，而不是需要你用博爱。</div><br><div>人性利己，趋利避害动物本能。</div><br><div>君子喻与义，小人喻与利。到现在不使用咯，应该是君子小人都喻与利。</div><br><div></div><br><div>博弈论</div><br><div>强盗分金币的故事（第一个强盗应该提议自己分所有金币）</div><br><div>《博弈论与经济行为》</div><br><div>《非合作博弈》</div><br><div>从囚徒困境开始的博弈论，现实是都坦白，对集体来说获得最差结果。</div><br><div>所有博弈分为四种：</div><br><div>完全信息静态博弈————结果“纳什均衡”</div><br><div>完全信息动态博弈</div><br><div>不完全信息静态博弈————海萨尼 数学期望</div><br><div>不完全信息动态博弈</div><br><div></div><br><div>（劳动，生产要素，资本{客观}）→（边际效用{主观}）决定价值</div><br><div>马歇尔《经济学原理》</div><br><div>价值（价格）既与供给有关，也与边际效用（需求）有关。</div><br><div>说到底，供给和需求！！</div><br><div></div><br><div>需求和供给相平衡的价格才是最优价格，对买卖双方都是最好的。</div><br><div>价格、替代品、互补品、偏好都影响需求。</div><br><div></div><br><div>消费者的目的：实现效用最大化！（边际效用递减）</div><br><div>所购买的每种商品的最后一单位的效用与价格之比，等于货币的边际效用。</div><br><div>第八章 竞争和垄断 P92</div><br><div></div><br><div>凯恩斯，奢侈有理，节俭有过</div><br><div></div><br><div>均衡的GDP由需求决定</div><br><div></div><br><div>政府的财政政策与货币政策</div><br><div></div><br><div>内务、外交、财政、国防四大部门</div><br><div></div><br><div>第十五章 失业</div><br><div>摩擦性失业+架构行失业→自然失业率</div><br><div>最低工资法一定是高于市场决定的工资水平的，那么就会减少岗位供应。</div><br><div>最低工资法不是帮助失业的最佳路径，最佳路径是帮助失业者提高工作技能。最佳途径是教育。另外，提供信息也是必要的。社会制度歧视（重男轻女，重女轻男，重视户口etc）。社会保障制度也有关系。</div><br><div></div><br><div>第十六章 通货膨胀</div><br><div>物价总水平的上升。</div><br><div>通货膨胀的原因</div><br><div>一总需求拉动（消费需求、投资需求、政府购买、国外需求）</div><br><div>二成本推动</div><br><div>三四人们预期“惯性通货膨胀”</div><br><div>但总的归结起来一句话，政府印钱印多了！所以通货膨胀政府永远是获益者。</div><br><div>治理通货膨胀</div><br><div>一压缩总需求提高税收，提高汇率，货币紧缩政策，公开市场操作</div><br><div>二实行工资和物价管制</div><br><div>在短时间内，通货膨胀总是与失业交替进行。（经济学十大原理之一）</div><br><div></div><br><div>第十七章 经济增长</div><br><div>马尔萨斯《人口原理》</div><br><div>马尔萨斯陷阱，人口数量以指数级增长，生产资料以算数级增长。长此以往，一定会出现人口数量超过食物供给。</div><br><div>但是他们都没有考虑到技术进步—技术大爆炸！</div><br><div>四个因素影响经济增长</div><br><div>一、自然资源</div><br><div>二、物质资本，资本和技术</div><br><div>三、技术进步</div><br><div>四、人力资本</div><br><div>人力资本是通过教育和培训获得的，所以教育很重要，所以经济学把高等教育主要看成是投资行为而不是消费。</div><br><div>迈克尔·斯彭斯的研究表明，大学读什么专业都一样，大学教育所起的作用只是发送信号，即证明我的能力比不上大学的人强，仅此而已。</div><br><div>王大炮最后要说的是，制度的作用，政府所起的作用只是监管，和救急，而不是一味的插手。</div><br><div>中国有丰富的劳动力资源，但是人力资本却不足；有较为丰富的自然资源，但这只是总量，从结构上看，就没有什么优势了，我们的资源主要是煤炭，石油资源相对匮乏，水资源也严重缺乏；取得了不少的重大科技成果，但是创新能力不强，创造力更是很弱，基础研究远远不能满足要求。另外，制度上还有缺陷，政府管制过多了。</div><br><div></div><br><div>第十八章 国际贸易和比较优势</div><br><div>比较优势原理是解释国际贸易原因的理论基础。任何国家通过贸易都能获得优势。</div><br><div></div><br><div>第十九章 自由贸易还是贸易保护</div><br><div>从事自己比较优势高的行业</div><br><div>现代政治经济学，现代经济政策的制定，从来都不只是经济学范畴内的事情，还得考虑诸多如政治的其他影响。</div><br><div></div><br><div>第二十章 汇率和国际贸易体系 P216</div><br><div></div><br><div>汇率：别国货币表示的本国货币的价格，或者说是两种国币交换时的比率，汇率也叫汇价，即汇兑的价格。</div><br><div>汇率由供求双方的力量决定，跟价格决定机制类似。</div><br><div>汇率的最根本原因。购买力评价理论。</div><br><div>汇率的作用应该是使得不同货币在任何国家具有相同的购买力，即买到的东西是一样的。</div><br><div>美元人民币日元（1:7:100）</div><br><div>在美国1美元买到的，中国7元买到，日本100元买到。买到的商品是一样的。</div><br><div>但是购买力平价理论不能应用于不可贸易商品上来？比如房子等。</div><br><div></div><br><div>就是附录啦？</div><br><div>经济学的100个关键词</div><br><div>1.经济学：研究一个社会如何利用稀缺资源进行有价值的生产，并把生产成果在社会成员之间进行分配的科学。</div><br><div>2.稀缺：相对于人类无穷无尽的欲望， 资源总是显得不足的状态。</div><br><div>3.效率：社会对资源的利用达到最佳状态，没有再改进的余地，即如果不让某个谁会成员的境况变差，就不能让其他任何成员的境况变得更好。</div><br><div>4.生产什么，如何生产，为谁生产：一个经济社会面临的基本问题，也叫资源配置，社会必须就这三个问题作出选择，以实现社会福利的最大化。</div><br><div>5.微观经济学：研究微观经济主体，即单个消费者、单个厂商、单个市场的经济学分子，其核心是价格决定论。</div><br><div>6.宏观经济学：研究一个经济总体运行的经济学分支。</div><br><div>7.计划经济：由计划当局决定生产什么、如何生产、为谁生产的经济。</div><br><div>8.市场经济：由市场特别是价格决定生产什么、如何生产、为谁生产的经济。</div><br><div>9.亚当·斯密：英国古典经济学的伟大代表，1776年出版《国民财富的性质和原因的研究》，从而创立了近代经济学体系。提出了著名的“看不见的手”的学硕。他的其他著作包括1759年出版的《道德情操论》。</div><br><div>10.边际：某个变量的微小变动，引起的其他变量的该变量。</div><br><div>11.总收益：企业出售产品得到的全部货币。</div><br><div>1.边际收益：某种活动的微小增加所增加的总收益。</div><br><div>13.机会成本：一件事情的机会成本是把做这件事的资源用于其他事情，所能产出的最大价值。</div><br><div>14.均衡：经济学借用这个概念，分析消费者、厂商以及宏观经济达到最佳的状态以及实现的条件。</div><br><div>15.经纪人假设：每个人都是在给定的约束下，追求自己利益最大化的人，是经济学最基本的假设。</div><br><div>16.看不见的手：最早由亚当·斯密在《国民财富的性质和原因的研究》中提出。他认为社会中存在着一种不同于人为的自然秩序。看不见的手，实际上就是价格机制，在价格机制的诱导下，经济可以有效的运行，达到最佳状态，不需要政府的干预。</div><br><div>17.博弈论：研究在当事人之间的决策相互影响的条件下，人们如何行动的一种方法。</div><br><div>18.纳什均衡：博弈当事人战略的组合，其中每个人的战略都是在嘉定其他人战略不变的情况下的最佳战略。</div><br><div>19.静态博弈：博弈的参加者同时做决定，或者虽然不同是，但是后行动着不知道先行动者的决策的一种博弈。</div><br><div>20.战略：博弈的参加者在生命条件下选择什么样的行动以保证自身利益最大化。</div><br><div>21.动态博弈：博弈参加者的行动有先后，后行动者可以观察到先新动作中的行为的一种博弈。</div><br><div>22.需求：在其他条件不变的情况下，在给定的价格下，消费者愿意并且能够购买的某种商品的数量。</div><br><div>23.供给：在其他条件不变的情况下，在给定的价格下，生产者愿意并且能够提供给市场的商品的数量。</div><br><div>24.价格：没单位商品、劳务的货币度量。</div><br><div>25.市场：卖方和买方互相作用决定价格的机制或者制度安排。</div><br><div>26.均衡价格：需求量和供给量相等是时的价格。</div><br><div>27.效用：人民从物品的消费总得到的快乐和蛮子，可以用效用单位表示。</div><br><div>28.边际效用：行增加的一单位商品所增加的总效用。</div><br><div>29.边际效用递减规律：不断的增加对某种商品的消费，所增加的总效用越来越小。</div><br><div>30.生产函数：在技术不变的条件下，一定量的投入和最大参数量之间关系的函数。</div><br><div>31.边际产量：保持其他投入不变，单独增加某一种投入的一单位说增加的总产量。</div><br><div>32.边际收益递减规律：在技术和其他投入不变的条件下，单独增加某一种投入的一单位，所增加的总产量越来越少。</div><br><div>33.企业家才能：协调生产经营活动以及创新的能力。</div><br><div>34.经济利润：总收益与总成本低差。</div><br><div>35.正常利润：企业家才能的报酬，是生产成本的一部分。</div><br><div>36.会计成本：总收益减去总成本。</div><br><div>37.固定成本：与产量无关的成本，或者说产量为零时候=的总成本。</div><br><div>38.可变成本：随着产量的变动而变动的成本，产量为零时，中可变成本为零。</div><br><div>39.平均可变成本：总成本除以总产量。</div><br><div>40.完全竞争：一种市场结构，在这个市场上存在过多的厂商，每个厂商的产量与总产量相比都是微不足道的，每个厂商都是价格的接受者，而不能影响价格。</div><br><div>41.垄断：只有一个参数的市场结构，厂商对于价格有决定权。</div><br><div>42.价格歧视：出售同样的商品，向不同类型的买者收取不同的价格。</div><br><div>43.消费者剩余：消费者愿意支付的价格与其实际价格之间的差值。</div><br><div>44.自然垄断：指一个企业能以低于两个或多个企业生产时的成本为整个市场服务。</div><br><div>45.垄断竞争：一种市场结构，在其中，每个厂商生产的产品都与其他厂商有所差别，因此对消费者构成垄断；同时，每家厂商的产品差别又非常小，他们之间又存在竞争的关系。</div><br><div>46.寡头：少数几家大厂商占据了市场的绝大部分份额。</div><br><div>47.国内生产总值：一个国家在给定时期内，所承受的全部最终产品和劳务的市场价格的和。</div><br><div>48.最终产品：用于消费，不再进入下一个阶段生产过程的产品。</div><br><div>49.附加值：某一个环节上的附加值指的是首家与购进价格之间的差额。</div><br><div>50.总需求：在给定时期内，在给定的价格水平下，一个经济中所有部门愿意购买的总和。</div><br><div>51.大萧条：指1929~1933年席卷整个资本主义世界的严重经济危机。</div><br><div>52.伊萨定律：法国经济学家让·巴蒂斯特·伊萨认为，供给能够创造它自己的需求，生产能够创造自己的销路，因此，不会有卖不出去的商品，伊萨定律可以概括凯恩斯之前的全部经济学的精髓，即市场供求的力量可以自动达到充分就业状态，政府干预是不必要的。</div><br><div>53.约翰·梅娜德·凯恩斯：英国人，1905年毕业于剑桥大学，后在英国财政部工作，1919年参加巴黎和会，写作《合约的经济后果》，获得世界性荣誉，任剑桥大学经济学讲师，是20世纪以及最伟大的经济学家之一，1936年发表《就业、利息和货币通论》，创立现代宏观经济学，推翻伊萨定律，主张国家干预经济生活。</div><br><div>54.财政：政府的收支活动。</div><br><div>55.公共物品：每个人不管是否付费都可以消费 的物品。</div><br><div>56.税收：政府利用强制力，无偿从具名或企业取得的收入。</div><br><div>57.财政政策：政府改变购买支出和转移支付规模，以及改变税收，调节总需求的手段。</div><br><div>58.乘数效应：某些支出的变化，引起总产量数倍的变化。</div><br><div>59.挤出效应：如果财政支出过多，企业和个人获得的直径就困难了，利率就将提高，企业和个人的投资支出、消费支出就会减少，政府的支出就“挤出”的民间支出。</div><br><div>60.货币：被人们普遍接受的贸易没见或支付手段。</div><br><div>61.银行：从储户手里获得的资金，借给需要资金的人，从中获取收益的企业。</div><br><div>62.货币供给量：一个经济中的货币总量</div><br><div>63.M1：现金和活期存款。</div><br><div>64.M2：现金、活期存款和储蓄存款。</div><br><div>65.中央银行：银行的银行。</div><br><div>66.货币政策：中央银行控制货币供给量的手段。</div><br><div>67.准备金：商业银行吸收的存款中，按法律规定交给中央银行的部分。</div><br><div>68.公开市场操作：中央银行买进和卖出政府债券以影响货币供给量的行为。</div><br><div>69.贴现率：商业银行向中央银行借款的利率。</div><br><div>70.失业：年龄在16岁以上，有工作能力并且愿意接受现行工资条件，却没有被雇佣而正在找工作的人。</div><br><div>71.失业率：失业人口占全部劳动力人口的百分比。</div><br><div>72.自然失业率：摩擦性失业率以及结构性失业率的和。</div><br><div>73.通货膨胀：一般价格水平的上升，通常用CPI的变动程度来衡量。</div><br><div>74.消费者价格指数：计算方法是选取固定的“一篮子”商品，加权计算购买他们所需要的话费。</div><br><div>75.需求拉动型通货膨胀：因为总需求过大造成的通货膨胀。</div><br><div>76.成本推动型通货膨胀：由于成本上升造成的通货膨胀。</div><br><div>77.惯性通货膨胀：如果大家都认为价格要上涨，并且根据调整所有合同，依法炮制就将真的发生，并且持续下去。</div><br><div>78.经济增长：一个国家潜在产出的持续增肌。</div><br><div>79.潜在产出：一个国家最大生产能力，可以充分就业时的总产量衡量。</div><br><div>80.72规则：用72除以一个一个变量的年平均增长率，就得到这个变量需要翻一番所需要的年数。</div><br><div>81.马尔萨斯的人口理论：托马斯·马尔萨斯，英国人，著名经济学家，以人口理论闻名于世。他认为，因为人口数以几何级数增长，而生活资料以算数级增长，所以，到一定时发，人类将面临饥饿的威胁。因此他提出要控制人口，并认为可以采取诸如战争和瘟疫等极端手段。</div><br><div>82.人力资本：个人通过教育和自身经济形成的可以用于生产的知识和技能。</div><br><div>83.技术进步：生产工艺、过程的改进，或者新产品的开发，使得在投入不变的情况下，产出仍然可以增加。</div><br><div>84.国际贸易：国家质检交换商品和互相提供劳务的活动，也叫世界贸易。</div><br><div>85.绝对优势：如果一个国家生产某种产品的直接成本即会计成本比别的国家低，就说明这个国家在这个产品的生产上具有绝对优势。首先由亚当·斯密在《国民财富的性质和原因的研究》中提出。</div><br><div>86.比较优势：如果一个国家生产某种产品的机会成本比别的国家低，就说明这个国家在这个产品的生产上具有比较优势。最早由英国经济学家大卫·李嘉图在1817年出版的《政治经济学及赋税原理》中提出。</div><br><div>87关税：一个国家队进出口物品征收的税。是最古老的税种之一。</div><br><div>88.世界贸易组织：一个独立于联合国的永久性国际组织，其前身为关税与贸易总协定，1995年1月1日开始运作，总部设在日内瓦。该组织的基本宗旨是通过实施非歧视、关税减让以及透明公平的贸易政策，来达到推动世界贸易自由化的目标。</div><br><div>89.自由贸易：不使用关税和非关税手段限制国际贸易主张和政策。</div><br><div>90.贸易保护主义：主张通过关税和非关税壁垒阻止外国产品进入本国市场，以保护本国产业的主张和政策。</div><br><div>91.关税壁垒：通过对进出口产品征税阻止外国产品进入本国市场，或者对出口产品征税·主持本国产品出口。一般是指进口税。</div><br><div>92.非关税壁垒：关税意外的阻止自由贸易的措施。</div><br><div>93.配额：规定进口商品的数量的做法。</div><br><div>94.倾销：进口商品的销售价格低于出口国的国内市场价格或低于其生产成本。</div><br><div>95.汇率：一种货币与另一种货币相互交换的比率。</div><br><div>96.外汇市场：不同货币相互交换的场所。</div><br><div>94.固定汇率制度：一个国家的货币才去紧盯某一汇率水平而不变的制度。</div><br><div>98.浮动汇率制度：汇率由外汇市场决定，政府不规定汇率水平的制度。</div><br><div>99.金本位制：一国规定其货币与某一固定量的黄金等价的制度。</div><br><div>100.购买力平价理论：汇率的作用应该使得不同货币在各国的购买力相等。</div>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/08/13/最近读的书/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/08/09/财富是什么——金融学的第一本书/" id="post_nav-older" class="next-content">
+            舊篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="conan's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        conanskyforce@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                首頁
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    過往
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">三月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主題 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/kevinconan" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>柯南的日常
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

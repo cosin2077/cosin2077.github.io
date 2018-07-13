@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            日本经济盛衰史 | 
+        
+        柯南的日常
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="柯南君,Full Stack">
+    <meta name="keywords" content=",笔记">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="柯南的日常">
+    <meta name="msapplication-starturl" content="/2016/08/09/日本经济盛衰史/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="柯南的日常">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="/2016/08/09/日本经济盛衰史/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="日本经济盛衰史 | 柯南的日常">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="柯南君,Full Stack">
+    <meta property="og:article:tag" content="笔记"> 
+
+    
+        <meta property="article:published_time" content="Tue Aug 09 2016 22:33:20 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jul 13 2018 13:19:14 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="/2016/08/09/日本经济盛衰史/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "/2016/08/09/日本经济盛衰史/index.html",
+    "headline": "日本经济盛衰史",
+    "datePublished": "Tue Aug 09 2016 22:33:20 GMT+0800",
+    "dateModified": "Fri Jul 13 2018 13:19:14 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "conan",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "你好，欢迎光临柯南的博客"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "柯南的日常",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",笔记",
+    "description": "柯南君,Full Stack",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 73 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                日本经济盛衰史
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>conan</strong>
+        <span>8月 09, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/笔记/">笔记</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=日本经济盛衰史&url=/2016/08/09/日本经济盛衰史/index.html&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=日本经济盛衰史&url=/2016/08/09/日本经济盛衰史/index.html&via=conan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=/2016/08/09/日本经济盛衰史/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=/2016/08/09/日本经济盛衰史/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <div>第一章日本的企业</div><br><div>1945年9月，GHQ盟军总司令部进驻日本。麦克阿瑟主导推行“解散财阀”等一些列经济名族文化政策，恰恰帮助了日本。</div><br><div>一、日本企业集团的形成和确立</div><br><div>1.战后日本财阀的解体</div><br><div>历史渊源</div><br><div>①德川时期  三井、住友</div><br><div>②明治时期 三菱 安田 古河 浅野 大仓</div><br><div>③昭和时期 日产 中岛 日窒 日朝 理研</div><br><div>二战前的日本财阀特征：<br clear="none">1）封建家族的闭锁（旧财阀最显著的特征）</div><br><div>2）所属企业种类繁杂，业务缺乏联系</div><br><div>3）三井、三菱、住友之流都是利用国家政权进行资本积累的（我艹，说的好像我们是通过竞争引起垄断、通过生产的集中和聚集引起垄断似地）</div><br><div>4）他们的经营领域主要是棉纺织业、铜矿、煤矿为主的轻工业</div><br><div></div><br><div>二战结束后，盟军决定解散日本财阀</div><br><div>解散财阀的措施分为4个方面：</div><br><div>①解散“持股公司”</div><br><div>②排除家族对企业的控制力</div><br><div>③分散股票所有权给该公司的从业人员</div><br><div>④大企业化小，实际化小的只有11家</div><br><div></div><br><div>历史上普遍给予财阀解体较高评价，认为没有财阀解体就没有之后日本企业集团的形成。</div><br><div></div><br><div>2.战后日本企业集团的形成</div><br><div>所谓企业集团，一般认为，是一种有着共同利益的特殊关系的企业群体，是在成员企业自主经营和对等互利的原则下结成的持续长久的经济联合协作体制。（相互持股）</div><br><div>1950年，朝鲜战争真特么救了日本一条命啊！！！特需景气！</div><br><div>当时处在道奇危机的日本经济，直接就被拯救了，其次，还把日本拉入了西方阵营，其三，日美讲和， 美国开始扶持日本了！（<strong><em>而新的对日占领政策，则在于培养强有力的日本政府。不仅要使日本成为自主国家，而且要使日本在今后远东可能产生的新极权</em></strong><strong><em>主义的威胁方面，充分发挥强有力的防洪堤作用。来源：日本大藏省编《昭和战败史》第17卷，东洋经济新报社， 1981年版，第41页。</em></strong>）</div><br><div>旧财阀系大企业成绩复名！加上对“禁止垄断法”的修改，直接公开复活了！</div><br><div>1955年，日本经济上各项指数均回复到站前水平！！</div><br><div></div><br><div>二、企业集团的特征、功能和作用</div><br><div>1.企业集团的基本特征</div><br><div>1）集团环状持股</div><br><div>2）社长会协调外资管理</div><br><div>3）系列贷款是重要联系纽带</div><br><div>4）综合商社—另一个组织者与中枢</div><br><div>5）其他</div><br><div>人事结合关系</div><br><div>重化学工业与综合化</div><br><div>成为国际性垄断资本</div><br><div>2.企业集团的功能 p73</div><br><div>稳定股东化，降低交流、信息分享成本、分散风险。</div><br><div>一、组织协调的功能</div><br><div>二、分散风险</div><br><div>三、技术信息交流功能</div><br><div></div><br><div>3.企业集团的作用</div><br><div>1）微观方面</div><br><div>一集团力量大吗，研发运营实力强</div><br><div>二信息收集成本降低，风险分散</div><br><div>三规模经济扩大市场占有率</div><br><div>四经营领域多元化，鸡蛋不装在一个篮子里</div><br><div>五引进消化外国技术</div><br><div>2）宏观层面</div><br><div>一增强市场竞争力</div><br><div>二利于调整产业机构</div><br><div>三解决资本主义的社会基本矛盾</div><br><div>四加速技术进步</div><br><div>五调节社会资源</div><br><div></div><br><div>三、企业集团的发展</div><br><div>日本1990年代，泡沫破灭。泡沫形成、膨胀和破灭，最主要的表现形式便是一股价、地价为代表的资产价格的暴涨暴跌。</div><br><div>1.泡沫危机对集团的冲击</div><br><div>20世纪80年代末，日本世纪年增长率为5.5%，4年增长为22%左右，但资产价格却增长了100%~200%。</div><br><div>泡沫破灭打击主要集中在金融界和中小企业。企业集团最大的影响便是相互持股率的下降。</div><br><div>2.企业集团的发展现状和未来走向</div><br><div>（1）企业集团的发展现状</div><br><div>一控股公司解禁</div><br><div>二外国股东持股比例持持续上升</div><br><div>（2）日本企业集团的未来走向</div><br><div>第二章 现代日本的产权制度</div><br><div>公司本位思想和公司主义</div><br><div>一、日本产权制度的变迁</div><br><div>1.站前日本公司产权结构的状况</div><br><div>日本公司制度是明治维新后移植欧美公司法人制度基础上形成的企业制度。</div><br><div>2.战后日本公司产权结构的特征</div><br><div>（1）股权结构法人化</div><br><div>（2）股权高度集中化，大股东持股比例高</div><br><div>（3）法人相互持股</div><br><div>3.法人相互持股形成的背景</div><br><div>二、日本的法人相互持股制度</div><br><div>1.日本股权性质的变化 p102</div><br><div>一日本集团的相互持股并不是为了获得利息！而是为了稳定股价，表现为低息主义。</div><br><div>二相互持股相互抵消最后使得控制权虚化！</div><br><div>2.日本公司制度的形式化</div><br><div>股东大会、董事会、监事会都变得形式化了</div><br><div>3.日本公司“法人所有实质化”的表现</div><br><div>4.日本经营者的权利基础</div><br><div>三、日本企业集团的产权制度特征</div><br><div>以法人持股制度为基础，以系列融资为纽带，以交易关系长期化为目标。</div><br><div>1.法人相互持股制度化</div><br><div>2.系列融资制度化</div><br><div>金融机构对自己系列的企业融资偏爱。</div><br><div>3.交易关系内部化</div><br><div>四、日本公司治理结构</div><br><div>1.日本公司治理结构 P122</div><br><div>2.主银行制度在日本经济发展中的作用</div><br><div>（1）主银行制度为日本企业提供了高效率的资金动员机制</div><br><div>（2）主银行制度提供了日本产业政策效率化的保证机制</div><br><div>（3）主银行制度在城市银行特别是主银行之间建立一种协调竞争体制</div><br><div>3.日本公司治理结构的重构</div><br><div>建立股东、企业员工、主银行以及包括社会在内的多元化的监督与约束机制。</div><br><div>第三章 日本的财政政策和金融制度</div><br><div>一、日本的财政政策</div><br><div>日本学者认为，财政体制就是维护财政支出和财政收入的制度系统以及左右这个系统各个主体（政治家、官僚、企业、个体等）的行为。如果从经济学角度还得加入“效率”和“公平”。</div><br><div>（1）均衡财政时期的财政运营</div><br><div>经常性收入（税收占大部分）来支付经常性支出。</div><br><div>（2）公债发型的财政运营体制</div><br><div>1955年后期，萧条造成税收增长率缓慢，入不敷出，发行公债应急。</div><br><div>（3）赤字财政运营机制</div><br><div>日本经济1970年代后期出现了几个重要的变化：</div><br><div>一是经济高速增长期结束</div><br><div>二是不断的增加公共投资</div><br><div>三四社会福利的投入开支急剧增大</div><br><div>导致财政赤字不断上升</div><br><div>（4）财政重建与体制创新</div><br><div>1996年12月19日，日本提出财政健全三项目标：</div><br><div>一、使现代人的受益和负担实现均衡</div><br><div>二、实现国债余额对GDP之比不在上升</div><br><div>三、实现国债余额不再上升</div><br><div>一位的强调财政重建，就会造成内需不足，最后抑制经济，而只有在经济增长的前提条件下，才能实现财政重建。没有经济的重建，就没有财政的重建。</div><br><div>2.日本财政的特性</div><br><div>主要表现为5个方面</div><br><div>（1）财政实施均衡主义的原则</div><br><div>在日本的1955年到1964年高速发展阶段，有人认为，“日本不存在凯恩斯主义政策”。</div><br><div>（2）日本财政相对规模迅速膨胀</div><br><div>（3）日本财政对国债的依存度十分高</div><br><div>对国债依存度高，不得不以债还债，结果越借越多，而且由于公债发型，还抑制了民间资本。所谓的“滞胀”怪圈。</div><br><div>（4）日本的税收对所得税依存度很高，产生了赋税负担的不平等现象</div><br><div>（5）财政融资对于社会资本的形成起到了重要作用</div><br><div>3.日本财政的现状</div><br><div>（1）近期的日本财政状况</div><br><div>1996年，日本政府债务对GDP的比例就达到了64.4%，为发达国家之最。在1996年底，建设公债与特例公债加在一起就已经有240兆日元了，这一数字意味着日本全体国民人均负担191万日元。</div><br><div>（2）当前日本的财政的主要问题</div><br><div>当前日本危机主要有以下几个方面：</div><br><div>一、财政赤字对GDP之比居高不下。一般所谓的财政赤字之比的方法是用中央政府财政赤字，地方政府财政赤字与社会福利基金赤字之和。而日本大藏省认为，日本财政最困难的公共企业的亏损应该计入赤字之中，而社会福利基金的结余是不能动用的，不应用来抵消赤字。所以日本的计算方法是中央政府、地方政府和公共企业的赤字之和与GDP的比值！</div><br><div>二、国债依存度过高</div><br><div>国债收入与财政收入之比，太高了！</div><br><div>三、长期债务余额对GDP之比过高</div><br><div>国债什么时候破产，国家什么时候破产？</div><br><div>四、利息支付对财政支出之比越来越高</div><br><div>债太多了，以至于还利息都困难，而且越来越困难。</div><br><div>（3）造成日本财政恶化的原因</div><br><div>各国的普遍原因一般都是经济低速增长，而税收增加的幅度不大。</div><br><div>而日本财政恶化的原因，人口老龄化和结构性失业（产业转换，变革）是主要原因。还有就是泡沫破灭对财政的影响也很长远（为了摆脱危机，结果发行公债想来刺激消费，然而并没有什么卵用）。1973年，还实行了老人医疗免费制！！</div><br><div>4.日本的财政结构改革</div><br><div>（1）确定财政健全化的目标 p144</div><br><div>第一，2005年之前将中央与地方政府财政赤字对GDP之比降至3%以下，基本实现财政收支平衡。</div><br><div>第二，切实使债务余额以及债务余额对GDP之比不再上升。</div><br><div>（2）明确财政结构改革的五项基本原则</div><br><div>（3）削减各项政府开支</div><br><div>5.财政结构改革所面临的难题及发展前景</div><br><div>（1）老龄化社会对财政支出的刚性需求</div><br><div>2015年，老龄人口25%！</div><br><div>（2）配套的行政改革步履维艰</div><br><div>（3）经济增长乏力，财政收入严重不足</div><br><div>国家需要一方面需要借债刺激消费，另一方面又要为税收减少、支出增加买单，可谓双重打击。</div><br><div>6.日本的财政政策给我国的借鉴与启示</div><br><div>（1）准确判断宏观经济的运行形势</div><br><div>（2）适度扩大国债发行，增加财政扩张的能力</div><br><div>（3）财政政策要有其他政策的配合</div><br><div>（4）要灵活运用各种财政政策手段，引导民间投资和消费</div><br><div>二、日本的金融制度</div><br><div>1.战后至20世纪70年代的金融制度与银行的作用</div><br><div>（1）战后至20世纪70年代的金融制度</div><br><div>被称为“受管制的制度”主要包括业务领域管制、利率管制、国内外市场分离三方面内容。</div><br><div>（2）战后至20世纪70年代日本金融制度的特征</div><br><div>主要呈现企业超借、银行超贷，间接融资为主和资金分布不均等特征。</div><br><div>第一，“超借”现象。内部资金不够</div><br><div>第二，“超贷”现象。借出贷款超本金</div><br><div>第三，资金分布不均匀。一些方面资金缺乏一些方面资金剩余</div><br><div>第四，间接融资为主。</div><br><div>（3）旧金融体制下银行的作用</div><br><div>主办银行：分担风险，信息管理者，节约代理人成本。</div><br><div>2.20世纪70年代以来日本金融结构的变化及对银行的影响</div><br><div>（1）20世纪70年代以来日本金融结构的变化 p163</div><br><div>增速放缓，日元升值，</div><br><div>（2）金融结构变化对银行的影响</div><br><div>银行存款比重下降，银行风险选择提高</div><br><div>3.亚洲金融危机中的日本金融业</div><br><div>1997年11月3日，三洋证券向东京地方法院申请破产保护，实际上也就宣告了破产，从此拉开了日本金融机构连续破产的序幕。</div><br><div>不良债权增加，银行惜贷</div><br><div>4.日本的金融体制改革</div><br><div>20世纪90年代以来，桥本内阁在金融、财政、行政、经济结构、社会保障、教育等六大部门实行全面的改革。</div><br><div>（1）日本金融体制改革计划的提出背景</div><br><div>一，金融自由化和国际化的缓慢推进</div><br><div>金融自由化包括：利率自由化；扩充金融市场贵吗；推动金融业务多元化；放宽金融业务间的限制，变分业经营为兼业经营，等等。</div><br><div>二，“泡沫经济”的破灭及其后遗症</div><br><div>严重的巨额坏账；官僚贪污腐败、严重金融丑闻；</div><br><div>三，国际金融中心的地位日趋下降</div><br><div>（2）日本金融体制改革计划的酝酿及提出</div><br><div>改革思路：一是贯彻市场原理，促进竞争，以此作为搞活经济的中心，二是必须确保跨行业、跨国家的竞争；三是应该考虑如何保护弱者的利益；四是明确说明还需保留一定管制的理由，而且要增加管制措施的透明度。</div><br><div>关于“相对滞后的金融体制”的改革</div><br><div>第一，实现各部门的全面竞争。</div><br><div>第二，实现资产交易自由化强化资本市场的功能；放款或取消资产运用及金融产品设计方面的原有限制；彻底改革原有的外汇管理制度，完全实现自由化。</div><br><div>第三，重新审定原有的管制、监督体制，完善破产处理制度的各项基础；向规则型行政体制转变；制定进一步促进金融领域竞争的政策。</div><br><div>（3）日本金融体制改革的基本原则和目标</div><br><div>“自由”，“公正”，“全球化”三大目标。</div><br><div>（4）日本金融改革的影响及主要问题</div><br><div>第一，活跃资本市场，加速资本流动。</div><br><div>第二，全面加剧国内外各种金融机构的竞争。</div><br><div>第三，极大提高融资企业的资本运营效率。</div><br><div>日本金融大改革（Bigbang）过程中面临的主要问题：</div><br><div>1.在改革的过程中如何保持金融体制的稳定。</div><br><div>2.防止资本外流所引起的国内市场空洞化。</div><br><div>3.尽快处理好巨额不良债权。</div><br><div>4.尽快修订、制定并完善与改革相配套的法规和制度。</div><br><div>5.要重视政府金融体系的改革。</div><br><div>第四章 日本经济增长方式和发展战略</div><br><div>一、日本经济增长方式</div><br><div>1.日本经济增长的阶段</div><br><div>大致可以分为四个阶段。</div><br><div>（1）1944~1955年战后经济恢复时期</div><br><div>这段时期GDP年均增长率为9.2%。到55年，已经恢复到了站前水平。</div><br><div>（2）1956~1973年的经济高速增长时期</div><br><div>在这一时期，日本gdp per capita从不及美国1/10，增长到相当于美国的60%！</div><br><div>这一阶段增速为9.7%！ 1968年，超过德国，成为第二大经济体。</div><br><div>（3）1973~1991年低速增长时期</div><br><div>受两次石油危机及布雷顿森林体系崩溃的冲击，年均增长率4%左右。</div><br><div>（4）1991年以后的经济“零增长”时期</div><br><div>失去的20年。</div><br><div>2.战后日本经济增长的原因 p189</div><br><div>一，战后初期，日本进行的民主改革，尤其是经济领域的民主改革，使日本经济充满活力。</div><br><div>二，充分利用了当时的各种有利条件。</div><br><div>三，政府在经济的复兴与发展过程中发挥了重要的主导作用。</div><br><div>四，日本企业采取了科学的管理与经营方式。日本企业制度，“日本式经营”。</div><br><div>五，日本政府和企业高度重视科技和教育。</div><br><div>六，根据国情，大力推进“贸易立国”的政策。</div><br><div>七，实行低消费、高储蓄、高积累的政策，为经济发展提供了必要的资金保证。</div><br><div>3.20世纪90年代后日本经济衰退的原因和特点。</div><br><div>随着日本经济的复兴与飞速发展，80年代初已成为经济大国。与各大国之间贸易摩擦不断，1985年9月22日，美英法德和日本无果财长签订《广场协议》规定降低美元汇价，随后日元一路升值。185年的1比263直到1987年的1比121，两年1倍以上！日本出口能力大幅下降。经济萧条！！！</div><br><div>为了应对萧条，日本政府开始降低贴现率！以后的钱不值钱了啊，所以现在的钱，得多用，多投资！结果，1987年超了59%，1989年超了92%！大笔资金流向土地、股票市场，引起地价和股价的上升！</div><br><div>地价和股价不断的暴涨，对个人、金融机构及企业都产生了极大的影响。结果就是大家越来越有钱，都成为土豪了！1989年，政府觉得不对了，贴现率一下子提高到了3.25%，开始限制不动产的价格了！截止1989年底，东京股市股票平均价格38915.87，而到92年4月，跌倒了17000以下。从186年年底到1991年4月，持续53个月的泡沫经济结束！</div><br><div>结局是很惨的，造成了整个日本经济的萧条。之后三年，基本上零增长！</div><br><div>主要原因：</div><br><div>一，企业生产力过剩。大规模的投资曾是支撑日本经济的重要因素。</div><br><div>二，科技创新后经不足。全靠引进发达国家的技术来消化，自身研发能力不足，信息产业被美国领先了啊！</div><br><div>三，产业结构调整滞后。</div><br><div>四，经济体制调整失误。政府主导的市场经济，到后来，想的越发疲软，规则体系有诸多掣肘。</div><br><div>五，金融机构存在巨额不良债权。</div><br><div>六，财政危机严重，削弱了政府干预经济的能力。日本一直奉行凯恩斯的赤字财政政策，财政支出不断扩大，以至于发展成危机。</div><br><div>这次危机的特点：</div><br><div>一，持续时间长。有20年了吧。</div><br><div>二，企业大量倒闭、负债规模空前、失业率不断上升。</div><br><div>三，金融机构相继倒闭，不良债权规模急剧增加，金融系统信用等级评级普遍下降。</div><br><div>四，设备投资乏力，工业生产下降。</div><br><div>五，具名消费水平下降。</div><br><div>六，经济、金融形势恶化的同时，日本证据也进入了战后最为动荡不安的时期。</div><br><div>日本经济发展展望</div><br><div></div>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/08/09/财富是什么——金融学的第一本书/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/08/08/再学习之HTML+CSS/" id="post_nav-older" class="next-content">
+            舊篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="conan's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        conanskyforce@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                首頁
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    過往
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">三月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主題 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/kevinconan" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>柯南的日常
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
