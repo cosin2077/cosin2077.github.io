@@ -43,7 +43,7 @@
     
     <title>
         
-            权利距离指数(PDI) | 
+            nodejs爬取以太坊区块数据 | 
         
         柯南的日常
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="柯南君,Full Stack">
-    <meta name="keywords" content=",读书">
+    <meta name="keywords" content="">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="柯南的日常">
-    <meta name="msapplication-starturl" content="/2018/02/03/权利距离指数(PDI)/">
+    <meta name="msapplication-starturl" content="/2018/03/20/nodejs爬取以太坊区块数据/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="柯南的日常">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="/2018/02/03/权利距离指数(PDI)/">
+    <meta property="og:url" content="/2018/03/20/nodejs爬取以太坊区块数据/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="权利距离指数(PDI) | 柯南的日常">
+    <meta property="og:title" content="nodejs爬取以太坊区块数据 | 柯南的日常">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="柯南君,Full Stack">
-    <meta property="og:article:tag" content="读书"> 
+    
 
     
-        <meta property="article:published_time" content="Sat Feb 03 2018 04:36:31 GMT+0800">
-        <meta property="article:modified_time" content="Sat Jul 14 2018 12:56:22 GMT+0800">
+        <meta property="article:published_time" content="Tue Mar 20 2018 22:14:30 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jul 20 2018 17:43:56 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="/2018/02/03/权利距离指数(PDI)/index.html" />
+        <link rel="canonical" href="/2018/03/20/nodejs爬取以太坊区块数据/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "/2018/02/03/权利距离指数(PDI)/index.html",
-    "headline": "权利距离指数(PDI)",
-    "datePublished": "Sat Feb 03 2018 04:36:31 GMT+0800",
-    "dateModified": "Sat Jul 14 2018 12:56:22 GMT+0800",
+    "mainEntityOfPage": "/2018/03/20/nodejs爬取以太坊区块数据/index.html",
+    "headline": "nodejs爬取以太坊区块数据",
+    "datePublished": "Tue Mar 20 2018 22:14:30 GMT+0800",
+    "dateModified": "Fri Jul 20 2018 17:43:56 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "conan",
@@ -280,7 +280,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",读书",
+    "keywords": "",
     "description": "柯南君,Full Stack",
 }
 </script>
@@ -340,6 +340,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用nodejs-爬取以太坊区块链数据"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用nodejs 爬取以太坊区块链数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#技术栈：node-mongodb-mongoose-web3-pm2"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">技术栈：node mongodb mongoose web3 pm2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#核心代码"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">核心代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#确保开启mongodb之后"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">确保开启mongodb之后</span></a></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -369,7 +378,7 @@
         
     
             <p class="article-headline-p">
-                权利距离指数(PDI)
+                nodejs爬取以太坊区块数据
             </p>
         </div>
 
@@ -388,7 +397,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>conan</strong>
-        <span>2月 03, 2018</span>
+        <span>3月 20, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -406,15 +415,6 @@
 
     <!-- Tags (bookmark) -->
     
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/读书/">读书</a>
-    </ul>
-    
 
     <!-- Share -->
     
@@ -429,7 +429,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=权利距离指数(PDI)&url=/2018/02/03/权利距离指数(PDI)/index.html&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=nodejs爬取以太坊区块数据&url=/2018/03/20/nodejs爬取以太坊区块数据/index.html&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -438,7 +438,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=权利距离指数(PDI)&url=/2018/02/03/权利距离指数(PDI)/index.html&via=conan" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=nodejs爬取以太坊区块数据&url=/2018/03/20/nodejs爬取以太坊区块数据/index.html&via=conan" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -447,7 +447,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=/2018/02/03/权利距离指数(PDI)/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=/2018/03/20/nodejs爬取以太坊区块数据/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -456,7 +456,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=/2018/02/03/权利距离指数(PDI)/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=/2018/03/20/nodejs爬取以太坊区块数据/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -481,10 +481,21 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>权利距离指数(PDI)</p>
-<p>中国的权利距离指数为何如此之高。<br>高PDI使得社会中每个人都唯权力是从，不敢有自己的主见，很难有创造性的思维出现，是被压抑的世界，是被奴役的世界。<br>以说话为向导——讲究表达清楚自己的观点<br>以聆听者为向导——含蓄，委婉， 不伤自尊，认为聆听者能迅速及时反映。（显然，这种中日韩的亚裔文化是有问题的，要求人性一定不如要求法律）。</p>
-<p>努力工作室所有成功人士的共性，而稻田中产生的精华是，通过努力公众，在巨大的不确定性和贫穷中寻找人生的真正价值。</p>
-<p>态度比能力更重要，只要你愿意你就能驾驭数学，这也正是舍恩菲尔德向学生们传授的思想。成功就是坚持不懈，顽强不屈，就是别人花30秒钟就放弃的事情，你却坚持22分钟去思考的坚定信念。</p>
+        <h1 id="使用nodejs-爬取以太坊区块链数据"><a href="#使用nodejs-爬取以太坊区块链数据" class="headerlink" title="使用nodejs 爬取以太坊区块链数据"></a>使用nodejs 爬取以太坊区块链数据</h1><h2 id="技术栈：node-mongodb-mongoose-web3-pm2"><a href="#技术栈：node-mongodb-mongoose-web3-pm2" class="headerlink" title="技术栈：node mongodb mongoose web3 pm2"></a>技术栈：node mongodb mongoose web3 pm2</h2><blockquote>
+<p><em>目的:</em> 获取以太坊网络上边(所有)钱包的余额数量,交易数量等数据.(其实也可以用web3抓取数据,然后保存到自己数据库,做一个自己的区块链浏览器)  </p>
+</blockquote>
+<blockquote>
+<p><em>思路:</em> 通过infura的接口(也可以自己下载geth客户端,然后自己作为一个节点,暴露api给web3),连接到以太坊主网络.<br>通过web3.eth.getBlock 方法遍历所有的区块,在所有的区块中遍历所有的transaction(web3.eth.getTransaction),然后再获取所有的transaction中交易双方的地址,这样就能收集到区块中所有有交易的以太坊钱包地址,<br>然后使用web3.eth.getBalance方法获取所有地址的余额.</p>
+</blockquote>
+<ul>
+<li>预先准备<br>安装好nodejs,mongodb,<br>然后：<br>npm i -S web3<br>npm i -S mongoose  </li>
+</ul>
+<h2 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h2><p>//app.js<br>let Web3 = require(‘web3’),<br>        web3,<br>        mongoose = require(‘mongoose’),<br>        AccountModel = require(‘./accountmodel.js’),<br>        infura_live = ‘<a href="https://mainnet.infura.io/v3/" target="_blank" rel="noopener">https://mainnet.infura.io/v3/</a>&lt;你自己的appid&gt;’;<br>if( typeof web3 !== ‘undefined’){<br>    web3 = new Web3(web3.currentProvider);<br>}else{<br>    web3 = new Web3(new Web3.providers.HttpProvider(infura_live));<br>}<br>function toEth(res){<br>    if(typeof res == ‘number’)return (res/(10**18)).toFixed(8);<br>}<br>//新增账户地址<br>function addNewAccount(newAddress){<br>    return new Promise((resolve,reject)=&gt;{<br>        AccountModel.find({address:newAddress},(err,docs)=&gt;{<br>            if(err) return console.log(err)<br>            if(docs.length!=0){<br>                console.log(‘address:’+newAddress+’ exists!’);<br>                resolve();<br>            }else{<br>                new AccountModel({<br>                    address:newAddress<br>                }).save((err,doc)=&gt;{<br>                    if(err) return console.log(‘save failed.’);<br>                        console.log(‘AccountModel %s save succeed.’,newAddress);<br>                        resolve();<br>                });<br>            }<br>        })<br>    })<br>}<br>//检查当前区块是否已经获取过了<br>function checkBlock(newBlock){<br>    return new Promise((resolve,reject)=&gt;{<br>        AccountModel.find({$where:’this.block!=undefined’},(err,doc)=&gt;{<br>            if(err) return console.log(err);<br>            if(doc.length==0){<br>                AccountModel.create({block:0},(err,doc)=&gt;{<br>                    console.log(‘initial block to 0.’)<br>                })<br>                resolve({<br>                    curBlock:0,<br>                    canContinue:true<br>                })<br>            }else{<br>            resolve( {<br>                curBlock:doc[0].block,<br>                canContinue:newBlock&gt;doc[0].block<br>            });<br>        }<br>    })<br>})<br>}<br>//更新最新区块<br>function updateBlock(newBlock){<br>    return new Promise((resolve,reject)=&gt;{<br>        AccountModel.update({$where:’this.block!=undefined’},{block:newBlock},(err,doc)=&gt;{<br>            if(err) return console.log(err)<br>            console.log(‘updateBlock succeed: ‘,newBlock);<br>            resolve();<br>        })<br>    })<br>}</p>
+<p>var allTransactions = [];<br>var startBlock = 0;//可以自己指定,开始的几万个区块都没有什么交易<br>var latest = 5995950;//可以直接用web3.eth.getBlock(‘latest’,…. 获取最新的区块<br>var endBlock = 10000;<br>(async function(){<br>    console.log(‘started async function…’);<br>    for(var a = start; a &lt; startBlock + endBlock; a++){<br>        console.log(‘fetch block:’,a);<br>        var can = await checkBlock(a);<br>        //如果当前区块已经获取过了，则直接跳过<br>        if(!can.canContinue){<br>            console.log(‘skip this block’);<br>            continue<br>        }<br>        //更新已获取区块<br>        await updateBlock(a);<br>        //获取这个块的内容<br>        await new Promise((resolve,reject)=&gt;{<br>            web3.eth.getBlock(a,(err,res)=&gt;{<br>                if(err){<br>                    return {err:err,block:a};<br>                }else{<br>                    //res.transactions 即为这个块含有的所有交易hash<br>                    console.log(‘transactions:’,JSON.stringify(res.transactions));<br>                    var txs = res.transactions;<br>                    //如果没有transaction，则直接跳过这个块<br>                    if(txs.length==0){<br>                        console.log(‘no txs,skip this block.’)<br>                        resolve();<br>                    }else{<br>                        //异步继发遍历所有交易hash<br>                        (async function(){<br>                            var allAddress = [];<br>                            for(let o = 0; o &lt; txs.length; o++){<br>                                console.log(‘fetch txs:’,txs[o]);<br>                                await new Promise((resolve,reject)=&gt;{<br>                                    web3.eth.getTransaction(txs[o],(err,res)=&gt;{<br>                                        if(err) {<br>                                            return {err:err,block:a,transaction:allTransactions[o]}<br>                                        }else{<br>                                            allAddress.push(res.from);<br>                                            allAddress.push(res.to);<br>                                        };<br>                                        //每获取到一个txs的时候，就去抓取这个transaction中的from,to数据，即交易的发送方和接收方.异步继发储存在mongodb.<br>                                        (async function(){<br>                                            for(let p = 0; p &lt; allAddress.length; p++){<br>                                                console.log(‘add new Address:’,allAddress[p]);<br>                                                if(allAddress[p] ==’undefined’) {<br>                                                    console.log(‘skip undefined address:’,allAddress[p]);<br>                                                    continue;<br>                                                }<br>                                                await addNewAccount(allAddress[p]);<br>                                        }<br>                                        }());<br>                                        resolve();<br>                                    })<br>                                })<br>                            }<br>                        }());<br>                        resolve();<br>                    }<br>                }<br>            });<br>        })<br>    }<br>})();</p>
+<p>//获取每一个地址的ether数量<br>function getBalance(){<br>AccountModel.find({$where:’this.address!=undefined’},(err,docs)=&gt;{<br>if(err) return console.log(err);<br>    console.log(docs.length);<br>    (async function(){<br>        for(let a = 0; a &lt; docs.length; a++){<br>            var addr = docs[a].address;<br>            console.log(‘check addr:’,addr);<br>            var bal = await checkBalance(addr);<br>            if(bal){<br>                console.log(‘skip this addr.’);<br>                continue<br>            }<br>            console.log(‘get balance of ‘,addr,’total:’,docs.length,’now:’,a);<br>            await new Promise((resolve,reject)=&gt;{<br>                web3.eth.getBalance(addr,(err,doc)=&gt;{<br>                    var ether = toEth(doc-0);<br>                    AccountModel.update({address:addr},{balance:ether},(err,doc)=&gt;{<br>                        if(err) return console.log(err);<br>                        console.log(‘set balance %s of %s succeed.’,ether,addr);<br>                        resolve();<br>                    })<br>                });<br>            });<br>        };<br>        console.log(‘finished get balance…..’)<br>    }());<br>})<br>}<br>// getBalance()</p>
+<p>//accountmodel.js<br>let mongoose = require(‘mongoose’);<br>//链接到mongodb的eth_accounts数据库<br>mongoose.connect(‘mongodb://127.0.0.1:27017/eth_accounts’,{ useNewUrlParser: true },(err)=&gt;{<br>    console.log(‘connected to mongodb.’);<br>});<br>//创建一个Schema<br>var AccountSchema = new mongoose.Schema({<br>    number:Number,<br>    address:String,<br>    balance:String,<br>    txs:Number,<br>    block:Number<br>})</p>
+<p>//创建并导出模型<br>AccountModel = mongoose.model(‘AccountModel’,AccountSchema);<br>module.exports = AccountModel;</p>
+<h2 id="确保开启mongodb之后"><a href="#确保开启mongodb之后" class="headerlink" title="确保开启mongodb之后"></a>确保开启mongodb之后</h2><p>pm2 start app.js</p>
 
         
     
@@ -505,21 +516,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/03/20/nodejs爬取以太坊区块数据/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/01/12/非常多的东西需要往这里搬运/" id="post_nav-older" class="next-content">
+        <a href="/2018/02/03/权利距离指数(PDI)/" id="post_nav-older" class="next-content">
             舊篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
