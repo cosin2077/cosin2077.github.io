@@ -43,7 +43,7 @@
     
     <title>
         
-            ES6之Number.EPSILON | 
+            以太坊区块信息保存 | 
         
         柯南的日常
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="柯南君,Full Stack">
-    <meta name="keywords" content=",JavaScript">
+    <meta name="keywords" content="">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="柯南的日常">
-    <meta name="msapplication-starturl" content="/2017/04/25/ES6之Number.EPSILON/">
+    <meta name="msapplication-starturl" content="/2018/05/24/以太坊区块信息保存/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="柯南的日常">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="/2017/04/25/ES6之Number.EPSILON/">
+    <meta property="og:url" content="/2018/05/24/以太坊区块信息保存/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="ES6之Number.EPSILON | 柯南的日常">
+    <meta property="og:title" content="以太坊区块信息保存 | 柯南的日常">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="柯南君,Full Stack">
-    <meta property="og:article:tag" content="JavaScript"> 
+    
 
     
-        <meta property="article:published_time" content="Tue Apr 25 2017 15:24:13 GMT+0800">
-        <meta property="article:modified_time" content="Fri Jul 13 2018 13:17:56 GMT+0800">
+        <meta property="article:published_time" content="Thu May 24 2018 15:52:20 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jul 24 2018 17:57:11 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="/2017/04/25/ES6之Number.EPSILON/index.html" />
+        <link rel="canonical" href="/2018/05/24/以太坊区块信息保存/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "/2017/04/25/ES6之Number.EPSILON/index.html",
-    "headline": "ES6之Number.EPSILON",
-    "datePublished": "Tue Apr 25 2017 15:24:13 GMT+0800",
-    "dateModified": "Fri Jul 13 2018 13:17:56 GMT+0800",
+    "mainEntityOfPage": "/2018/05/24/以太坊区块信息保存/index.html",
+    "headline": "以太坊区块信息保存",
+    "datePublished": "Thu May 24 2018 15:52:20 GMT+0800",
+    "dateModified": "Tue Jul 24 2018 17:57:11 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "conan",
@@ -280,7 +280,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",JavaScript",
+    "keywords": "",
     "description": "柯南君,Full Stack",
 }
 </script>
@@ -340,6 +340,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#以太坊区块信息保存-获取"><span class="post-toc-number">1.</span> <span class="post-toc-text">以太坊区块信息保存(获取)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用docker-搭建了一个以太坊的轻节点"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">用docker 搭建了一个以太坊的轻节点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搭建好节点之后在本地新建项目，安装依赖"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">搭建好节点之后在本地新建项目，安装依赖</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一个循环抓取想要的数据"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">一个循环抓取想要的数据</span></a></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -369,7 +378,7 @@
         
     
             <p class="article-headline-p">
-                ES6之Number.EPSILON
+                以太坊区块信息保存
             </p>
         </div>
 
@@ -388,7 +397,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>conan</strong>
-        <span>4月 25, 2017</span>
+        <span>5月 24, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -406,15 +415,6 @@
 
     <!-- Tags (bookmark) -->
     
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a>
-    </ul>
-    
 
     <!-- Share -->
     
@@ -429,7 +429,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ES6之Number.EPSILON&url=/2017/04/25/ES6之Number.EPSILON/index.html&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=以太坊区块信息保存&url=/2018/05/24/以太坊区块信息保存/index.html&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -438,7 +438,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=ES6之Number.EPSILON&url=/2017/04/25/ES6之Number.EPSILON/index.html&via=conan" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=以太坊区块信息保存&url=/2018/05/24/以太坊区块信息保存/index.html&via=conan" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -447,7 +447,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=/2017/04/25/ES6之Number.EPSILON/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=/2018/05/24/以太坊区块信息保存/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -456,7 +456,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=/2017/04/25/ES6之Number.EPSILON/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=/2018/05/24/以太坊区块信息保存/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -481,9 +481,10 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>ES6在Number对象上扩展了不少属性<br>其中一个就是Number.EPSILON，<br>这是个极小的常量，<br>Number.EPSILON=2.220446049250313e-16<br>目的就是为了浮点数计算误差提供一个标准，<br>如果误差在这个范围内，<br>那么就可以算作精确的</p>
-<p>我们可以定义个函数来判断计算结果是否精确,如果两者误差小于Number.EPSILON，那么就返回true，反之亦然</p>
-<p>function withinErrorRange(left,right){<br>  return Math.abs(left-right)&lt;Number.EPSILON;<br>}<br>withinErrorRange(0.1+0.2,0.3);<br>//true</p>
+        <h1 id="以太坊区块信息保存-获取"><a href="#以太坊区块信息保存-获取" class="headerlink" title="以太坊区块信息保存(获取)"></a>以太坊区块信息保存(获取)</h1><h2 id="用docker-搭建了一个以太坊的轻节点"><a href="#用docker-搭建了一个以太坊的轻节点" class="headerlink" title="用docker 搭建了一个以太坊的轻节点"></a>用docker 搭建了一个以太坊的轻节点</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//拉取以太坊docker镜像</span></span><br><span class="line">docker pull ethereum/client-go</span><br><span class="line"><span class="comment">//docker运行以太坊节点(以轻节点的模式运行--syncmode "light")</span></span><br><span class="line">docker run -d --name geth-node -v $HOME/geth-node:<span class="regexp">/root -p 8454:8545 -p 30303:30303 ethreum/</span>client-go --rpc --syncmode <span class="string">"light"</span></span><br><span class="line"><span class="comment">//docker logs geth-node 可以查看容器日志,轻节点只下载区块头,在需要的时候才回去下载特定的区块数据,所以同步起来非常快,几乎几分钟就能到最新的节点了</span></span><br></pre></td></tr></table></figure>
+<h2 id="搭建好节点之后在本地新建项目，安装依赖"><a href="#搭建好节点之后在本地新建项目，安装依赖" class="headerlink" title="搭建好节点之后在本地新建项目，安装依赖"></a>搭建好节点之后在本地新建项目，安装依赖</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm i -S web3</span><br><span class="line">npm i -S mongoose</span><br><span class="line">npm i -S ioredis</span><br></pre></td></tr></table></figure>
+<h2 id="一个循环抓取想要的数据"><a href="#一个循环抓取想要的数据" class="headerlink" title="一个循环抓取想要的数据"></a>一个循环抓取想要的数据</h2><p><em>app.js 内容</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> Web3 = <span class="built_in">require</span>(<span class="string">'web3'</span>);</span><br><span class="line"><span class="keyword">let</span> url = <span class="string">'http://127.0.0.1:8545'</span>;</span><br><span class="line"><span class="keyword">let</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="keyword">let</span> Redis = <span class="built_in">require</span>(<span class="string">'ioredis'</span>);</span><br><span class="line"><span class="keyword">let</span> redis = <span class="keyword">new</span> Redis();</span><br><span class="line">mongoose.connect(<span class="string">'mongodb://127.0.0.1:27017/eth'</span>,&#123; <span class="attr">useNewUrlParser</span>: <span class="literal">true</span> &#125;);</span><br><span class="line"><span class="keyword">let</span> ethSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">	difficulty: <span class="built_in">String</span>,</span><br><span class="line">	extraData: <span class="built_in">String</span>,</span><br><span class="line">	gasLimit: <span class="built_in">Number</span>,</span><br><span class="line">	gasUsed: <span class="built_in">Number</span>,</span><br><span class="line">	hash: <span class="built_in">String</span>,</span><br><span class="line">	logsBloom: <span class="built_in">String</span>,</span><br><span class="line">	miner: <span class="built_in">String</span>,</span><br><span class="line">	mixHash: <span class="built_in">String</span>,</span><br><span class="line">	nonce: <span class="built_in">String</span>,</span><br><span class="line">	number: <span class="built_in">Number</span>,</span><br><span class="line">	parentHash: <span class="built_in">String</span>,</span><br><span class="line">	receiptsRoot: <span class="built_in">String</span>,</span><br><span class="line">	sha3Uncles: <span class="built_in">String</span>,</span><br><span class="line">	size: <span class="built_in">Number</span>,</span><br><span class="line">	stateRoot: <span class="built_in">String</span>,</span><br><span class="line">	timestamp: <span class="built_in">Number</span>,</span><br><span class="line">	totalDifficulty: <span class="built_in">String</span>,</span><br><span class="line">	transactions: [<span class="built_in">String</span>],</span><br><span class="line">	transactionsRoot: <span class="built_in">String</span>,</span><br><span class="line">	uncles: [<span class="built_in">String</span>]</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">let</span> ethmd = mongoose.model(<span class="string">'ethmd'</span>,ethSchema);</span><br><span class="line"></span><br><span class="line">web3 = <span class="keyword">new</span> Web3(<span class="keyword">new</span> Web3.providers.HttpProvider(url));</span><br><span class="line"></span><br><span class="line">!<span class="function">(<span class="params">fetch = <span class="keyword">async</span> (</span>) =&gt;</span>&#123;</span><br><span class="line">	<span class="comment">//这里只获取了交易量比较多的500w到600w的块</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> a = <span class="number">5000000</span>; a &lt; <span class="number">6000000</span>; a++)&#123;</span><br><span class="line">		<span class="keyword">let</span> curBlock = <span class="keyword">await</span> redis.get(<span class="string">'currentblock'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'curBlock:'</span>,curBlock);</span><br><span class="line">		<span class="keyword">if</span>(curBlock &amp;&amp; curBlock &gt; a ) &#123;</span><br><span class="line">			a = curBlock;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">'skip block to:'</span>,curBlock)</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span> (<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">			web3.eth.getBlock (a,(err,data) =&gt; &#123;</span><br><span class="line">				<span class="keyword">if</span>(err)&#123;</span><br><span class="line">					<span class="built_in">console</span>.log(err);</span><br><span class="line">					<span class="built_in">console</span>.log(<span class="string">`retry....`</span>);</span><br><span class="line">					setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">						fetch();</span><br><span class="line">					&#125;,<span class="number">12000</span>)</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					<span class="built_in">console</span>.log(data);</span><br><span class="line">					ethmd.find(&#123;<span class="attr">number</span>:a&#125;,(err,doc)=&gt;&#123;</span><br><span class="line">						<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">						<span class="keyword">if</span>(doc.length!==<span class="number">0</span>)&#123;</span><br><span class="line">							<span class="built_in">console</span>.log(<span class="string">'block '</span>,a,<span class="string">' exists.'</span>);</span><br><span class="line">							resolve()</span><br><span class="line">						&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">							<span class="keyword">new</span> ethmd(&#123;</span><br><span class="line">								difficulty: data.difficulty,</span><br><span class="line">								extraData: data.extraData,</span><br><span class="line">								gasLimit: data.gasLimit,</span><br><span class="line">								gasUsed: data.gasUsed,</span><br><span class="line">								hash: data.hash,</span><br><span class="line">								logsBloom: data.logsBloom,</span><br><span class="line">								miner: data.miner,</span><br><span class="line">								mixHash: data.mixHash,</span><br><span class="line">								nonce: data.nonce,</span><br><span class="line">								number: data.number,</span><br><span class="line">								parentHash: data.parentHash,</span><br><span class="line">								receiptsRoot: data.receiptsRoot,</span><br><span class="line">								sha3Uncles: data.sha3Uncles,</span><br><span class="line">								size: data.size,</span><br><span class="line">								stateRoot: data.stateRoot,</span><br><span class="line">								timestamp: data.timestamp,</span><br><span class="line">								totalDifficulty: data.totalDifficulty,</span><br><span class="line">								transactions: data.transactions,</span><br><span class="line">								transactionsRoot: data.transactionsRoot,</span><br><span class="line">								uncles: data.uncles</span><br><span class="line">							&#125;).save(<span class="function">(<span class="params">err,doc</span>)=&gt;</span>&#123;</span><br><span class="line">								<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">								<span class="built_in">console</span>.log(<span class="string">`block <span class="subst">$&#123;a&#125;</span> saved.`</span>);</span><br><span class="line">								redis.set(<span class="string">'currentblock'</span>,a,(err,doc)=&gt;&#123;</span><br><span class="line">									<span class="built_in">console</span>.log(<span class="string">'update currentblock to: '</span>,a)</span><br><span class="line">									<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">									resolve();</span><br><span class="line">								&#125;);</span><br><span class="line">							&#125;);</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;)</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	process.exit(<span class="number">0</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
+<p><em>简单起见，所有的内容都在app.js里边,做了最简单一个错误处理,当然mongodb和redis的操作也可能产生错误，如果想程序更加健壮可以把这部分内容加上.</em><br><em>当然这样跑还是太慢了，主要就是获取区块的速度太慢了，可以考虑用全节点模式，那样节点数据就在本地，而不用从网络获取，另外也可以多跑几个实例，分别跑不同的区段然后汇总到数据库</em></p>
 
         
     
@@ -504,21 +505,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/04/25/ES6之Math对象的扩展/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/04/09/《活着》/" id="post_nav-older" class="next-content">
+        <a href="/2018/03/20/nodejs爬取以太坊区块数据/" id="post_nav-older" class="next-content">
             舊篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
