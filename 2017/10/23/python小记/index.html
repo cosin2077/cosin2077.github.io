@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            python小记 | 
+        
+        柯南的日常
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="柯南君,Full Stack">
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="柯南的日常">
+    <meta name="msapplication-starturl" content="/2017/10/23/python小记/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="柯南的日常">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="/2017/10/23/python小记/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="python小记 | 柯南的日常">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="柯南君,Full Stack">
+    
+
+    
+        <meta property="article:published_time" content="Mon Oct 23 2017 18:20:54 GMT+0800">
+        <meta property="article:modified_time" content="Tue Oct 23 2018 18:32:12 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="/2017/10/23/python小记/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "/2017/10/23/python小记/index.html",
+    "headline": "python小记",
+    "datePublished": "Mon Oct 23 2017 18:20:54 GMT+0800",
+    "dateModified": "Tue Oct 23 2018 18:32:12 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "conan",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "你来啦，坐坐呗"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "柯南的日常",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "柯南君,Full Stack",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础"><span class="post-toc-number">1.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#list-和-tuple"><span class="post-toc-number">2.</span> <span class="post-toc-text">list 和 tuple</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参数"><span class="post-toc-number">3.</span> <span class="post-toc-text">参数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#递归"><span class="post-toc-number">4.</span> <span class="post-toc-text">递归</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#生成器"><span class="post-toc-number">5.</span> <span class="post-toc-text">生成器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#map-和-reduce"><span class="post-toc-number">6.</span> <span class="post-toc-text">map 和 reduce</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#匿名函数"><span class="post-toc-number">7.</span> <span class="post-toc-text">匿名函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#装饰器-代码运行期间，动态增加功能的方式"><span class="post-toc-number">8.</span> <span class="post-toc-text">装饰器(代码运行期间，动态增加功能的方式)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#偏函数"><span class="post-toc-number">9.</span> <span class="post-toc-text">偏函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#类"><span class="post-toc-number">10.</span> <span class="post-toc-text">类</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#获取对象信息"><span class="post-toc-number">11.</span> <span class="post-toc-text">获取对象信息</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#获得对象的所有属性和方法"><span class="post-toc-number">12.</span> <span class="post-toc-text">获得对象的所有属性和方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#直接操作一个对象的状态"><span class="post-toc-number">13.</span> <span class="post-toc-text">直接操作一个对象的状态</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#定制类"><span class="post-toc-number">14.</span> <span class="post-toc-text">定制类</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#枚举"><span class="post-toc-number">15.</span> <span class="post-toc-text">枚举</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#错误处理"><span class="post-toc-number">16.</span> <span class="post-toc-text">错误处理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件读写"><span class="post-toc-number">17.</span> <span class="post-toc-text">文件读写</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#序列化"><span class="post-toc-number">18.</span> <span class="post-toc-text">序列化</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSON"><span class="post-toc-number">19.</span> <span class="post-toc-text">JSON</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程和线程"><span class="post-toc-number">20.</span> <span class="post-toc-text">进程和线程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#正则"><span class="post-toc-number">21.</span> <span class="post-toc-text">正则</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常见内建模块"><span class="post-toc-number">22.</span> <span class="post-toc-text">常见内建模块</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三方模块"><span class="post-toc-number">23.</span> <span class="post-toc-text">第三方模块</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#收发邮件"><span class="post-toc-number">24.</span> <span class="post-toc-text">收发邮件</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 73 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                python小记
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>conan</strong>
+        <span>10月 23, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=python小记&url=/2017/10/23/python小记/index.html&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=python小记&url=/2017/10/23/python小记/index.html&via=conan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=/2017/10/23/python小记/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=/2017/10/23/python小记/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p><code>ord()</code> 获取字符的整数表示<br><code>chr()</code> 把编码转换为对应的字符</p>
+<p>计算机内存中, 统一使用<code>unicode</code>编码,需要保存到硬盘或者<br>传说的时候,就转换为<code>utf-8</code>编码</p>
+<p><code>b&#39;ABC&#39;</code> 以字节为单位的<code>bytes</code>(网络传输，保存磁盘,只能包含ascii编码)</p>
+<p>保存为指定的<code>bytes</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'asd'</span>.encode(<span class="string">'ascii'</span>)</span><br><span class="line"><span class="string">'asd'</span>.encode(<span class="string">'utf-8'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>以指定编码解码字节流<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">b'as'</span>.decode(<span class="string">'ascii'</span>,errors=<span class="string">'ignore'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>包含多少个字符<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">len(<span class="string">'真好'</span>)</span><br><span class="line"><span class="comment">#2</span></span><br><span class="line">转换成`bytes`, 计算的就是字节数</span><br><span class="line">len(<span class="string">'明天会更好'</span>.encode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="comment">#15</span></span><br></pre></td></tr></table></figure></p>
+<p>格式化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;%s,真好-分数-%d-%.2f&quot; %(&apos;试试&apos;,2,23.333))</span><br></pre></td></tr></table></figure></p>
+<h2 id="list-和-tuple"><a href="#list-和-tuple" class="headerlink" title="list 和 tuple"></a>list 和 tuple</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">classmates = [<span class="string">'kevin'</span>,<span class="string">'lili'</span>,<span class="string">'jobs'</span>]</span><br><span class="line">追加</span><br><span class="line">classmates.append(<span class="string">'coco'</span>)</span><br><span class="line">插入</span><br><span class="line">classmates.insert(<span class="number">2</span>,<span class="string">'stella'</span>)</span><br><span class="line">删除</span><br><span class="line">classmates.pop(<span class="number">1</span>)</span><br><span class="line">修改</span><br><span class="line">classmates[<span class="number">0</span>] = <span class="string">'kevin.conan'</span></span><br><span class="line"></span><br><span class="line">tp = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">tp2 = (<span class="number">1</span>,)</span><br><span class="line">tp3 = ()</span><br></pre></td></tr></table></figure>
+<p>条件判断</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> a&gt;<span class="number">10</span>:</span><br><span class="line">  print(<span class="string">'a&gt;10'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'a&lt;=10'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> b%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">  print(<span class="string">'b is even'</span>)</span><br><span class="line"><span class="keyword">elif</span> b%<span class="number">3</span> == <span class="number">0</span>:</span><br><span class="line">  print(<span class="string">'b % 3 == 0'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'''whats' ever...'''</span>)</span><br></pre></td></tr></table></figure>
+<p>强制类型转换<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int(<span class="string">'233'</span>)</span><br><span class="line"></span><br><span class="line">str(<span class="string">'233'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="keyword">in</span> [tuple <span class="keyword">or</span> list]:</span><br><span class="line"></span><br><span class="line">range(<span class="number">100</span>)</span><br><span class="line">生成<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3.</span>.<span class="number">.99</span>的list</span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">  sum += x</span><br><span class="line">print(sum)</span><br><span class="line"></span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line">x = <span class="number">100</span></span><br><span class="line"><span class="keyword">while</span> x&gt;<span class="number">0</span>:</span><br><span class="line">	sum += x</span><br><span class="line">	x = x - <span class="number">1</span></span><br><span class="line">print(sum)</span><br><span class="line"></span><br><span class="line">dict 和 set</span><br><span class="line"></span><br><span class="line">d = &#123;<span class="string">"conan"</span>:<span class="number">27</span>,<span class="string">'steve'</span>:<span class="number">49</span>,<span class="string">'coco'</span>:<span class="number">31</span>&#125;</span><br><span class="line">d[<span class="string">'conan'</span>]</span><br><span class="line">d[<span class="string">'stella'</span>] = <span class="number">21</span></span><br><span class="line"></span><br><span class="line"><span class="string">'conan'</span> <span class="keyword">in</span> d</span><br><span class="line"><span class="comment"># True</span></span><br><span class="line"></span><br><span class="line">d.get(<span class="string">'cssonan'</span>)</span><br><span class="line"><span class="comment"># 不存在则返回None</span></span><br><span class="line"></span><br><span class="line">d.get(<span class="string">'sss'</span>,<span class="number">-1</span>)</span><br><span class="line"><span class="comment"># 自定义找不到时候的返回值</span></span><br><span class="line"></span><br><span class="line">d.pop(<span class="string">'stella'</span>)</span><br><span class="line">删除一个键</span><br><span class="line"></span><br><span class="line">s = set(range(<span class="number">10</span>))</span><br><span class="line">s.add(<span class="number">222</span>)</span><br><span class="line">s.remove(<span class="number">222</span>)</span><br><span class="line"></span><br><span class="line">s2 = set(range(<span class="number">20</span>))</span><br><span class="line">s2 &amp; s 交集</span><br><span class="line">s2 | s 并集</span><br></pre></td></tr></table></figure>
+<p>函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_min</span><span class="params">(list)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> min(list)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nop</span><span class="params">()</span>:</span></span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></p>
+<p>返回多个值,实际上返回的是tuple</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rttp</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span></span><br><span class="line">x,y,z = rttp();</span><br></pre></td></tr></table></figure>
+<p>内置类型检测函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">isinstance(type(<span class="number">1</span>),type)</span><br><span class="line">isinstance(<span class="number">1</span>,(float,int))</span><br><span class="line">isinstance(<span class="keyword">True</span>,(float,int,bool))</span><br></pre></td></tr></table></figure></p>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>一般参数:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(x,y,z)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x+y+z</span><br></pre></td></tr></table></figure></p>
+<p>默认参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span><span class="params">(x,y=<span class="number">2</span>,z=<span class="number">3</span>)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x+y+z</span><br></pre></td></tr></table></figure>
+<p>可变参数(内部tuple)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span><span class="params">(x,y=<span class="number">2</span>,*z)</span>:</span></span><br><span class="line">	sum = <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> a <span class="keyword">in</span> z:</span><br><span class="line">		sum += a</span><br><span class="line">	<span class="keyword">return</span> x+y+sum</span><br><span class="line">func3(<span class="number">1</span>,<span class="number">1</span>,*[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br></pre></td></tr></table></figure></p>
+<p>关键字参数(内部dict)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun4</span><span class="params">(x,y=<span class="number">3</span>,*z,**kw)</span>:</span></span><br><span class="line">	print(x,y,z,kw);</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">fun4(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,**&#123;<span class="string">'css'</span>:<span class="string">'asd'</span>&#125;)</span><br><span class="line"><span class="comment">#1 2 (3,) &#123;'css': 'asd'&#125;</span></span><br><span class="line">*args是可变参数，args接收的是一个tuple</span><br><span class="line"></span><br><span class="line">**kw是关键字参数，kw接收的是一个dict</span><br><span class="line"></span><br><span class="line">定义命名的关键字参数在没有可变参数的情况下不要忘了写分隔符*，否则定义的将是位置参数。</span><br></pre></td></tr></table></figure></p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">factorial</span><span class="params">(n)</span>:</span></span><br><span class="line">	<span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		<span class="keyword">return</span> n*factorial(n<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
+<p>切片(含头不含尾)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">L = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">L[:] 复制一遍</span><br><span class="line">L[<span class="number">0</span>:<span class="number">10</span>]</span><br><span class="line">L[:<span class="number">-1</span>] 不包含最后一个</span><br><span class="line">L[<span class="number">1</span>:] 不包含第一个</span><br><span class="line"></span><br><span class="line">L[::<span class="number">2</span>] 每<span class="number">2</span>个取一个</span><br></pre></td></tr></table></figure></p>
+<p>可迭代对象<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</span><br><span class="line"></span><br><span class="line">isinstance([],Iterable)</span><br><span class="line"><span class="comment"># True</span></span><br><span class="line"></span><br><span class="line">list,tuple,字符串,dict,</span><br><span class="line"></span><br><span class="line">dict迭代的时候</span><br><span class="line">迭代key</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dict:</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">迭代value</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> dict.values():</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">一起迭代</span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> dict.items():</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">enumerate 将list变成索引-元素对</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i,v <span class="keyword">in</span> enumerate([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]):</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">list(range(<span class="number">1</span>,<span class="number">11</span>));</span><br><span class="line"><span class="comment">#[1,2,3,4,5,6,7,8,9,10]</span></span><br><span class="line"></span><br><span class="line">[x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>)]</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">g = ( x * x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>))</span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> g:</span><br><span class="line">	print(n)</span><br><span class="line"></span><br><span class="line">迭代器</span><br><span class="line">可直接用<span class="keyword">for</span>循环的数据:</span><br><span class="line">list,tuple,dict,set,str,</span><br><span class="line">generator,包括生成器和带<span class="keyword">yield</span>的generator函数</span><br><span class="line">这些可用<span class="keyword">for</span>循环迭代的对象统称 Iterable 对象</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</span><br><span class="line"></span><br><span class="line">isinstance([],Iterable)</span><br><span class="line">isinstance(&#123;&#125;,Iterable)</span><br><span class="line">isinstance(<span class="string">''</span>,Iterable)</span><br><span class="line">isinstance((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)),Iterable)</span><br><span class="line"><span class="comment">#All Are True</span></span><br><span class="line"></span><br><span class="line">Iterator 对象(能被next()调用迭代)</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterator</span><br><span class="line">isinstance((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)),Iterator)</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line">isinstance(iter(<span class="string">'sad'</span>),Iterator)</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line">isinstance(iter([]),Iterator)</span><br><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
+<h2 id="map-和-reduce"><a href="#map-和-reduce" class="headerlink" title="map 和 reduce"></a>map 和 reduce</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">list(map(str,(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)))</span><br><span class="line"><span class="comment">#['1','2','3','4','5']</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">list(map(<span class="keyword">lambda</span> x:x*x,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]))</span><br><span class="line"><span class="comment">#[1, 4, 9, 16, 25, 36, 49, 64, 81]</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x+y;</span><br><span class="line">reduce(add,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"></span><br><span class="line">filter 和 sorted</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ft</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x%<span class="number">2</span> == <span class="number">0</span></span><br><span class="line">list(filter(ft,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]))</span><br><span class="line"><span class="comment"># [2, 4]</span></span><br><span class="line"></span><br><span class="line">sorted([<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">24</span>,<span class="number">2</span>,<span class="number">23</span>,<span class="number">5</span>])</span><br><span class="line"><span class="comment"># [1, 2, 2, 3, 5, 23, 24]</span></span><br><span class="line"></span><br><span class="line">sorted([<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">24</span>,<span class="number">2</span>,<span class="number">23</span>,<span class="number">5</span>],reverse=<span class="keyword">True</span>)</span><br><span class="line"><span class="comment"># [24, 23, 5, 3, 2, 2, 1]</span></span><br><span class="line"></span><br><span class="line">sorted([<span class="string">'bob'</span>, <span class="string">'about'</span>, <span class="string">'Zoo'</span>, <span class="string">'Credit'</span>], key=str.lower)</span><br><span class="line"><span class="comment"># ['about', 'bob', 'Credit', 'Zoo']</span></span><br></pre></td></tr></table></figure>
+<h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">lambda</span> x: x*x</span><br><span class="line">等价于</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x * x</span><br><span class="line"></span><br><span class="line">list(map(<span class="keyword">lambda</span> x:x*x,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]))</span><br></pre></td></tr></table></figure>
+<h2 id="装饰器-代码运行期间，动态增加功能的方式"><a href="#装饰器-代码运行期间，动态增加功能的方式" class="headerlink" title="装饰器(代码运行期间，动态增加功能的方式)"></a>装饰器(代码运行期间，动态增加功能的方式)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line"><span class="meta">	@functools.wraps(func)</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args,**kw)</span>:</span></span><br><span class="line">		print(<span class="string">"call %s()"</span> % func.__name__)</span><br><span class="line">		<span class="keyword">return</span> func(*args,**kw)</span><br><span class="line">	<span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line">带参数的装饰器</span><br><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(text)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(func)</span>:</span></span><br><span class="line"><span class="meta">		@functools.wraps(func)</span></span><br><span class="line">		<span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args,**kw)</span>:</span></span><br><span class="line">			print(<span class="string">'%s %s():'</span>%(text,func.__name__))</span><br><span class="line">			<span class="keyword">return</span> func(*args,**kw)</span><br><span class="line">		<span class="keyword">return</span> wrapper</span><br><span class="line">	<span class="keyword">return</span> decorator</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">now</span><span class="params">()</span>:</span></span><br><span class="line">	print(<span class="string">'2028-12-3'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> functools</span><br><span class="line">int2 = functools.partial(int,base=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">conan = Student()</span><br><span class="line">isinstance(conan,Student)</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age)</span>:</span></span><br><span class="line">		self.__name = name</span><br><span class="line">		self.__age = age</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">get_name</span><span class="params">(self)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> self.__name</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">get_age</span><span class="params">(self)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> self.__age</span><br><span class="line">bart = Student(<span class="string">'bart'</span>,<span class="number">32</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="获取对象信息"><a href="#获取对象信息" class="headerlink" title="获取对象信息"></a>获取对象信息</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">type()</span><br><span class="line">type(<span class="string">'123'</span>) == str</span><br><span class="line">type(<span class="number">234</span>) == int</span><br><span class="line">type(<span class="number">23.2</span>) == float</span><br><span class="line">type(<span class="number">24</span>+<span class="number">3j</span>) == complex</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> types</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">type(fn) == types.FunctionType</span><br><span class="line">type(abs) == types.BuiltinFuncitonType</span><br><span class="line">type(<span class="keyword">lambda</span> x:x*x) == types.LambdaType</span><br><span class="line">type((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>))) == types.GeneratorType</span><br><span class="line"></span><br><span class="line">isinstance(Child,Parent)</span><br></pre></td></tr></table></figure>
+<h2 id="获得对象的所有属性和方法"><a href="#获得对象的所有属性和方法" class="headerlink" title="获得对象的所有属性和方法"></a>获得对象的所有属性和方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dir()</span><br><span class="line"></span><br><span class="line">dir(<span class="string">"ABC"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="直接操作一个对象的状态"><a href="#直接操作一个对象的状态" class="headerlink" title="直接操作一个对象的状态"></a>直接操作一个对象的状态</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">getattr(obj,key,<span class="keyword">None</span>)</span><br><span class="line">setattr(obj,key,value)</span><br><span class="line">hasattr(obj,key)</span><br><span class="line"></span><br><span class="line">__slots__</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">	__slots__ = (<span class="string">'name'</span>,<span class="string">'score'</span>)</span><br><span class="line"></span><br><span class="line">s = Student()</span><br></pre></td></tr></table></figure>
+<h2 id="定制类"><a href="#定制类" class="headerlink" title="定制类"></a>定制类</h2><p>class Student(object):<br>    def <strong>init</strong>(self, name):<br>        self.name = name<br>    def <strong>str</strong>(self):<br>        return ‘Student object (name=%s)’ % self.name<br>    <strong>repr</strong> = <strong>str</strong></p>
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p>from enum import Enum</p>
+<p>Month = Enum(‘Month’,(‘Jan’, ‘Feb’, ‘Mar’, ‘Apr’, ‘May’, ‘Jun’, ‘Jul’, ‘Aug’, ‘Sep’, ‘Oct’, ‘Nov’, ‘Dec’))</p>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><p>try:<br>    r = 10/0<br>except Exception as e:<br>    print(e.message)<br>finally:<br>    print(‘finally…’)</p>
+<p>记录错误<br>import logging</p>
+<p>try:<br>    someFunc()<br>except Exception as e:<br>    logging.exception(e)</p>
+<h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><p>try:<br>    f = open(‘/path/to/file’,’r’)<br>    print(f.read())<br>finally:<br>    if f:<br>        f.close()</p>
+<p>等价于:<br>with open(‘/path/to/file’,’r’) as f:<br>    print(f.read())</p>
+<p>逐行读取<br>for line in f.readlines():<br>    print(line.strip())</p>
+<p>读取二进制文件<br>f = open(path,’rb’)</p>
+<p>指定非utf8编码的文本文件<br>f = open(path,’r’,encoding=”gbk”)</p>
+<p>忽略错误<br>f = open(path,’r’,encoding=’gbk’,errors=’ignore’)</p>
+<p>写文件<br>f = open(path,’w’)<br>写二进制文件<br>f = open(path,’wb’)</p>
+<p>f.write(‘xxx’)<br>f.close()</p>
+<p>便捷方法:<br>with open(path,’w’) as f:<br>    f.write(‘xxx’)</p>
+<p>##os 模块<br>import os<br>os.name</p>
+<p>os.environ.get(‘HOME’)</p>
+<p>创建 删除文件夹<br>os.mkdir(‘path’)<br>os.rmdir(‘path’)</p>
+<p>路径拼接<br>os.path.join(‘x’,’s’)<br>路径拆分<br>os.path.split(‘a/b/c’)<br>(‘a/b’,’c’)<br>获取后缀名<br>os.path.splitext(‘xxx/xx/xas/xsd.xt’)<br>重命名<br>os.rename(name1,name2)<br>os.remove(name1)</p>
+<p>列出当前目录的文件夹<br>[x for x in os.listdir(‘.’) if os.path.isdir(x)]</p>
+<p>列出当前目录的文件<br>[x for x in os.listdir(‘.’) if os.path.isfile(x)]</p>
+<p>列出当前目录的py文件<br>[x for x in os.listdir(‘.’) if os.path.isfile(x) and os.path.splitext(x)[1]==’.py’]</p>
+<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>import pickle<br>d = dict(name=’bob’,age=20,score=80)<br>pickle.dumps(d)<br>将对象序列化成bytes<br>or<br>f = open(‘dump.txt’,’wb’)<br>pickle.dump(d,f)<br>d.close()</p>
+<p>f = open(‘dump.txt’,’r’)<br>pickle.loads(f.read())</p>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p>import json<br>d = dict(name=’conan’,age=27,gender=’male’)<br>jsonstr = json.dumps(d)</p>
+<p>new_dict = json.loads(jsonstr)</p>
+<p>Class 转换为json对象<br>class Student(object):<br>    def <strong>init</strong>(self,name,age,gender):<br>        self.name = name<br>        self.age = age<br>        self.gender = gender<br>def student2dict(st):<br>    return {<br>        ‘name’:st.name,<br>        ‘age’:st.age,<br>        ‘gender’:st.gender,<br>    }<br>json.dumps(s,default=student2dict)</p>
+<p>json.dumps(s, default=lambda obj: obj.<strong>dict</strong>)</p>
+<p>反序列化<br>def dict2student(d):<br>  return Student(d[‘name’], d[‘age’], d[‘score’])<br>json_str = ‘{“age”: 20, “score”: 88, “name”: “Bob”}’<br>json.loads(json_str, object_hook=dict2student)</p>
+<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><h2 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h2><p>import re</p>
+<p>m = re.match(r’^([a-zA-Z][a-zA-Z0-9.]*)@[a-zA-Z0-9]+.[a-zA-Z]+’,<a href="mailto:&#39;xxx@w21.com">&#39;xxx@w21.com</a>‘)<br>m.group(0)<br>原始字符串<br>m.group(1)<br>匹配的第一个分组<br>m.groups()<br>匹配到的结果元祖表示</p>
+<p>re.split(r’\s+’,’a b  v’)</p>
+<p>编译使用<br>re_num_3 = re.compile(r’(\d{3})-‘)<br>re_num_3.match(‘332-12123’).groups()<br>(‘332’,)</p>
+<h2 id="常见内建模块"><a href="#常见内建模块" class="headerlink" title="常见内建模块"></a>常见内建模块</h2><p>datetime<br>from datetime import datetime<br>now = datetime.now()<br>dt = datetime(2018,10,20,20,20)<br>now.timestamp()<br>datetime.fromtimestamp(now.timestamp())# 本地时间<br>datetime.utcfromtimestamp(now.timestamp())# UTC时间</p>
+<p>字符串 datetime 互相转换<br>datetime.strptime(‘2018-10-20 18:22:22’,’%Y-%m-%d %H:%M:%S’)<br>now.strftime(‘%a, %b %d %H:%M’)</p>
+<p>collections<br>from collections import namedtuple<br>Point = namedtuple(‘Point’,[‘x’,’y’])<br>p = Point(1,2)</p>
+<p>from collections import deque<br>q = deque([‘a’,’b’,’c’])<br>q.append(‘x’)<br>q.appendLeft(‘y’)<br>q</p>
+<p> #deque([‘y’, ‘a’, ‘b’, ‘c’, ‘x’])</p>
+<p>from collections import defaultdict<br>dd = defaultdict(lambda: ‘N/A’)<br>dd[‘key1’] = ‘abc’</p>
+<p>dd[‘key2’]</p>
+<p> #’N/A’</p>
+<p>from collections import OrderDict<br>OrderDict([(‘a’, 1), (‘b’, 2), (‘c’, 3)])</p>
+<p> #key 是有序的</p>
+<p>base64<br>import base64</p>
+<p>c = base64.b64encode(b’binary content’)<br>d = base64.b64decode(c)<br>d.decode(‘utf-8’)</p>
+<p>base64.urlsafe_b64encode(d)<br>base64.urlsafe_b64decode(c)</p>
+<p>hashlib<br>import hashlib</p>
+<p>md5 = hashlib.md5()<br>md5.update(‘that”s pretty awesome…’.encode(‘utf-8’))<br>md5.hexdigest()</p>
+<p>sha1 = hashlib.sha1()<br>sha1.update(‘that”s pretty awesome…’.encode(‘utf-8’))<br>sha1.hexdigest()</p>
+<p>hmac<br>import hmac<br>message = b’hello monkey’;<br>key = b’conan666’;<br>h = hmac.new(key,message,digestmod=”MD5”)<br>h.hexdigest()</p>
+<h2 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h2><p>pillow<br>requests<br>chardet<br>psutil</p>
+<p> #chardet<br>data = chardet.detect(‘锄禾日当午’.encode(‘utf-8’))</p>
+<p> #{‘encoding’: ‘GB2312’, ‘confidence’: 0.7407407407407407, ‘language’: ‘Chinese’}</p>
+<p>import psutil<br>psutil.cpu_count()<br>psutil.virtual_memory()<br>psutil.swap_memory()</p>
+<h2 id="收发邮件"><a href="#收发邮件" class="headerlink" title="收发邮件"></a>收发邮件</h2><p>from email import encoders<br>from email.header import Header<br>from email.mime.text import MIMEText<br>from email.utils import parseaddr, formataddr</p>
+<p>import smtplib</p>
+<p>def _format_addr(s):<br>    name, addr = parseaddr(s)<br>    return formataddr(Header(name,’utf-8’).encode(),addr)</p>
+<p>from_addr = <a href="mailto:&#39;conankyforce@163.com">&#39;conankyforce@163.com</a>‘<br>password = ‘xxxx’<br>to_addr = <a href="mailto:&#39;xxx@22.com">&#39;xxx@22.com</a>‘<br>smtp_server = ‘smtp.163.com’</p>
+<p>msg = MIMEText(‘hello,send by python…’,’plain’,’utf-8’)<br>msg[‘From’] = _format_addr(‘Python爱好者 &lt;%s&gt;’ % from_addr)<br>msg[‘To’] = _format_addr(‘管理员 &lt;%s&gt;’ % to_addr)<br>msg[‘Subject’] = Header(‘来自SMTP的问候……’, ‘utf-8’).encode()</p>
+<p>server = smtplib.SMTP(smtp_server, 25)<br>server.set_debuglevel(1)<br>server.login(from_addr,password)<br>server.sendmail(from_addr,[to_addr],msg.as_string())<br>server.quit()</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/12/02/杂七杂八的一些总结/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/07/12/mongodb学一学/" id="post_nav-older" class="next-content">
+            舊篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="conan's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        conanskyforce@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                首頁
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    過往
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">三月 2016<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主題 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/kevinconan" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>柯南的日常
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
