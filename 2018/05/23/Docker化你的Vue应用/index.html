@@ -43,7 +43,7 @@
     
     <title>
         
-            過往: 2017/12 | 
+            将你的Vue应用部署在Docker环境中 | 
         
         柯南的日常
     </title>
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="柯南的日常">
-    <meta name="msapplication-starturl" content="/archives/2017/12/">
+    <meta name="msapplication-starturl" content="/2018/05/23/Docker化你的Vue应用/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="柯南的日常">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="/archives/2017/12/">
+    <meta property="og:url" content="/2018/05/23/Docker化你的Vue应用/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="過往: 2017/12 | 柯南的日常">
+    <meta property="og:title" content="将你的Vue应用部署在Docker环境中 | 柯南的日常">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="柯南君,Full Stack">
     
 
+    
+        <meta property="article:published_time" content="Wed May 23 2018 22:30:17 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 23 2019 12:51:13 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="/archives/2017/12/index.html" />
+        <link rel="canonical" href="/2018/05/23/Docker化你的Vue应用/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "/2018/05/23/Docker化你的Vue应用/index.html",
+    "headline": "将你的Vue应用部署在Docker环境中",
+    "datePublished": "Wed May 23 2018 22:30:17 GMT+0800",
+    "dateModified": "Tue Apr 23 2019 12:51:13 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "conan",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "你来啦，坐坐呗"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "柯南的日常",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "柯南君,Full Stack",
+}
+</script>
 
 
     
@@ -284,93 +317,232 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#将你的Vue应用部署在Docker环境中"><span class="post-toc-number">1.</span> <span class="post-toc-text">将你的Vue应用部署在Docker环境中</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在项目根目录下创建Dockerfile"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">在项目根目录下创建Dockerfile</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#开始构建项目"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">开始构建项目</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最后，我们就可以在docker中运行我们的Vue-js项目了"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">最后，我们就可以在docker中运行我们的Vue.js项目了</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#结合nginx-用docker部署Vue应用"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">结合nginx,用docker部署Vue应用</span></a></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 73 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/12/02/杂七杂八的一些总结/">杂七杂八的一些总结</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/12/02/杂七杂八的一些总结/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>12月 02, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 73 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                将你的Vue应用部署在Docker环境中
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>conan</strong>
+        <span>5月 23, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=将你的Vue应用部署在Docker环境中&url=/2018/05/23/Docker化你的Vue应用/index.html&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=将你的Vue应用部署在Docker环境中&url=/2018/05/23/Docker化你的Vue应用/index.html&via=conan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=/2018/05/23/Docker化你的Vue应用/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=/2018/05/23/Docker化你的Vue应用/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="将你的Vue应用部署在Docker环境中"><a href="#将你的Vue应用部署在Docker环境中" class="headerlink" title="将你的Vue应用部署在Docker环境中"></a>将你的Vue应用部署在Docker环境中</h2><blockquote>
+<p>8012年，你不得不会的技能，将你的app部署在docker环境中</p>
+</blockquote>
+<p>这篇文章不是docker教程，内容假设你对docker有一定的了解，如果你还不知道docker是什么，docker的基本操作，<a href="https://docs.docker.com/" target="_blank" rel="noopener">点我</a>，小半天就能入门基础操作。通过vue-cli脚手架工具，将Vue项目搭建起来之后……</p>
+<h4 id="在项目根目录下创建Dockerfile"><a href="#在项目根目录下创建Dockerfile" class="headerlink" title="在项目根目录下创建Dockerfile"></a>在项目根目录下创建Dockerfile</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">FROM node:9.11.1-alpine</span><br><span class="line"># 安装一个简单的http静态文件服务器</span><br><span class="line">RUN npm install -g http-server</span><br><span class="line"># 设置 &apos;app&apos; 目录为工作目录</span><br><span class="line">WORKDIR /app</span><br><span class="line"># 复制package.json以及package-lock.json</span><br><span class="line">COPY package*.json ./</span><br><span class="line"># 安装依赖</span><br><span class="line">RUN npm install</span><br><span class="line"># 复制项目文件到当前工作目录</span><br><span class="line">COPY . .</span><br><span class="line"># 构建项目</span><br><span class="line">RUN npm run build</span><br><span class="line"># 对外暴露8080端口</span><br><span class="line">EXPOSE 8080</span><br><span class="line"># 执行http-server</span><br><span class="line">CMD [&quot;http-server&quot;,&quot;dist&quot;]</span><br></pre></td></tr></table></figure>
+<h4 id="开始构建项目"><a href="#开始构建项目" class="headerlink" title="开始构建项目"></a>开始构建项目</h4><p><code>docker build -t my-project/my-dockerize-vuejs-app-0.2.3 .</code>  </p>
+<h4 id="最后，我们就可以在docker中运行我们的Vue-js项目了"><a href="#最后，我们就可以在docker中运行我们的Vue-js项目了" class="headerlink" title="最后，我们就可以在docker中运行我们的Vue.js项目了"></a>最后，我们就可以在docker中运行我们的Vue.js项目了</h4><p><code>docker run -it -p 8080:8080 --rm --name dockerize-vuejs-app-0.2.3 my-project/my-dockerize-vuejs-app-0.2.3</code></p>
+<blockquote>
+<p>我们上边的项目中用到了http-server，这用在原型开发，或者用户量非常小的情况下还是比较适用的，然而实际生产中，我们还是要借助巨人的肩膀，来让我们的应用更加健壮。</p>
+</blockquote>
+<h4 id="结合nginx-用docker部署Vue应用"><a href="#结合nginx-用docker部署Vue应用" class="headerlink" title="结合nginx,用docker部署Vue应用"></a>结合nginx,用docker部署Vue应用</h4><p><strong>编写Dockerfile</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># build阶段 docker在17.05版本之后出的多阶段构建(解决构建臃肿问题)</span><br><span class="line">FROM node:9.11.1-apline as build-stage</span><br><span class="line"># 设置工作目录</span><br><span class="line">WORKDIR /app</span><br><span class="line"># 复制package.json以及package-lock.json</span><br><span class="line">COPY package*.json ./</span><br><span class="line"># 安装依赖</span><br><span class="line">RUN npm install</span><br><span class="line"># 复制项目文件到当前工作目录</span><br><span class="line">COPY . .</span><br><span class="line"># 构建项目</span><br><span class="line">RUN npm run build</span><br><span class="line"></span><br><span class="line"># 生产阶段(用nginx简洁版镜像)</span><br><span class="line">from nginx:1.13.12-alpine as production-stage</span><br><span class="line"># 直接复制构建阶段生成在dist的代码到nginx的html目录下</span><br><span class="line">COPY --from=build-stage /app/dist /usr/share/nginx/html</span><br><span class="line"># 对外暴露nginx端口</span><br><span class="line">EXPOSE 80</span><br><span class="line"># 运行nginx</span><br><span class="line">CMD [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]</span><br></pre></td></tr></table></figure></p>
+<p><strong>构建镜像</strong><br><code>docker build -t my-project/my-dockerize-vuejs-app-with-nginx-0.1.1 .</code></p>
+<p><strong>在docker容器中运行我们的app</strong><br><code>docker run -it -p 8080:80 --rm --name dockerize-vuejs-app-with-nginx-0.1.1 my-project/my-dockerize-vuejs-app-with-nginx-0.1.1</code></p>
+<p>好了，现在你可以在<a href="http://localhost:8080" target="_blank" rel="noopener">localhost:8080</a>查看你的Vue.js 应用了</p>
+<p><strong>[完]</strong></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/05/24/以太坊区块信息保存/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/03/20/nodejs爬取以太坊区块数据/" id="post_nav-older" class="next-content">
+            舊篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
