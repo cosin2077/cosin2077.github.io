@@ -1,1161 +1,1178 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="zh">
-    <head>
-    <meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.5.2 -->
-    <script>
-        window.materialVersion = "1.5.2"
-        // Delete localstorage with these tags
-        window.oldVersion = [
-            'codestartv1',
-            '1.3.4',
-            '1.4.0',
-            '1.4.0b1',
-            '1.5.0'
-        ]
-    </script>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="柯南君,Full Stack">
+<meta name="keywords" content="conanskyforce Front-End Full-Stack">
+<meta property="og:type" content="website">
+<meta property="og:title" content="柯南的日常">
+<meta property="og:url" content="/page/2/index.html">
+<meta property="og:site_name" content="柯南的日常">
+<meta property="og:description" content="柯南君,Full Stack">
+<meta property="og:locale" content="zh-TW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="柯南的日常">
+<meta name="twitter:description" content="柯南君,Full Stack">
+
+<link rel="canonical" href="/page/2/">
 
 
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-TW'
+  };
+</script>
 
-
-
-
-
-
-
-
-
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!-- Title -->
-    
-    <title>
-        
-        柯南的日常
-    </title>
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" href="/img/favicon.png">
-
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="柯南君,Full Stack">
-    <meta name="keywords" content="">
-    <meta name="theme-color" content="#0097A7">
-
-    <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.en.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Import CSS -->
-    
-        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-        
-
-    
-
-    
-
-    <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    overflow-x: hidden !important;
-  }
+  <title>柯南的日常</title>
   
-  code {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
   }
 
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
-      }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-<!-- Import Roboto -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-
-
-<!-- Import Material Icons -->
-
-
-    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-
-
-
-    <!-- Import jQuery -->
-    
-        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
-    
-
-    <!-- WebAPP Icons -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="柯南的日常">
-    <meta name="msapplication-starturl" content="/page/2/">
-    <meta name="msapplication-navbutton-color" content="#0097A7">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="柯南的日常">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- RSS -->
-    
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="/page/2/">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="柯南的日常">
-    <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="柯南君,Full Stack">
-    
-
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="/page/2/index.html" />
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
-
-
-
-    
-
-    <!-- Analytics -->
-    
-    
-    
-
-    <!-- Custom Head -->
-    
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
-
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
-    
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/03/20/nodejs爬取以太坊区块数据/">nodejs爬取以太坊区块数据</a></p>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
+  </div>
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/03/20/nodejs爬取以太坊区块数据/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>3月 20, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
+  <div class="site-meta">
 
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/02/03/权利距离指数(PDI)/">权利距离指数(PDI)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            权利距离指数(PDI)
-中国的权利距离指数为何如此之高。高PDI使得社会中每个人都唯权力是从，不敢有自己的主见，很难有创造性的...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/02/03/权利距离指数(PDI)/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>2月 03, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/22/实现一个mapLimit/">实现一个mapLimit</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/22/实现一个mapLimit/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>1月 22, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/01/12/非常多的东西需要往这里搬运/">非常多的东西需要往这里搬运</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/01/12/非常多的东西需要往这里搬运/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>1月 12, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/12/02/杂七杂八的一些总结/">杂七杂八的一些总结</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/12/02/杂七杂八的一些总结/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>12月 02, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/11/18/继承/">继承</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/11/18/继承/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>11月 18, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/23/python小记/">python小记</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            基础o...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/23/python小记/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>10月 23, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/07/12/mongodb学一学/">mongodb学一学</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            mo...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/07/12/mongodb学一学/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>7月 12, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/06/27/真的太疯狂了/">真的太疯狂了</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            最近居然没有好好写博客了！真是不行不行的！一想到自己隔了一段时间没写点东西，就感到十分的不安。觉得自己好像没...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/06/27/真的太疯狂了/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>6月 27, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/05/15/实现bind的两种方法/">实现bind的两种方法</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ES5中新增了一个bind方法，用于绑定函数this，使得调用栈更改之后this仍然不变，看个例子
-...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/05/15/实现bind的两种方法/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>5月 15, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <a class="extend prev" rel="prev" href="/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 73 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="conan's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        conanskyforce@gmail.com
-        <b class="caret"></b>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">柯南的日常</h1>
+      <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">Full Stack Hobbist</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
 </div>
 
 
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
             
-                <li>
-                    <a href="#" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/03/20/nodejs爬取以太坊区块数据/">
 
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                首頁
-            </a>
-        </li>
-        
-    
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
 
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    過往
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">三月 2016<span class="sidebar_archives-count">1</span></a>
-            </ul>
-        </li>
-        
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/20/nodejs爬取以太坊区块数据/" class="post-title-link" itemprop="url">nodejs爬取以太坊区块数据</a>
+        </h2>
 
-    <!-- Categories  -->
-    
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
 
-    <!-- Pages  -->
-    
+              <time title="創建時間：2018-03-20 22:14:30" itemprop="dateCreated datePublished" datetime="2018-03-20T22:14:30+08:00">2018-03-20</time>
+            </span>
 
-    <!-- Article Number  -->
+          
+
+        </div>
+      </header>
+
     
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="使用nodejs-爬取以太坊区块链数据"><a href="#使用nodejs-爬取以太坊区块链数据" class="headerlink" title="使用nodejs 爬取以太坊区块链数据"></a>使用nodejs 爬取以太坊区块链数据</h1><h2 id="技术栈：node-mongodb-mongoose-web3-pm2"><a href="#技术栈：node-mongodb-mongoose-web3-pm2" class="headerlink" title="技术栈：node mongodb mongoose web3 pm2"></a>技术栈：node mongodb mongoose web3 pm2</h2><blockquote>
+<p><em>目的:</em> 获取以太坊网络上边(所有)钱包的余额数量,交易数量等数据.(其实也可以用web3抓取数据,然后保存到自己数据库,做一个自己的区块链浏览器)  </p>
+</blockquote>
+<blockquote>
+<p><em>思路:</em> 通过infura的接口(也可以自己下载geth客户端,然后自己作为一个节点,暴露api给web3),连接到以太坊主网络.<br>通过web3.eth.getBlock 方法遍历所有的区块,在所有的区块中遍历所有的transaction(web3.eth.getTransaction),然后再获取所有的transaction中交易双方的地址,这样就能收集到区块中所有有交易的以太坊钱包地址,<br>然后使用web3.eth.getBalance方法获取所有地址的余额.</p>
+</blockquote>
+<ul>
+<li>预先准备<br>安装好nodejs,mongodb,<br>然后：<br>npm i -S web3<br>npm i -S mongoose  </li>
 </ul>
+<h2 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h2><p><strong>app.js代码</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> Web3 = <span class="built_in">require</span>(<span class="string">'web3'</span>),</span><br><span class="line">		web3,</span><br><span class="line">		mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>),</span><br><span class="line">		AccountModel = <span class="built_in">require</span>(<span class="string">'./accountmodel.js'</span>),</span><br><span class="line">		infura_live = <span class="string">'https://mainnet.infura.io/v3/&lt;你自己的appid&gt;'</span>;</span><br><span class="line"><span class="keyword">if</span>( <span class="keyword">typeof</span> web3 !== <span class="string">'undefined'</span>)&#123;</span><br><span class="line">	web3 = <span class="keyword">new</span> Web3(web3.currentProvider);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	web3 = <span class="keyword">new</span> Web3(<span class="keyword">new</span> Web3.providers.HttpProvider(infura_live));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toEth</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">typeof</span> res == <span class="string">'number'</span>)<span class="keyword">return</span> (res/(<span class="number">10</span>**<span class="number">18</span>)).toFixed(<span class="number">8</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//新增账户地址</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addNewAccount</span>(<span class="params">newAddress</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">		AccountModel.find(&#123;<span class="attr">address</span>:newAddress&#125;,(err,docs)=&gt;&#123;</span><br><span class="line">			<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">			<span class="keyword">if</span>(docs.length!=<span class="number">0</span>)&#123;</span><br><span class="line">				<span class="built_in">console</span>.log(<span class="string">'address:'</span>+newAddress+<span class="string">' exists!'</span>);</span><br><span class="line">				resolve();</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">new</span> AccountModel(&#123;</span><br><span class="line">					address:newAddress</span><br><span class="line">				&#125;).save(<span class="function">(<span class="params">err,doc</span>)=&gt;</span>&#123;</span><br><span class="line">					<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">'save failed.'</span>);</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">'AccountModel %s save succeed.'</span>,newAddress);</span><br><span class="line">						resolve();</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//检查当前区块是否已经获取过了  </span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkBlock</span>(<span class="params">newBlock</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">		AccountModel.find(&#123;<span class="attr">$where</span>:<span class="string">'this.block!=undefined'</span>&#125;,(err,doc)=&gt;&#123;</span><br><span class="line">			<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err);</span><br><span class="line">			<span class="keyword">if</span>(doc.length==<span class="number">0</span>)&#123;</span><br><span class="line">				AccountModel.create(&#123;<span class="attr">block</span>:<span class="number">0</span>&#125;,(err,doc)=&gt;&#123;</span><br><span class="line">					<span class="built_in">console</span>.log(<span class="string">'initial block to 0.'</span>)</span><br><span class="line">				&#125;)</span><br><span class="line">				resolve(&#123;</span><br><span class="line">					curBlock:<span class="number">0</span>,</span><br><span class="line">					canContinue:<span class="literal">true</span></span><br><span class="line">				&#125;)</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			resolve( &#123;</span><br><span class="line">				curBlock:doc[<span class="number">0</span>].block,</span><br><span class="line">				canContinue:newBlock&gt;doc[<span class="number">0</span>].block</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//更新最新区块</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateBlock</span>(<span class="params">newBlock</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">		AccountModel.update(&#123;<span class="attr">$where</span>:<span class="string">'this.block!=undefined'</span>&#125;,&#123;<span class="attr">block</span>:newBlock&#125;,(err,doc)=&gt;&#123;</span><br><span class="line">			<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">'updateBlock succeed: '</span>,newBlock);</span><br><span class="line">			resolve();</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//检查这个地址是否已经获取过了</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkBalance</span>(<span class="params">addr</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">		AccountModel.find(&#123;<span class="attr">address</span>:addr&#125;,(err,doc)=&gt;&#123;</span><br><span class="line">			<span class="keyword">if</span>(err)&#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(doc[<span class="number">0</span>].balance)&#123;</span><br><span class="line">				resolve(<span class="literal">true</span>);</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				resolve(<span class="literal">false</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> allTransactions = [];</span><br><span class="line"><span class="keyword">var</span> startBlock = <span class="number">0</span>;<span class="comment">//可以自己指定,开始的几万个区块都没有什么交易</span></span><br><span class="line"><span class="keyword">var</span> latest = <span class="number">5995950</span>;<span class="comment">//可以直接用web3.eth.getBlock('latest',.... 获取最新的区块</span></span><br><span class="line"><span class="keyword">var</span> endBlock = <span class="number">10000</span>;</span><br><span class="line">(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'started async function...'</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> a = start; a &lt; startBlock + endBlock; a++)&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'fetch block:'</span>,a);</span><br><span class="line">		<span class="keyword">var</span> can = <span class="keyword">await</span> checkBlock(a);</span><br><span class="line">		<span class="comment">//如果当前区块已经获取过了，则直接跳过</span></span><br><span class="line">		<span class="keyword">if</span>(!can.canContinue)&#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">'skip this block'</span>);</span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//更新已获取区块</span></span><br><span class="line">		<span class="keyword">await</span> updateBlock(a);</span><br><span class="line">		<span class="comment">//获取这个块的内容</span></span><br><span class="line">		<span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">			web3.eth.getBlock(a,(err,res)=&gt;&#123;</span><br><span class="line">				<span class="keyword">if</span>(err)&#123;</span><br><span class="line">					<span class="keyword">return</span> &#123;<span class="attr">err</span>:err,<span class="attr">block</span>:a&#125;;</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					<span class="comment">//res.transactions 即为这个块含有的所有交易hash</span></span><br><span class="line">					<span class="built_in">console</span>.log(<span class="string">'transactions:'</span>,<span class="built_in">JSON</span>.stringify(res.transactions));</span><br><span class="line">					<span class="keyword">var</span> txs = res.transactions;</span><br><span class="line">					<span class="comment">//如果没有transaction，则直接跳过这个块</span></span><br><span class="line">					<span class="keyword">if</span>(txs.length==<span class="number">0</span>)&#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">'no txs,skip this block.'</span>)</span><br><span class="line">						resolve();</span><br><span class="line">					&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">						<span class="comment">//异步继发遍历所有交易hash</span></span><br><span class="line">						(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">							<span class="keyword">var</span> allAddress = [];</span><br><span class="line">							<span class="keyword">for</span>(<span class="keyword">let</span> o = <span class="number">0</span>; o &lt; txs.length; o++)&#123;</span><br><span class="line">								<span class="built_in">console</span>.log(<span class="string">'fetch txs:'</span>,txs[o]);</span><br><span class="line">								<span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">									web3.eth.getTransaction(txs[o],(err,res)=&gt;&#123;</span><br><span class="line">										<span class="keyword">if</span>(err) &#123;</span><br><span class="line">											<span class="keyword">return</span> &#123;<span class="attr">err</span>:err,<span class="attr">block</span>:a,<span class="attr">transaction</span>:allTransactions[o]&#125;</span><br><span class="line">										&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">											allAddress.push(res.from);</span><br><span class="line">											allAddress.push(res.to);</span><br><span class="line">										&#125;;</span><br><span class="line">										<span class="comment">//每获取到一个txs的时候，就去抓取这个transaction中的from,to数据，即交易的发送方和接收方.异步继发储存在mongodb.</span></span><br><span class="line">										(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">											<span class="keyword">for</span>(<span class="keyword">let</span> p = <span class="number">0</span>; p &lt; allAddress.length; p++)&#123;</span><br><span class="line">												<span class="built_in">console</span>.log(<span class="string">'add new Address:'</span>,allAddress[p]);</span><br><span class="line">												<span class="keyword">if</span>(allAddress[p] ==<span class="string">'undefined'</span>) &#123;</span><br><span class="line">													<span class="built_in">console</span>.log(<span class="string">'skip undefined address:'</span>,allAddress[p]);</span><br><span class="line">													<span class="keyword">continue</span>;</span><br><span class="line">												&#125;</span><br><span class="line">												<span class="keyword">await</span> addNewAccount(allAddress[p]);</span><br><span class="line">										&#125;</span><br><span class="line">										&#125;());</span><br><span class="line">										resolve();</span><br><span class="line">									&#125;)</span><br><span class="line">								&#125;)</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;());</span><br><span class="line">						resolve();</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//获取每一个地址的ether数量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBalance</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">AccountModel.find(&#123;<span class="attr">$where</span>:<span class="string">'this.address!=undefined'</span>&#125;,(err,docs)=&gt;&#123;</span><br><span class="line"><span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err);</span><br><span class="line">	<span class="built_in">console</span>.log(docs.length);</span><br><span class="line">	(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">let</span> a = <span class="number">0</span>; a &lt; docs.length; a++)&#123;</span><br><span class="line">			<span class="keyword">var</span> addr = docs[a].address;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">'check addr:'</span>,addr);</span><br><span class="line">			<span class="keyword">var</span> bal = <span class="keyword">await</span> checkBalance(addr);</span><br><span class="line">			<span class="keyword">if</span>(bal)&#123;</span><br><span class="line">				<span class="built_in">console</span>.log(<span class="string">'skip this addr.'</span>);</span><br><span class="line">				<span class="keyword">continue</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">'get balance of '</span>,addr,<span class="string">'total:'</span>,docs.length,<span class="string">'now:'</span>,a);</span><br><span class="line">			<span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">				web3.eth.getBalance(addr,(err,doc)=&gt;&#123;</span><br><span class="line">					<span class="keyword">var</span> ether = toEth(doc<span class="number">-0</span>);</span><br><span class="line">					AccountModel.update(&#123;<span class="attr">address</span>:addr&#125;,&#123;<span class="attr">balance</span>:ether&#125;,(err,doc)=&gt;&#123;</span><br><span class="line">						<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err);</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">'set balance %s of %s succeed.'</span>,ether,addr);</span><br><span class="line">						resolve();</span><br><span class="line">					&#125;)</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'finished get balance.....'</span>)</span><br><span class="line">	&#125;());</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// getBalance()</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>accountmodel.js代码</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="comment">//链接到mongodb的eth_accounts数据库</span></span><br><span class="line">mongoose.connect(<span class="string">'mongodb://127.0.0.1:27017/eth_accounts'</span>,&#123; <span class="attr">useNewUrlParser</span>: <span class="literal">true</span> &#125;,(err)=&gt;&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'connected to mongodb.'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//创建一个Schema</span></span><br><span class="line"><span class="keyword">var</span> AccountSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">	number:<span class="built_in">Number</span>,</span><br><span class="line">	address:<span class="built_in">String</span>,</span><br><span class="line">	balance:<span class="built_in">String</span>,</span><br><span class="line">	txs:<span class="built_in">Number</span>,</span><br><span class="line">	block:<span class="built_in">Number</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建并导出模型</span></span><br><span class="line">AccountModel = mongoose.model(<span class="string">'AccountModel'</span>,AccountSchema);</span><br><span class="line"><span class="built_in">module</span>.exports = AccountModel;</span><br></pre></td></tr></table></figure>
+<h2 id="确保开启mongodb之后"><a href="#确保开启mongodb之后" class="headerlink" title="确保开启mongodb之后"></a>确保开启mongodb之后</h2><p>pm2 start app.js</p>
 
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-    <div class="sidebar-divider"></div>
-
-
-<!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主題 - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
+      
     </div>
 
-    <!-- Sidebar Image -->
     
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
-</aside>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/02/03/权利距离指数(PDI)/">
 
-                    
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
 
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/03/权利距离指数(PDI)/" class="post-title-link" itemprop="url">权利距离指数(PDI)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2018-02-03 04:36:31" itemprop="dateCreated datePublished" datetime="2018-02-03T04:36:31+08:00">2018-02-03</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>权利距离指数(PDI)</p>
+<p>中国的权利距离指数为何如此之高。<br>高PDI使得社会中每个人都唯权力是从，不敢有自己的主见，很难有创造性的思维出现，是被压抑的世界，是被奴役的世界。<br>以说话为向导——讲究表达清楚自己的观点<br>以聆听者为向导——含蓄，委婉， 不伤自尊，认为聆听者能迅速及时反映。（显然，这种中日韩的亚裔文化是有问题的，要求人性一定不如要求法律）。</p>
+<p>努力工作室所有成功人士的共性，而稻田中产生的精华是，通过努力公众，在巨大的不确定性和贫穷中寻找人生的真正价值。</p>
+<p>态度比能力更重要，只要你愿意你就能驾驭数学，这也正是舍恩菲尔德向学生们传授的思想。成功就是坚持不懈，顽强不屈，就是别人花30秒钟就放弃的事情，你却坚持22分钟去思考的坚定信念。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/01/22/实现一个mapLimit/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/22/实现一个mapLimit/" class="post-title-link" itemprop="url">实现一个mapLimit</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2018-01-22 19:39:13" itemprop="dateCreated datePublished" datetime="2018-01-22T19:39:13+08:00">2018-01-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="实现一个mapLimit（异步并发控制）"><a href="#实现一个mapLimit（异步并发控制）" class="headerlink" title="实现一个mapLimit（异步并发控制）"></a>实现一个mapLimit（异步并发控制）</h2><p>核心主要是异步流程的控制,<br><code>核心代码:</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> index = <span class="number">0</span>,</span><br><span class="line">	 completed = <span class="number">0</span>,</span><br><span class="line">	 running = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">next</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.info(<span class="string">'running:'</span>,running,<span class="string">" index:"</span>,index,<span class="string">" completed:"</span>,completed)</span><br><span class="line">	<span class="comment">//如果 当前运行任务数量小于 并发限制数量 且 完成的任务数小于总任务数目,则取出下一个任务执行，在其回调中, 让running--, complete++;并且执行下一个next();执行完任务行后, running++;</span></span><br><span class="line">	<span class="keyword">while</span> ( running &lt; concurrency &amp;&amp; index &lt; tasks.length ) &#123;</span><br><span class="line">		task = tasks[index++]</span><br><span class="line">		task(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">			running--</span><br><span class="line">			completed++</span><br><span class="line">			<span class="keyword">if</span> ( completed == tasks.length )&#123;</span><br><span class="line">				<span class="keyword">return</span> callback()</span><br><span class="line">			&#125;</span><br><span class="line">			next()</span><br><span class="line">		&#125;)</span><br><span class="line">		running++</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">next()</span><br></pre></td></tr></table></figure></p>
+<p>全部代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mapLimit</span> (<span class="params"> tasks, concurrency=<span class="number">1</span>, callback </span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!<span class="built_in">Array</span>.isArray(tasks)) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'first argument must be array'</span>)</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">typeof</span>(concurrency)!=<span class="string">'number'</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'second argument must be number'</span>)</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">typeof</span>(callback)!=<span class="string">'function'</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'third argument must be function'</span>)</span><br><span class="line">	<span class="keyword">let</span> index = <span class="number">0</span>,</span><br><span class="line">			completed = <span class="number">0</span>,</span><br><span class="line">			running = <span class="number">0</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">next</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">`running:<span class="subst">$&#123;running&#125;</span>,concurrency:<span class="subst">$&#123;concurrency&#125;</span>,completed:<span class="subst">$&#123;completed&#125;</span>`</span>);</span><br><span class="line">		<span class="keyword">while</span> ( running &lt;= concurrency &amp;&amp; index &lt; tasks.length ) &#123;</span><br><span class="line">			task = tasks[index++]</span><br><span class="line">			task(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">				running--</span><br><span class="line">				completed++</span><br><span class="line">				<span class="keyword">if</span> ( completed == tasks.length )&#123;</span><br><span class="line">					<span class="keyword">return</span> callback()</span><br><span class="line">				&#125;</span><br><span class="line">				next()</span><br><span class="line">			&#125;)</span><br><span class="line">			running++</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	next()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>随便开一个百度首页测试</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">generateTask</span>(<span class="params">num = <span class="number">100</span></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> tasks = [];</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> fetch(location.href+<span class="string">'?'</span>+<span class="built_in">Math</span>.random())</span><br><span class="line">		.then()</span><br><span class="line">		.then(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">			callback()</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; num; i++) &#123;</span><br><span class="line">		tasks.push(fetchData)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> tasks;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> tasks = generateTask(<span class="number">1e2</span>)</span><br><span class="line"></span><br><span class="line">mapLimit(tasks,<span class="number">50</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">'全部任务结束!'</span>)&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/6fd49c27gy1fyfrp1krc8j20io1i71kx.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/6fd49c27gy1fyfrly2z5ej21280r4kb6.jpg" alt=""></p>
+<h2 id="end"><a href="#end" class="headerlink" title="end"></a>end</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/01/12/非常多的东西需要往这里搬运/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/12/非常多的东西需要往这里搬运/" class="post-title-link" itemprop="url">非常多的东西需要往这里搬运</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2018-01-12 19:11:16" itemprop="dateCreated datePublished" datetime="2018-01-12T19:11:16+08:00">2018-01-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="不得不说Github-Pages真是神器呀"><a href="#不得不说Github-Pages真是神器呀" class="headerlink" title="不得不说Github Pages真是神器呀."></a>不得不说Github Pages真是神器呀.</h2><p></p><p><br>从一开始自己到处找免费的代码托管空间,<br>再到空间跑路/续费,<br>之后又是自己往自己服务器迁移博客,<br>时间过的还是非常之快的,不知不觉得,我至少迁移过3次以上的博客了,<br>风格也变化了很多次,<br>从一开始的简单网页,再到WordPress,<br>最后到Hexo,</p>
+<blockquote>
+<p>NodeJS也真是<code>awesome</code>,<br>帮我完成了从WordPress xml备份到新hexo md文件的写入，<br>棒棒哒💯!  </p>
+</blockquote>
+<p>可以说是十分波折的,<br>还好最后找到了node栈的Hexo和Github Page帮我托管,<br>Github这么家大业大,应该能帮我继续托管下去.</p>
+<p>
+
+</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/12/02/杂七杂八的一些总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/12/02/杂七杂八的一些总结/" class="post-title-link" itemprop="url">杂七杂八的一些总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-12-02 04:21:41" itemprop="dateCreated datePublished" datetime="2017-12-02T04:21:41+08:00">2017-12-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="杂七杂八的一些总结"><a href="#杂七杂八的一些总结" class="headerlink" title="杂七杂八的一些总结"></a>杂七杂八的一些总结</h1><ol>
+<li>努力去思考实现的路径，而不是一直在纠结是否可行</li>
+<li>有些事情就是，吾之蜜糖，彼之砒霜</li>
+<li>愿意放弃自由来换保障的人，即得不到自由，也得不到保障</li>
+<li>男人的语言是为了阐述事实，女人的语言是为了表达情感，男人需要独处，女人需要倾听</li>
+<li>工作之外，还要有精力去享受生活</li>
+<li>不同的环境会影响不同基因的表达，人也是这样的，对吗？</li>
+<li>我们只完成困难的事，我们不完成不可能的事</li>
+<li>卖空机制提高了市场效率，他能够让看好的声音和看空的声音同时进入这个市场，这个理论的来源于一个非常著名的理论 —— 估值偏高假说。这个理论认为，一个股票的价格是市场信息的汇总，你看好的人要进入这个市场，那不看好的人也要进入这个市场，才能有助于真实价格的发现。而不看好的人进入市场的方式就是做空。17年-18年初的比特币泡沫可谓成也期货败也期货。</li>
+<li>不要成为知识瘫痪的长颈鹿，眼界学时，知识越来越多，但是行动能力却越来越弱。</li>
+<li></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/11/18/继承/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/11/18/继承/" class="post-title-link" itemprop="url">继承</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-11-18 17:14:45" itemprop="dateCreated datePublished" datetime="2017-11-18T17:14:45+08:00">2017-11-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="JavaScript继承"><a href="#JavaScript继承" class="headerlink" title="JavaScript继承"></a>JavaScript继承</h1><h3 id="原型继承-问题：如果父类有引用类型，实例都会共享这引用类型"><a href="#原型继承-问题：如果父类有引用类型，实例都会共享这引用类型" class="headerlink" title="原型继承,问题：如果父类有引用类型，实例都会共享这引用类型"></a>原型继承,问题：如果父类有引用类型，实例都会共享这引用类型</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.basic = <span class="string">'basic'</span>;</span><br><span class="line">	<span class="keyword">this</span>.refer = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">SubType.prototype = <span class="keyword">new</span> SuperType();</span><br><span class="line">SubType.prototype.constructor = SubType;</span><br></pre></td></tr></table></figure>
+<h3 id="为了解决这个问题，发明了借用构造函数-这样每个实例都有自己引用属性了"><a href="#为了解决这个问题，发明了借用构造函数-这样每个实例都有自己引用属性了" class="headerlink" title="为了解决这个问题，发明了借用构造函数,这样每个实例都有自己引用属性了"></a>为了解决这个问题，发明了借用构造函数,这样每个实例都有自己引用属性了</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.refer = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">&#125;</span><br><span class="line">SubType.prototype = <span class="keyword">new</span> SuperType();</span><br><span class="line">SubType.prototype.constructor = SubType;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	SuperType.call(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="都继承了父类，函数复用就无从说起，于是发明了组合继承"><a href="#都继承了父类，函数复用就无从说起，于是发明了组合继承" class="headerlink" title="都继承了父类，函数复用就无从说起，于是发明了组合继承"></a>都继承了父类，函数复用就无从说起，于是发明了组合继承</h3><h3 id="调用构造函数继承实例属性，在子类定义原型方法"><a href="#调用构造函数继承实例属性，在子类定义原型方法" class="headerlink" title="调用构造函数继承实例属性，在子类定义原型方法"></a>调用构造函数继承实例属性，在子类定义原型方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Subtype</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	SuperType.call(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">SubType.prototype = <span class="keyword">new</span> SuperType();</span><br><span class="line">SubType.prototype.constructor = SubType;</span><br><span class="line">SubType.prototype.someMethod = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="原型式继承-父类引用属性也会共享"><a href="#原型式继承-父类引用属性也会共享" class="headerlink" title="原型式继承,父类引用属性也会共享"></a>原型式继承,父类引用属性也会共享</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">creatFromObject</span>(<span class="params">parent</span>)</span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	F.prototype = parent;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> F();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> child = creatFromObject(&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="寄生式继承，不能做到函数复用"><a href="#寄生式继承，不能做到函数复用" class="headerlink" title="寄生式继承，不能做到函数复用"></a>寄生式继承，不能做到函数复用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createAnother</span>(<span class="params">parent</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> clone = creatFromObject(parent);</span><br><span class="line">	clone.someMethod = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	<span class="keyword">return</span> clone;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="寄生组合继承-避免构造函数执行2次"><a href="#寄生组合继承-避免构造函数执行2次" class="headerlink" title="寄生组合继承(避免构造函数执行2次)"></a>寄生组合继承(避免构造函数执行2次)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">inherit</span>(<span class="params">SubType, SuperType</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> prototype = creatFromObject(SuperType.prototype)</span><br><span class="line">	prototype.constructor = Subtype;</span><br><span class="line">	Subtype.prototype = prototype;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/10/23/python小记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/10/23/python小记/" class="post-title-link" itemprop="url">python小记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-10-23 18:20:54" itemprop="dateCreated datePublished" datetime="2017-10-23T18:20:54+08:00">2017-10-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p><code>ord()</code> 获取字符的整数表示<br><code>chr()</code> 把编码转换为对应的字符</p>
+<p>计算机内存中, 统一使用<code>unicode</code>编码,需要保存到硬盘或者<br>传说的时候,就转换为<code>utf-8</code>编码</p>
+<p><code>b&#39;ABC&#39;</code> 以字节为单位的<code>bytes</code>(网络传输，保存磁盘,只能包含ascii编码)</p>
+<p>保存为指定的<code>bytes</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'asd'</span>.encode(<span class="string">'ascii'</span>)</span><br><span class="line"><span class="string">'asd'</span>.encode(<span class="string">'utf-8'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>以指定编码解码字节流<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">b'as'</span>.decode(<span class="string">'ascii'</span>,errors=<span class="string">'ignore'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>包含多少个字符<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">len(<span class="string">'真好'</span>)</span><br><span class="line"><span class="comment">#2</span></span><br><span class="line">转换成`bytes`, 计算的就是字节数</span><br><span class="line">len(<span class="string">'明天会更好'</span>.encode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="comment">#15</span></span><br></pre></td></tr></table></figure></p>
+<p>格式化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;%s,真好-分数-%d-%.2f&quot; %(&apos;试试&apos;,2,23.333))</span><br></pre></td></tr></table></figure></p>
+<h2 id="list-和-tuple"><a href="#list-和-tuple" class="headerlink" title="list 和 tuple"></a>list 和 tuple</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">classmates = [<span class="string">'kevin'</span>,<span class="string">'lili'</span>,<span class="string">'jobs'</span>]</span><br><span class="line">追加</span><br><span class="line">classmates.append(<span class="string">'coco'</span>)</span><br><span class="line">插入</span><br><span class="line">classmates.insert(<span class="number">2</span>,<span class="string">'stella'</span>)</span><br><span class="line">删除</span><br><span class="line">classmates.pop(<span class="number">1</span>)</span><br><span class="line">修改</span><br><span class="line">classmates[<span class="number">0</span>] = <span class="string">'kevin.conan'</span></span><br><span class="line"></span><br><span class="line">tp = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">tp2 = (<span class="number">1</span>,)</span><br><span class="line">tp3 = ()</span><br></pre></td></tr></table></figure>
+<p>条件判断</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> a&gt;<span class="number">10</span>:</span><br><span class="line">  print(<span class="string">'a&gt;10'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'a&lt;=10'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> b%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">  print(<span class="string">'b is even'</span>)</span><br><span class="line"><span class="keyword">elif</span> b%<span class="number">3</span> == <span class="number">0</span>:</span><br><span class="line">  print(<span class="string">'b % 3 == 0'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'''whats' ever...'''</span>)</span><br></pre></td></tr></table></figure>
+<p>强制类型转换<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int(<span class="string">'233'</span>)</span><br><span class="line"></span><br><span class="line">str(<span class="string">'233'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="keyword">in</span> [tuple <span class="keyword">or</span> list]:</span><br><span class="line"></span><br><span class="line">range(<span class="number">100</span>)</span><br><span class="line">生成<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3.</span>.<span class="number">.99</span>的list</span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">  sum += x</span><br><span class="line">print(sum)</span><br><span class="line"></span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line">x = <span class="number">100</span></span><br><span class="line"><span class="keyword">while</span> x&gt;<span class="number">0</span>:</span><br><span class="line">	sum += x</span><br><span class="line">	x = x - <span class="number">1</span></span><br><span class="line">print(sum)</span><br><span class="line"></span><br><span class="line">dict 和 set</span><br><span class="line"></span><br><span class="line">d = &#123;<span class="string">"conan"</span>:<span class="number">27</span>,<span class="string">'steve'</span>:<span class="number">49</span>,<span class="string">'coco'</span>:<span class="number">31</span>&#125;</span><br><span class="line">d[<span class="string">'conan'</span>]</span><br><span class="line">d[<span class="string">'stella'</span>] = <span class="number">21</span></span><br><span class="line"></span><br><span class="line"><span class="string">'conan'</span> <span class="keyword">in</span> d</span><br><span class="line"><span class="comment"># True</span></span><br><span class="line"></span><br><span class="line">d.get(<span class="string">'cssonan'</span>)</span><br><span class="line"><span class="comment"># 不存在则返回None</span></span><br><span class="line"></span><br><span class="line">d.get(<span class="string">'sss'</span>,<span class="number">-1</span>)</span><br><span class="line"><span class="comment"># 自定义找不到时候的返回值</span></span><br><span class="line"></span><br><span class="line">d.pop(<span class="string">'stella'</span>)</span><br><span class="line">删除一个键</span><br><span class="line"></span><br><span class="line">s = set(range(<span class="number">10</span>))</span><br><span class="line">s.add(<span class="number">222</span>)</span><br><span class="line">s.remove(<span class="number">222</span>)</span><br><span class="line"></span><br><span class="line">s2 = set(range(<span class="number">20</span>))</span><br><span class="line">s2 &amp; s 交集</span><br><span class="line">s2 | s 并集</span><br></pre></td></tr></table></figure>
+<p>函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_min</span><span class="params">(list)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> min(list)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nop</span><span class="params">()</span>:</span></span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></p>
+<p>返回多个值,实际上返回的是tuple</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rttp</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span></span><br><span class="line">x,y,z = rttp();</span><br></pre></td></tr></table></figure>
+<p>内置类型检测函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">isinstance(type(<span class="number">1</span>),type)</span><br><span class="line">isinstance(<span class="number">1</span>,(float,int))</span><br><span class="line">isinstance(<span class="keyword">True</span>,(float,int,bool))</span><br></pre></td></tr></table></figure></p>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>一般参数:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(x,y,z)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x+y+z</span><br></pre></td></tr></table></figure></p>
+<p>默认参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span><span class="params">(x,y=<span class="number">2</span>,z=<span class="number">3</span>)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x+y+z</span><br></pre></td></tr></table></figure>
+<p>可变参数(内部tuple)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span><span class="params">(x,y=<span class="number">2</span>,*z)</span>:</span></span><br><span class="line">	sum = <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> a <span class="keyword">in</span> z:</span><br><span class="line">		sum += a</span><br><span class="line">	<span class="keyword">return</span> x+y+sum</span><br><span class="line">func3(<span class="number">1</span>,<span class="number">1</span>,*[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br></pre></td></tr></table></figure></p>
+<p>关键字参数(内部dict)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun4</span><span class="params">(x,y=<span class="number">3</span>,*z,**kw)</span>:</span></span><br><span class="line">	print(x,y,z,kw);</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">fun4(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,**&#123;<span class="string">'css'</span>:<span class="string">'asd'</span>&#125;)</span><br><span class="line"><span class="comment">#1 2 (3,) &#123;'css': 'asd'&#125;</span></span><br><span class="line">*args是可变参数，args接收的是一个tuple</span><br><span class="line"></span><br><span class="line">**kw是关键字参数，kw接收的是一个dict</span><br><span class="line"></span><br><span class="line">定义命名的关键字参数在没有可变参数的情况下不要忘了写分隔符*，否则定义的将是位置参数。</span><br></pre></td></tr></table></figure></p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">factorial</span><span class="params">(n)</span>:</span></span><br><span class="line">	<span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		<span class="keyword">return</span> n*factorial(n<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
+<p>切片(含头不含尾)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">L = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">L[:] 复制一遍</span><br><span class="line">L[<span class="number">0</span>:<span class="number">10</span>]</span><br><span class="line">L[:<span class="number">-1</span>] 不包含最后一个</span><br><span class="line">L[<span class="number">1</span>:] 不包含第一个</span><br><span class="line"></span><br><span class="line">L[::<span class="number">2</span>] 每<span class="number">2</span>个取一个</span><br></pre></td></tr></table></figure></p>
+<p>可迭代对象<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</span><br><span class="line"></span><br><span class="line">isinstance([],Iterable)</span><br><span class="line"><span class="comment"># True</span></span><br><span class="line"></span><br><span class="line">list,tuple,字符串,dict,</span><br><span class="line"></span><br><span class="line">dict迭代的时候</span><br><span class="line">迭代key</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dict:</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">迭代value</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> dict.values():</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">一起迭代</span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> dict.items():</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">enumerate 将list变成索引-元素对</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i,v <span class="keyword">in</span> enumerate([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]):</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">list(range(<span class="number">1</span>,<span class="number">11</span>));</span><br><span class="line"><span class="comment">#[1,2,3,4,5,6,7,8,9,10]</span></span><br><span class="line"></span><br><span class="line">[x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>)]</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">g = ( x * x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>))</span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> g:</span><br><span class="line">	print(n)</span><br><span class="line"></span><br><span class="line">迭代器</span><br><span class="line">可直接用<span class="keyword">for</span>循环的数据:</span><br><span class="line">list,tuple,dict,set,str,</span><br><span class="line">generator,包括生成器和带<span class="keyword">yield</span>的generator函数</span><br><span class="line">这些可用<span class="keyword">for</span>循环迭代的对象统称 Iterable 对象</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</span><br><span class="line"></span><br><span class="line">isinstance([],Iterable)</span><br><span class="line">isinstance(&#123;&#125;,Iterable)</span><br><span class="line">isinstance(<span class="string">''</span>,Iterable)</span><br><span class="line">isinstance((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)),Iterable)</span><br><span class="line"><span class="comment">#All Are True</span></span><br><span class="line"></span><br><span class="line">Iterator 对象(能被next()调用迭代)</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterator</span><br><span class="line">isinstance((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)),Iterator)</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line">isinstance(iter(<span class="string">'sad'</span>),Iterator)</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line">isinstance(iter([]),Iterator)</span><br><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
+<h2 id="map-和-reduce"><a href="#map-和-reduce" class="headerlink" title="map 和 reduce"></a>map 和 reduce</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">list(map(str,(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)))</span><br><span class="line"><span class="comment">#['1','2','3','4','5']</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">list(map(<span class="keyword">lambda</span> x:x*x,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]))</span><br><span class="line"><span class="comment">#[1, 4, 9, 16, 25, 36, 49, 64, 81]</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x+y;</span><br><span class="line">reduce(add,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"></span><br><span class="line">filter 和 sorted</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ft</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x%<span class="number">2</span> == <span class="number">0</span></span><br><span class="line">list(filter(ft,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]))</span><br><span class="line"><span class="comment"># [2, 4]</span></span><br><span class="line"></span><br><span class="line">sorted([<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">24</span>,<span class="number">2</span>,<span class="number">23</span>,<span class="number">5</span>])</span><br><span class="line"><span class="comment"># [1, 2, 2, 3, 5, 23, 24]</span></span><br><span class="line"></span><br><span class="line">sorted([<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">24</span>,<span class="number">2</span>,<span class="number">23</span>,<span class="number">5</span>],reverse=<span class="keyword">True</span>)</span><br><span class="line"><span class="comment"># [24, 23, 5, 3, 2, 2, 1]</span></span><br><span class="line"></span><br><span class="line">sorted([<span class="string">'bob'</span>, <span class="string">'about'</span>, <span class="string">'Zoo'</span>, <span class="string">'Credit'</span>], key=str.lower)</span><br><span class="line"><span class="comment"># ['about', 'bob', 'Credit', 'Zoo']</span></span><br></pre></td></tr></table></figure>
+<h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">lambda</span> x: x*x</span><br><span class="line">等价于</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x * x</span><br><span class="line"></span><br><span class="line">list(map(<span class="keyword">lambda</span> x:x*x,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]))</span><br></pre></td></tr></table></figure>
+<h2 id="装饰器-代码运行期间，动态增加功能的方式"><a href="#装饰器-代码运行期间，动态增加功能的方式" class="headerlink" title="装饰器(代码运行期间，动态增加功能的方式)"></a>装饰器(代码运行期间，动态增加功能的方式)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line"><span class="meta">	@functools.wraps(func)</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args,**kw)</span>:</span></span><br><span class="line">		print(<span class="string">"call %s()"</span> % func.__name__)</span><br><span class="line">		<span class="keyword">return</span> func(*args,**kw)</span><br><span class="line">	<span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line">带参数的装饰器</span><br><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(text)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(func)</span>:</span></span><br><span class="line"><span class="meta">		@functools.wraps(func)</span></span><br><span class="line">		<span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args,**kw)</span>:</span></span><br><span class="line">			print(<span class="string">'%s %s():'</span>%(text,func.__name__))</span><br><span class="line">			<span class="keyword">return</span> func(*args,**kw)</span><br><span class="line">		<span class="keyword">return</span> wrapper</span><br><span class="line">	<span class="keyword">return</span> decorator</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">now</span><span class="params">()</span>:</span></span><br><span class="line">	print(<span class="string">'2028-12-3'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> functools</span><br><span class="line">int2 = functools.partial(int,base=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">conan = Student()</span><br><span class="line">isinstance(conan,Student)</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age)</span>:</span></span><br><span class="line">		self.__name = name</span><br><span class="line">		self.__age = age</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">get_name</span><span class="params">(self)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> self.__name</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">get_age</span><span class="params">(self)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> self.__age</span><br><span class="line">bart = Student(<span class="string">'bart'</span>,<span class="number">32</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="获取对象信息"><a href="#获取对象信息" class="headerlink" title="获取对象信息"></a>获取对象信息</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">type()</span><br><span class="line">type(<span class="string">'123'</span>) == str</span><br><span class="line">type(<span class="number">234</span>) == int</span><br><span class="line">type(<span class="number">23.2</span>) == float</span><br><span class="line">type(<span class="number">24</span>+<span class="number">3j</span>) == complex</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> types</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">type(fn) == types.FunctionType</span><br><span class="line">type(abs) == types.BuiltinFuncitonType</span><br><span class="line">type(<span class="keyword">lambda</span> x:x*x) == types.LambdaType</span><br><span class="line">type((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>))) == types.GeneratorType</span><br><span class="line"></span><br><span class="line">isinstance(Child,Parent)</span><br></pre></td></tr></table></figure>
+<h2 id="获得对象的所有属性和方法"><a href="#获得对象的所有属性和方法" class="headerlink" title="获得对象的所有属性和方法"></a>获得对象的所有属性和方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dir()</span><br><span class="line"></span><br><span class="line">dir(<span class="string">"ABC"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="直接操作一个对象的状态"><a href="#直接操作一个对象的状态" class="headerlink" title="直接操作一个对象的状态"></a>直接操作一个对象的状态</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">getattr(obj,key,<span class="keyword">None</span>)</span><br><span class="line">setattr(obj,key,value)</span><br><span class="line">hasattr(obj,key)</span><br><span class="line"></span><br><span class="line">__slots__</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">	__slots__ = (<span class="string">'name'</span>,<span class="string">'score'</span>)</span><br><span class="line"></span><br><span class="line">s = Student()</span><br></pre></td></tr></table></figure>
+<h2 id="定制类"><a href="#定制类" class="headerlink" title="定制类"></a>定制类</h2><p>class Student(object):<br>    def <strong>init</strong>(self, name):<br>        self.name = name<br>    def <strong>str</strong>(self):<br>        return ‘Student object (name=%s)’ % self.name<br>    <strong>repr</strong> = <strong>str</strong></p>
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p>from enum import Enum</p>
+<p>Month = Enum(‘Month’,(‘Jan’, ‘Feb’, ‘Mar’, ‘Apr’, ‘May’, ‘Jun’, ‘Jul’, ‘Aug’, ‘Sep’, ‘Oct’, ‘Nov’, ‘Dec’))</p>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><p>try:<br>    r = 10/0<br>except Exception as e:<br>    print(e.message)<br>finally:<br>    print(‘finally…’)</p>
+<p>记录错误<br>import logging</p>
+<p>try:<br>    someFunc()<br>except Exception as e:<br>    logging.exception(e)</p>
+<h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><p>try:<br>    f = open(‘/path/to/file’,’r’)<br>    print(f.read())<br>finally:<br>    if f:<br>        f.close()</p>
+<p>等价于:<br>with open(‘/path/to/file’,’r’) as f:<br>    print(f.read())</p>
+<p>逐行读取<br>for line in f.readlines():<br>    print(line.strip())</p>
+<p>读取二进制文件<br>f = open(path,’rb’)</p>
+<p>指定非utf8编码的文本文件<br>f = open(path,’r’,encoding=”gbk”)</p>
+<p>忽略错误<br>f = open(path,’r’,encoding=’gbk’,errors=’ignore’)</p>
+<p>写文件<br>f = open(path,’w’)<br>写二进制文件<br>f = open(path,’wb’)</p>
+<p>f.write(‘xxx’)<br>f.close()</p>
+<p>便捷方法:<br>with open(path,’w’) as f:<br>    f.write(‘xxx’)</p>
+<p>##os 模块<br>import os<br>os.name</p>
+<p>os.environ.get(‘HOME’)</p>
+<p>创建 删除文件夹<br>os.mkdir(‘path’)<br>os.rmdir(‘path’)</p>
+<p>路径拼接<br>os.path.join(‘x’,’s’)<br>路径拆分<br>os.path.split(‘a/b/c’)<br>(‘a/b’,’c’)<br>获取后缀名<br>os.path.splitext(‘xxx/xx/xas/xsd.xt’)<br>重命名<br>os.rename(name1,name2)<br>os.remove(name1)</p>
+<p>列出当前目录的文件夹<br>[x for x in os.listdir(‘.’) if os.path.isdir(x)]</p>
+<p>列出当前目录的文件<br>[x for x in os.listdir(‘.’) if os.path.isfile(x)]</p>
+<p>列出当前目录的py文件<br>[x for x in os.listdir(‘.’) if os.path.isfile(x) and os.path.splitext(x)[1]==’.py’]</p>
+<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>import pickle<br>d = dict(name=’bob’,age=20,score=80)<br>pickle.dumps(d)<br>将对象序列化成bytes<br>or<br>f = open(‘dump.txt’,’wb’)<br>pickle.dump(d,f)<br>d.close()</p>
+<p>f = open(‘dump.txt’,’r’)<br>pickle.loads(f.read())</p>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p>import json<br>d = dict(name=’conan’,age=27,gender=’male’)<br>jsonstr = json.dumps(d)</p>
+<p>new_dict = json.loads(jsonstr)</p>
+<p>Class 转换为json对象<br>class Student(object):<br>    def <strong>init</strong>(self,name,age,gender):<br>        self.name = name<br>        self.age = age<br>        self.gender = gender<br>def student2dict(st):<br>    return {<br>        ‘name’:st.name,<br>        ‘age’:st.age,<br>        ‘gender’:st.gender,<br>    }<br>json.dumps(s,default=student2dict)</p>
+<p>json.dumps(s, default=lambda obj: obj.<strong>dict</strong>)</p>
+<p>反序列化<br>def dict2student(d):<br>  return Student(d[‘name’], d[‘age’], d[‘score’])<br>json_str = ‘{“age”: 20, “score”: 88, “name”: “Bob”}’<br>json.loads(json_str, object_hook=dict2student)</p>
+<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><h2 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h2><p>import re</p>
+<p>m = re.match(r’^([a-zA-Z][a-zA-Z0-9.]*)@[a-zA-Z0-9]+.[a-zA-Z]+’,<a href="mailto:&#39;xxx@w21.com">&#39;xxx@w21.com</a>‘)<br>m.group(0)<br>原始字符串<br>m.group(1)<br>匹配的第一个分组<br>m.groups()<br>匹配到的结果元祖表示</p>
+<p>re.split(r’\s+’,’a b  v’)</p>
+<p>编译使用<br>re_num_3 = re.compile(r’(\d{3})-‘)<br>re_num_3.match(‘332-12123’).groups()<br>(‘332’,)</p>
+<h2 id="常见内建模块"><a href="#常见内建模块" class="headerlink" title="常见内建模块"></a>常见内建模块</h2><p>datetime<br>from datetime import datetime<br>now = datetime.now()<br>dt = datetime(2018,10,20,20,20)<br>now.timestamp()<br>datetime.fromtimestamp(now.timestamp())# 本地时间<br>datetime.utcfromtimestamp(now.timestamp())# UTC时间</p>
+<p>字符串 datetime 互相转换<br>datetime.strptime(‘2018-10-20 18:22:22’,’%Y-%m-%d %H:%M:%S’)<br>now.strftime(‘%a, %b %d %H:%M’)</p>
+<p>collections<br>from collections import namedtuple<br>Point = namedtuple(‘Point’,[‘x’,’y’])<br>p = Point(1,2)</p>
+<p>from collections import deque<br>q = deque([‘a’,’b’,’c’])<br>q.append(‘x’)<br>q.appendLeft(‘y’)<br>q</p>
+<p> #deque([‘y’, ‘a’, ‘b’, ‘c’, ‘x’])</p>
+<p>from collections import defaultdict<br>dd = defaultdict(lambda: ‘N/A’)<br>dd[‘key1’] = ‘abc’</p>
+<p>dd[‘key2’]</p>
+<p> #’N/A’</p>
+<p>from collections import OrderDict<br>OrderDict([(‘a’, 1), (‘b’, 2), (‘c’, 3)])</p>
+<p> #key 是有序的</p>
+<p>base64<br>import base64</p>
+<p>c = base64.b64encode(b’binary content’)<br>d = base64.b64decode(c)<br>d.decode(‘utf-8’)</p>
+<p>base64.urlsafe_b64encode(d)<br>base64.urlsafe_b64decode(c)</p>
+<p>hashlib<br>import hashlib</p>
+<p>md5 = hashlib.md5()<br>md5.update(‘that”s pretty awesome…’.encode(‘utf-8’))<br>md5.hexdigest()</p>
+<p>sha1 = hashlib.sha1()<br>sha1.update(‘that”s pretty awesome…’.encode(‘utf-8’))<br>sha1.hexdigest()</p>
+<p>hmac<br>import hmac<br>message = b’hello monkey’;<br>key = b’conan666’;<br>h = hmac.new(key,message,digestmod=”MD5”)<br>h.hexdigest()</p>
+<h2 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h2><p>pillow<br>requests<br>chardet<br>psutil</p>
+<p> #chardet<br>data = chardet.detect(‘锄禾日当午’.encode(‘utf-8’))</p>
+<p> #{‘encoding’: ‘GB2312’, ‘confidence’: 0.7407407407407407, ‘language’: ‘Chinese’}</p>
+<p>import psutil<br>psutil.cpu_count()<br>psutil.virtual_memory()<br>psutil.swap_memory()</p>
+<h2 id="收发邮件"><a href="#收发邮件" class="headerlink" title="收发邮件"></a>收发邮件</h2><p>from email import encoders<br>from email.header import Header<br>from email.mime.text import MIMEText<br>from email.utils import parseaddr, formataddr</p>
+<p>import smtplib</p>
+<p>def _format_addr(s):<br>    name, addr = parseaddr(s)<br>    return formataddr(Header(name,’utf-8’).encode(),addr)</p>
+<p>from_addr = <a href="mailto:&#39;conankyforce@163.com">&#39;conankyforce@163.com</a>‘<br>password = ‘xxxx’<br>to_addr = <a href="mailto:&#39;xxx@22.com">&#39;xxx@22.com</a>‘<br>smtp_server = ‘smtp.163.com’</p>
+<p>msg = MIMEText(‘hello,send by python…’,’plain’,’utf-8’)<br>msg[‘From’] = _format_addr(‘Python爱好者 &lt;%s&gt;’ % from_addr)<br>msg[‘To’] = _format_addr(‘管理员 &lt;%s&gt;’ % to_addr)<br>msg[‘Subject’] = Header(‘来自SMTP的问候……’, ‘utf-8’).encode()</p>
+<p>server = smtplib.SMTP(smtp_server, 25)<br>server.set_debuglevel(1)<br>server.login(from_addr,password)<br>server.sendmail(from_addr,[to_addr],msg.as_string())<br>server.quit()</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/07/12/mongodb学一学/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/07/12/mongodb学一学/" class="post-title-link" itemprop="url">mongodb学一学</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-07-12 19:05:01" itemprop="dateCreated datePublished" datetime="2017-07-12T19:05:01+08:00">2017-07-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><pre><code>show dbs 显示有多少数据库  
+use conan 需要时自动创建一个数据库  
+db.dropDatabase()  删除当前use的数据库  
+show tables  显示多少张表
+等价于
+show collections
+</code></pre><p><strong>插入数据</strong></p>
+<pre><code>db.imooc_collection.insert({x:1}) //插入表中以json格式的数据
+db.imooc_collection.find()  //默认返回所有  
+db.imooc_collection.find({x:1}) //返回含有{x:1}的字段
+for(i=3;i&lt;100;i++) db.imooc_collection.insert({x:1}) //js语法插入  
+db.imooc_collection.find().count() //计数
+.skip() //跳过
+.limit()  //限制返回的数目  
+.sort()  //排序
+
+db.imooc_collection.find().skip(3).limit(5).sort({x:1})
+</code></pre><p><strong>数据查询</strong></p>
+<pre><code>db.imooc_collection.find({x:2}) //查找x为2的字段
+</code></pre><p><strong>数据更新</strong>  </p>
+<pre><code>db.imooc_collection.update({x:2},{x:666})
+</code></pre><p><strong>部分更新</strong></p>
+<pre><code>db.imoor_collection.update({x:1},{$set:{y:1}}) //以{x:1}来查找字段,只更新y字段为{y:1};
+</code></pre><p><strong>查询字段不存在,自动创建更新的那条</strong></p>
+<pre><code>db.imoor_collection.update({x:1110},{y:&quot;666&quot;},true)
+</code></pre><p><strong>更新多条数据</strong></p>
+<pre><code>db.imoor_collection.update({x:1},{$set:{x:&quot;sequences&quot;}},false,true)
+</code></pre><p><strong>数据删除</strong></p>
+<pre><code>db.imooc_colletion.remove({x:&quot;sequences&quot;})//删除所有有这个属性的字段
+db.imooc_collection.drop() //删除这张表  
+</code></pre><p><strong>获取索引</strong></p>
+<pre><code>db.imoor_collection.getIndexes()
+</code></pre><p><strong>创建索引</strong></p>
+<pre><code>db.imoor_collection.ensureIndex({x:1}) //1为正向排序,-1为逆向排序  
+</code></pre><p><strong>_id索引</strong> </p>
+<pre><code>1. _id索引是绝大多数集合默认建立的索引
+2. 对于每个插入的数据，mongodb都会自动生成一条唯一的_id字段  
+</code></pre><p><strong>单键索引</strong></p>
+<pre><code>比如 {x:1,y:2,z:3}以x为索引就能很快查询
+</code></pre><p><strong>多键索引</strong></p>
+<pre><code>值具有多个记录,比如数组  
+db.imoor_collection.insert({x:[1,23,5,null]})
+</code></pre><p><strong>复合索引</strong>(查询条件为复合的时候)</p>
+<pre><code>collection.ensureIndex({x:1,y:1})
+</code></pre><p><strong>过期索引</strong></p>
+<pre><code>- 在一段时间后会过期的索引
+- 在索引过期后，响应的数据会被删除
+- 适合存放用户登录信息等
+</code></pre><p>db.collection.ensureIndex({time:1},{expireAfterSeconds:864000})</p>
+<h3 id="creatIndex-替代了-ensureIndex-3-2版之后"><a href="#creatIndex-替代了-ensureIndex-3-2版之后" class="headerlink" title="creatIndex 替代了 ensureIndex 3.2版之后"></a>creatIndex 替代了 ensureIndex 3.2版之后</h3><pre><code>- 储存在过期字段的值必须是指定时间类型，不然不能被自动删除  
+- 如果指定ISODate数组,则按照最小时间删除  
+- 过期索引不能是复合索引
+- 删除时间不一定完全准确(后台程序每60s跑一次，删除也需要时间)  
+</code></pre><p><strong>全文索引</strong></p>
+<pre><code>对字符串和字符串数组创建全文可搜索的索引  
+case:
+{author:&quot;&quot;,title:&quot;&quot;,content&quot;&quot;,keyword:&quot;&quot;}
+
+创建全文索引  
+db.articles.createIndex({key:&quot;text&quot;})
+db.articles.createIndex({key1:&quot;text&quot;,key2:&quot;text&quot;})
+db.articles.createIndex({&quot;$**&quot;:&quot;text&quot;}) //对集合中所有字段,创建一个大的全文索引
+</code></pre><p><strong>全文索引的查找</strong></p>
+<pre><code>db.articles.find({$test:{$search:&quot;coffee&quot;}})
+db.articles.find({$test:{$search:&quot;aa bb cc&quot;}}) 默认或查询
+db.articles.find({$test:{$search:&quot;\&quot;aa\&quot; \&quot;bb\&quot; \&quot;cc&quot;}}) 与查询
+db.articles.find({$test:{$search:&quot;aa bb -cc&quot;}}) 不包含cc的
+全文相似度  
+$meta操作符 :{score:{$meta:&quot;textScore&quot;}}  
+写在查询条件后边可以返回返回结果的相似度  
+与sort一起使用,有很好效果哟
+db.articles.find({$test:{$search:&quot;aa bb -cc&quot;}},{score:{$meta:&quot;textScore&quot;}}).sort({score:{$meta:&quot;textScore&quot;}})
+</code></pre><p><strong>限制</strong></p>
+<pre><code>每次查询,只能指定一个$text查询  
+$text查询不能出现在$nor查询中  
+包含$text后，hint不起作用  
+</code></pre><p><strong>地理位置索引</strong></p>
+<pre><code>2d索引 平面地理位置索引
+位置表示方式  经纬度 [经度,纬度]
+取值范围：经度[-180,180] 维度[-90,90]
+db.location.createIndex({&quot;w&quot;:&quot;2d&quot;})
+db.location.insert({w:[1,2]})
+db.location.insert({w:[100,85]})   
+db.location.insert({w:[75,85]})  
+db.location.insert({w:[60,65]})  
+db.location.insert({w:[20,15]})  
+查询方式  
+$near 查询,查询距离某个点最近的点    
+$geoWithin查询 查询某个形状内的点  
+db.location.find({w:{$near:[1,1]}}) //默认返回100个点
+db.location.find({w:{$near:[1,1],$maxDistance:10}})
+
+形状  
+- $box 矩形
+ {$box:[[x1,y1],[x2,y2]]}
+- $center 圆形
+- {$center:[[x1,y1],r]}
+- $polygon 多边形
+- {$polygon:[[x1,y1],[x2,y2],[x3,y3]]}
+
+db.location.find({w:{$geoWithin:{$box:[[0,0],[3,3]]}}})  
+db.location.find({w:{$geoWithin:{$center:[[0,0],3]}}})  
+db.location.find({w:{$geoWithin:{$polygon:[[0,0],[2,2],[3,3]]}}})  
+
+geoNear 查询  
+db.runCommand(
+{geoNear:&lt;collection&gt;,
+near:[x,y],
+minDistance:
+maxDistance:
+num:
+...
+})
+
+db.runCommand({
+geoNear:&quot;location&quot;,near:[1,2],maxDistance:10,num:10
+})
+</code></pre><p><strong>索引属性</strong> </p>
+<pre><code>name属性
+db.collection.createIndex({x:1,y:1,z:1},{name:&quot;normal_index&quot;}) //指定name属性  
+db.collection.dropIndex(&quot;normal_index&quot;) //可以通过name属性删除索引  
+unique属性
+db.collection.createIndex({x:1,y:1,z:1},{unique:true}) //添加唯一索引后相同字段不允许值相同(x,y,z)同时相等  
+sparse属性  
+db.collection.createIndex({x:1,y:1,z:1},{sparse:true}) //避免为不存在的值插入索引
+db.collection.find({m:{$exists:false}}).hint(&quot;m_1&quot;) //强制使用稀疏索引  
+</code></pre><p><strong>字段是否存在查找</strong></p>
+<pre><code>db.collection.find({m:{$exists:true}}) //存在m字段的数据  
+</code></pre><p><strong>索引构建情况分析</strong>  </p>
+<pre><code>评判索引构建情况  
+mongostate  
+profile  
+日志
+explain分析
+
+mongostat  
+qr 读队列
+qw 写队列 
+
+
+查看profile
+db.getProfilingStatus()
+db.setProfilingLevel(2)
+{ &quot;was&quot; : 0, &quot;slowms&quot; : 100 } //was为0就是关闭,不记录,1,记录超过100的值,为2时候,全部记录  
+被记录在  
+system.profile
+db.system.profile.find().sort({$natural:-1}).limit(10)//natural 自然排序
+
+db.collection.find({x:1}).explain() 详细解释本次查询的参数  
+
+mongodb安全  
+
+mongodb中创建永辉 
+
+createUser
+{user:&quot;&lt;name&gt;&quot;,
+pwd:&quot;&lt;passwd&gt;&quot;,
+customData:{},
+roles:[{role:&quot;&lt;role&gt;&quot;,db:&quot;&lt;database&gt;&quot;}]
+}
+角色类型(read,readWrite,dbAdmin,dbOwner,userAdmin)  
+
+db.createUser({user:&quot;conan&quot;,pwd:&quot;201010&quot;,customData:&quot;conan&quot;,roles:[role:&quot;userAdmin&quot;,db:&quot;*&quot;]})
+
+DBAdminAbyDatabase
+</code></pre>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/06/27/真的太疯狂了/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/06/27/真的太疯狂了/" class="post-title-link" itemprop="url">真的太疯狂了</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-06-27 21:27:05" itemprop="dateCreated datePublished" datetime="2017-06-27T21:27:05+08:00">2017-06-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><blockquote><strong>最近居然没有好好写博客了！真是不行不行的！一想到自己隔了一段时间没写点东西，就感到十分的不安。觉得自己好像没有存在感了似地。</strong></blockquote><br>这个月可以说是高强度的在前端,哦不,暂且可以不要脸的说一下是在全栈的路上高歌猛进了!<br>虽说大前端栈很多工具用的还不是特别熟练,但觉得自己逐渐能摸到门道了。看到问题,也知道该怎么样去分析解决了,<br>而不是一味的害怕,无知.最重要的是培养了我自己对这个行业坚定的信心，以及对其广泛的兴趣。</p>
+<p><blockquote>If you don’t know, learn it.我们每个人都是终身学习者.</blockquote><br>唯一觉得稍有遗憾的就是自己没有很早的接触编程.</p>
+<p>另外，最近这两天疯狂的弥补区块链，比特币，cryptocurrency的相关知识。因为自己算是有一点经济学的基础，经常关注财经的类的节目,书籍,也学过一段时间。虽然自己现在还算不上经济学高手。但是即使是我，也知道区块链，去中心化，即将对金融行业、以及所有涉及交易、公证、信用的行业带来多大的影响。</p>
+<p>这里有个ted的视频，这个老头子讲的还挺宽泛。即使是实现其中之一，也是非常了不起的。</p>
+<p><iframe src="https://embed.ted.com/talks/don_tapscott_how_the_blockchain_is_changing_money_and_business" width="854px" height="480px" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe><br>有一句话，不知道是谁说的。</p>
+<p><blockquote><strong>对于新兴事物，绝大多数人第一是看不见，第二是看不懂，第三是看不起，第四是来不及。</strong></blockquote><br>这句话对于比特币(区块链)来说，真的是再适合不过了。<br>看好它的人，觉得它能颠覆世界，带来一场伟大的革命。而看不懂的人觉得它就是一场阴谋，一场庞氏骗局。<br>虽然不敢说自己很懂，但我知道，自己还是很乐于拥抱新鲜事物的，而且也希望自己一直如此。<br>之后将建个关于比特币/区块链的技术网站。暂定为</p>
+<p><blockquote><strong><a href="http://bytecoin.tech" target="_blank">bytecoin.tech</a></strong></blockquote><br>希望我们能在这个动荡的时代过的更好。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/05/15/实现bind的两种方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/05/15/实现bind的两种方法/" class="post-title-link" itemprop="url">实现bind的两种方法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-05-15 22:57:26" itemprop="dateCreated datePublished" datetime="2017-05-15T22:57:26+08:00">2017-05-15</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>ES5中新增了一个bind方法，用于绑定函数this，使得调用栈更改之后this仍然不变，看个例子</strong></p>
+<p><pre>function f(x,y){return this.x+this.y};<br>var a = {x:4,y:16};<br>f.bind(a);//=&gt;bind方法返回的是函数，即：function f(x,y){return this.x+this.y}<br>f.bind(a)();//函数调用,结果为20</pre><br><strong>bind方法返回的是函数，他与call,apply都能改变函数内this的指向，但是返回不同，call、apply返回的是结果</strong></p>
+<p><strong>bind是绑定this指向，call、apply可以理解为获取将函数扩展到某个对象上来的结果</strong></p>
+<p><pre>Math.pow.call(null,2,3);//&lt;=&gt;Math.pow(2,3)，也等价于下边<br>Math.pow.apply(null,[2,3]);//&lt;=&gt;Math.pow(2,3)<br>function add(){return this.x+this.y};<br>var a = {x:3,y:7,z:false};<br>add.bind(a)();//10<br>add.call(a);//10<br>add.apply(a);//10</pre><br>实现bind的两种方法</p>
+<p>1.</p>
+<p><pre>if(!Function.prototype.bind){<br>  Function.prototype.bind = function(o){<br>    var self = this,//第一层函数this保存为self<br>      args,<br>      args1=Array.prototype.slice.call(arguments,1);//获取传入bind函数除第一个参数外的所有参数<br>    return function(){//返回的应该是一个函数<br>      args2 = Array.prototype.slice.call(arguments);//获取传入返回函数的所有参数<br>      args = args1.concat(args2)<br>      self.apply(o,args);//应用到第一层函数<br>    };<br>  };<br>};<br></pre><br>2.</p>
+<p><pre>if(!Function.prototype.bind){<br>  Function.prototype.bind = function(o){<br>    var self = this,<br>      args,<br>      args1=Array.prototype.slice.call(arguments,1),<br>      fNOP = function(){},<br>      fBound = function(){<br>        return self.apply(this instanceof fNOP<br>            ?this<br>            :o,<br>            args1.concat(Array.prototype.slice.call(arguments)));<br>      };<br>    if (this.prototype){<br>      fNOP.prototype = this.prototype;<br>    }<br>    fBound.prototype = new fNOP();<br>    return fBound;<br>  };<br>}</pre></p>
+<p><br>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">conan</p>
+  <div class="site-description" itemprop="description">柯南君,Full Stack</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
 </div>
 
-                    
 
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/kevinconan" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
 
-    <!-- Facebook -->
-    
-        <a href="https://www.facebook.com/facebook" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
-    
+      </div>
 
-    <!-- Google + -->
-    
-        <a href="https://www.google.com/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
-                <span class="visuallyhidden">Google Plus</span>
-            </button><!--
-     --></a>
-    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    <!-- Weibo -->
-    
 
-    <!-- Instagram -->
-    
+      </div>
+    </main>
 
-    <!-- Tumblr -->
-    
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
-    <!-- Github -->
-    
+        
 
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Telegram -->
-    
-    
-    <!-- V2EX -->
-    
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">conan</span>
 </div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
 
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>柯南的日常
-            
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
-</footer>
-
-
-                    <!-- Import JS File -->
-
-    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+        
 
 
 
-    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
 
 
 
-    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
 
 
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
 
 
 
@@ -1169,71 +1186,11 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
-
-<!-- Import prettify js  -->
 
 
+  
 
-<!-- Window Load -->
-<!-- add class for prettify -->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
+  
 
-    
-    
-</script>
-
-<!-- MathJax Load-->
-
-
-<!-- Bing Background -->
-
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Custom Footer -->
-
-
-
-<script>
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
-        }
-    })()
-console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
-
-                </main>
-            </div>
-        </body>
-    
+</body>
 </html>

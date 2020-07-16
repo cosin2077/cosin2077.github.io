@@ -1,1159 +1,1275 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="zh">
-    <head>
-    <meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.5.2 -->
-    <script>
-        window.materialVersion = "1.5.2"
-        // Delete localstorage with these tags
-        window.oldVersion = [
-            'codestartv1',
-            '1.3.4',
-            '1.4.0',
-            '1.4.0b1',
-            '1.5.0'
-        ]
-    </script>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="柯南君,Full Stack">
+<meta name="keywords" content="conanskyforce Front-End Full-Stack">
+<meta property="og:type" content="website">
+<meta property="og:title" content="柯南的日常">
+<meta property="og:url" content="/page/6/index.html">
+<meta property="og:site_name" content="柯南的日常">
+<meta property="og:description" content="柯南君,Full Stack">
+<meta property="og:locale" content="zh-TW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="柯南的日常">
+<meta name="twitter:description" content="柯南君,Full Stack">
+
+<link rel="canonical" href="/page/6/">
 
 
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-TW'
+  };
+</script>
 
-
-
-
-
-
-
-
-
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!-- Title -->
-    
-    <title>
-        
-        柯南的日常
-    </title>
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" href="/img/favicon.png">
-
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="柯南君,Full Stack">
-    <meta name="keywords" content="">
-    <meta name="theme-color" content="#0097A7">
-
-    <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.en.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Import CSS -->
-    
-        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-        
-
-    
-
-    
-
-    <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    overflow-x: hidden !important;
-  }
+  <title>柯南的日常</title>
   
-  code {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
   }
 
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
-      }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-<!-- Import Roboto -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-
-
-<!-- Import Material Icons -->
-
-
-    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-
-
-
-    <!-- Import jQuery -->
-    
-        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
-    
-
-    <!-- WebAPP Icons -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="柯南的日常">
-    <meta name="msapplication-starturl" content="/page/6/">
-    <meta name="msapplication-navbutton-color" content="#0097A7">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="柯南的日常">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- RSS -->
-    
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="/page/6/">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="柯南的日常">
-    <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="柯南君,Full Stack">
-    
-
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="/page/6/index.html" />
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
-
-
-
-    
-
-    <!-- Analytics -->
-    
-    
-    
-
-    <!-- Custom Head -->
-    
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
-
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
-    
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/08/13/最近读的书/">最近读的书</a></p>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
+  </div>
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            三体三部曲（人性的思考，地球的存亡，宇宙的意义。文革毁了银河系？圣母婊毁了地球，毁了银河系，毁了宇宙。普世价值观的悖论）
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/08/13/最近读的书/" target="_self">繼續閱讀</a>
-        </span>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">柯南的日常</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Full Stack Hobbist</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
     </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>8月 13, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+  </div>
 </div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/08/09/王福重人人都爱经济学/">王福重人人都爱经济学</a></p>
-    </div>
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            （边际效益）边际效益递减原则机会成本，会计学认为任何一个项目都可能有利润。而经济学认为只有一个项目才有利润。（机会...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/08/09/王福重人人都爱经济学/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>8月 09, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
           
 
+          <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/08/13/最近读的书/">
 
-            
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/13/最近读的书/" class="post-title-link" itemprop="url">最近读的书</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-08-13 02:24:13" itemprop="dateCreated datePublished" datetime="2016-08-13T02:24:13+08:00">2016-08-13</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/08/09/财富是什么——金融学的第一本书/">财富是什么——金融学的第一本书</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            财富是保证你这辈子过上理想生活的时间。对必需品的态度，决定了你会不会被搜刮的很惨...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/08/09/财富是什么——金融学的第一本书/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>8月 09, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <div>三体三部曲（人性的思考，地球的存亡，宇宙的意义。文革毁了银河系？圣母婊毁了地球，毁了银河系，毁了宇宙。普世价值观的悖论）</div><br><div>超新星纪元（孩子到底是天使还是魔鬼？）</div><br><div>乡村教师（我们这个文明很不容易，教师是个伟大的职业。）</div><br><div>球状闪电（一件事情身埋心底的仇恨能毁灭一个人，人啊，这一辈子，有一件痴迷的事情，时间就过的很快了，人们不都这样么）</div><br><div>诗云（天生我材必有用，诗仙唯有一礼拜，李白文明好牛逼。技术与艺术？会是互不相容的两样东西吗）</div><br><div>鲸歌（鲸鱼歌唱着地球的演变，生物的兴衰，一切的灭亡与重生）</div><br><div>搞懂金融的第一本书</div><br><div>中国经济到了最危险的边缘</div><br><div>天意——（古之成大事者，不惟有超世之才，亦必有坚忍不拔之志，韩信是也。）2016.7.11看完。</div><br><div>人人都爱经济学——（斯密、李嘉图、凯恩斯的嫉妒崇拜者，纯粹的经济学家）2016.7.12看完</div><br><div>朝闻道（对宇宙终极真理的追求，是文明的最终目标和归宿。）——2016.7.12看完</div><br><div>流浪地球——（人类啊人类，你是多么的孤独。地球啊地球，你是多么的孤独。）2016.7.13看完</div><br><div>时间移民（在对存在思考到终极时，他们认为不存在是最合理的，并选择了它。一切结束之后，一切又都开始了，生我养我的地球母亲啊，我爱你！）——2016.7.13看完</div><br><div>微观尽头——（微观的 尽头是宇宙）2016.7.14</div><br><div>坍缩——（膨胀的反面是坍缩，时间空间是基于物质的存在，习惯膨胀时光的流向，之后我们也将习惯坍缩时间的流向，没人会质疑从衰老到幼小这一过程，正如之前没人质疑从小到大是正常的一样）2016.7.14</div><br><div>思想者——（宇宙的闪烁会不会就是一次次宇宙大脑神经元的冲动传导呢？而这一次完整的反射却也似乎无法实现）2016.7.14</div><br><div>命运——（人类发展至今是必然，还是偶然？人类就一定是上帝的幸运儿吗？好像不是，现存的所有一切，包括人类从猩猩进化成人类，都是偶然，历史再来一次，也许被关在动物园的就是人类自己了）2016.7.14</div><br><div>带上她的眼镜——（清灵的女孩儿啊，总是那么的美好，令人神往，对家园的热爱，对地球母亲的真情。活在平庸世界中的我们，真的麻木了）2016.7.15</div><br><div>地火——（人类怎么这么傻呢，挖煤这么辛苦，这里吃力不讨好的事情还有那么多人去干！我的煤矿啊，我的父亲！）2016.7.15</div><br><div>微纪元——（缩小十亿倍之后的人类会是什么样子呢，好幻想）2016.7.16</div><br><div>天幕红尘——</div><br><div>经济学原理微观分册——p118—</div><br><div>战后日本经济的盛衰——p122—</div><br><div>我们台湾这些年——p23—p53—p73-p84</div><br><div>金翼：中国家族制度的社会学研究—p23</div><br><div>番茄工作法—p23</div><br><div></div><br><div></div>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/08/09/王福重人人都爱经济学/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/09/王福重人人都爱经济学/" class="post-title-link" itemprop="url">王福重人人都爱经济学</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-08-09 23:27:45" itemprop="dateCreated datePublished" datetime="2016-08-09T23:27:45+08:00">2016-08-09</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/08/09/日本经济盛衰史/">日本经济盛衰史</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            第一章日本的企业1945年9月，GHQ盟军总司令部进驻日本。麦克阿瑟主导推行“解散财阀”等一些列经济名族文化政策，...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/08/09/日本经济盛衰史/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>8月 09, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <div>（边际效益）边际效益递减原则</div><br><div>机会成本，会计学认为任何一个项目都可能有利润。而经济学认为只有一个项目才有利润。（机会成本）</div><br><div>那么资源配置到哪里，就是非常重要的！</div><br><div>所以，我们不只要看做某件事情得到了什么了，更重要的是看因为做这件事，我们失去了什么。如果失去的比得到的还多，这件事就不值得做。</div><br><div>市场能进行资源的最佳配置。</div><br><div>（纳什均衡）</div><br><div>比较边际效益与边际成本</div><br><div></div><br><div>理性人假设</div><br><div>看不见的手，为自己谋利，整个社会就会发展，而不是需要你用博爱。</div><br><div>人性利己，趋利避害动物本能。</div><br><div>君子喻与义，小人喻与利。到现在不使用咯，应该是君子小人都喻与利。</div><br><div></div><br><div>博弈论</div><br><div>强盗分金币的故事（第一个强盗应该提议自己分所有金币）</div><br><div>《博弈论与经济行为》</div><br><div>《非合作博弈》</div><br><div>从囚徒困境开始的博弈论，现实是都坦白，对集体来说获得最差结果。</div><br><div>所有博弈分为四种：</div><br><div>完全信息静态博弈————结果“纳什均衡”</div><br><div>完全信息动态博弈</div><br><div>不完全信息静态博弈————海萨尼 数学期望</div><br><div>不完全信息动态博弈</div><br><div></div><br><div>（劳动，生产要素，资本{客观}）→（边际效用{主观}）决定价值</div><br><div>马歇尔《经济学原理》</div><br><div>价值（价格）既与供给有关，也与边际效用（需求）有关。</div><br><div>说到底，供给和需求！！</div><br><div></div><br><div>需求和供给相平衡的价格才是最优价格，对买卖双方都是最好的。</div><br><div>价格、替代品、互补品、偏好都影响需求。</div><br><div></div><br><div>消费者的目的：实现效用最大化！（边际效用递减）</div><br><div>所购买的每种商品的最后一单位的效用与价格之比，等于货币的边际效用。</div><br><div>第八章 竞争和垄断 P92</div><br><div></div><br><div>凯恩斯，奢侈有理，节俭有过</div><br><div></div><br><div>均衡的GDP由需求决定</div><br><div></div><br><div>政府的财政政策与货币政策</div><br><div></div><br><div>内务、外交、财政、国防四大部门</div><br><div></div><br><div>第十五章 失业</div><br><div>摩擦性失业+架构行失业→自然失业率</div><br><div>最低工资法一定是高于市场决定的工资水平的，那么就会减少岗位供应。</div><br><div>最低工资法不是帮助失业的最佳路径，最佳路径是帮助失业者提高工作技能。最佳途径是教育。另外，提供信息也是必要的。社会制度歧视（重男轻女，重女轻男，重视户口etc）。社会保障制度也有关系。</div><br><div></div><br><div>第十六章 通货膨胀</div><br><div>物价总水平的上升。</div><br><div>通货膨胀的原因</div><br><div>一总需求拉动（消费需求、投资需求、政府购买、国外需求）</div><br><div>二成本推动</div><br><div>三四人们预期“惯性通货膨胀”</div><br><div>但总的归结起来一句话，政府印钱印多了！所以通货膨胀政府永远是获益者。</div><br><div>治理通货膨胀</div><br><div>一压缩总需求提高税收，提高汇率，货币紧缩政策，公开市场操作</div><br><div>二实行工资和物价管制</div><br><div>在短时间内，通货膨胀总是与失业交替进行。（经济学十大原理之一）</div><br><div></div><br><div>第十七章 经济增长</div><br><div>马尔萨斯《人口原理》</div><br><div>马尔萨斯陷阱，人口数量以指数级增长，生产资料以算数级增长。长此以往，一定会出现人口数量超过食物供给。</div><br><div>但是他们都没有考虑到技术进步—技术大爆炸！</div><br><div>四个因素影响经济增长</div><br><div>一、自然资源</div><br><div>二、物质资本，资本和技术</div><br><div>三、技术进步</div><br><div>四、人力资本</div><br><div>人力资本是通过教育和培训获得的，所以教育很重要，所以经济学把高等教育主要看成是投资行为而不是消费。</div><br><div>迈克尔·斯彭斯的研究表明，大学读什么专业都一样，大学教育所起的作用只是发送信号，即证明我的能力比不上大学的人强，仅此而已。</div><br><div>王大炮最后要说的是，制度的作用，政府所起的作用只是监管，和救急，而不是一味的插手。</div><br><div>中国有丰富的劳动力资源，但是人力资本却不足；有较为丰富的自然资源，但这只是总量，从结构上看，就没有什么优势了，我们的资源主要是煤炭，石油资源相对匮乏，水资源也严重缺乏；取得了不少的重大科技成果，但是创新能力不强，创造力更是很弱，基础研究远远不能满足要求。另外，制度上还有缺陷，政府管制过多了。</div><br><div></div><br><div>第十八章 国际贸易和比较优势</div><br><div>比较优势原理是解释国际贸易原因的理论基础。任何国家通过贸易都能获得优势。</div><br><div></div><br><div>第十九章 自由贸易还是贸易保护</div><br><div>从事自己比较优势高的行业</div><br><div>现代政治经济学，现代经济政策的制定，从来都不只是经济学范畴内的事情，还得考虑诸多如政治的其他影响。</div><br><div></div><br><div>第二十章 汇率和国际贸易体系 P216</div><br><div></div><br><div>汇率：别国货币表示的本国货币的价格，或者说是两种国币交换时的比率，汇率也叫汇价，即汇兑的价格。</div><br><div>汇率由供求双方的力量决定，跟价格决定机制类似。</div><br><div>汇率的最根本原因。购买力评价理论。</div><br><div>汇率的作用应该是使得不同货币在任何国家具有相同的购买力，即买到的东西是一样的。</div><br><div>美元人民币日元（1:7:100）</div><br><div>在美国1美元买到的，中国7元买到，日本100元买到。买到的商品是一样的。</div><br><div>但是购买力平价理论不能应用于不可贸易商品上来？比如房子等。</div><br><div></div><br><div>就是附录啦？</div><br><div>经济学的100个关键词</div><br><div>1.经济学：研究一个社会如何利用稀缺资源进行有价值的生产，并把生产成果在社会成员之间进行分配的科学。</div><br><div>2.稀缺：相对于人类无穷无尽的欲望， 资源总是显得不足的状态。</div><br><div>3.效率：社会对资源的利用达到最佳状态，没有再改进的余地，即如果不让某个谁会成员的境况变差，就不能让其他任何成员的境况变得更好。</div><br><div>4.生产什么，如何生产，为谁生产：一个经济社会面临的基本问题，也叫资源配置，社会必须就这三个问题作出选择，以实现社会福利的最大化。</div><br><div>5.微观经济学：研究微观经济主体，即单个消费者、单个厂商、单个市场的经济学分子，其核心是价格决定论。</div><br><div>6.宏观经济学：研究一个经济总体运行的经济学分支。</div><br><div>7.计划经济：由计划当局决定生产什么、如何生产、为谁生产的经济。</div><br><div>8.市场经济：由市场特别是价格决定生产什么、如何生产、为谁生产的经济。</div><br><div>9.亚当·斯密：英国古典经济学的伟大代表，1776年出版《国民财富的性质和原因的研究》，从而创立了近代经济学体系。提出了著名的“看不见的手”的学硕。他的其他著作包括1759年出版的《道德情操论》。</div><br><div>10.边际：某个变量的微小变动，引起的其他变量的该变量。</div><br><div>11.总收益：企业出售产品得到的全部货币。</div><br><div>1.边际收益：某种活动的微小增加所增加的总收益。</div><br><div>13.机会成本：一件事情的机会成本是把做这件事的资源用于其他事情，所能产出的最大价值。</div><br><div>14.均衡：经济学借用这个概念，分析消费者、厂商以及宏观经济达到最佳的状态以及实现的条件。</div><br><div>15.经纪人假设：每个人都是在给定的约束下，追求自己利益最大化的人，是经济学最基本的假设。</div><br><div>16.看不见的手：最早由亚当·斯密在《国民财富的性质和原因的研究》中提出。他认为社会中存在着一种不同于人为的自然秩序。看不见的手，实际上就是价格机制，在价格机制的诱导下，经济可以有效的运行，达到最佳状态，不需要政府的干预。</div><br><div>17.博弈论：研究在当事人之间的决策相互影响的条件下，人们如何行动的一种方法。</div><br><div>18.纳什均衡：博弈当事人战略的组合，其中每个人的战略都是在嘉定其他人战略不变的情况下的最佳战略。</div><br><div>19.静态博弈：博弈的参加者同时做决定，或者虽然不同是，但是后行动着不知道先行动者的决策的一种博弈。</div><br><div>20.战略：博弈的参加者在生命条件下选择什么样的行动以保证自身利益最大化。</div><br><div>21.动态博弈：博弈参加者的行动有先后，后行动者可以观察到先新动作中的行为的一种博弈。</div><br><div>22.需求：在其他条件不变的情况下，在给定的价格下，消费者愿意并且能够购买的某种商品的数量。</div><br><div>23.供给：在其他条件不变的情况下，在给定的价格下，生产者愿意并且能够提供给市场的商品的数量。</div><br><div>24.价格：没单位商品、劳务的货币度量。</div><br><div>25.市场：卖方和买方互相作用决定价格的机制或者制度安排。</div><br><div>26.均衡价格：需求量和供给量相等是时的价格。</div><br><div>27.效用：人民从物品的消费总得到的快乐和蛮子，可以用效用单位表示。</div><br><div>28.边际效用：行增加的一单位商品所增加的总效用。</div><br><div>29.边际效用递减规律：不断的增加对某种商品的消费，所增加的总效用越来越小。</div><br><div>30.生产函数：在技术不变的条件下，一定量的投入和最大参数量之间关系的函数。</div><br><div>31.边际产量：保持其他投入不变，单独增加某一种投入的一单位说增加的总产量。</div><br><div>32.边际收益递减规律：在技术和其他投入不变的条件下，单独增加某一种投入的一单位，所增加的总产量越来越少。</div><br><div>33.企业家才能：协调生产经营活动以及创新的能力。</div><br><div>34.经济利润：总收益与总成本低差。</div><br><div>35.正常利润：企业家才能的报酬，是生产成本的一部分。</div><br><div>36.会计成本：总收益减去总成本。</div><br><div>37.固定成本：与产量无关的成本，或者说产量为零时候=的总成本。</div><br><div>38.可变成本：随着产量的变动而变动的成本，产量为零时，中可变成本为零。</div><br><div>39.平均可变成本：总成本除以总产量。</div><br><div>40.完全竞争：一种市场结构，在这个市场上存在过多的厂商，每个厂商的产量与总产量相比都是微不足道的，每个厂商都是价格的接受者，而不能影响价格。</div><br><div>41.垄断：只有一个参数的市场结构，厂商对于价格有决定权。</div><br><div>42.价格歧视：出售同样的商品，向不同类型的买者收取不同的价格。</div><br><div>43.消费者剩余：消费者愿意支付的价格与其实际价格之间的差值。</div><br><div>44.自然垄断：指一个企业能以低于两个或多个企业生产时的成本为整个市场服务。</div><br><div>45.垄断竞争：一种市场结构，在其中，每个厂商生产的产品都与其他厂商有所差别，因此对消费者构成垄断；同时，每家厂商的产品差别又非常小，他们之间又存在竞争的关系。</div><br><div>46.寡头：少数几家大厂商占据了市场的绝大部分份额。</div><br><div>47.国内生产总值：一个国家在给定时期内，所承受的全部最终产品和劳务的市场价格的和。</div><br><div>48.最终产品：用于消费，不再进入下一个阶段生产过程的产品。</div><br><div>49.附加值：某一个环节上的附加值指的是首家与购进价格之间的差额。</div><br><div>50.总需求：在给定时期内，在给定的价格水平下，一个经济中所有部门愿意购买的总和。</div><br><div>51.大萧条：指1929~1933年席卷整个资本主义世界的严重经济危机。</div><br><div>52.伊萨定律：法国经济学家让·巴蒂斯特·伊萨认为，供给能够创造它自己的需求，生产能够创造自己的销路，因此，不会有卖不出去的商品，伊萨定律可以概括凯恩斯之前的全部经济学的精髓，即市场供求的力量可以自动达到充分就业状态，政府干预是不必要的。</div><br><div>53.约翰·梅娜德·凯恩斯：英国人，1905年毕业于剑桥大学，后在英国财政部工作，1919年参加巴黎和会，写作《合约的经济后果》，获得世界性荣誉，任剑桥大学经济学讲师，是20世纪以及最伟大的经济学家之一，1936年发表《就业、利息和货币通论》，创立现代宏观经济学，推翻伊萨定律，主张国家干预经济生活。</div><br><div>54.财政：政府的收支活动。</div><br><div>55.公共物品：每个人不管是否付费都可以消费 的物品。</div><br><div>56.税收：政府利用强制力，无偿从具名或企业取得的收入。</div><br><div>57.财政政策：政府改变购买支出和转移支付规模，以及改变税收，调节总需求的手段。</div><br><div>58.乘数效应：某些支出的变化，引起总产量数倍的变化。</div><br><div>59.挤出效应：如果财政支出过多，企业和个人获得的直径就困难了，利率就将提高，企业和个人的投资支出、消费支出就会减少，政府的支出就“挤出”的民间支出。</div><br><div>60.货币：被人们普遍接受的贸易没见或支付手段。</div><br><div>61.银行：从储户手里获得的资金，借给需要资金的人，从中获取收益的企业。</div><br><div>62.货币供给量：一个经济中的货币总量</div><br><div>63.M1：现金和活期存款。</div><br><div>64.M2：现金、活期存款和储蓄存款。</div><br><div>65.中央银行：银行的银行。</div><br><div>66.货币政策：中央银行控制货币供给量的手段。</div><br><div>67.准备金：商业银行吸收的存款中，按法律规定交给中央银行的部分。</div><br><div>68.公开市场操作：中央银行买进和卖出政府债券以影响货币供给量的行为。</div><br><div>69.贴现率：商业银行向中央银行借款的利率。</div><br><div>70.失业：年龄在16岁以上，有工作能力并且愿意接受现行工资条件，却没有被雇佣而正在找工作的人。</div><br><div>71.失业率：失业人口占全部劳动力人口的百分比。</div><br><div>72.自然失业率：摩擦性失业率以及结构性失业率的和。</div><br><div>73.通货膨胀：一般价格水平的上升，通常用CPI的变动程度来衡量。</div><br><div>74.消费者价格指数：计算方法是选取固定的“一篮子”商品，加权计算购买他们所需要的话费。</div><br><div>75.需求拉动型通货膨胀：因为总需求过大造成的通货膨胀。</div><br><div>76.成本推动型通货膨胀：由于成本上升造成的通货膨胀。</div><br><div>77.惯性通货膨胀：如果大家都认为价格要上涨，并且根据调整所有合同，依法炮制就将真的发生，并且持续下去。</div><br><div>78.经济增长：一个国家潜在产出的持续增肌。</div><br><div>79.潜在产出：一个国家最大生产能力，可以充分就业时的总产量衡量。</div><br><div>80.72规则：用72除以一个一个变量的年平均增长率，就得到这个变量需要翻一番所需要的年数。</div><br><div>81.马尔萨斯的人口理论：托马斯·马尔萨斯，英国人，著名经济学家，以人口理论闻名于世。他认为，因为人口数以几何级数增长，而生活资料以算数级增长，所以，到一定时发，人类将面临饥饿的威胁。因此他提出要控制人口，并认为可以采取诸如战争和瘟疫等极端手段。</div><br><div>82.人力资本：个人通过教育和自身经济形成的可以用于生产的知识和技能。</div><br><div>83.技术进步：生产工艺、过程的改进，或者新产品的开发，使得在投入不变的情况下，产出仍然可以增加。</div><br><div>84.国际贸易：国家质检交换商品和互相提供劳务的活动，也叫世界贸易。</div><br><div>85.绝对优势：如果一个国家生产某种产品的直接成本即会计成本比别的国家低，就说明这个国家在这个产品的生产上具有绝对优势。首先由亚当·斯密在《国民财富的性质和原因的研究》中提出。</div><br><div>86.比较优势：如果一个国家生产某种产品的机会成本比别的国家低，就说明这个国家在这个产品的生产上具有比较优势。最早由英国经济学家大卫·李嘉图在1817年出版的《政治经济学及赋税原理》中提出。</div><br><div>87关税：一个国家队进出口物品征收的税。是最古老的税种之一。</div><br><div>88.世界贸易组织：一个独立于联合国的永久性国际组织，其前身为关税与贸易总协定，1995年1月1日开始运作，总部设在日内瓦。该组织的基本宗旨是通过实施非歧视、关税减让以及透明公平的贸易政策，来达到推动世界贸易自由化的目标。</div><br><div>89.自由贸易：不使用关税和非关税手段限制国际贸易主张和政策。</div><br><div>90.贸易保护主义：主张通过关税和非关税壁垒阻止外国产品进入本国市场，以保护本国产业的主张和政策。</div><br><div>91.关税壁垒：通过对进出口产品征税阻止外国产品进入本国市场，或者对出口产品征税·主持本国产品出口。一般是指进口税。</div><br><div>92.非关税壁垒：关税意外的阻止自由贸易的措施。</div><br><div>93.配额：规定进口商品的数量的做法。</div><br><div>94.倾销：进口商品的销售价格低于出口国的国内市场价格或低于其生产成本。</div><br><div>95.汇率：一种货币与另一种货币相互交换的比率。</div><br><div>96.外汇市场：不同货币相互交换的场所。</div><br><div>94.固定汇率制度：一个国家的货币才去紧盯某一汇率水平而不变的制度。</div><br><div>98.浮动汇率制度：汇率由外汇市场决定，政府不规定汇率水平的制度。</div><br><div>99.金本位制：一国规定其货币与某一固定量的黄金等价的制度。</div><br><div>100.购买力平价理论：汇率的作用应该使得不同货币在各国的购买力相等。</div>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/08/09/财富是什么——金融学的第一本书/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/09/财富是什么——金融学的第一本书/" class="post-title-link" itemprop="url">财富是什么——金融学的第一本书</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-08-09 23:26:39" itemprop="dateCreated datePublished" datetime="2016-08-09T23:26:39+08:00">2016-08-09</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/08/08/再学习之HTML+CSS/">再学习之HTML+CSS</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            由于之前在一两天之后学完了html和css，现再重新温习一遍。1.html属性为html元素提供更多的信息，属性总是以名称/值的形式出现，得...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/08/08/再学习之HTML+CSS/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>8月 08, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <div><strong>财富是保证你这辈子过上理想生活的时间。</strong></div><br><div>对必需品的态度，决定了你会不会被搜刮的很惨。如果你认为那是必需品，那价格自然高，但你不把他当回事，自然也就下来了。</div><br><div>货币</div><br><div>货币是从商品中分离出来，固定的充当一般等价物的商品。</div><br><div>货币具有五种基本功能：价值尺度，流通手段，支付手段，储存手段，世界货币。</div><br><div>货币天然是金银。</div><br><div>金银铜被选为货币的原因：容易保存，稀有程度，方便铸造……</div><br><div>北宋1005年，成都发行交子货币。</div><br><div>金银本位：金银对应相应的纸币。</div><br><div>欧洲十八世纪到二十世纪，大量采用金本位制度，这是货币最稳定的时代，发展最迅速的时代。</div><br><div>一二战的时候，才知道，只有黄金，才是真正的钱，才是真正的硬通货，其他纸币都是他的代表而已！</div><br><div>金融危机后，黄金价格暴涨，因为你是告诉你，黄金才是真正的钱啊。</div><br><div>一战结束后，美国发了战争财，美元开始成为强势货币，</div><br><div>二战结束中， 各国只有用黄金从美国买各种军备！</div><br><div>二战结束后，美国黄金储备超过2万吨，占世界总量75%！</div><br><div>1944，二战快结束时，美国主导建立了关于货币、贸易的布雷顿森林体系！规定，美元与黄金直接挂钩！其他国家货币与美元挂钩！</div><br><div>Bretton Woods System设想：美国一直提供世界纸币，世界提供美国商品和服务！！</div><br><div>二战结束后，欧洲恢复生产，开始发展起来，开始不遗余力用外汇买美国的黄金。</div><br><div>然而美国并不能一直出口美元，因为黄金储备是固定的！而且，不能让他们再一直兑换黄金了！！这就是有名的特里芬困境（Triffin Paradox）</div><br><div>然而，1959年底的时候，美国外债就和自己的黄金储备总价相当了。呵呵，没钱了，只是没人刚来揭底。</div><br><div>1971年8月15日，尼克松政府宣布“暂时（永久）”停止美元与黄金的兑换！</div><br><div>背弃了1945年的bretton woods system，对全世界耍赖！</div><br><div>黄金是钱，美元是白条。你特么突然说，白条不能换钱啦？</div><br><div>1971.8.15货币时代的巨大变革！从今天起，金银不是钱，纸片当钱花！！！！！！</div><br><div>当钱与金银脱钩后，只要有“信用”就行，可以花未来的钱！债务可以无限制的增加，钞票无限制的印刷了啊。</div><br><div><strong>21世纪全球债务危机！！</strong></div><br><div>银行</div><br><div>佛罗伦萨的美第奇银行资助达芬奇，伽利略，文艺复兴之父</div><br><div>阿姆斯特丹银行，帮助荷兰成为海上马车夫</div><br><div>英格兰银行</div><br><div>银行的银行，银行的核心，最终贷款人———中央银行</div><br><div>英国的英格兰银行</div><br><div>美国的美联储</div><br><div>中国的中国人民银行</div><br><div>日本的日本央行</div><br><div>欧洲的欧洲中央银行】</div><br><div>中央银行：印刷钞票，管理银行，调控经济，代表政府。</div><br><div>1.印刷钞票</div><br><div>目前所有法币体系的国家，纸币都是债务的凭证，都是中央银行对全国国民的债务！</div><br><div>中央银行的资产负债表：</div><br><div>钞票量：负债</div><br><div>外汇储备、黄金、 印刷机等资产：资产</div><br><div>然而资产与负债相差太多了，果然就负债印钱啊。</div><br><div>美联储（公私合营）</div><br><div>中央银行（隶属国务院）</div><br><div>2.管理银行</div><br><div>对银行进行“存款”、“放贷”、“汇兑”</div><br><div>3.调控经济</div><br><div>调整利率、调整存款准备金、公开市场操作（国债）<br><div>金融危机让人们共同走入了“零利率时代”</div><br><div>还有定量宽松(Quantitative Easing，QE)，扩大一定数量的货币发行</div><br></div><br><div>4.代表政府</div><br><div>政府的财务管家，中国经济体量太大，需要证监会、银监会、保监会来监督了（所谓的一行三会嘛）</div><br><div></div><br><div>存款准备金</div><br><div>中国的是20%</div><br><div>美联储的10%</div><br><div>货币乘数10%—9、20%—4</div><br><div>政策性银行</div><br><div>商业银行</div><br><div><strong>投资银行</strong></div><br><div>我国的投资银行一般叫做某某证券，属于证监会管理范畴。</div><br><div><strong>利率</strong></div><br><div>当cpi高于利率的时候。</div><br><div>负利率时代。贷款负利率不是针对普通大众啊，针对的是商业机构啊，国有大型企业，地方政府之流。他们真是太富了。贫富差距拉大的工具。</div><br><div>银行业啊，你好不好意思啊。存贷款的利率差居然在3%之上。国际水平都是1%啊，你凭借这个成为最赚钱的银行有什么光荣的啊？？？！！！</div><br><div>所有上市公司赚的钱，有一半都是银行赚的。</div><br><div>加息不容易—负债</div><br><div><strong>中国地方政府的债务</strong>是个问题。</div><br><div><strong>地方政府收入大头—卖地！！！！！</strong></div><br><div>信用是一种力量，它能够自然生长，但是不能认为构建！！</div><br><div>美元</div><br><div>一战后即成为强势货币（闷声发大财），二战后1944年，布雷顿森林体系建立，并建立了International Monterey Fund,Word Bank,Word Trade Organization！</div><br><div>怎么用美元呢！马歇尔计划（The Marshall Plan），用美元援助欧洲。</div><br><div>1971.8.15尼克松悍然宣布关闭黄金兑换窗口。bretton woods system彻底倒台。之后几个月，金价上涨，油价上涨！黄金：一直以来的货币。油：国际上最重要的大宗商品。</div><br><div>1973.10第四次中东战争。美国公开支持以色列。结果11个opec成员，直接将石油提价4倍！</div><br><div>滞胀：经济停滞+通货膨胀</div><br><div>提高油价→增加美元需求量（Arabia赚的钱买美国国债）（无耻的石油换安全：石油只与美元挂钩）</div><br><div>1980年。保罗·沃尔克，提息20%。美元走强，黄金、石油价格暴跌。休克式疗法。走强的后果。那些欠债美国的国家！！！陷入债务的无底洞！把发展中国家洗劫一通之后，美国从此进入了平稳的发展阶段。</div><br><div>2001年反恐战争开始。美国又开动了印钞机。</div><br><div>结果是，美元贬值，果然，黄金、石油暴涨。</div><br><div>中国4万亿美元外汇储备。</div><br><div>中国有多少钱</div><br><div>汇率，市场决定的汇率由是两国之间各类资源产品的供需关系决定。</div><br><div>1973年，布雷顿森林体系彻底倒台后，从此进入“浮动汇率时代”。各国纸币之间，到底谁值钱。</div><br><div>中国的外汇储备：</div><br><div>出口所得外汇，必须换成人民币。中国11年的广义货币近80万亿，20多万亿都是由于外汇储备引起的。这就造成了人民币对外升值，对内贬值了！</div><br><div>我们出口的目的不是积攒纸片，是为了让企业和个人能够买回相应的商品！</div><br><div>外汇换人民币的时候，就已经有一次通货膨胀了，再分给人民一次，就是第二次通货膨胀。但第一次通货膨胀的受益者是政府，第二次的受益者是人民啊！！！给每个公民发钱【新加坡做过】，并不是你以为的那么简单！！！</div><br><div>我们把国人辛苦出口赚到的外汇买美国国债，美国把这些钱分给美国公民，然后他们又过来买我们的国债，就这样，他们打白条，我们工作，提供商品、服务。最后，他们还绝对不会还债。</div><br><div>通胀和通缩</div><br><div>M0=现金</div><br><div>M1=通货+商业活期</div><br><div>M2=M1+商业定期</div><br><div>M3=M2+金融债券</div><br><div>M4=M3+短期金融工具</div><br><div>M1狭义货币供应量</div><br><div>M2广义货币供应量</div><br><div>流动性从上到下依次递减</div><br><div>印钞票会导致贫富差距越来越大！因为钞票首先留到的是政府本身，银行，国有企业，这时候的钱更值钱，而到普通民众的时候，钱已经不值钱了。</div><br><div>中国大城市的房价</div><br><div>房价收入比：家庭年收入与房价之间的比值。国际上一般在4~6之间。极端的能达到10~15。</div><br><div>北上广深真的不说了，真的不相信眼泪。</div><br><div>香港的地为什么这么贵。因为政府垄断土地供应。现在中国的地方政府不也一样了么。卖地收入达到财政收入的一半。</div><br><div>它山之石可以攻玉，他山就是日本和美国。</div><br><div>房价越高，利率越低。（就像现在这样）</div><br><div>降息印钞票，制造房价泡沫，升息收钞票，戳破房价泡沫。然后赶紧降低利率而已无用。“失去的20年”“日本债务危机”“美国次贷危机”。</div><br><div>在这个世界上，凡事靠房地产拉动经济的国家，结果没有不崩盘的，日本，美国都无法避免，为什么中国能有这自信。</div><br><div>中国的特殊性。中国房地产背后政府这只看不见的手托着。问题来了，政府的强制性和每日自由经济孰优孰劣，或者说，谁更能在这些泡沫中幸存！？</div><br><div>人民币终将贬值，这也确实是真的。但是过程会很缓慢。除非政权更迭。</div><br><div>解决办法：出国亦或努力使自己变成暴富的那群人。</div><br><div>人民币国际化</div><br><div>国际货币满足三个方面：<br clear="none">1.境外一定流通率</div><br><div>2.人民币金融产品投资工具</div><br><div>3.人民币结算国际贸易</div><br><div></div><br><div>欧猪五国，piigs。葡萄牙，意大利，爱尔兰，希腊，西班牙。</div><br><div>国际化一般都是你币值足够稳定，才能获得人们信任，才能越来越被更多人持有，汇率也会越来越低。</div><br><div>日元的国际化之路：广场协议之后，日本货币三年升值100%！然而，房地产拉动型与金融投机型泡沫破灭后，又一蹶不振。</div><br><div>影响货币国际化的五个主要方面：</div><br><div>1.该国在全球贸易中的相对规模</div><br><div>2.该国贸易在全休贸易总量中的相对规模</div><br><div>3.该国货币的币值稳定性</div><br><div>4.该国金融市场的稳定和完善程度</div><br><div>5.历史偏好的问题，就是该国货币在历史上信用如何</div><br><div>归根结底，实力，信用</div><br><div>真正的国际化：资本输出，那纸片到国外买服务，买商品来造福自己国家的小老百姓。</div><br><div>中国所谓的经济发展奇迹与日本的明治维新、印尼的裙带资本主义、俄罗斯的寡头经济没有什么本子区别，若果硬要说发展阶段，总共刚刚发展到日本的明治维新时代。</div><br><div>谁是欠债天王</div><br><div>国债</div><br><div>国家欠债的凭证</div><br><div>主权债务危机：</div><br><div>欧猪五国和希腊危机</div><br><div>美国印钞机和日本欠债天王</div><br><div>花未来的钱的前提是你未来能赚越来越多的钱</div><br><div>神话与神器</div><br><div>海上马车夫—荷兰Netherlands，的阿姆斯特丹开创了股票（stock）</div><br><div>future，未来就是期货：约定未来某一时刻以某一价格交收货。十倍杠杆</div><br><div>期货可以，那股票当然也可以，所以就有了期权（stock options）。</div><br><div>财富的积累，从来都不是你想的那样勤勤恳恳就可以，要不被剥削，你就必须成为剥削别人的人！</div><br><div></div>
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/08/09/日本经济盛衰史/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/09/日本经济盛衰史/" class="post-title-link" itemprop="url">日本经济盛衰史</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-08-09 22:33:20" itemprop="dateCreated datePublished" datetime="2016-08-09T22:33:20+08:00">2016-08-09</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/08/06/天幕红尘/">天幕红尘</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            人是什么？人是趋利避害？人是我要比你强，我要比你尊贵、富有，比你荣耀……归根到底是我...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/08/06/天幕红尘/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>8月 06, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <div>第一章日本的企业</div><br><div>1945年9月，GHQ盟军总司令部进驻日本。麦克阿瑟主导推行“解散财阀”等一些列经济名族文化政策，恰恰帮助了日本。</div><br><div>一、日本企业集团的形成和确立</div><br><div>1.战后日本财阀的解体</div><br><div>历史渊源</div><br><div>①德川时期  三井、住友</div><br><div>②明治时期 三菱 安田 古河 浅野 大仓</div><br><div>③昭和时期 日产 中岛 日窒 日朝 理研</div><br><div>二战前的日本财阀特征：<br clear="none">1）封建家族的闭锁（旧财阀最显著的特征）</div><br><div>2）所属企业种类繁杂，业务缺乏联系</div><br><div>3）三井、三菱、住友之流都是利用国家政权进行资本积累的（我艹，说的好像我们是通过竞争引起垄断、通过生产的集中和聚集引起垄断似地）</div><br><div>4）他们的经营领域主要是棉纺织业、铜矿、煤矿为主的轻工业</div><br><div></div><br><div>二战结束后，盟军决定解散日本财阀</div><br><div>解散财阀的措施分为4个方面：</div><br><div>①解散“持股公司”</div><br><div>②排除家族对企业的控制力</div><br><div>③分散股票所有权给该公司的从业人员</div><br><div>④大企业化小，实际化小的只有11家</div><br><div></div><br><div>历史上普遍给予财阀解体较高评价，认为没有财阀解体就没有之后日本企业集团的形成。</div><br><div></div><br><div>2.战后日本企业集团的形成</div><br><div>所谓企业集团，一般认为，是一种有着共同利益的特殊关系的企业群体，是在成员企业自主经营和对等互利的原则下结成的持续长久的经济联合协作体制。（相互持股）</div><br><div>1950年，朝鲜战争真特么救了日本一条命啊！！！特需景气！</div><br><div>当时处在道奇危机的日本经济，直接就被拯救了，其次，还把日本拉入了西方阵营，其三，日美讲和， 美国开始扶持日本了！（<strong><em>而新的对日占领政策，则在于培养强有力的日本政府。不仅要使日本成为自主国家，而且要使日本在今后远东可能产生的新极权</em></strong><strong><em>主义的威胁方面，充分发挥强有力的防洪堤作用。来源：日本大藏省编《昭和战败史》第17卷，东洋经济新报社， 1981年版，第41页。</em></strong>）</div><br><div>旧财阀系大企业成绩复名！加上对“禁止垄断法”的修改，直接公开复活了！</div><br><div>1955年，日本经济上各项指数均回复到站前水平！！</div><br><div></div><br><div>二、企业集团的特征、功能和作用</div><br><div>1.企业集团的基本特征</div><br><div>1）集团环状持股</div><br><div>2）社长会协调外资管理</div><br><div>3）系列贷款是重要联系纽带</div><br><div>4）综合商社—另一个组织者与中枢</div><br><div>5）其他</div><br><div>人事结合关系</div><br><div>重化学工业与综合化</div><br><div>成为国际性垄断资本</div><br><div>2.企业集团的功能 p73</div><br><div>稳定股东化，降低交流、信息分享成本、分散风险。</div><br><div>一、组织协调的功能</div><br><div>二、分散风险</div><br><div>三、技术信息交流功能</div><br><div></div><br><div>3.企业集团的作用</div><br><div>1）微观方面</div><br><div>一集团力量大吗，研发运营实力强</div><br><div>二信息收集成本降低，风险分散</div><br><div>三规模经济扩大市场占有率</div><br><div>四经营领域多元化，鸡蛋不装在一个篮子里</div><br><div>五引进消化外国技术</div><br><div>2）宏观层面</div><br><div>一增强市场竞争力</div><br><div>二利于调整产业机构</div><br><div>三解决资本主义的社会基本矛盾</div><br><div>四加速技术进步</div><br><div>五调节社会资源</div><br><div></div><br><div>三、企业集团的发展</div><br><div>日本1990年代，泡沫破灭。泡沫形成、膨胀和破灭，最主要的表现形式便是一股价、地价为代表的资产价格的暴涨暴跌。</div><br><div>1.泡沫危机对集团的冲击</div><br><div>20世纪80年代末，日本世纪年增长率为5.5%，4年增长为22%左右，但资产价格却增长了100%~200%。</div><br><div>泡沫破灭打击主要集中在金融界和中小企业。企业集团最大的影响便是相互持股率的下降。</div><br><div>2.企业集团的发展现状和未来走向</div><br><div>（1）企业集团的发展现状</div><br><div>一控股公司解禁</div><br><div>二外国股东持股比例持持续上升</div><br><div>（2）日本企业集团的未来走向</div><br><div>第二章 现代日本的产权制度</div><br><div>公司本位思想和公司主义</div><br><div>一、日本产权制度的变迁</div><br><div>1.站前日本公司产权结构的状况</div><br><div>日本公司制度是明治维新后移植欧美公司法人制度基础上形成的企业制度。</div><br><div>2.战后日本公司产权结构的特征</div><br><div>（1）股权结构法人化</div><br><div>（2）股权高度集中化，大股东持股比例高</div><br><div>（3）法人相互持股</div><br><div>3.法人相互持股形成的背景</div><br><div>二、日本的法人相互持股制度</div><br><div>1.日本股权性质的变化 p102</div><br><div>一日本集团的相互持股并不是为了获得利息！而是为了稳定股价，表现为低息主义。</div><br><div>二相互持股相互抵消最后使得控制权虚化！</div><br><div>2.日本公司制度的形式化</div><br><div>股东大会、董事会、监事会都变得形式化了</div><br><div>3.日本公司“法人所有实质化”的表现</div><br><div>4.日本经营者的权利基础</div><br><div>三、日本企业集团的产权制度特征</div><br><div>以法人持股制度为基础，以系列融资为纽带，以交易关系长期化为目标。</div><br><div>1.法人相互持股制度化</div><br><div>2.系列融资制度化</div><br><div>金融机构对自己系列的企业融资偏爱。</div><br><div>3.交易关系内部化</div><br><div>四、日本公司治理结构</div><br><div>1.日本公司治理结构 P122</div><br><div>2.主银行制度在日本经济发展中的作用</div><br><div>（1）主银行制度为日本企业提供了高效率的资金动员机制</div><br><div>（2）主银行制度提供了日本产业政策效率化的保证机制</div><br><div>（3）主银行制度在城市银行特别是主银行之间建立一种协调竞争体制</div><br><div>3.日本公司治理结构的重构</div><br><div>建立股东、企业员工、主银行以及包括社会在内的多元化的监督与约束机制。</div><br><div>第三章 日本的财政政策和金融制度</div><br><div>一、日本的财政政策</div><br><div>日本学者认为，财政体制就是维护财政支出和财政收入的制度系统以及左右这个系统各个主体（政治家、官僚、企业、个体等）的行为。如果从经济学角度还得加入“效率”和“公平”。</div><br><div>（1）均衡财政时期的财政运营</div><br><div>经常性收入（税收占大部分）来支付经常性支出。</div><br><div>（2）公债发型的财政运营体制</div><br><div>1955年后期，萧条造成税收增长率缓慢，入不敷出，发行公债应急。</div><br><div>（3）赤字财政运营机制</div><br><div>日本经济1970年代后期出现了几个重要的变化：</div><br><div>一是经济高速增长期结束</div><br><div>二是不断的增加公共投资</div><br><div>三四社会福利的投入开支急剧增大</div><br><div>导致财政赤字不断上升</div><br><div>（4）财政重建与体制创新</div><br><div>1996年12月19日，日本提出财政健全三项目标：</div><br><div>一、使现代人的受益和负担实现均衡</div><br><div>二、实现国债余额对GDP之比不在上升</div><br><div>三、实现国债余额不再上升</div><br><div>一位的强调财政重建，就会造成内需不足，最后抑制经济，而只有在经济增长的前提条件下，才能实现财政重建。没有经济的重建，就没有财政的重建。</div><br><div>2.日本财政的特性</div><br><div>主要表现为5个方面</div><br><div>（1）财政实施均衡主义的原则</div><br><div>在日本的1955年到1964年高速发展阶段，有人认为，“日本不存在凯恩斯主义政策”。</div><br><div>（2）日本财政相对规模迅速膨胀</div><br><div>（3）日本财政对国债的依存度十分高</div><br><div>对国债依存度高，不得不以债还债，结果越借越多，而且由于公债发型，还抑制了民间资本。所谓的“滞胀”怪圈。</div><br><div>（4）日本的税收对所得税依存度很高，产生了赋税负担的不平等现象</div><br><div>（5）财政融资对于社会资本的形成起到了重要作用</div><br><div>3.日本财政的现状</div><br><div>（1）近期的日本财政状况</div><br><div>1996年，日本政府债务对GDP的比例就达到了64.4%，为发达国家之最。在1996年底，建设公债与特例公债加在一起就已经有240兆日元了，这一数字意味着日本全体国民人均负担191万日元。</div><br><div>（2）当前日本的财政的主要问题</div><br><div>当前日本危机主要有以下几个方面：</div><br><div>一、财政赤字对GDP之比居高不下。一般所谓的财政赤字之比的方法是用中央政府财政赤字，地方政府财政赤字与社会福利基金赤字之和。而日本大藏省认为，日本财政最困难的公共企业的亏损应该计入赤字之中，而社会福利基金的结余是不能动用的，不应用来抵消赤字。所以日本的计算方法是中央政府、地方政府和公共企业的赤字之和与GDP的比值！</div><br><div>二、国债依存度过高</div><br><div>国债收入与财政收入之比，太高了！</div><br><div>三、长期债务余额对GDP之比过高</div><br><div>国债什么时候破产，国家什么时候破产？</div><br><div>四、利息支付对财政支出之比越来越高</div><br><div>债太多了，以至于还利息都困难，而且越来越困难。</div><br><div>（3）造成日本财政恶化的原因</div><br><div>各国的普遍原因一般都是经济低速增长，而税收增加的幅度不大。</div><br><div>而日本财政恶化的原因，人口老龄化和结构性失业（产业转换，变革）是主要原因。还有就是泡沫破灭对财政的影响也很长远（为了摆脱危机，结果发行公债想来刺激消费，然而并没有什么卵用）。1973年，还实行了老人医疗免费制！！</div><br><div>4.日本的财政结构改革</div><br><div>（1）确定财政健全化的目标 p144</div><br><div>第一，2005年之前将中央与地方政府财政赤字对GDP之比降至3%以下，基本实现财政收支平衡。</div><br><div>第二，切实使债务余额以及债务余额对GDP之比不再上升。</div><br><div>（2）明确财政结构改革的五项基本原则</div><br><div>（3）削减各项政府开支</div><br><div>5.财政结构改革所面临的难题及发展前景</div><br><div>（1）老龄化社会对财政支出的刚性需求</div><br><div>2015年，老龄人口25%！</div><br><div>（2）配套的行政改革步履维艰</div><br><div>（3）经济增长乏力，财政收入严重不足</div><br><div>国家需要一方面需要借债刺激消费，另一方面又要为税收减少、支出增加买单，可谓双重打击。</div><br><div>6.日本的财政政策给我国的借鉴与启示</div><br><div>（1）准确判断宏观经济的运行形势</div><br><div>（2）适度扩大国债发行，增加财政扩张的能力</div><br><div>（3）财政政策要有其他政策的配合</div><br><div>（4）要灵活运用各种财政政策手段，引导民间投资和消费</div><br><div>二、日本的金融制度</div><br><div>1.战后至20世纪70年代的金融制度与银行的作用</div><br><div>（1）战后至20世纪70年代的金融制度</div><br><div>被称为“受管制的制度”主要包括业务领域管制、利率管制、国内外市场分离三方面内容。</div><br><div>（2）战后至20世纪70年代日本金融制度的特征</div><br><div>主要呈现企业超借、银行超贷，间接融资为主和资金分布不均等特征。</div><br><div>第一，“超借”现象。内部资金不够</div><br><div>第二，“超贷”现象。借出贷款超本金</div><br><div>第三，资金分布不均匀。一些方面资金缺乏一些方面资金剩余</div><br><div>第四，间接融资为主。</div><br><div>（3）旧金融体制下银行的作用</div><br><div>主办银行：分担风险，信息管理者，节约代理人成本。</div><br><div>2.20世纪70年代以来日本金融结构的变化及对银行的影响</div><br><div>（1）20世纪70年代以来日本金融结构的变化 p163</div><br><div>增速放缓，日元升值，</div><br><div>（2）金融结构变化对银行的影响</div><br><div>银行存款比重下降，银行风险选择提高</div><br><div>3.亚洲金融危机中的日本金融业</div><br><div>1997年11月3日，三洋证券向东京地方法院申请破产保护，实际上也就宣告了破产，从此拉开了日本金融机构连续破产的序幕。</div><br><div>不良债权增加，银行惜贷</div><br><div>4.日本的金融体制改革</div><br><div>20世纪90年代以来，桥本内阁在金融、财政、行政、经济结构、社会保障、教育等六大部门实行全面的改革。</div><br><div>（1）日本金融体制改革计划的提出背景</div><br><div>一，金融自由化和国际化的缓慢推进</div><br><div>金融自由化包括：利率自由化；扩充金融市场贵吗；推动金融业务多元化；放宽金融业务间的限制，变分业经营为兼业经营，等等。</div><br><div>二，“泡沫经济”的破灭及其后遗症</div><br><div>严重的巨额坏账；官僚贪污腐败、严重金融丑闻；</div><br><div>三，国际金融中心的地位日趋下降</div><br><div>（2）日本金融体制改革计划的酝酿及提出</div><br><div>改革思路：一是贯彻市场原理，促进竞争，以此作为搞活经济的中心，二是必须确保跨行业、跨国家的竞争；三是应该考虑如何保护弱者的利益；四是明确说明还需保留一定管制的理由，而且要增加管制措施的透明度。</div><br><div>关于“相对滞后的金融体制”的改革</div><br><div>第一，实现各部门的全面竞争。</div><br><div>第二，实现资产交易自由化强化资本市场的功能；放款或取消资产运用及金融产品设计方面的原有限制；彻底改革原有的外汇管理制度，完全实现自由化。</div><br><div>第三，重新审定原有的管制、监督体制，完善破产处理制度的各项基础；向规则型行政体制转变；制定进一步促进金融领域竞争的政策。</div><br><div>（3）日本金融体制改革的基本原则和目标</div><br><div>“自由”，“公正”，“全球化”三大目标。</div><br><div>（4）日本金融改革的影响及主要问题</div><br><div>第一，活跃资本市场，加速资本流动。</div><br><div>第二，全面加剧国内外各种金融机构的竞争。</div><br><div>第三，极大提高融资企业的资本运营效率。</div><br><div>日本金融大改革（Bigbang）过程中面临的主要问题：</div><br><div>1.在改革的过程中如何保持金融体制的稳定。</div><br><div>2.防止资本外流所引起的国内市场空洞化。</div><br><div>3.尽快处理好巨额不良债权。</div><br><div>4.尽快修订、制定并完善与改革相配套的法规和制度。</div><br><div>5.要重视政府金融体系的改革。</div><br><div>第四章 日本经济增长方式和发展战略</div><br><div>一、日本经济增长方式</div><br><div>1.日本经济增长的阶段</div><br><div>大致可以分为四个阶段。</div><br><div>（1）1944~1955年战后经济恢复时期</div><br><div>这段时期GDP年均增长率为9.2%。到55年，已经恢复到了站前水平。</div><br><div>（2）1956~1973年的经济高速增长时期</div><br><div>在这一时期，日本gdp per capita从不及美国1/10，增长到相当于美国的60%！</div><br><div>这一阶段增速为9.7%！ 1968年，超过德国，成为第二大经济体。</div><br><div>（3）1973~1991年低速增长时期</div><br><div>受两次石油危机及布雷顿森林体系崩溃的冲击，年均增长率4%左右。</div><br><div>（4）1991年以后的经济“零增长”时期</div><br><div>失去的20年。</div><br><div>2.战后日本经济增长的原因 p189</div><br><div>一，战后初期，日本进行的民主改革，尤其是经济领域的民主改革，使日本经济充满活力。</div><br><div>二，充分利用了当时的各种有利条件。</div><br><div>三，政府在经济的复兴与发展过程中发挥了重要的主导作用。</div><br><div>四，日本企业采取了科学的管理与经营方式。日本企业制度，“日本式经营”。</div><br><div>五，日本政府和企业高度重视科技和教育。</div><br><div>六，根据国情，大力推进“贸易立国”的政策。</div><br><div>七，实行低消费、高储蓄、高积累的政策，为经济发展提供了必要的资金保证。</div><br><div>3.20世纪90年代后日本经济衰退的原因和特点。</div><br><div>随着日本经济的复兴与飞速发展，80年代初已成为经济大国。与各大国之间贸易摩擦不断，1985年9月22日，美英法德和日本无果财长签订《广场协议》规定降低美元汇价，随后日元一路升值。185年的1比263直到1987年的1比121，两年1倍以上！日本出口能力大幅下降。经济萧条！！！</div><br><div>为了应对萧条，日本政府开始降低贴现率！以后的钱不值钱了啊，所以现在的钱，得多用，多投资！结果，1987年超了59%，1989年超了92%！大笔资金流向土地、股票市场，引起地价和股价的上升！</div><br><div>地价和股价不断的暴涨，对个人、金融机构及企业都产生了极大的影响。结果就是大家越来越有钱，都成为土豪了！1989年，政府觉得不对了，贴现率一下子提高到了3.25%，开始限制不动产的价格了！截止1989年底，东京股市股票平均价格38915.87，而到92年4月，跌倒了17000以下。从186年年底到1991年4月，持续53个月的泡沫经济结束！</div><br><div>结局是很惨的，造成了整个日本经济的萧条。之后三年，基本上零增长！</div><br><div>主要原因：</div><br><div>一，企业生产力过剩。大规模的投资曾是支撑日本经济的重要因素。</div><br><div>二，科技创新后经不足。全靠引进发达国家的技术来消化，自身研发能力不足，信息产业被美国领先了啊！</div><br><div>三，产业结构调整滞后。</div><br><div>四，经济体制调整失误。政府主导的市场经济，到后来，想的越发疲软，规则体系有诸多掣肘。</div><br><div>五，金融机构存在巨额不良债权。</div><br><div>六，财政危机严重，削弱了政府干预经济的能力。日本一直奉行凯恩斯的赤字财政政策，财政支出不断扩大，以至于发展成危机。</div><br><div>这次危机的特点：</div><br><div>一，持续时间长。有20年了吧。</div><br><div>二，企业大量倒闭、负债规模空前、失业率不断上升。</div><br><div>三，金融机构相继倒闭，不良债权规模急剧增加，金融系统信用等级评级普遍下降。</div><br><div>四，设备投资乏力，工业生产下降。</div><br><div>五，具名消费水平下降。</div><br><div>六，经济、金融形势恶化的同时，日本证据也进入了战后最为动荡不安的时期。</div><br><div>日本经济发展展望</div><br><div></div>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/08/08/再学习之HTML+CSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/08/再学习之HTML+CSS/" class="post-title-link" itemprop="url">再学习之HTML+CSS</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-08-08 05:56:58" itemprop="dateCreated datePublished" datetime="2016-08-08T05:56:58+08:00">2016-08-08</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/08/06/上帝掷骰子吗/">上帝掷骰子吗</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            以前的人们以为光传播的介质是“以太”！牛顿 关于光的微粒说胡克和牛顿，有点惨啊，胡克...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/08/06/上帝掷骰子吗/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>8月 06, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <p>由于之前在一两天之后学完了html和css，现再重新温习一遍。<br>1.html属性为html元素提供更多的信息，属性总是以名称/值的形式出现，得要有引号。<br><a title="default.html" href="default.html">This a link</a></p>
+<p></p><h6>我是h6</h6><p></p>
+<p></p><h5>我是h5</h5><p></p>
+<p></p><h2>我是h2</h2><br>一般h1对应36px<p></p>
+<p>h2对应30px;</p>
+<p>h3对应24px;</p>
+<p>h4对应18px;</p>
+<p>h5对应14px;</p>
+<p>h6对应12px;</p>
+<p>普通文本为16px，一般也就能用到h3罢了。</p>
+<p>html的注释方法&lt;!–内容–&gt;</p>
+<p>浏览器中连续的空格被当做一个空格，换行被当做一个空格，两者叠加也被当做一个空格。</p>
+<p>HTML的文本格式化：<br>定义各种字体：<br>粗体：<b>粗体</b><br>大号字体：<big>大号字体</big><br>着重文字：<em>着重文字</em><br>斜体：<i>斜体</i><br>小号字体：<small>小号字体</small><br>加重语气：<strong>加重语气</strong><br>下标：<sub>下标</sub><br>上标：<sup>上标</sup><br>插入字：<ins>插入字</ins><br>删除字：<del>删除字</del></p>
+<p>HTML计算机输出标签：<br>计算机代码：<code>计算机代码</code><br>键盘码：<kbd>键盘码</kbd><br>计算机代码样本：<samp>即使按季代码样本</samp><br>打字机代码：<tt>打字机代码</tt><br>变量：<var>变量</var><br>预格式文本：</p>
+<p><pre>预格式文本</pre><br>HTML应用、术语定义：<br>缩写：<abbr title="dfa">define first alphabet缩写</abbr><br>首字母缩写：<acronym>首字母缩写</acronym><br>地址：</p>
+<p><address>地址</address>文字方向：<bdo dir="rtl">文字方向</bdo><br>长的引用：</p>
+<p><blockquote>长的引用</blockquote><br>短的引用：<q>短的引用</q><br>引用、引证：<cite>引用、引证</cite><br>定义项目：<dfn>定义项目</dfn></p>
+<p>HTML标签语义话，大多数的标签都是有具体语义的，如果仅仅为了改变样式，应该用样式表来改变样式，而HTML表达语义。</p>
+<p>样式，外部样式表、内部样式表、内连样式表<br>外部：head里插入</p>
+<p><pre>&lt;link type=”text/css” rel=”stylesheet” href=”style.css”&gt;</pre><br>超链接<a href="aim.html">我就是超链接</a><br>属性target=”_blank”新窗口打开<br>属性target=”_top”跳出框架到首页去<br>锚（anchor）先设定锚，然后就能指定锚了<br>&lt;a name=”anchor”&gt;锚&lt;/a&gt;设定锚<br>指定锚&lt;a href=”#anchor”&gt;指定锚&lt;/a&gt;<br>创建电子邮件链接：<br><a href="mailto:conanskyforce@163.com?subject=Hello&amp;bcc=conansky163@163.com&amp;body=Are20%You20%Ok" target="_blank" rel="noopener">发送邮件</a><br>&lt;a href=”mailto:<a href="mailto:conanskyforce@163.com" target="_blank" rel="noopener">conanskyforce@163.com</a>?subject=Hello&amp;<a href="mailto:bcc=conansky163@163.com" target="_blank" rel="noopener">bcc=conansky163@163.com</a>&amp;body=Are20%You20%Ok”&gt;</p>
+<p>插入图像：</p>
+<p>&lt;img src=”xxx.jpg” alt=”this is a pic”/&gt;</p>
+<p>表格：&lt;table&gt;、&lt;th&gt;、&lt;tr&gt;、&lt;td&gt;</p>
+<p><table></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td>一行一列</td></p>
+<p><td>一行二列</td><br></p>
+<p><tr></tr></p>
+<p><td>二行一列</td></p>
+<p><td>二行二列</td><br><br><br><br>&lt;table&gt;:定义表格<br>&lt;caption&gt;:定义标题<br>&lt;th&gt;:定义表头<br>&lt;tr&gt;:定义行<br>&lt;td&gt;:定义列</p>
+<p>块级元素（block level element）和内联元素（inline element）<br>块级元素会以新行和新列来开始和结束如&lt;h1&gt;、&lt;p&gt;、&lt;ul&gt;、&lt;table&gt;、&lt;div&gt;<br>内联元素不会新行开始如&lt;b&gt;、&lt;td&gt;、&lt;a&gt;、&lt;img&gt;、&lt;span&gt;</p>
+<p>HTML表单和输入：&lt;form&gt;<br>输入&lt;input&gt;<br>类型为文本域type=”text”,&lt;input type=”text” name=”name”&gt;:<br>name:<input type="text"><br>类型为单选按钮type=”radio”,&lt;input type=”radio” name=”sex” value=”female”/&gt;:</p>
+<p><input name="sex" type="radio" value="male">male</p>
+<p><input name="sex" type="radio" value="female">female<br>类型为复选按钮type=”checkboxs”,&lt;input type=”checkboxs” name=”car” /&gt;</p>
+<p><input name="car" type="checkbox">volve</p>
+<p><input name="car" type="checkbox">benz</p>
+<p><input name="car" type="checkbox">bmw<br>文本域：&lt;textarea&gt;</p>
+<textarea style="margin: 0px; width: 142px; height: 32px;">文本域</textarea>
+
+<p>表单动作属性和确认按钮<br>&lt;form name=”input” action=”xxxx.asp” method=”get”&gt;<br>&lt;input type=”text” name=”name”/&gt;<br>&lt;inupt type=”submit” value=”提交按钮”/&gt;</p>
+<p><form action="xxx.asp" method="get" name="input">user:<input name="user" type="text" placeholder="husingcapital"><input type="submit" value="提交按钮"></form><form><select name="cars"></select></form></p>
+<p><option value="benz">benz</option></p>
+<p><option value="bmw">bmw</option></p>
+<p><option selected="selected" value="volve">volve</option></p>
+<p><option value="audi">audi</option><br></p>
+<p><input type="button" value="点击我">框架，浏览器中显示不止一个页面<br>&lt;frameset&gt;<br>&lt;frame src=”aaa.html”/&gt;<br>&lt;frame src=”bbb.html”/&gt;<br>&lt;frameset/&gt;<br>iframe用于网页内显示网页<br>&lt;iframe src=”aaa.html” width=”” height=””&gt;&lt;iframe&gt;</p>
+<p>216web安全色被用来确保:当计算机使用 256 色调色板时,所有的计算机能够正确地显示所有的颜色。</p>
+<p><table border="1" width="100%"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#000000">000000</td></p>
+<p><td align="center" bgcolor="#000033">000033</td></p>
+<p><td align="center" bgcolor="#000066">000066</td></p>
+<p><td align="center" bgcolor="#000099">000099</td></p>
+<p><td align="center" bgcolor="#0000cc">0000CC</td></p>
+<p><td align="center" bgcolor="#0000ff">0000FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#003300">003300</td></p>
+<p><td align="center" bgcolor="#003333">003333</td></p>
+<p><td align="center" bgcolor="#003366">003366</td></p>
+<p><td align="center" bgcolor="#003399">003399</td></p>
+<p><td align="center" bgcolor="#0033cc">0033CC</td></p>
+<p><td align="center" bgcolor="#0033ff">0033FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#006600">006600</td></p>
+<p><td align="center" bgcolor="#006633">006633</td></p>
+<p><td align="center" bgcolor="#006666">006666</td></p>
+<p><td align="center" bgcolor="#006699">006699</td></p>
+<p><td align="center" bgcolor="#0066cc">0066CC</td></p>
+<p><td align="center" bgcolor="#0066ff">0066FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#009900">009900</td></p>
+<p><td align="center" bgcolor="#009933">009933</td></p>
+<p><td align="center" bgcolor="#009966">009966</td></p>
+<p><td align="center" bgcolor="#009999">009999</td></p>
+<p><td align="center" bgcolor="#0099cc">0099CC</td></p>
+<p><td align="center" bgcolor="#0099ff">0099FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#00cc00">00CC00</td></p>
+<p><td align="center" bgcolor="#00cc33">00CC33</td></p>
+<p><td align="center" bgcolor="#00cc66">00CC66</td></p>
+<p><td align="center" bgcolor="#00cc99">00CC99</td></p>
+<p><td align="center" bgcolor="#00cccc">00CCCC</td></p>
+<p><td align="center" bgcolor="#00ccff">00CCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#00ff00">00FF00</td></p>
+<p><td align="center" bgcolor="#00ff33">00FF33</td></p>
+<p><td align="center" bgcolor="#00ff66">00FF66</td></p>
+<p><td align="center" bgcolor="#00ff99">00FF99</td></p>
+<p><td align="center" bgcolor="#00ffcc">00FFCC</td></p>
+<p><td align="center" bgcolor="#00ffff">00FFFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#330000">330000</td></p>
+<p><td align="center" bgcolor="#330033">330033</td></p>
+<p><td align="center" bgcolor="#330066">330066</td></p>
+<p><td align="center" bgcolor="#330099">330099</td></p>
+<p><td align="center" bgcolor="#3300cc">3300CC</td></p>
+<p><td align="center" bgcolor="#3300ff">3300FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#333300">333300</td></p>
+<p><td align="center" bgcolor="#333333">333333</td></p>
+<p><td align="center" bgcolor="#333366">333366</td></p>
+<p><td align="center" bgcolor="#333399">333399</td></p>
+<p><td align="center" bgcolor="#3333cc">3333CC</td></p>
+<p><td align="center" bgcolor="#3333ff">3333FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#336600">336600</td></p>
+<p><td align="center" bgcolor="#336633">336633</td></p>
+<p><td align="center" bgcolor="#336666">336666</td></p>
+<p><td align="center" bgcolor="#336699">336699</td></p>
+<p><td align="center" bgcolor="#3366cc">3366CC</td></p>
+<p><td align="center" bgcolor="#3366ff">3366FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#339900">339900</td></p>
+<p><td align="center" bgcolor="#339933">339933</td></p>
+<p><td align="center" bgcolor="#339966">339966</td></p>
+<p><td align="center" bgcolor="#339999">339999</td></p>
+<p><td align="center" bgcolor="#3399cc">3399CC</td></p>
+<p><td align="center" bgcolor="#3399ff">3399FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#33cc00">33CC00</td></p>
+<p><td align="center" bgcolor="#33cc33">33CC33</td></p>
+<p><td align="center" bgcolor="#33cc66">33CC66</td></p>
+<p><td align="center" bgcolor="#33cc99">33CC99</td></p>
+<p><td align="center" bgcolor="#33cccc">33CCCC</td></p>
+<p><td align="center" bgcolor="#33ccff">33CCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#33ff00">33FF00</td></p>
+<p><td align="center" bgcolor="#33ff33">33FF33</td></p>
+<p><td align="center" bgcolor="#33ff66">33FF66</td></p>
+<p><td align="center" bgcolor="#33ff99">33FF99</td></p>
+<p><td align="center" bgcolor="#33ffcc">33FFCC</td></p>
+<p><td align="center" bgcolor="#33ffff">33FFFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#660000">660000</td></p>
+<p><td align="center" bgcolor="#660033">660033</td></p>
+<p><td align="center" bgcolor="#660066">660066</td></p>
+<p><td align="center" bgcolor="#660099">660099</td></p>
+<p><td align="center" bgcolor="#6600cc">6600CC</td></p>
+<p><td align="center" bgcolor="#6600ff">6600FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#663300">663300</td></p>
+<p><td align="center" bgcolor="#663333">663333</td></p>
+<p><td align="center" bgcolor="#663366">663366</td></p>
+<p><td align="center" bgcolor="#663399">663399</td></p>
+<p><td align="center" bgcolor="#6633cc">6633CC</td></p>
+<p><td align="center" bgcolor="#6633ff">6633FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#666600">666600</td></p>
+<p><td align="center" bgcolor="#666633">666633</td></p>
+<p><td align="center" bgcolor="#666666">666666</td></p>
+<p><td align="center" bgcolor="#666699">666699</td></p>
+<p><td align="center" bgcolor="#6666cc">6666CC</td></p>
+<p><td align="center" bgcolor="#6666ff">6666FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#669900">669900</td></p>
+<p><td align="center" bgcolor="#669933">669933</td></p>
+<p><td align="center" bgcolor="#669966">669966</td></p>
+<p><td align="center" bgcolor="#669999">669999</td></p>
+<p><td align="center" bgcolor="#6699cc">6699CC</td></p>
+<p><td align="center" bgcolor="#6699ff">6699FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#66cc00">66CC00</td></p>
+<p><td align="center" bgcolor="#66cc33">66CC33</td></p>
+<p><td align="center" bgcolor="#66cc66">66CC66</td></p>
+<p><td align="center" bgcolor="#66cc99">66CC99</td></p>
+<p><td align="center" bgcolor="#66cccc">66CCCC</td></p>
+<p><td align="center" bgcolor="#66ccff">66CCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#66ff00">66FF00</td></p>
+<p><td align="center" bgcolor="#66ff33">66FF33</td></p>
+<p><td align="center" bgcolor="#66ff66">66FF66</td></p>
+<p><td align="center" bgcolor="#66ff99">66FF99</td></p>
+<p><td align="center" bgcolor="#66ffcc">66FFCC</td></p>
+<p><td align="center" bgcolor="#66ffff">66FFFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#990000">990000</td></p>
+<p><td align="center" bgcolor="#990033">990033</td></p>
+<p><td align="center" bgcolor="#990066">990066</td></p>
+<p><td align="center" bgcolor="#990099">990099</td></p>
+<p><td align="center" bgcolor="#9900cc">9900CC</td></p>
+<p><td align="center" bgcolor="#9900ff">9900FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#993300">993300</td></p>
+<p><td align="center" bgcolor="#993333">993333</td></p>
+<p><td align="center" bgcolor="#993366">993366</td></p>
+<p><td align="center" bgcolor="#993399">993399</td></p>
+<p><td align="center" bgcolor="#9933cc">9933CC</td></p>
+<p><td align="center" bgcolor="#9933ff">9933FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#996600">996600</td></p>
+<p><td align="center" bgcolor="#996633">996633</td></p>
+<p><td align="center" bgcolor="#996666">996666</td></p>
+<p><td align="center" bgcolor="#996699">996699</td></p>
+<p><td align="center" bgcolor="#9966cc">9966CC</td></p>
+<p><td align="center" bgcolor="#9966ff">9966FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#999900">999900</td></p>
+<p><td align="center" bgcolor="#999933">999933</td></p>
+<p><td align="center" bgcolor="#999966">999966</td></p>
+<p><td align="center" bgcolor="#999999">999999</td></p>
+<p><td align="center" bgcolor="#9999cc">9999CC</td></p>
+<p><td align="center" bgcolor="#9999ff">9999FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#99cc00">99CC00</td></p>
+<p><td align="center" bgcolor="#99cc33">99CC33</td></p>
+<p><td align="center" bgcolor="#99cc66">99CC66</td></p>
+<p><td align="center" bgcolor="#99cc99">99CC99</td></p>
+<p><td align="center" bgcolor="#99cccc">99CCCC</td></p>
+<p><td align="center" bgcolor="#99ccff">99CCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#99ff00">99FF00</td></p>
+<p><td align="center" bgcolor="#99ff33">99FF33</td></p>
+<p><td align="center" bgcolor="#99ff66">99FF66</td></p>
+<p><td align="center" bgcolor="#99ff99">99FF99</td></p>
+<p><td align="center" bgcolor="#99ffcc">99FFCC</td></p>
+<p><td align="center" bgcolor="#99ffff">99FFFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#cc0000">CC0000</td></p>
+<p><td align="center" bgcolor="#cc0033">CC0033</td></p>
+<p><td align="center" bgcolor="#cc0066">CC0066</td></p>
+<p><td align="center" bgcolor="#cc0099">CC0099</td></p>
+<p><td align="center" bgcolor="#cc00cc">CC00CC</td></p>
+<p><td align="center" bgcolor="#cc00ff">CC00FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#cc3300">CC3300</td></p>
+<p><td align="center" bgcolor="#cc3333">CC3333</td></p>
+<p><td align="center" bgcolor="#cc3366">CC3366</td></p>
+<p><td align="center" bgcolor="#cc3399">CC3399</td></p>
+<p><td align="center" bgcolor="#cc33cc">CC33CC</td></p>
+<p><td align="center" bgcolor="#cc33ff">CC33FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#cc6600">CC6600</td></p>
+<p><td align="center" bgcolor="#cc6633">CC6633</td></p>
+<p><td align="center" bgcolor="#cc6666">CC6666</td></p>
+<p><td align="center" bgcolor="#cc6699">CC6699</td></p>
+<p><td align="center" bgcolor="#cc66cc">CC66CC</td></p>
+<p><td align="center" bgcolor="#cc66ff">CC66FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#cc9900">CC9900</td></p>
+<p><td align="center" bgcolor="#cc9933">CC9933</td></p>
+<p><td align="center" bgcolor="#cc9966">CC9966</td></p>
+<p><td align="center" bgcolor="#cc9999">CC9999</td></p>
+<p><td align="center" bgcolor="#cc99cc">CC99CC</td></p>
+<p><td align="center" bgcolor="#cc99ff">CC99FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#cccc00">CCCC00</td></p>
+<p><td align="center" bgcolor="#cccc33">CCCC33</td></p>
+<p><td align="center" bgcolor="#cccc66">CCCC66</td></p>
+<p><td align="center" bgcolor="#cccc99">CCCC99</td></p>
+<p><td align="center" bgcolor="#cccccc">CCCCCC</td></p>
+<p><td align="center" bgcolor="#ccccff">CCCCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ccff00">CCFF00</td></p>
+<p><td align="center" bgcolor="#ccff33">CCFF33</td></p>
+<p><td align="center" bgcolor="#ccff66">CCFF66</td></p>
+<p><td align="center" bgcolor="#ccff99">CCFF99</td></p>
+<p><td align="center" bgcolor="#ccffcc">CCFFCC</td></p>
+<p><td align="center" bgcolor="#ccffff">CCFFFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ff0000">FF0000</td></p>
+<p><td align="center" bgcolor="#ff0033">FF0033</td></p>
+<p><td align="center" bgcolor="#ff0066">FF0066</td></p>
+<p><td align="center" bgcolor="#ff0099">FF0099</td></p>
+<p><td align="center" bgcolor="#ff00cc">FF00CC</td></p>
+<p><td align="center" bgcolor="#ff00ff">FF00FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ff3300">FF3300</td></p>
+<p><td align="center" bgcolor="#ff3333">FF3333</td></p>
+<p><td align="center" bgcolor="#ff3366">FF3366</td></p>
+<p><td align="center" bgcolor="#ff3399">FF3399</td></p>
+<p><td align="center" bgcolor="#ff33cc">FF33CC</td></p>
+<p><td align="center" bgcolor="#ff33ff">FF33FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ff6600">FF6600</td></p>
+<p><td align="center" bgcolor="#ff6633">FF6633</td></p>
+<p><td align="center" bgcolor="#ff6666">FF6666</td></p>
+<p><td align="center" bgcolor="#ff6699">FF6699</td></p>
+<p><td align="center" bgcolor="#ff66cc">FF66CC</td></p>
+<p><td align="center" bgcolor="#ff66ff">FF66FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ff9900">FF9900</td></p>
+<p><td align="center" bgcolor="#ff9933">FF9933</td></p>
+<p><td align="center" bgcolor="#ff9966">FF9966</td></p>
+<p><td align="center" bgcolor="#ff9999">FF9999</td></p>
+<p><td align="center" bgcolor="#ff99cc">FF99CC</td></p>
+<p><td align="center" bgcolor="#ff99ff">FF99FF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ffcc00">FFCC00</td></p>
+<p><td align="center" bgcolor="#ffcc33">FFCC33</td></p>
+<p><td align="center" bgcolor="#ffcc66">FFCC66</td></p>
+<p><td align="center" bgcolor="#ffcc99">FFCC99</td></p>
+<p><td align="center" bgcolor="#ffcccc">FFCCCC</td></p>
+<p><td align="center" bgcolor="#ffccff">FFCCFF</td><br></p>
+<p><tr></tr></p>
+<p><td align="center" bgcolor="#ffff00">FFFF00</td></p>
+<p><td align="center" bgcolor="#ffff33">FFFF33</td></p>
+<p><td align="center" bgcolor="#ffff66">FFFF66</td></p>
+<p><td align="center" bgcolor="#ffff99">FFFF99</td></p>
+<p><td align="center" bgcolor="#ffffcc">FFFFCC</td></p>
+<p><td align="center" bgcolor="#ffffff">FFFFFF</td><br><br><br><br>&nbsp;</p>
+<p>&lt;!doctype&gt;声明</p>
+<p>&lt;!doctype html&gt;html5声明</p>
+<p>HTML头部元素&lt;head&gt;里的元素有：</p>
+<p>&lt;title&gt;标题</p>
+<p>&lt;base&gt;新窗口打开标签</p>
+<p>&lt;link&gt;链接样式表、JavaScript等</p>
+<p>&lt;meta&gt;描述文档、定义关键词，</p>
+<p>&lt;meta name=”keywords” content=”html,css,xmlx”/&gt;</p>
+<p>&lt;meta name=”author” content=”Kai.Huang”/&gt;</p>
+<p>&lt;meta http-equiv=”Refresh” content=”300;url=xxx.html”/ &gt;300秒刷新页面，并重新定向xxx.html</p>
+<p>&lt;meta charset=”utf=8”/&gt;设置支持中文</p>
+<p>&lt;script&gt;内部脚本</p>
+<p>&lt;style&gt;内部样式表</p>
+<p>&nbsp;</p>
+<p>HTML实体字符</p>
+<p>空格：&amp;nbsp;</p>
+<p>小于号：&amp;lt;</p>
+<p>大于号：&amp;gt;</p>
+<p>和号：&amp;amp;</p>
+<p>版权：&amp;copy;</p>
+<p>注册商标：&amp;reg;</p>
+<p>&nbsp;</p>
+<p>HTML统一资源定位符URL（Unicode Resource Locator）</p>
+<p>schme://host.domain:port/path/filename</p>
+<p>服务类型://定义域主机默认(www).域名:端口默认(80)/服务器路径/资源名称</p>
+<p>http:超文本传输协议(hypertext transport protocol)</p>
+<p>https:安全超文本传输协议(hypertext transport protocol safety)</p>
+<p>ftp:文件传输协议(file transport protocol)</p>
+<p>URL以ASCII字符集来传送信息。ASCII字符集之外的字符要先转换为ASCII格式。</p>
+<p>今天在重新复习一下FreeCodeCamp的一百多个小codegame：</p>
+<p>border-radius:50%圆形框</p>
+<p>&lt;input type=”text” placeholder=”占位”&gt;</p>
+<p>两种提交按钮：</p>
+<p>&lt;button type=”submit”&gt;submit&lt;/button&gt;</p>
+<p>&lt;input type=”submit” value=”submit”/&gt;</p>
+<p>&lt;input type=”text” name=”url” placeholder=”xxx.com” required=”required”&gt;必填项目</p>
+<p>checked=”checked”→对于单选、复选</p>
+<p>selected=”selected” select option→对于下拉菜单</p>
+<p>样式继承：</p>
+<p>!important&gt;内联样式&gt;内部样式表最下边一个</p>
+<p>bootstrap响应式设计：</p>
+<p>&lt;link rel=”stylesheet” href=”//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css”/&gt;</p>
+<p>图片添加class为img-responsive属性，完美适配屏幕大小。</p>
+<p>button class=”btn”属性，bootstrap自带的按钮风格（其实就是Twitter的），bootstrap其实就是Twitter的轮子吧</p>
+<p>class=”btn btn-block”按钮变为块属性</p>
+<p>class=”btn btn-block btn-primary”按钮变为块属性+基本蓝色（Twitter风格）</p>
+<p><span style="color: #ff0000;">块级元素放在一行：整体在div class=”row”属性下，每一项div class=”col-xs-4”,一行十二格,占4格,共3列</span></p>
+<p>bootstrap内置css：</p>
+<p>text-primary文本蓝色风格</p>
+<p>btn-primary蓝色like按钮</p>
+<p>btn-info淡蓝色info按钮</p>
+<p>btn-danger红色删除按钮</p>
+<p>img-responsive图片响应式</p>
+<p>bootstrap十二栅格布局：</p>
+<p><img src="https://i.imgur.com/FaYuui8.png"></p>
+<p>class属性：col-xs-*很小的屏幕布局（手机）</p>
+<p>class属性：col-md-*：中等屏幕大小（pad？）</p>
+<p>bootstrap图标库：</p>
+<p>&lt;link rel=”stylesheet” href=”//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css”/&gt;</p>
+<p>图标库中i为图标</p>
+<p>&lt;i class=”fa fa-thumb-up”&gt;like&lt;/i&gt;</p>
+<p>&lt;i class=”fa fa-info-circle”&gt;info&lt;/i&gt;</p>
+<p>&lt;i class=”fa fa-trash”&gt;delete&lt;/i&gt;</p>
+<p>&lt;i class=”fa fa-paper-plane”&gt;submit&lt;/i&gt;</p>
+<p>div class=”well”这个框有井效果（凹框）</p>
+<p>JQuery:</p>
+<p>&lt;script&gt;<br>$(document).ready(function() {<br>$(“button”).addClass(“animated bounce”);//$(选择)button(元素),add(添加)Class(属性)animated(动画)bounce(跳动)</p>
+<p>$(“.well”).addClass(“animated shake”);//$(选择).well(well类),add(添加)Class(属性)animated(动画)shake(震动)</p>
+<p>$(“#target3”).addClass(“animated fadeout”)//$(选择)#target3(id为target3),add(添加)Class(属性)animated(动画)fadeout(渐消)</p>
+<p>$(“#target1”).css(“color”,”red”);//$(选择)#target1(id为target1),add(添加)css(属性)color(颜色)red(红色)</p>
+<p>$(“#target1”).prop(“disabled”, “true”);//$(选择)#target1(id为target1),prop(属性)disable(不可选)true(真)</p>
+<p>$(“#target4”).html(“&lt;em&gt;#target4&lt;/em&gt;”);//$(选择)#target4(id为target4)的html的内容被&lt;em&gt;#target4&lt;/em&gt;代替</p>
+<p>$(“#target4”).remove( );//$(选择)#target4(id为target4)的元素被移除</p>
+<p>$(“#target2”).appendTo(“#right-well”);//$(选择)#target2(id为target2)的元素被移动到id为right-well的div中</p>
+<p>$(“#target5”).clone().appendTo(“#left-well”)//$(选择)#target5(id为target5)的元素复制，然后移动到id为left-well的div中</p>
+<p>$(“#target1”).parent().css(“background-color”,”red”)//$(选择)#target1(id为target1)的元素，的父元素，设定样式，背景颜色为红色</p>
+<p>$(“#right-well”).children().css(“color”,”orange”)//$(选择)#right-well(id为right-well)的元素，的子元素，设定样式，颜色为橙色</p>
+<p>$(.target:nth-child(n))选择器//类元素(.target)的子元素,2n-偶数,2n+1基数,n为2第二个子元素</p>
+<p>$(“.target:even”).addClass(“animated shake”)//target属性为偶数的元素，添加效果，震动；odd为奇数</p>
+<p>$(“body”).addClass(“animated hinge”)//给body元素添加 hinge(折挂)动画效果</p>
+<p>&lt;/script&gt;</p>
+<p>$(bling)符号来选择元素，然后添加操作。</p>
+<p>.addClass添加class属性</p>
+<p>.css改变css样式</p>
+<p>.prop改变属性（可选不可选）</p>
+<p>.html改变选中者的内容</p>
+<p>.remove()移除选中者</p>
+<p>.appendTo()把元素从一个div移动到另一个div中</p>
+<p>.clone()克隆元素</p>
+<p>.parent()选中元素的父元素</p>
+<p>.children()选中元素的子元素</p>
+<p>element:nth-child(n)第n个element元素的子元素</p>
+<p>freecodecamp第一个项目爱因斯坦简单主页：</p>
+<p><a href="https://codepen.io/conanskyforce/pen/yJKpRg" target="_blank" rel="noopener">https://codepen.io/conanskyforce/pen/yJKpRg</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/08/06/天幕红尘/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/06/天幕红尘/" class="post-title-link" itemprop="url">天幕红尘</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-08-06 19:14:24" itemprop="dateCreated datePublished" datetime="2016-08-06T19:14:24+08:00">2016-08-06</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/08/02/16节生死课告诉你前世今生/">16节生死课告诉你前世今生</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            这都是两三天之前看完的书了，16节生死课告诉你前世今生。作者是个科学工作者，但是却被身边发生的关于轮回，前世今生的事情给惊呆了，于是乎，你宁...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/08/02/16节生死课告诉你前世今生/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>8月 02, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <div>人是什么？</div><br><div>人是趋利避害？</div><br><div>人是我要比你强，我要比你尊贵、富有，比你荣耀……归根到底是我得比你强，比你强了才踏实，这就是人的原动力。所以，尊重、关爱才成了道德，而能众生平等的就不是人了，是佛，是基督。资本的本性是逐利的，而把货币、技术、信息……包括青春美色和健壮体格等一切可用之用都转化为资本的，是人。</div><br><div></div><br><div>在我看来，马克思的资本规律说可能不是最重要的，最重要的是马克思主义的认识观，辩证、证明的认识观。也许是我太笨了，我看来看去就只看出了一句话：实事求是。以辩证、证明的认识实事求是是认识事物，这就是我认为的马克思主义。</div><br><div></div><br><div>什么是民主？</div><br><div>体现人民意志的制度就是民主。</div><br><div>意志就一定是利益的体现吗？</div><br><div>标志性的还是美国的选举制度。</div><br><div>我能不能这样理解，美国式的民主就是数人头？</div><br><div>不是简单的数人头，民主的内涵是尊重。</div><br><div>既然标志性的还是美国的选举制度，那你告诉我，哪届总统不是数人头数出来的，哪届总统是尊重出来的，国家政权这种事还可以AA制或自助餐吗，不管是简单的数，还是复杂的数，还能不是数人头吗？</div><br><div>好，就算是数人头。</div><br><div>民主不是先挖渠道还是先放水的非此即彼，不是为民主而民主的事与道，民主是社会经济、文化发展的产物，不是谁想不要就可以不要了。不同的社会条件决定了不同的民主形式，没有什么放之四海而皆准的法宝。中国文化2000多年了，那是根植在骨子里的东西，你说换就换吗？中国人不可以按照自己的方式生活吗？一定要活在西方人的价值观里边吗？人、文化，是有思维方向和思维半径的，数人头不是什么条件下都适用的，也未必是最好的解决社会问题的方式。美国到处输出它的民主与过去中国要把红旗插满全世界，我看不出来有什么本质不同，同样是事与道。你喜欢大米，你就把稻子到处撒，也不管人家的土质、温度合不合适，你是怎关心人家呢？还是价值观的好恶使然呢？</div><br><div></div><br><div>人最难做到的是实事求是，妄念、贪念、杂念一大堆，就算想实事求是，你也不知道怎样实事求是。见路不走是实事求是的通俗版，是提醒你不要唯经验、教条，要走因果、走条件的可能。见路不走是让你解放思想，不要怕跟别人不一样，因为很多人一看到跟人不一样就觉得不正常了，心里不踏实。也不要怕跟别人一样，因为也有很多人是生怕跟别人一样显不出自己高了。见路不走是解决实事求是的可操作性问题，实事求是的态度、观念、思想，是一切正确认识和决策的基础。</div><br><div></div>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/08/06/上帝掷骰子吗/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/06/上帝掷骰子吗/" class="post-title-link" itemprop="url">上帝掷骰子吗</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-08-06 19:04:37" itemprop="dateCreated datePublished" datetime="2016-08-06T19:04:37+08:00">2016-08-06</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/07/02/about threebody/">About Threebody</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            三体这个名字，中文比英文逼格要高到不知道哪里去了，光看英文名，还以为是哪部A片的名字呢。故事讲述的是一个叫叶文洁的女性，在文革的压迫下，向外星文明发...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/07/02/about threebody/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>7月 02, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <div>以前的人们以为光传播的介质是“以太”！</div><br><div>牛顿 关于光的微粒说</div><br><div>胡克和牛顿，有点惨啊，胡克完全活在牛顿的阴影下。</div><br><div>托马斯杨双缝干涉实验——波动说</div><br><div>菲涅尔——圆盘衍射和泊松亮斑</div><br><div>傅科关于光速测量实验的报告，光在水中的速度小于真空中的光速</div><br><div>随后麦克斯韦关于电磁波的预言</div><br><div>1887年，赫兹证明了麦克斯韦的电磁波存在！也证明了光就是电磁波的一种！</div><br><div>1900年，19世纪的两朵乌云</div><br><div>以太假设有问题</div><br><div>黑体辐射实验和理论不一致</div><br><div>物理学实验的意外所发现的东西：</div><br><div>1.拉瓦锡推翻燃素学说，建立近代化学</div><br><div>2.瑞利制取氮气发现惰性气体</div><br><div>3.贝克勒尔意外发现放射性</div><br><div></div><br><div>普朗克量子物理奠基（黑体方程）</div><br><div>量子 为最小单位，不可分割！能量的传输不是连续的！</div><br><div>最小单位约为6.626×10^-34焦耳*秒！为普朗克常数，用h表示。</div><br><div>量子论告诉我们，“无限分割”的概念只是一种数学上的理想，而不可能在现实中来实现，一切都是不连续的！</div><br><div></div><br><div>1900年12月14日，普朗克在柏林宣读了关于黑体辐射的论文，宣告了量子的诞生。那一年，他 42岁。</div><br><div>同年，一个名叫阿尔伯特·爱因斯坦（Albert Einstein）的青年从苏黎世联邦工业大学（eth）毕业，正在为将来的生活发愁。他在大学了旷了无穷多的课，以致于他的教授闵可夫斯基（minkowski）愤愤的骂他是“懒狗”。没有一个人肯留他在校做理论或者实验方面的工作，一个失业的年轻人的黯淡前途正等待着这位不修边幅的年轻人。</div><br><div><span style="font-family: 'courier new', courier, monospace;">在丹麦，15岁的尼尔斯·波尔（Niels bohr）正在哥本哈根的中学里读书。波尔有着好动的性格，每次打架或者争论，总是少不了他。在学习方面，他在数学和科学方面显示出了非凡的天才，但是他的笨拙的口齿和惨不忍睹的作文却是全校有名的笑柄。特别是作为最后的总结。往往使得波尔头痛半天，在他看来，这种无意义的重复而已。有一次他写一篇关于金属的论文，最后总结到：in conclusion，i would like to mention uranium（总而言之，我想说的是铀）。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">埃尔文·薛定谔（Erwin Schrodinger）比波尔下两岁，当时也在维也纳的一间著名的高级中学上学。这间中学也是物理前辈玻尔兹曼，著名剧作家施尼茨勒（Arthur Schnitzler）和齐威格（Stefanie Zweig）的母校。对于刚入校的学生来说，拉丁文是最重要的工科，每周要占8小时。而数学和物理只用3小时。不过对薛定谔来说，一切都是小菜一碟，他热爱古文、戏剧和你是，每次在班上都是第一。小埃尔文长得非常帅气，穿上礼服和紧身裤，俨然一个偏偏小公子。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">马克思·波恩（Max Born）和薛定谔有着现实的教育背景，经过了家庭教育，高级中学的过程进入了布雷斯劳大学。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">路易斯·德布罗意（Louis de Broglie</span><span style="font-family: 'courier new', courier, monospace;">）当时8岁，正在他那显赫的贵族家庭里接受良好的幼年教育。他对历史表现出浓厚的兴趣，并乐意把自己的时间花在这上面。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">沃尔夫冈·恩斯特·泡利（Wolfgang Ernst Pauli）才出生8个月，可怜的小家伙似乎一出生就和科学结缘了。他的middle name：ernst，就是因为他父亲崇拜著名的科学家恩斯特·马赫（Ernst Mach）才给他取的。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">而再过12个月，维尔兹堡的以为著名希腊文献教授就要喜滋滋 的看着他的宝贝儿子小海森堡（Werner Karl Heisenberg）呱呱坠地。稍早前，罗马的一位公务员把他的孩子命名为克里恩·费米（Enrico Fermi）。20个月后，保罗·狄拉克（Paul Dirac）也将出生在英国的布里斯托尔港。</span></div><br><div><span style="font-family: 'courier new', courier, monospace;">好了，演员都到齐了，好戏也该上演了。</span></div><br><div>光点效应</div><br><div>奇迹年annus mirabilis</div><br><div>1666年，牛顿发明了微积分，完成了光分解的实验分析，以及万有引力的开创性工作，在那一年，他为数学、力学和光学三大学科分别打下了基础，而其中的任何一项工作，都足以使他名列有史以来最伟大的科学家之列。</div><br><div>1905年，在专利局我局的爱因斯坦发表了6片论文。3月18日，发表了光电效应的论文，成为量子论的奠基石之一。4月30日，发表 了关于测量分子大小的论文，这为他赢得了博士学位。5月11日和后来的12月19日，两篇关于布朗运动的论文成为分子论的里程碑。6月30日，发表题为《论运动物理的电动力学》的论文，这个不起眼的题目后来被加上一个如雷贯耳的名称，叫“狭义相对论”。9月27日，关于物体惯性和能量的关系的论文，这是狭义相对论的进一步说明，并且在其中提出了著名的质能方程E=mc^2。</div><br><div>J.J.汤姆逊（Joseph John Thomson）发现电子 提出了葡萄干布丁的原子假说。</div><br><div>恩内斯特·卢瑟福（Ernest Rutherford）用α粒子轰击金箔，提出了原子行星模型。</div><br><div>卢瑟福——诺贝尔奖得主的幼儿园，培养了至少10位诺贝尔奖得主！ 新西兰货币100元上就是他！</div><br><div>卢瑟福假说面临问题，如果模型是这样的，那么电子运行轨道会衰减直至撞到原子上去。</div><br><div>波尔提出了能级说。</div><br><div>人们发现，一个原子的化学性质，主要取决于它最外层的电子数量，并由此表现出周期性来，但是人们也十分疑惑，那就是对于拥有众多电子的重元素来说，为什么它的一些电子能够长期的占据外层的电子轨道，而不会失去能量落到靠近原子核的低层轨道上去。这个疑问有泡利在1925年作出了解答，即一层对到所你能能够包容的不同状态，其数目是有限的，也就是说，一个轨道有着一定的容量。——泡利不相容原理。</div><br><div>P60 4.2 波尔王朝的衰败</div><br><div>路易斯·维克托·皮雷·雷蒙·德布罗意王子（prince Louis Victor Pierre Raymond de broglie）将告诉大家，电子，是一种波。</div><br><div>傅里叶展开，将一个混合的音波分解成一系列的简谐波。</div><br><div>matrix！海森堡！</div><br><div>矩阵算数！</div><br><div>I×II≠II×I！！！</div><br><div>发明矩阵的最初目的是为了求解某些微分方程组！</div><br><div>p×q≠q×p！</div><br><div>P94 6.3波恩笑谈骰子</div><br><div>是的，科学家知道过去；似地，科学家明白现在；似地科学家了解未来。只要掌握了定律，只要手机足够多的情报，只要能够处理足够大的运算量，科学家就能如同上帝一般无所不知。整个宇宙不过是一台精密的机器，它的每个部件都按照定律一丝不苟的运行，这种想法就是古典的，严格决定论（determinism）。宇宙从出生的那一刹那起，就有一个缺点的命运。我们现在无法了解它，只是因为我们说知道的信息太少了而已。</div><br><div></div><br><div>矜持的决定论在20世纪首先找到了量子论的严重跳战，随后混沌动力学的兴起使它彻底被打垮了。</div><br><div></div><br><div>决定论的垮塌是否注定了足有一直的兴起？这在哲学上市很值得探讨的。事实上，在量子论之后，物理学越来越陷于形而上学的争论中。也许形而上学应该改革名字叫“量子论之后”。</div><br><div></div><br><div>“但是，我们现在在谈论电子！他是如此的小而轻，以至于光子对它的撞击决不能忽略不计。测量一个电子的位置？好，我们派遣一个光子去自信这个任务，它回来怎么报告呢？是的，我接触到了这个电子，但是它给我狠狠撞了一下后，飞到不知什么地方去了，它现在的速度我可什么都说不上来。看，为了测量他的位置，我们剧烈的改变了他的速度，也就是动量。我们没法同时既准确的知道一个电子的位置，同时又准确的了解他的动量。”</div><br><div>△p×△q＞h/2π。</div><br><div>p动量和q位置为共轭量，有你无我，无法同时测得。</div><br><div>海德堡测不准原理uncertainty principle（不确定性原理）</div><br><div>△E×△t＞h/2π</div><br><div>能量和时间也是对共轭量。</div><br><div>波尔的“互补原理”，波恩的概率解释，海森堡的不确定性，三者构成了量子论的“哥本哈根解释”。——波粒二象性。</div><br><div></div><br><div>量子派的物理学家现在逐渐领悟到了事情的真相：我们的结论和我们的观测行为本身大有联系。人看到马是白色的，但蜜蜂看到的却是蓝色的。</div><br><div>事实上，没有什么“客观真相”。讨论马本质上“到底是什么颜色”，正如我们已经指出过的，是很无聊的行为。根本不存在一个绝对的所谓的“本色”，除非你先定义观测的方式。</div><br><div>在量子世界，我们的测量对象是如此微小，以至于我们的接入对其产生了致命的干预。我们本色的劳动使得我们的测量中充满了不确定性，从原则上都无法克服。采取的不同的手段，往往会得到不同的答案，我们随着不确定性原理摇摇摆摆，你根本不能说有一个客观的答案在那里。在量子论中没有外部世界和我之分，我们和客观世界天人合一，融合成为一体，我们和观测物相互影响，使得车辆行为成为一种难以把握的手段在量子世界，一个电子并没有什么“客观动量”，我们能谈论的，只有它的“测量动量”，而这又和我们的测量手段密切相关。</div><br><div>波尔—“如果谁不为量子论而感到困惑，那他就是没有理解量子论”。</div><br><div></div><br><div>如果不定义一个测量动量的方式，那我们谈论电子动量就是没有意义的？这听上去师傅是一种唯心主义的说法。难道我们无法测量电子，它们就没有动量了吗？让我们非常惊讶和尴尬的是，波尔和海森堡两个人对此大点其头。一点也不错，加入一个屋里概念是无法测量的，它就是没有意义的。我们要时时刻刻注意，在量子论中，观测者适合外部宇宙结合在一起的，它们之间已经没有明确的分界线，是一个整体。在经典理论中，我们脱离一个绝对客观的外部世界而存在，我们也许不了解这个世界的某些因素，但这不影响其他客观性。可如今我们自己一人融入这个世界了，对于这个物我合一的世界来说，任何东西都应该是可以测量和感知的。只有可观测的量才是存在的！</div><br><div></div><br><div>事实上，同时具有p和q的电子是不存在！p和q也像波和微粒一样，在不确定原理和互补原理的通知下以一种此消彼长的方式生存。对于一些测量手段来说，电子成像出一个准确的p，对于另一些测量手段来说，电子呈现出准确的q。我们能够测量到的电子才是唯一的实在，这后面不存在一个“客观”的，或者“实际上”的电子！</div><br><div>换言之，不存在一个库管的，绝对的世界。唯一存在的，就是我们能够观测到的世界。物理学的全部意义，不在于它能够揭示出自然“是什么”，而在于它能够明确，关于自然我们能“说什么”。没有一个脱离观测而存在的绝对自然，只有我们和那些复杂的测量关系，熙熙攘攘纵横交错，构成了这个令人心醉的宇宙的全部。测量是新物理学的核心，测量行为创造了整个世界。</div><br><div></div><br><div>奥卡姆剃刀</div><br><div>当两种说法都能接相同的事实时，应该相信假设少的那个，比如，地球“本来”是放的，但观测时显示出圆形。这和地球“本来就是园的”说明的是同一件事。但前者引入了一个墨明棋妙的不必要假设，所以前者是胡说。同样，“电子本来有准确的p和q，但是观测时只有一个显示”，这和“只存在具有p或者具有q的电子”说明的也是同一回事，但前者多了一个假设，我们应该相信后者。“存在但观测不到”，这和“不存在”根本就是一回事。</div><br><div></div><br><div>150亿光年外的宇宙（150亿光年这个距离你被称作“视界”）。</div><br><div></div><br><div>量子论的不确定性大概就是反对决定论的最好证明了吧。</div><br><div>但是，同样，概率云也告诉我们，你也有机会掌控一些东西。</div><br><div></div><br><div>哥本哈根解释：电子在没有观察的时候什么也不是，谈论他是没有意义的，只有数学可以描述——波函数！不观测的时候，根本没有个实在！自然也就没有实在的电子。事实上，不存在“电子”这个东西，只存在，“我们与电子之间的观测关系”。</div><br><div></div><br><div>爱因斯坦—波尔之争！</div><br><div>物理全明星</div><br><div>量子纠缠！（EPR佯谬）</div><br><div>薛定谔的猫！</div><br><div></div><br><div>加强版的人择原理惠勒的“延迟实验”。</div><br><div>宇宙本身由一个有意识的观测者创造出来也不是什么不可能的事。虽然宇宙的 行为在道理上已经眼花了几百亿年，但某种“延迟”使得它知道被一个高级生物所观察才成为确定。我们的观测行为本身参与了宇宙的创造过程！这就是所谓的“参与性宇宙”模型。宇宙本身没有一个确定的答案，而其中的生物参与了这个谜题答案的构建本身！</div><br><div>这实际上是某种增强版的“人择原理”。人择原理是说，我们存在这个事实本身，决定了宇宙的某些性质为什么是这样的而不是那样的。也就是说，我们讨论所有问题的前提是：事实上已经存在了一些像我们这样的智能生物来讨论这些问题。我们回忆一下笛卡尔的“第一原理”：不管我怀疑什么也好，有一点我是不能怀疑的，那就是“我在怀疑”本身。“我思故我在”！类似的原则也适用于人择原理：不管这个宇宙有什么样的性质也好，它必须要使得只能生物可能存在其中，不然就没有人来问“宇宙为什么是这样？”这个问题了。随便什么问题也好，你首先得保证有一个“人”来问问题，不然就没意义了。</div><br><div></div><br><div>参与性宇宙是增强的人择原理，它不仅表明我们的存在影响了宇宙的性质，更甚，我们的存在创造了宇宙和它的历史本身！可以想象这样一种情形：各种宇宙参数首先是一个不确定的叠加，只有被观测者观察后才变成确定。但这样一来他们又必须保持在某些精确的范围内，一遍创造一个好的环境，令观测者有可能在宇宙中存在并观察它们！这似乎是一个逻辑循环：我们选择了宇宙，宇宙又创造了我们。这件怪事叫做“自指”或者“自激活”（self-exciting），意识的存在反过来又创造了它自身的过去！</div><br><div></div><br><div>冯·诺依曼（John Von Neumann）这位现代计算机的奠基人之一，20世纪最杰出的数学家，百年难得一遇的天才。从集合论到数学基础方面的研究，从算子环到遍历理论，从博弈论到数值分析，从计算机结构到自动机理论，每一项都可以大书特书。</div>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/08/02/16节生死课告诉你前世今生/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/02/16节生死课告诉你前世今生/" class="post-title-link" itemprop="url">16节生死课告诉你前世今生</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-08-02 14:36:31" itemprop="dateCreated datePublished" datetime="2016-08-02T14:36:31+08:00">2016-08-02</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/06/18/Overwhelming change——节选自《三体》的一段话/">Overwhelming change——节选自《三体》的一段话</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            您的人生中有重大的变故吗？这变故突然完全的改变那了你的生活，对你来说，世界在一夜之间变得完全不同。没有。那...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/06/18/Overwhelming change——节选自《三体》的一段话/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>6月 18, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
         </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>这都是两三天之前看完的书了，16节生死课告诉你前世今生。<br>作者是个科学工作者，但是却被身边发生的关于轮回，前世今生的事情给惊呆了，于是乎，你宁愿冒着专业的风险，把这些事情分享给我们。</p>
+<p>前面的故事是那么引人入胜，甚至听起来都有点渗人。</p>
+<p>其实这和我想象的有共同点，那就是——人类在这个伟大的世界里，是多么的渺小，多么的无知，我们不知晓的事情是多么多么的多。<br>现在的物理学、生物学、数学、以及一切的科学都一定是正确的吗？现在答案是否定的。我们还有好多不知晓的事情，我们文明现在还是多么的不发达。</p>
+<p>就连人类自己，都没有研究透，更别说无穷无尽深邃的自然、宇宙了呢？</p>
+<p>睡觉，一个看似再平常不过，再随意不过的词汇，每个人一生都不知道会经历多少回，甚至也是最终都会经历的。你甚至不知道你是睡着了，还是死了。</p>
+<p>催眠，这是个神奇的孩子。荣格的潜意识理论认为人类醒着的意识不过是人类所有意识的冰山一角。而睡着的时候，才是人类绝大部分意识活动的时候！<br>而人类又是多么的神奇，很多人潜意识里，居然存储了自己所有的对一切的记忆—你是不会忘掉这些东西的，在需要的时候，他们就会出来。而且还有好多人好多人意识里还会有好多前世今生！！</p>
+<p>目前，潜意识更多的还是运用在催眠治疗这一方面，但是如若人类真的掌握了这本科学，这将极大的促进人类文明的发展！</p>
+<p>还有瑜伽，还有冥想，这简直都是我们文化的瑰宝！！！</p>
+
+      
     </div>
-</div>
-
-            
-            
-        
-    
 
     
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <a class="extend prev" rel="prev" href="/page/5/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
     
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/07/02/about threebody/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/07/02/about threebody/" class="post-title-link" itemprop="url">About Threebody</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-07-02 14:53:26" itemprop="dateCreated datePublished" datetime="2016-07-02T14:53:26+08:00">2016-07-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
 
     
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 73 + 1);
+      
+          <p>三体这个名字，中文比英文逼格要高到不知道哪里去了，光看英文名，还以为是哪部A片的名字呢。故事讲述的是一个叫叶文洁的女性，在文革的压迫下，向外星文明发射了自己文明的信息，从而间接的毁了地球。以及另一个叫程心的圣母，用爱毁灭太阳系，三体星系，以及宇宙的故事。</p>
+<p>故事中有很多对人性的思考，比如叶文洁，逻辑，章北海，还有程心，这几个主人公无不反映着社会的整体意识形态。<br>叶文洁：<br>身处那样的一个时代，任何人对自己的命运都是无能为力的，在那个独裁者的时代，所有人都是极度疯狂的，集体意志的体现，竟是如此的癫狂，整个华夏文明，十载荼毒。可笑的，癫狂的，恐惧的，无知的，所有能有的负面情绪都砸到这个小姑娘身上，生出任何极端的思想都不为过。大刘为什么会让这个女的来背毁灭世界的锅，说到底，影射的还是她背后所处的那个时代，那是个背叛的时代，堕落的时代，值得毁灭的时代。<br>逻辑：<br>想想逻辑之前玩世不恭的生活作风都觉得羡慕，有时都都想，要是自己像逻辑前半生那样就好了，混混日子，能够一世风流，泡到那么多美女也是极好的【~(@^_^@)~】。好吧，意淫了。作者明显是先抑后扬，增加逻辑的角色感和对观众的震撼、对普世价值观的抨击。当世界都渴望一个救世主的时候，他偏不愿意，非要过自己自由自在的生活。之后，逻辑向一个星星发送了自己的咒语以验证黑暗森林法则，而它至少要等到一百年后才能看到结果，随后逻辑跟着进入了冬眠，在冬眠醒来之后，社会发生了巨大的变化，人们沉浸在巨大的喜悦之中，在他冬眠的这么长时间中，人类社会已经发生了巨大的发展，人类地球舰队已经达到2000艘，而且速度能达到光速的15%了，而这时，自由章北海和逻辑能够思考的看清楚问题。<br>弱小和无知不是生存的障碍，傲慢才是。<br>就在逻辑向星星发送咒语的那年，三体世界为了限制太阳作为广播发送坐标，于是派出了更快的“水滴”向地球进行。在逻辑醒来之后，水滴瞬间秒杀了2000艘战舰，这时人类世界才意识到自己真的毫无胜算。人类在三体时间面前，就是一个虫子。<br>而，章北海，一个坚定的“胜利主义者”【失败主义者】，从头到尾都坚信人类必败，这种坚定的精神，在人类舰队背会之后，帮人类世界留下了文明的种子，也催生了宇宙新人类的诞生，在你确信自己再也无法回到地球之后，你就不再是人类了，而是新人类。<br>187J3X1星星被毁灭之后，人类又再一次的相信有超自然救世主的存在。人类又拜倒在逻辑脚下。而逻辑声称没有了太阳作为扩大元，自己也没办法向宇宙发射坐标，自己也无能为力。在随后近两年，逻辑几乎是完全凭借着自己的一己之力，帮地球逆转了局面。凭借“雪地工程”利用氢弹爆炸产生的尘埃、颗粒使得太阳闪烁，向宇宙发送地球和三体世界的坐标。<br>这时候，三体妥协了。随之而来的是50多年人类社会的高度发展，拜托了智子的限制，生活在威慑纪元的人类社会空前发展。<br>人总是好了伤疤忘了疼。<br>50年后，程心出厂了，先是把爱自己、送自己星星的云天明安乐死，脑子送往太空。而后在接手执剑人的一瞬间把半个世界的和平毁了。人类，从此又得开始自己的艰苦岁月了。大刘营造出这么一个人物来，其实这个人物，反应的就是普世的价值观。民主的社会容不下独裁者的控制（逻辑），而必须实现大爱（程心）。但这种普世观念在世界末日还适用吗？也许不吧，至少大刘是这样回答的。如果程心不参加执剑人，人类社会也许在之后的半个世界发展水平就将追上三体世界，也不会出现后来人类数量的急剧减少。也不至于后来蓝色空间号向宇宙广播三体世界和地球的广播，地球和三体世界也就不会那么快的毁灭。及时后来，如果没有阻止韦德，人类利用好了那35年，人类的种子也可以在宇宙延续，而不至于除了他俩，其他所有人都成了一幅画，再后来归零者呼吁归还宇宙质量她还偏要留5公斤，唉，毁天灭地，灭宇宙啊。</p>
+<p>就跟丁元英问大师的回答一样，大爱不爱，大人不仁。或者说民可与乐成，不可与始虑。<br>那为什么会这样呢？为什么大爱就是不爱，大仁不仁呢，为什么民不可虑始，而可乐成呢。<br>这里就要谈到一个层次的问题了，我们老是说阶级局限性，这到底是什么东西呢？说到底，这其实就是格局，眼界，就是你是不是站的高，看得远，是不是你具有实现某种愿景的执行力，魄力，抗压迫的能力。<br>因为好多事，在民众看来是不可理解的。我们现在的舰队数量几乎是 三体舰队的4倍了，而且，现在我们能达到光速的15%了，他们才能达到10%。所以我们必胜。<br>弱小和无知不是生存的障碍，傲慢才是。<br>那为什么章北海确实坚定的必败主义者呢？或者说，他这种必败的信念是从什么时候，从哪儿开始建立的呢？<br>人们做出一种判断，往往是基于对现象的观察及对现实的分析。在一个智慧文明能够掌握智子刻蚀工艺。并把你技术锁死的情况下，在物理学根本没办法进一步研究的情况下，在别人对我们知根知底，我们对三体世界几乎一无所知的情况下，试问你哪里来的自信，仅仅凭借数量上貌似的优势，以及光速超过了别人5%。这就叫傲慢。没有根基的自信。</p>
+<p>民主的困境。（无法反应每个人的意志，集体的智商为零）</p>
+<p>自信是对自己努力的信任，是成功者的路径依赖表现。</p>
 
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
+      
+    </div>
 
-        locatePost = locatePost.next();
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/06/18/Overwhelming change——节选自《三体》的一段话/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/06/18/Overwhelming change——节选自《三体》的一段话/" class="post-title-link" itemprop="url">Overwhelming change——节选自《三体》的一段话</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-06-18 14:47:24" itemprop="dateCreated datePublished" datetime="2016-06-18T14:47:24+08:00">2016-06-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote><br>您的人生中有重大的变故吗？这变故突然完全的改变那了你的生活，对你来说，世界在一夜之间变得完全不同。<br>没有。<br>那你的生活是一种偶然，世界有这么多变化莫测的因素，你的人生却没有什么变故。<br>大部分人不都是这样嘛？<br>那大部分人的人生都是偶然。<br>可……多少代人不都是这么平淡地过过来的。<br>都是偶然。<br>得承认今天我的理解力太差了，您岂不是说……<br>是的，整个人类历史也是偶然，从石器时代到今天，都没有什么重大变故，真的幸运。但既然是幸运，总会有结束的一天。现在我告诉你，结束了，做好思想准备吧。</blockquote>
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一頁"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
     }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
-    
-</div>
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="conan's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        conanskyforce@gmail.com
-        <b class="caret"></b>
-    </a>
-</div>
-
-
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="#" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
-
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                首頁
-            </a>
-        </li>
-        
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    過往
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">三月 2016<span class="sidebar_archives-count">1</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Categories  -->
-    
-
-    <!-- Pages  -->
-    
-
-    <!-- Article Number  -->
-    
-</ul>
-
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-    <div class="sidebar-divider"></div>
-
-
-<!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主題 - Material
-            <span class="sidebar-badge badge-circle">i</span>
         </div>
-    </a>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">conan</p>
+  <div class="site-description" itemprop="description">柯南君,Full Stack</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
+</div>
 
 
-<!-- Help & Support -->
-<!--
 
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
+      </div>
 
     </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    <!-- Sidebar Image -->
-    
 
-</aside>
+      </div>
+    </main>
 
-                    
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">conan</span>
 </div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
 
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/kevinconan" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Facebook -->
-    
-        <a href="https://www.facebook.com/facebook" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Google + -->
-    
-        <a href="https://www.google.com/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
-                <span class="visuallyhidden">Google Plus</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Telegram -->
-    
-    
-    <!-- V2EX -->
-    
-</div>
-
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>柯南的日常
-            
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
-</footer>
-
-
-                    <!-- Import JS File -->
-
-    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+        
 
 
 
-    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
 
 
 
-    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
 
 
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
 
 
 
@@ -1167,71 +1283,11 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
-
-<!-- Import prettify js  -->
 
 
+  
 
-<!-- Window Load -->
-<!-- add class for prettify -->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
+  
 
-    
-    
-</script>
-
-<!-- MathJax Load-->
-
-
-<!-- Bing Background -->
-
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Custom Footer -->
-
-
-
-<script>
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
-        }
-    })()
-console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
-
-                </main>
-            </div>
-        </body>
-    
+</body>
 </html>

@@ -1,1295 +1,916 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="zh">
-    <head>
-    <meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.5.2 -->
-    <script>
-        window.materialVersion = "1.5.2"
-        // Delete localstorage with these tags
-        window.oldVersion = [
-            'codestartv1',
-            '1.3.4',
-            '1.4.0',
-            '1.4.0b1',
-            '1.5.0'
-        ]
-    </script>
-
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!-- Title -->
-    
-    <title>
-        
-        柯南的日常
-    </title>
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" href="/img/favicon.png">
-
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="柯南君,Full Stack">
-    <meta name="keywords" content="">
-    <meta name="theme-color" content="#0097A7">
-
-    <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.en.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Import CSS -->
-    
-        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-        
-
-    
-
-    
-
-    <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    overflow-x: hidden !important;
-  }
-  
-  code {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  }
-
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
-      }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-<!-- Import Roboto -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-
-
-<!-- Import Material Icons -->
-
-
-    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-
-
-
-    <!-- Import jQuery -->
-    
-        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
-    
-
-    <!-- WebAPP Icons -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="柯南的日常">
-    <meta name="msapplication-starturl" content="/">
-    <meta name="msapplication-navbutton-color" content="#0097A7">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="柯南的日常">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
-
-    <!-- Site Verification -->
-    
-    
-
-    <!-- RSS -->
-    
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="/">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="柯南的日常">
-    <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="柯南君,Full Stack">
-    
-
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="" />
-    
-
-    <!-- Structured-data for SEO -->
-    
-        
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "柯南的日常",
-        "logo": "/img/favicon.png"
-    },
-    "url": "",
-    "image": {
-        "@type": "ImageObject",
-        "url": "/img/favicon.png"
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": ""
-    },
-    "description": "柯南君,Full Stack"
-}
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="柯南君,Full Stack">
+<meta name="keywords" content="conanskyforce Front-End Full-Stack">
+<meta property="og:type" content="website">
+<meta property="og:title" content="柯南的日常">
+<meta property="og:url" content="/index.html">
+<meta property="og:site_name" content="柯南的日常">
+<meta property="og:description" content="柯南君,Full Stack">
+<meta property="og:locale" content="zh-TW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="柯南的日常">
+<meta name="twitter:description" content="柯南君,Full Stack">
+
+<link rel="canonical" href="/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-TW'
+  };
 </script>
 
+  <title>柯南的日常</title>
+  
 
 
 
-    
 
-    <!-- Analytics -->
-    
-    
-    
 
-    <!-- Custom Head -->
-    
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-    
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
-
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-        <!-- Paradox Header -->
-        <!-- Daily pic -->
-<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
-
-    <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/daily_pic.png)">
-        <p class="index-top-block-slogan"><a href="#">
-        
-            
-                你来啦，坐坐呗
-            
-        
-        </a></p>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
+  </div>
 
-    <!-- Avatar & Name -->
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <!-- Author Avatar -->
-        <div id="author-avatar">
-            <img src="/img/avatar.png" width="32px" height="32px" alt="avatar">
-        </div>
-        <div>
-            <strong>conan</strong>
-        </div>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">柯南的日常</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Full Stack Hobbist</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
     </div>
+  </div>
 </div>
 
-        <!-- Blog info -->
-<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-
-    <!-- Search -->
-    
 
 
 
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+  </ul>
+</nav>
 
 
 
-    <!-- LOGO -->
-    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="#" target="_self">
-            <img src="/img/logo.png" alt="logo" />
-        </a>
-    </div>
 
-    <!-- Infomation -->
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-        <!-- Blog Title -->
-        <div>
-            <strong>柯南的日常</strong>
-        </div>
-        <div class="section-spacer"></div>
-
-        <!-- Pages -->
-        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">view_carousel</i>
-            <span class="visuallyhidden">Pages</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            
-        </ul>
-
-        <!-- Menu -->
-        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">more_vert</i>
-            <span class="visuallyhidden">show menu</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            
-
-            
-
-            
-                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=柯南的日常&url=&pic=/img/favicon.png&searchPic=false&style=simple" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到微博
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=柯南的日常&url=&via=conan" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Twitter
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Facebook
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://plus.google.com/share?url=" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Google+
-                    </li>
-                </a>
-            
-
-            
-
-            
-
-            
-        </ul>
-    </div>
 </div>
+    </header>
 
     
-    <div class="locate-thumbnail-symbol"></div>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-    <!-- Pin on top -->
-    
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/09/16/写一个自己的redux/">写一个自己的redux</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/09/16/写一个自己的redux/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>9月 16, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
           
 
+          <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2019/09/16/写一个自己的redux/">
 
-            
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/16/写一个自己的redux/" class="post-title-link" itemprop="url">写一个自己的redux</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2019-09-16 13:49:24" itemprop="dateCreated datePublished" datetime="2019-09-16T13:49:24+08:00">2019-09-16</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/09/10/技术的沉淀/">技术的沉淀</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            在大公司待久了，很难保持以前那种高强度的学习。人总是有惰性的，一旦在一个安逸的环境待的时间稍微久点，心里就会变得很享受，不再有紧张感，也就不再有动力...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/09/10/技术的沉淀/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>9月 10, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <h1 id="写一个自己的redux"><a href="#写一个自己的redux" class="headerlink" title="写一个自己的redux"></a>写一个自己的redux</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createStore</span> (<span class="params">reducer, preState, enhancer</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (enhancer &amp;&amp; <span class="keyword">typeof</span> enhancer === <span class="string">'function'</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> enhancer(createStore)(reducer,preState)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">let</span> currentReducer = reducer</span><br><span class="line">	<span class="keyword">let</span> currentState = preState</span><br><span class="line">	<span class="keyword">const</span> listeners = []</span><br><span class="line">	<span class="keyword">const</span> getState = <span class="function"><span class="params">()</span> =&gt;</span> currentState</span><br><span class="line">	<span class="keyword">const</span> subscribe = <span class="function">(<span class="params">listener</span>) =&gt;</span> &#123;</span><br><span class="line">		listeners.push(listener)</span><br><span class="line">		<span class="keyword">const</span> unsubscribe = <span class="function"><span class="params">()</span> =&gt;</span> listeners.splice(listeners.indexOf(listener),<span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> &#123;</span><br><span class="line">			unsubscribe</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">const</span> dispatch = <span class="function">(<span class="params">action</span>) =&gt;</span> &#123;</span><br><span class="line">		currentState = currentReducer(currentState,action)</span><br><span class="line">		listeners.forEach(<span class="function"><span class="params">listener</span> =&gt;</span> listener())</span><br><span class="line">		<span class="keyword">return</span> action</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		getState,</span><br><span class="line">		subscribe</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compose</span> (<span class="params">...funcs</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(funcs.length === <span class="number">0</span>) <span class="keyword">return</span> <span class="function"><span class="params">arg</span> =&gt;</span> arg</span><br><span class="line">	<span class="keyword">if</span>(funcs.length === <span class="number">1</span>) <span class="keyword">return</span> funcs[<span class="number">0</span>]</span><br><span class="line">	<span class="keyword">return</span> funcs.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span><span class="function">(<span class="params">...args</span>) =&gt;</span> x(y(...args)))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">applyMiddleware</span> (<span class="params">...middlewares</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="params">createStore</span> =&gt;</span> (...args) &#123;</span><br><span class="line">		<span class="keyword">const</span> store = createStore(...args)</span><br><span class="line">		<span class="keyword">let</span> dispatch = <span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;</span><br><span class="line">		<span class="keyword">const</span> middlewareApi = &#123;</span><br><span class="line">			getState: store.getState,</span><br><span class="line">			dispatch: <span class="function">(<span class="params">...args</span>) =&gt;</span> dispatch(...args)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">const</span> chain =middlewares.map(<span class="function"><span class="params">middleware</span> =&gt;</span> middleware(middlewareApi))</span><br><span class="line">		dispatch = compose(...chain)(store.dispatch)</span><br><span class="line">		<span class="keyword">return</span> &#123;</span><br><span class="line">			...store,</span><br><span class="line">			dispatch</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">thunkMiddleware</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function">(<span class="params">&#123;dispatch,getState&#125;</span>) =&gt;</span> next =&gt; <span class="function"><span class="params">action</span> =&gt;</span> &#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="keyword">typeof</span> action === <span class="string">'function'</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> action(dispatch,getState)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> next(action)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> thunk = thunkMiddleware()</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2019/09/10/技术的沉淀/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/10/技术的沉淀/" class="post-title-link" itemprop="url">技术的沉淀</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2019-09-10 10:01:22" itemprop="dateCreated datePublished" datetime="2019-09-10T10:01:22+08:00">2019-09-10</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/07/16/javascript精华代码/">javascript精华代码</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/07/16/javascript精华代码/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>7月 16, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <p>在大公司待久了，很难保持以前那种高强度的学习。人总是有惰性的，一旦在一个安逸的环境待的时间稍微久点，心里就会变得很享受，不再有紧张感，也就不再有动力，动机去一直提升自己。</p>
+<p>大部分同学每晚上班到8、9点才回家，回家已经精疲力竭了，吃吃喝喝，看点知乎、微信，最新电影，刷刷微博，抖音，时间已经到11点了。大部分人的时间，都是这样过的了。这也就是为什么入职场之后，很多人的进步会变得更加慢。</p>
+<p>虽然嘴巴上口口声声说着要终身成长，但是，身体却很享受这样安逸的生活。<br>从某种程度上来讲，这样倒也无可厚非，人生的意义各有各的定义，不是每个人的目标都必须整齐划一的。</p>
+<p>然而这种快乐，大多数时候是不可持续的，这可能就是这种生活方式最大的问题了。如果你有5千万，那不上班肯定没问题，如果你有北上广深几套房，那你上班混吃等死也没人说你。然而，绝大多数的我们，还是得跟绝大多数跟我们一样的，几乎是无产阶级的同行们竞争。 高考还是一年一年的持续，廉价劳动力一年一年的减少，数量还是大的你难以想象，大厂就那么几个，想吃这口饭的人，多的超乎你想象，他们起点之低/之高，负担之小/之大，到远远超乎你想象。</p>
+<p>如果纯粹走竞争路线的话，而不是去找到乐趣，好好享受的话，这也太难了，我不相信有人能坚持到底。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2019/07/16/javascript精华代码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/07/16/javascript精华代码/" class="post-title-link" itemprop="url">javascript精华代码</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2019-07-16 20:45:31" itemprop="dateCreated datePublished" datetime="2019-07-16T20:45:31+08:00">2019-07-16</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/10/24/实现一个express/">实现一个express</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/10/24/实现一个express/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>10月 24, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mapLimit = <span class="function">(<span class="params">tasks, concurrency, debug, callback</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> running = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> completed = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> index = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> next = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">while</span> (completed &lt; tasks.length &amp;&amp; running &lt; concurrency) &#123;</span><br><span class="line">      <span class="keyword">let</span> task = tasks[index++];</span><br><span class="line">      task(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        running--;</span><br><span class="line">        completed++;</span><br><span class="line">        <span class="keyword">if</span> (completed == tasks.length) &#123;</span><br><span class="line">          <span class="keyword">return</span> callback()</span><br><span class="line">        &#125;</span><br><span class="line">        next();</span><br><span class="line">      &#125;)</span><br><span class="line">      running++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  next()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> chainAsync = <span class="function">(<span class="params">tasks</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> index = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> last = tasks[tasks.length - <span class="number">1</span>];</span><br><span class="line">  <span class="keyword">const</span> next = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> fn = tasks[index++];</span><br><span class="line">    fn === last ? fn() : fn(next);</span><br><span class="line">  &#125;;</span><br><span class="line">  next();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="EXAMPLES"><a href="#EXAMPLES" class="headerlink" title="EXAMPLES"></a>EXAMPLES</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">chainAsync([</span><br><span class="line">  next =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'0 seconds'</span>);</span><br><span class="line">    setTimeout(next, <span class="number">1000</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  next =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'1 second'</span>);</span><br><span class="line">    setTimeout(next, <span class="number">1000</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'2 second'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+<h2 id="滑动到顶部"><a href="#滑动到顶部" class="headerlink" title="滑动到顶部"></a>滑动到顶部</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> scrollToTop = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> c = <span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">document</span>.body.scrollTop;</span><br><span class="line">  <span class="keyword">if</span> (c &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="built_in">window</span>.scrollTo(<span class="number">0</span>, c - c / <span class="number">10</span>);</span><br><span class="line">    requestAnimationFrame(scrollToTop)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">scrollToTop()</span><br></pre></td></tr></table></figure>
+<h2 id="科里化函数"><a href="#科里化函数" class="headerlink" title="科里化函数"></a>科里化函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> curry = <span class="function">(<span class="params">fn, arity = fn.length, ...args</span>) =&gt;</span> </span><br><span class="line">  arity &lt; args.length ? fn(...args): curry.bind(<span class="literal">null</span>,fn,arity,...args)</span><br><span class="line"></span><br><span class="line"><span class="comment">// debounce</span></span><br><span class="line"><span class="keyword">const</span> debounce = <span class="function">(<span class="params">fn, ms = <span class="number">0</span></span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> timeoutId;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">...args</span>)</span>&#123;</span><br><span class="line">    clearTimeout(timeoutId);</span><br><span class="line">    timeoutId = setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">      fn.call(<span class="keyword">this</span>,...args)</span><br><span class="line">    &#125;,ms)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onresize = debounce(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">window</span>.innerHeight)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">window</span>.innerWidth)</span><br><span class="line">&#125;,<span class="number">1200</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// throttle </span></span><br><span class="line"><span class="keyword">const</span> throttle = <span class="function">(<span class="params">fn, ms = <span class="number">200</span></span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> date = <span class="built_in">Date</span>.now();</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">...args</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> d = <span class="built_in">Date</span>.now();</span><br><span class="line">    <span class="keyword">if</span> (d - date &lt; ms) <span class="keyword">return</span></span><br><span class="line">    date = d;</span><br><span class="line">    fn.apply(<span class="keyword">this</span>,args)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> throttle2 = <span class="function">(<span class="params">fn, wait</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> inThrottle, lastFn, lastTime;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> context = <span class="keyword">this</span>,</span><br><span class="line">      args = <span class="built_in">arguments</span>;</span><br><span class="line">    <span class="keyword">if</span> (!inThrottle) &#123;</span><br><span class="line">      fn.apply(context, args);</span><br><span class="line">      lastTime = <span class="built_in">Date</span>.now();</span><br><span class="line">      inThrottle = <span class="literal">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      clearTimeout(lastFn);</span><br><span class="line">      lastFn = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">Date</span>.now() - lastTime &gt;= wait) &#123;</span><br><span class="line">          fn.apply(context, args);</span><br><span class="line">          lastTime = <span class="built_in">Date</span>.now();</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, <span class="built_in">Math</span>.max(wait - (<span class="built_in">Date</span>.now() - lastTime), <span class="number">0</span>));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## hz 函数执行每秒次数</span><br><span class="line"><span class="string">``</span><span class="string">`javascript</span></span><br><span class="line"><span class="string">const hz = (fn, iterations = 100) =&gt; &#123;</span></span><br><span class="line"><span class="string">  let start = performance.now();</span></span><br><span class="line"><span class="string">  for(let i = 0; i&lt;iterations; i++) fn();</span></span><br><span class="line"><span class="string">  let end = performance.now();</span></span><br><span class="line"><span class="string">  return (1000 * iterations) / (end - before);</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">// memorize </span></span><br><span class="line"><span class="string">const memorize = (fn) =&gt; &#123;</span></span><br><span class="line"><span class="string">  const cache = new Map();</span></span><br><span class="line"><span class="string">  const cached = function(val)&#123;</span></span><br><span class="line"><span class="string">    return cache.get(val) ? cache.get(val) : cache.set(val,fn.apply(this,val)) &amp;&amp; cache.get(val)</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  cached.cache = cache;</span></span><br><span class="line"><span class="string">  return cached;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">// once </span></span><br><span class="line"><span class="string">const once = (fn) =&gt; &#123;</span></span><br><span class="line"><span class="string">  let started = false;</span></span><br><span class="line"><span class="string">  return function(...args)&#123;</span></span><br><span class="line"><span class="string">    if(started) return;</span></span><br><span class="line"><span class="string">    started = true;</span></span><br><span class="line"><span class="string">    return fn.apply(this,args);</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">const runPromisesInSeries = tasks =&gt; tasks.reduce((prev,next)=&gt;prev.then(next),Promise.resolve())</span></span><br><span class="line"><span class="string">const delay = (delay) =&gt; new Promise(resolve=&gt;setTimeout(()=&gt;&#123;</span></span><br><span class="line"><span class="string">  resolve();</span></span><br><span class="line"><span class="string">  console.log(`</span>$&#123;delay&#125; delayed...<span class="string">`)</span></span><br><span class="line"><span class="string">&#125;,delay))</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">runPromisesInSeries([()=&gt;delay(1000),()=&gt;delay(200),()=&gt;delay(1200)])</span></span><br><span class="line"><span class="string">.then(console.log)</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据分组"><a href="#数据分组" class="headerlink" title="数据分组"></a>数据分组</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> chunk = <span class="function">(<span class="params">arr,size</span>) =&gt;</span> </span><br><span class="line">  <span class="built_in">Array</span>.from(&#123;<span class="attr">length</span>:<span class="built_in">Math</span>.ceil(arr.length / size)&#125;,(val,idx)=&gt;</span><br><span class="line">      arr.slice(idx*size,idx*size + size)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> chunk2 = <span class="function">(<span class="params">arr,size</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> ret = [];</span><br><span class="line">  <span class="keyword">let</span> tmp = [];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</span><br><span class="line">    tmp.push(arr[i]);</span><br><span class="line">    <span class="keyword">if</span>((i+<span class="number">1</span>)%size == <span class="number">0</span>)&#123;</span><br><span class="line">      ret.push(tmp);</span><br><span class="line">      tmp = []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  ret.push(tmp);</span><br><span class="line">  <span class="keyword">return</span> ret</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// chunk2的性能居然比chunk高了3倍左右</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> countNum = <span class="function">(<span class="params">arr</span>) =&gt;</span> arr.reduce(<span class="function">(<span class="params">acc,next</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// acc[next] = acc[next] ? acc[next] : 1 </span></span><br><span class="line">  acc[next] = (acc[next] || <span class="number">0</span>) + <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> acc</span><br><span class="line">&#125;,&#123;&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> deepFlatten = <span class="function"><span class="params">arr</span> =&gt;</span> [].concat(...arr.map(<span class="function"><span class="params">v</span>=&gt;</span>(<span class="built_in">Array</span>.isArray(v)?deepFlatten(v):v)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> deepFlatten2 = <span class="function">(<span class="params">arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> tmp = [];</span><br><span class="line">  arr.forEach(<span class="function"><span class="params">a</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">Array</span>.isArray(a))&#123;</span><br><span class="line">      tmp.push(a)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      tmp = [...tmp,...deepFlatten(a)]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> tmp</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> filterNonUnique = <span class="function"><span class="params">arr</span> =&gt;</span> arr.filter(<span class="function"><span class="params">i</span> =&gt;</span> arr.indexOf(i) === arr.lastIndexOf(i));</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> filterNonUnique2 = <span class="function"><span class="params">arr</span> =&gt;</span> [...new <span class="built_in">Set</span>(arr)];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> flattenDepth = <span class="function">(<span class="params">arr, depth=<span class="number">1</span></span>) =&gt;</span> </span><br><span class="line">  arr.reduce(<span class="function">(<span class="params">prev,next</span>)=&gt;</span>prev.concat(depth&gt;<span class="number">1</span> &amp;&amp; <span class="built_in">Array</span>.isArray(next)?flattenDepth(next,depth <span class="number">-1</span>):next),[])</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> indexOfAll = <span class="function">(<span class="params">arr, val</span>) =&gt;</span></span><br><span class="line">  arr.reduce(<span class="function">(<span class="params">prev,next,idx</span>)=&gt;</span>next === val?[...prev,idx]:prev,[])</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> countOfAll = <span class="function">(<span class="params">arr, val</span>) =&gt;</span></span><br><span class="line">  arr.reduce(<span class="function">(<span class="params">prev,next,idx</span>)=&gt;</span>next === val?prev+<span class="number">1</span>:prev,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/10/24/实现一个express/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/10/24/实现一个express/" class="post-title-link" itemprop="url">实现一个express</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2018-10-24 11:55:43" itemprop="dateCreated datePublished" datetime="2018-10-24T11:55:43+08:00">2018-10-24</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/10/21/实现一个promise/">实现一个promise</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/10/21/实现一个promise/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>10月 21, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">const http = require(&apos;http&apos;)</span><br><span class="line">const Emitter = require(&apos;events&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class WebServer extends Emitter&#123;</span><br><span class="line">	constructor()&#123;</span><br><span class="line">		super()</span><br><span class="line">		this.middlewares = [];</span><br><span class="line">		this.context = Object.create(null);</span><br><span class="line">	&#125;</span><br><span class="line">	use(fn)&#123;</span><br><span class="line">		if(typeof(fn) === &apos;function&apos;)&#123;</span><br><span class="line">			this.middlewares.push(fn)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	listen(...args)&#123;</span><br><span class="line">		let server = http.createServer(this.callback())</span><br><span class="line">		server.listen(...args);</span><br><span class="line">	&#125;</span><br><span class="line">	callback()&#123;</span><br><span class="line">		let that = this;</span><br><span class="line">		const handleRequest = (req,res) =&gt; &#123;</span><br><span class="line">			let context = that.createContext(req,res);</span><br><span class="line">			</span><br><span class="line">			/* 管道执行中间件方式之一[开始] */</span><br><span class="line">			// let idx = 0;</span><br><span class="line">			// let next = (idx) =&gt; &#123;</span><br><span class="line">			// 	if(idx == that.middlewares.length) return context.res.end();</span><br><span class="line">			// 	let fn = that.middlewares[idx];</span><br><span class="line">			// 	idx++</span><br><span class="line">			// 	fn(context)</span><br><span class="line">			// 	next(idx)</span><br><span class="line">			// &#125;</span><br><span class="line">			// return next(0)</span><br><span class="line">			/* 管道执行中间件方式之一[结束] */</span><br><span class="line">			/* 管道执行中间件方式之二[开始] */</span><br><span class="line">			let start = process.hrtime();</span><br><span class="line">			this.middlewares.forEach((fn,idx) =&gt;&#123;</span><br><span class="line">				try&#123;</span><br><span class="line">					fn(context)</span><br><span class="line">				&#125;catch(err)&#123;</span><br><span class="line">					this.onerror(err)</span><br><span class="line">				&#125;</span><br><span class="line">				if(idx &gt;= this.middlewares.length - 1)&#123;</span><br><span class="line">					let end = process.hrtime();</span><br><span class="line">					context.res.write(`$&#123;(end[0]-start[0])&#125;s,$&#123;(end[1]-start[1])/1e6&#125;ms,`)</span><br><span class="line">					context.res.end()</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)</span><br><span class="line">			/* 管道执行中间件方式之二[结束] */</span><br><span class="line">		&#125;</span><br><span class="line">		return handleRequest</span><br><span class="line">	&#125;</span><br><span class="line">	onerror(err)&#123;</span><br><span class="line">		console.log(err)</span><br><span class="line">	&#125;</span><br><span class="line">	createContext(req,res)&#123;</span><br><span class="line">		this.context.req = req;</span><br><span class="line">		this.context.res = res;</span><br><span class="line">		return this.context</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var app = new WebServer();</span><br><span class="line">var PORT = 3001;</span><br><span class="line"></span><br><span class="line">app.use(ctx =&gt; &#123;</span><br><span class="line">  ctx.res.write(&apos;&lt;p&gt;line 1&lt;/p&gt;&apos;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.use(ctx =&gt; &#123;</span><br><span class="line">  ctx.res.write(&apos;&lt;p&gt;line 2&lt;/p&gt;&apos;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.use(ctx =&gt; &#123;</span><br><span class="line">  ctx.res.write(&apos;&lt;p&gt;line 3&lt;/p&gt;&apos;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(PORT, () =&gt; &#123;</span><br><span class="line">  console.log(`the web server is starting at port $&#123;PORT&#125;`);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/10/21/实现一个promise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/10/21/实现一个promise/" class="post-title-link" itemprop="url">实现一个promise</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2018-10-21 14:38:56" itemprop="dateCreated datePublished" datetime="2018-10-21T14:38:56+08:00">2018-10-21</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/08/02/JavaScript设计模式/">JavaScript设计模式</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/08/02/JavaScript设计模式/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>8月 02, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PENDING = <span class="built_in">Symbol</span>();</span><br><span class="line"><span class="keyword">const</span> FULFILLED = <span class="built_in">Symbol</span>();</span><br><span class="line"><span class="keyword">const</span> REJECTED = <span class="built_in">Symbol</span>();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Promisee</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">typeof</span> fn != <span class="string">'function'</span>)&#123;</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'resolver must be a function'</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">let</span> state = PENDING;</span><br><span class="line">	<span class="keyword">let</span> value = <span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">let</span> handler = [];</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">fulfill</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">		state = FULFILLED;</span><br><span class="line">		value = result;</span><br><span class="line">		handler.forEach(next)</span><br><span class="line">		handler = []</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">reject</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">		state = REJECTED;</span><br><span class="line">		value = err;</span><br><span class="line">		handler.forEach(next)</span><br><span class="line">		handler = []</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">resolve</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			<span class="keyword">let</span> then = <span class="keyword">typeof</span> result.then === <span class="string">'function'</span>? result.then:<span class="literal">null</span></span><br><span class="line">			<span class="keyword">if</span>(then)&#123;</span><br><span class="line">				then.bind(result)(resolve,reject)</span><br><span class="line">				<span class="keyword">return</span></span><br><span class="line">			&#125;</span><br><span class="line">			fulfill(result)	</span><br><span class="line">		&#125; <span class="keyword">catch</span>(err)&#123;</span><br><span class="line">			reject(err)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">next</span>(<span class="params">&#123;onFulfill,onReject&#125;</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">switch</span>(state)&#123;</span><br><span class="line">			<span class="keyword">case</span> FULFILLED:</span><br><span class="line">				onFulfill &amp;&amp; onFulfill(value);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> REJECTED:</span><br><span class="line">				onReject &amp;&amp; <span class="keyword">typeof</span>(onReject) == <span class="string">'function'</span> &amp;&amp; onReject(value);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> PENDING:</span><br><span class="line">				handler.push(&#123; onFulfill, onReject &#125;)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">this</span>.then = <span class="function"><span class="keyword">function</span>(<span class="params">onFulfill,onReject</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Promisee(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">			next(&#123;</span><br><span class="line">				onFulfill: <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">					resolve(onFulfill(val))</span><br><span class="line">				&#125;,</span><br><span class="line">				onReject: <span class="function">(<span class="params">err</span>) =&gt;</span>&#123;</span><br><span class="line">					reject(onReject(err))</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">this</span>.catch = <span class="function">(<span class="params">reject</span>)=&gt;</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(state === REJECTED)&#123;</span><br><span class="line">			reject(value)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	fn(resolve,reject)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span>(<span class="params">sec</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> Promisee(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">		setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> resolve(sec),sec * <span class="number">1000</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Promisee(<span class="function">(<span class="params">r,j</span>)=&gt;</span>&#123;</span><br><span class="line">	r(<span class="string">'resolve'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">p.then(<span class="function">(<span class="params">val</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(val)</span><br><span class="line">	<span class="keyword">return</span> sleep(<span class="number">1</span>)</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="params">val</span>=&gt;</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(val)</span><br><span class="line">	<span class="keyword">return</span> sleep(val + <span class="number">1</span>)</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="params">val</span>=&gt;</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(val)</span><br><span class="line">	<span class="keyword">return</span> sleep(val + <span class="number">1</span>)</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="built_in">console</span>.log)</span><br><span class="line"></span><br><span class="line">.catch(<span class="function"><span class="params">err</span>=&gt;</span><span class="built_in">console</span>.log(<span class="string">'err:'</span>,err))</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/08/02/JavaScript设计模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/08/02/JavaScript设计模式/" class="post-title-link" itemprop="url">JavaScript设计模式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2018-08-02 22:46:43" itemprop="dateCreated datePublished" datetime="2018-08-02T22:46:43+08:00">2018-08-02</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/31/异步/">异步</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            关于继发异...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/31/异步/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>7月 31, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>()&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'Animal......'</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>()&#123;</span><br><span class="line">		<span class="keyword">super</span>();<span class="comment">//必须调用父类构造函数</span></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"Dog......"</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> Dog();<span class="comment">//Animal......,Dog......</span></span><br></pre></td></tr></table></figure>
+<p>简单模拟<code>Object.create</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.create = <span class="built_in">Object</span>.create || <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	F,prototype = obj;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> F()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="1-工厂模式"><a href="#1-工厂模式" class="headerlink" title="1.工厂模式"></a>1.工厂模式</h2><p><em>无法识别类型,无法复用函数,属性</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name,age,job</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line">	o.name = name;</span><br><span class="line">	o.age = age;</span><br><span class="line">	o.job = job;</span><br><span class="line">	o.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> o.name</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> o</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> conan = createPerson(<span class="string">'conan'</span>,<span class="number">25</span>,<span class="string">'ceo'</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-构造函数"><a href="#2-构造函数" class="headerlink" title="2.构造函数"></a>2.构造函数</h2><p><em>构造函数内的函数，不能复用，都是不一样的函数</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age,job</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name;</span><br><span class="line">	<span class="keyword">this</span>.age = age;</span><br><span class="line">	<span class="keyword">this</span>.job = job;</span><br><span class="line">	<span class="keyword">this</span>.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> conan = <span class="keyword">new</span> Person(<span class="string">'conan'</span>,<span class="number">35</span>,<span class="string">'ceo'</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-构造函数-原型模式"><a href="#3-构造函数-原型模式" class="headerlink" title="3.构造函数 + 原型模式"></a>3.构造函数 + 原型模式</h2><p><em>算是比较符合js设计原则的OOP模式</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age,job</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name;</span><br><span class="line">	<span class="keyword">this</span>.age = age;</span><br><span class="line">	<span class="keyword">this</span>.job = job;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> conan = <span class="keyword">new</span> Person(<span class="string">'conan'</span>,<span class="number">35</span>,<span class="string">'ceo'</span>)</span><br><span class="line"></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	sayName()&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">	&#125;,</span><br><span class="line">	sayJob()&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.job</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="keyword">constructor</span>:Person</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote><br>(构造)函数 都有一个prototype属性，指向原型对象,<br>原型对象都有一个constructor属性指向构造函数,<br>实例都有一个指向原型对象的指针<strong>proto</strong><br></blockquote>
+
+<hr>
+<p> _继承_</p>
+<hr>
+<h2 id="原型链的继承"><a href="#原型链的继承" class="headerlink" title="原型链的继承"></a>原型链的继承</h2><p><em>包含引用类型值的原型会被共享，class 方案解决了这个问题，besides,子类不能像父类构造函数传值</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.subs = []</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ChildType</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">ChildType.prototype = <span class="keyword">new</span> SuperType();</span><br><span class="line">ChildType.prototype.constructor = ChildType;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SuperType</span></span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>()&#123;</span><br><span class="line">		<span class="keyword">this</span>.subs = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SubType</span> <span class="keyword">extends</span> <span class="title">SuperType</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sub1 = <span class="keyword">new</span> SubType();</span><br><span class="line"><span class="keyword">var</span> sub2 = <span class="keyword">new</span> SubType();</span><br></pre></td></tr></table></figure></p>
+<h2 id="借用构造函数"><a href="#借用构造函数" class="headerlink" title="借用构造函数"></a>借用构造函数</h2><p><em>(可以调用父类的构造函数),复用是个问题</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.subs = [<span class="string">'old'</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	SubType.call(<span class="keyword">this</span>)</span><br><span class="line">	<span class="keyword">this</span>.newSubs = [<span class="string">'new'</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h2><p><em>(能够复用,能够调用父类构造函数)</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name;</span><br><span class="line">	<span class="keyword">this</span>.subs = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SuperType.prototype.SupersayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">	SuperType.call(<span class="keyword">this</span>,name)</span><br><span class="line">	<span class="keyword">this</span>.age = age</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SubType.prototype = <span class="keyword">new</span> SuperType()</span><br><span class="line">SubType.prototype.constructor = SubType</span><br></pre></td></tr></table></figure></p>
+<h2 id="原型式继承-子类和父类引用属性共享"><a href="#原型式继承-子类和父类引用属性共享" class="headerlink" title="原型式继承(子类和父类引用属性共享)"></a>原型式继承(子类和父类引用属性共享)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">create</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">	F.prototype = obj;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> F();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="寄生式继承"><a href="#寄生式继承" class="headerlink" title="寄生式继承"></a>寄生式继承</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createAnother</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> newObj = create(obj);</span><br><span class="line">	newObj.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">'lalala...'</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> newObj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="寄生组合式继承"><a href="#寄生组合式继承" class="headerlink" title="寄生组合式继承"></a>寄生组合式继承</h2><p><em>通过构造函数来继承属性，通过原型链来继承方法)这个最优，保持函数，属性复用，能调用父类构造函数，只执行一次父类构造函数</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">inherit</span>(<span class="params">subType,SuperType</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> proto = crate(SuperType.prototype)</span><br><span class="line">	proto.constructor = subType;</span><br><span class="line">	subType.prototype = proto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">*bind*</span><br><span class="line"></span><br><span class="line"><span class="built_in">Function</span>.prototype.bind = <span class="function"><span class="keyword">function</span>(<span class="params">context</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> self = <span class="keyword">this</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> self.apply(context,<span class="built_in">arguments</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">*复杂版bind*</span><br><span class="line"></span><br><span class="line"><span class="built_in">Function</span>.prototype.bind = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">	<span class="keyword">var</span> args = [...arguments]</span><br><span class="line">	<span class="keyword">var</span> context = args.shift()</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> that.apply(context,args.concat([...arguments]))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.a</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = &#123;<span class="attr">a</span>:<span class="number">333</span>&#125;</span><br><span class="line"></span><br><span class="line">*判断类型*</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> isArray = <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(arr) === <span class="string">'[object Array]'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> isType = <span class="function"><span class="keyword">function</span>(<span class="params">type</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">ele</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(ele) === <span class="string">`[object <span class="subst">$&#123;type&#125;</span>]`</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> isArray = isType(<span class="string">"Array"</span>);</span><br><span class="line">isArray([]);<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line">*单例*</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getSingle = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> ret</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> ret || ret = fn.call(<span class="keyword">this</span>,...arguments)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">*分时处理函数*</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> timeChunk = <span class="function"><span class="keyword">function</span>(<span class="params">arr,fn,count</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> t</span><br><span class="line">	<span class="keyword">var</span> start = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> a=<span class="number">0</span>;a&lt;<span class="built_in">Math</span>.min(count||<span class="number">1</span>,arr.length);a++)&#123;</span><br><span class="line">			fn(arr.shift())</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		t = setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(arr.length &lt;= <span class="number">0</span>)&#123;</span><br><span class="line">				clearInterval(t)</span><br><span class="line">			&#125;</span><br><span class="line">			start()</span><br><span class="line">		&#125;,<span class="number">500</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> getSingle = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> res;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> res || (res = fn.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2><h2 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> each = <span class="function"><span class="keyword">function</span>(<span class="params">arr,callback</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> a = <span class="number">0</span>; a &lt; arr.length; a++)&#123;</span><br><span class="line">		callback.call(arr[a],i,arr[a]);<span class="comment">//传递下标和元素本身</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="发布-订阅模式-时间，空间上的解耦"><a href="#发布-订阅模式-时间，空间上的解耦" class="headerlink" title="发布 - 订阅模式 (时间，空间上的解耦)"></a>发布 - 订阅模式 (时间，空间上的解耦)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Subscriber = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Subscriber.subs = [];</span></span><br><span class="line">Subscriber.subs = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">Subscriber.listen = <span class="function"><span class="keyword">function</span>(<span class="params">key,fn</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!<span class="keyword">this</span>.subs[key])&#123;</span><br><span class="line">		<span class="keyword">this</span>.subs[key] = []</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">this</span>.subs[key].push(fn)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Subscriber.trigger = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> key = [...arguments][<span class="number">0</span>]</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.subs[key].length === <span class="number">0</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> a <span class="keyword">of</span> <span class="keyword">this</span>.subs[key])&#123;</span><br><span class="line">		a.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//- - - - - - 修改完善</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> event = &#123;</span><br><span class="line">	subs : &#123;&#125;,</span><br><span class="line">	on: <span class="function"><span class="keyword">function</span>(<span class="params">type,fn</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!<span class="keyword">this</span>.subs[type])&#123;</span><br><span class="line">			<span class="keyword">this</span>.subs[type] = []</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">this</span>.subs[type].push(fn)</span><br><span class="line">	&#125;,</span><br><span class="line">	emit: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> args = [...arguments]</span><br><span class="line">		<span class="keyword">var</span> type = args.shift()</span><br><span class="line">		<span class="keyword">var</span> that = <span class="keyword">this</span></span><br><span class="line">		<span class="keyword">if</span>(<span class="keyword">this</span>.subs[type].length === <span class="number">0</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">this</span>.subs[type].forEach(<span class="function"><span class="params">fn</span>=&gt;</span>&#123;</span><br><span class="line">			fn.apply(that,args)</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;,</span><br><span class="line">	off:<span class="function"><span class="keyword">function</span>(<span class="params">type,fn</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> types = <span class="keyword">this</span>.subs[type];</span><br><span class="line">		<span class="keyword">if</span>(!types)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(!fn)&#123;</span><br><span class="line">			types &amp;&amp; (types.length = <span class="number">0</span>)</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">let</span> _fn <span class="keyword">of</span> types)&#123;</span><br><span class="line">				<span class="keyword">if</span>(_fn === fn)&#123;</span><br><span class="line">					types.splice(types.indexOf(_fn),<span class="number">1</span>)</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="ES6-class-模式"><a href="#ES6-class-模式" class="headerlink" title="ES6 class 模式"></a>ES6 class 模式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Event</span> </span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>()&#123;</span><br><span class="line">		<span class="keyword">this</span>.subs = &#123;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	on(type,fn)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!<span class="keyword">this</span>.subs[type])&#123;</span><br><span class="line">			<span class="keyword">this</span>.subs[type] = [];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">this</span>.subs[type].push(fn)</span><br><span class="line">	&#125;</span><br><span class="line">	emit()&#123;</span><br><span class="line">		<span class="keyword">var</span> args = [...arguments]</span><br><span class="line">		<span class="keyword">var</span> type = args.shift();</span><br><span class="line">		<span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">		<span class="keyword">if</span>(!type)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">this</span>.subs[type].forEach(<span class="function"><span class="params">fn</span>=&gt;</span>&#123;</span><br><span class="line">			fn.apply(that,args)</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	off(type,fn)&#123;</span><br><span class="line">		<span class="keyword">var</span> fns = <span class="keyword">this</span>.subs[type]</span><br><span class="line">		<span class="keyword">if</span>(!fns)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(!fn)&#123;</span><br><span class="line">			fns.length = <span class="number">0</span></span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">let</span> _fn <span class="keyword">of</span> fns)&#123;</span><br><span class="line">				<span class="keyword">if</span>(_fn === fn)&#123;</span><br><span class="line">					fns.splice(fns.indexOf(_fn),<span class="number">1</span>)</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="…"><a href="#…" class="headerlink" title="…"></a>…</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/07/31/异步/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/31/异步/" class="post-title-link" itemprop="url">异步</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2018-07-31 18:29:19" itemprop="dateCreated datePublished" datetime="2018-07-31T18:29:19+08:00">2018-07-31</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/22/nodejs模拟登录/">nodejs模拟登录</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/22/nodejs模拟登录/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>7月 22, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <h1 id="关于继发异步"><a href="#关于继发异步" class="headerlink" title="关于继发异步"></a>关于继发异步</h1><p>1.两种方案Promise和async/await</p>
+<p>2.Promise方案<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> queue = [p1,p2,p3,p4,p5]<span class="comment">//5个Promise</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> seq = <span class="built_in">Promise</span>.resolve();</span><br><span class="line">queue.forEach(<span class="function"><span class="params">ele</span>=&gt;</span>&#123;</span><br><span class="line">	seq = seq.then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(res)</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;);</span><br><span class="line">可以看到输出了<span class="number">4</span>个promise的结果,第五个promise的成功回调调用</span><br><span class="line">seq.then(<span class="function"><span class="params">res</span>=&gt;</span><span class="built_in">console</span>.log(res))就可以看到</span><br><span class="line"></span><br><span class="line">同样也可使用数组的reduce方式实现</span><br><span class="line"><span class="keyword">let</span> queue = [p1,p2,p3,p4,p5]<span class="comment">//5个Promise</span></span><br><span class="line"></span><br><span class="line">queue.reduce(<span class="function">(<span class="params">prev,next</span>)=&gt;</span>&#123;<span class="comment">//如果有第二个参数,prev的值就为这个参数</span></span><br><span class="line">	<span class="keyword">return</span> prev = prev.then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(res);</span><br><span class="line">		<span class="keyword">return</span> next</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;,<span class="built_in">Promise</span>.resolve())</span><br></pre></td></tr></table></figure></p>
+<p>3.async/await方案<br>着一种方案用的比较多一点,这是最新ES7的用法,大大简化了异步处理流程</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">;<span class="function">(<span class="params"><span class="keyword">async</span> (</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> queue = [p1,p2,p3,p4,p5];<span class="comment">//promise 数组</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> a <span class="keyword">of</span> queue)</span><br><span class="line">		<span class="keyword">await</span> a</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/07/22/nodejs模拟登录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/22/nodejs模拟登录/" class="post-title-link" itemprop="url">nodejs模拟登录</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2018-07-22 22:04:41" itemprop="dateCreated datePublished" datetime="2018-07-22T22:04:41+08:00">2018-07-22</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/24/以太坊区块信息保存/">以太坊区块信息保存</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/05/24/以太坊区块信息保存/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>5月 24, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
+        </div>
+      </header>
 
-            
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
+      
+          <h1 id="不借用其他库，nodejs原生模拟登录伯乐在线"><a href="#不借用其他库，nodejs原生模拟登录伯乐在线" class="headerlink" title="不借用其他库，nodejs原生模拟登录伯乐在线"></a>不借用其他库，nodejs原生模拟登录伯乐在线</h1><blockquote>
+<p><em>思路：</em> http原生有get和request方法可以构造GET和POST请求,我们首先分析网站登录入口，然后用自己的用户名，密码等一些必要信息(有事还会有hidden的input，他们大部分都是来防范跨站请求伪造的)自己模拟数据，然后发送请求，获取网站给你的cookie,成功登录之后，你就能为所欲为了。</p>
+</blockquote>
+<h2 id="直接上代码"><a href="#直接上代码" class="headerlink" title="直接上代码"></a>直接上代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//构造请求参数</span></span><br><span class="line"><span class="keyword">let</span> options = &#123;</span><br><span class="line">	hostname:<span class="string">'www.jobbole.com'</span>,</span><br><span class="line">	method:<span class="string">'POST'</span>,</span><br><span class="line">	path:<span class="string">'/wp-admin/admin-ajax.php'</span>,  <span class="comment">//为什么这么像wordpress的用户台。。后来看了一下，jobbole用了很多wordpress模块，还有好多的jQuery</span></span><br><span class="line">	headers:&#123;</span><br><span class="line">		<span class="string">'Content-Type'</span>:<span class="string">'application/x-www-form-urlencoded'</span>,<span class="comment">//表单格式</span></span><br><span class="line">		<span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Macintosh)'</span>,<span class="comment">//浏览器头</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//jobbole登录用的是ajax登录，然后登录成功之后再location.href='http://www.jobbole.com/'跳到首页,感觉有点多此一举。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//这是ajax POST需要的数据</span></span><br><span class="line"><span class="keyword">let</span> postData = &#123;</span><br><span class="line">	action: <span class="string">'user_login'</span>,</span><br><span class="line">	user_login:<span class="string">'你的用户名'</span>,</span><br><span class="line">	user_pass:<span class="string">'你的密码'</span>,</span><br><span class="line">	remember_me:<span class="number">1</span>,<span class="comment">//0 是不记住登录</span></span><br><span class="line">	redirect_url:<span class="string">'http://www.jobbole.com/'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">构造请求函数</span><br><span class="line"><span class="keyword">let</span> request = http.request(options,(res)=&gt;&#123;</span><br><span class="line">	res.setEncoding(<span class="string">'utf-8'</span>);<span class="comment">//网站响应的res是Buffer,这里我们将它设置为utf-8格式</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">`状态码:<span class="subst">$&#123;res.statusCode&#125;</span>`</span>);</span><br><span class="line">	<span class="keyword">let</span> cookies = res.headers[<span class="string">'Set-Cookie'</span>];<span class="comment">//这个就是关键了，能获取到网站返回响应的Set-Cookie头;</span></span><br><span class="line">	<span class="keyword">let</span> body = <span class="string">''</span>;<span class="comment">//res是可读流，我们通过绑定data事件的方式，获取每次data触发传过来的chunk</span></span><br><span class="line">	res.on(<span class="string">'data'</span>,(chunk)=&gt;&#123;</span><br><span class="line">		body += chunk;</span><br><span class="line">	&#125;);</span><br><span class="line">	res.on(<span class="string">'end'</span>,()=&gt;&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'响应结束啦...'</span>);<span class="comment">//body就是响应拼接起来的字符串,如果需要json格式，直接JSON.parse就获取到了.</span></span><br><span class="line">		visitHome(cookies);<span class="comment">//在这里我们获取到的cookie去登录网站主页,</span></span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)	;</span><br><span class="line">request.write(querystring.stringify(postDate));<span class="comment">//写入需要post的数据</span></span><br><span class="line">request.end();<span class="comment">//request需要调用end才能发送请求,get方式就不用</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">visitHome</span>(<span class="params">cookies</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> options = &#123;</span><br><span class="line">		hostname:<span class="string">'www.jobbole.com'</span>,</span><br><span class="line">		path:<span class="string">'/'</span>,<span class="comment">//访问首页</span></span><br><span class="line">		headers:&#123;</span><br><span class="line">			<span class="string">'cookie'</span>:cookies.join()<span class="comment">//由于cookies是数组形式，所以我们将它转换为字符串</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="comment">//这次我们直接用GET请求</span></span><br><span class="line">	http.get(options,(res)=&gt;&#123;</span><br><span class="line">		<span class="keyword">let</span> html = <span class="string">''</span>;</span><br><span class="line">		res.on(<span class="string">'data'</span>,(chunk)=&gt;&#123;</span><br><span class="line">			html+=chunk;</span><br><span class="line">		&#125;);</span><br><span class="line">		res.on(<span class="string">'end'</span>,()=&gt;&#123;</span><br><span class="line">			<span class="built_in">console</span>.log(html);<span class="comment">//这就是我们获取到的主页啦,如果不出意外，现在就已经是登录的状态啦，以后你发送请求，都加上这个cookie，你就能享受到登录之后的用户权限了</span></span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>##完。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/05/24/以太坊区块信息保存/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/05/24/以太坊区块信息保存/" class="post-title-link" itemprop="url">以太坊区块信息保存</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2018-05-24 15:52:20" itemprop="dateCreated datePublished" datetime="2018-05-24T15:52:20+08:00">2018-05-24</time>
             </span>
-        </div>
-    </div>
-</div>
 
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/23/Docker化你的Vue应用/">将你的Vue应用部署在Docker环境中</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/05/23/Docker化你的Vue应用/" target="_self">繼續閱讀</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="conan's avatar">
-            </div>
-            <div>
-                <strong>conan</strong>
-                <span>5月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
           
 
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
         </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="以太坊区块信息保存-获取"><a href="#以太坊区块信息保存-获取" class="headerlink" title="以太坊区块信息保存(获取)"></a>以太坊区块信息保存(获取)</h1><h2 id="用docker-搭建了一个以太坊的轻节点"><a href="#用docker-搭建了一个以太坊的轻节点" class="headerlink" title="用docker 搭建了一个以太坊的轻节点"></a>用docker 搭建了一个以太坊的轻节点</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//拉取以太坊docker镜像</span></span><br><span class="line">docker pull ethereum/client-go</span><br><span class="line"><span class="comment">//docker运行以太坊节点(以轻节点的模式运行--syncmode "light")</span></span><br><span class="line">docker run -d --name geth-node -v $HOME/geth-node:<span class="regexp">/root -p 8454:8545 -p 30303:30303 ethreum/</span>client-go --rpc --syncmode <span class="string">"light"</span></span><br><span class="line"><span class="comment">//docker logs geth-node 可以查看容器日志,轻节点只下载区块头,在需要的时候才回去下载特定的区块数据,所以同步起来非常快,几乎几分钟就能到最新的节点了</span></span><br></pre></td></tr></table></figure>
+<h2 id="搭建好节点之后在本地新建项目，安装依赖"><a href="#搭建好节点之后在本地新建项目，安装依赖" class="headerlink" title="搭建好节点之后在本地新建项目，安装依赖"></a>搭建好节点之后在本地新建项目，安装依赖</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm i -S web3</span><br><span class="line">npm i -S mongoose</span><br><span class="line">npm i -S ioredis</span><br></pre></td></tr></table></figure>
+<h2 id="一个循环抓取想要的数据"><a href="#一个循环抓取想要的数据" class="headerlink" title="一个循环抓取想要的数据"></a>一个循环抓取想要的数据</h2><p><em>app.js 内容</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> Web3 = <span class="built_in">require</span>(<span class="string">'web3'</span>);</span><br><span class="line"><span class="keyword">let</span> url = <span class="string">'http://127.0.0.1:8545'</span>;</span><br><span class="line"><span class="keyword">let</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="keyword">let</span> Redis = <span class="built_in">require</span>(<span class="string">'ioredis'</span>);</span><br><span class="line"><span class="keyword">let</span> redis = <span class="keyword">new</span> Redis();</span><br><span class="line">mongoose.connect(<span class="string">'mongodb://127.0.0.1:27017/eth'</span>,&#123; <span class="attr">useNewUrlParser</span>: <span class="literal">true</span> &#125;);</span><br><span class="line"><span class="keyword">let</span> ethSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">	difficulty: <span class="built_in">String</span>,</span><br><span class="line">	extraData: <span class="built_in">String</span>,</span><br><span class="line">	gasLimit: <span class="built_in">Number</span>,</span><br><span class="line">	gasUsed: <span class="built_in">Number</span>,</span><br><span class="line">	hash: <span class="built_in">String</span>,</span><br><span class="line">	logsBloom: <span class="built_in">String</span>,</span><br><span class="line">	miner: <span class="built_in">String</span>,</span><br><span class="line">	mixHash: <span class="built_in">String</span>,</span><br><span class="line">	nonce: <span class="built_in">String</span>,</span><br><span class="line">	number: <span class="built_in">Number</span>,</span><br><span class="line">	parentHash: <span class="built_in">String</span>,</span><br><span class="line">	receiptsRoot: <span class="built_in">String</span>,</span><br><span class="line">	sha3Uncles: <span class="built_in">String</span>,</span><br><span class="line">	size: <span class="built_in">Number</span>,</span><br><span class="line">	stateRoot: <span class="built_in">String</span>,</span><br><span class="line">	timestamp: <span class="built_in">Number</span>,</span><br><span class="line">	totalDifficulty: <span class="built_in">String</span>,</span><br><span class="line">	transactions: [<span class="built_in">String</span>],</span><br><span class="line">	transactionsRoot: <span class="built_in">String</span>,</span><br><span class="line">	uncles: [<span class="built_in">String</span>]</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">let</span> ethmd = mongoose.model(<span class="string">'ethmd'</span>,ethSchema);</span><br><span class="line"></span><br><span class="line">web3 = <span class="keyword">new</span> Web3(<span class="keyword">new</span> Web3.providers.HttpProvider(url));</span><br><span class="line"></span><br><span class="line">!<span class="function">(<span class="params">fetch = <span class="keyword">async</span> (</span>) =&gt;</span>&#123;</span><br><span class="line">	<span class="comment">//这里只获取了交易量比较多的500w到600w的块</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> a = <span class="number">5000000</span>; a &lt; <span class="number">6000000</span>; a++)&#123;</span><br><span class="line">		<span class="keyword">let</span> curBlock = <span class="keyword">await</span> redis.get(<span class="string">'currentblock'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'curBlock:'</span>,curBlock);</span><br><span class="line">		<span class="keyword">if</span>(curBlock &amp;&amp; curBlock &gt; a ) &#123;</span><br><span class="line">			a = curBlock;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">'skip block to:'</span>,curBlock)</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span> (<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">			web3.eth.getBlock (a,(err,data) =&gt; &#123;</span><br><span class="line">				<span class="keyword">if</span>(err)&#123;</span><br><span class="line">					<span class="built_in">console</span>.log(err);</span><br><span class="line">					<span class="built_in">console</span>.log(<span class="string">`retry....`</span>);</span><br><span class="line">					setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">						fetch();</span><br><span class="line">					&#125;,<span class="number">12000</span>)</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					<span class="built_in">console</span>.log(data);</span><br><span class="line">					ethmd.find(&#123;<span class="attr">number</span>:a&#125;,(err,doc)=&gt;&#123;</span><br><span class="line">						<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">						<span class="keyword">if</span>(doc.length!==<span class="number">0</span>)&#123;</span><br><span class="line">							<span class="built_in">console</span>.log(<span class="string">'block '</span>,a,<span class="string">' exists.'</span>);</span><br><span class="line">							resolve()</span><br><span class="line">						&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">							<span class="keyword">new</span> ethmd(&#123;</span><br><span class="line">								difficulty: data.difficulty,</span><br><span class="line">								extraData: data.extraData,</span><br><span class="line">								gasLimit: data.gasLimit,</span><br><span class="line">								gasUsed: data.gasUsed,</span><br><span class="line">								hash: data.hash,</span><br><span class="line">								logsBloom: data.logsBloom,</span><br><span class="line">								miner: data.miner,</span><br><span class="line">								mixHash: data.mixHash,</span><br><span class="line">								nonce: data.nonce,</span><br><span class="line">								number: data.number,</span><br><span class="line">								parentHash: data.parentHash,</span><br><span class="line">								receiptsRoot: data.receiptsRoot,</span><br><span class="line">								sha3Uncles: data.sha3Uncles,</span><br><span class="line">								size: data.size,</span><br><span class="line">								stateRoot: data.stateRoot,</span><br><span class="line">								timestamp: data.timestamp,</span><br><span class="line">								totalDifficulty: data.totalDifficulty,</span><br><span class="line">								transactions: data.transactions,</span><br><span class="line">								transactionsRoot: data.transactionsRoot,</span><br><span class="line">								uncles: data.uncles</span><br><span class="line">							&#125;).save(<span class="function">(<span class="params">err,doc</span>)=&gt;</span>&#123;</span><br><span class="line">								<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">								<span class="built_in">console</span>.log(<span class="string">`block <span class="subst">$&#123;a&#125;</span> saved.`</span>);</span><br><span class="line">								redis.set(<span class="string">'currentblock'</span>,a,(err,doc)=&gt;&#123;</span><br><span class="line">									<span class="built_in">console</span>.log(<span class="string">'update currentblock to: '</span>,a)</span><br><span class="line">									<span class="keyword">if</span>(err) <span class="keyword">return</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">									resolve();</span><br><span class="line">								&#125;);</span><br><span class="line">							&#125;);</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;)</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	process.exit(<span class="number">0</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
+<p><em>简单起见，所有的内容都在app.js里边,做了最简单一个错误处理,当然mongodb和redis的操作也可能产生错误，如果想程序更加健壮可以把这部分内容加上.</em><br><em>当然这样跑还是太慢了，主要就是获取区块的速度太慢了，可以考虑用全节点模式，那样节点数据就在本地，而不用从网络获取，另外也可以多跑几个实例，分别跑不同的区段然后汇总到数据库</em></p>
+
+      
     </div>
-</div>
-
-            
-            
-        
-    
 
     
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
     
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2018/05/23/Docker化你的Vue应用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/05/23/Docker化你的Vue应用/" class="post-title-link" itemprop="url">将你的Vue应用部署在Docker环境中</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2018-05-23 22:30:17" itemprop="dateCreated datePublished" datetime="2018-05-23T22:30:17+08:00">2018-05-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
 
     
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 73 + 1);
+      
+          <h2 id="将你的Vue应用部署在Docker环境中"><a href="#将你的Vue应用部署在Docker环境中" class="headerlink" title="将你的Vue应用部署在Docker环境中"></a>将你的Vue应用部署在Docker环境中</h2><blockquote>
+<p>8012年，你不得不会的技能，将你的app部署在docker环境中</p>
+</blockquote>
+<p>这篇文章不是docker教程，内容假设你对docker有一定的了解，如果你还不知道docker是什么，docker的基本操作，<a href="https://docs.docker.com/" target="_blank" rel="noopener">点我</a>，小半天就能入门基础操作。通过vue-cli脚手架工具，将Vue项目搭建起来之后……</p>
+<h4 id="在项目根目录下创建Dockerfile"><a href="#在项目根目录下创建Dockerfile" class="headerlink" title="在项目根目录下创建Dockerfile"></a>在项目根目录下创建Dockerfile</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">FROM node:9.11.1-alpine</span><br><span class="line"># 安装一个简单的http静态文件服务器</span><br><span class="line">RUN npm install -g http-server</span><br><span class="line"># 设置 &apos;app&apos; 目录为工作目录</span><br><span class="line">WORKDIR /app</span><br><span class="line"># 复制package.json以及package-lock.json</span><br><span class="line">COPY package*.json ./</span><br><span class="line"># 安装依赖</span><br><span class="line">RUN npm install</span><br><span class="line"># 复制项目文件到当前工作目录</span><br><span class="line">COPY . .</span><br><span class="line"># 构建项目</span><br><span class="line">RUN npm run build</span><br><span class="line"># 对外暴露8080端口</span><br><span class="line">EXPOSE 8080</span><br><span class="line"># 执行http-server</span><br><span class="line">CMD [&quot;http-server&quot;,&quot;dist&quot;]</span><br></pre></td></tr></table></figure>
+<h4 id="开始构建项目"><a href="#开始构建项目" class="headerlink" title="开始构建项目"></a>开始构建项目</h4><p><code>docker build -t my-project/my-dockerize-vuejs-app-0.2.3 .</code>  </p>
+<h4 id="最后，我们就可以在docker中运行我们的Vue-js项目了"><a href="#最后，我们就可以在docker中运行我们的Vue-js项目了" class="headerlink" title="最后，我们就可以在docker中运行我们的Vue.js项目了"></a>最后，我们就可以在docker中运行我们的Vue.js项目了</h4><p><code>docker run -it -p 8080:8080 --rm --name dockerize-vuejs-app-0.2.3 my-project/my-dockerize-vuejs-app-0.2.3</code></p>
+<blockquote>
+<p>我们上边的项目中用到了http-server，这用在原型开发，或者用户量非常小的情况下还是比较适用的，然而实际生产中，我们还是要借助巨人的肩膀，来让我们的应用更加健壮。</p>
+</blockquote>
+<h4 id="结合nginx-用docker部署Vue应用"><a href="#结合nginx-用docker部署Vue应用" class="headerlink" title="结合nginx,用docker部署Vue应用"></a>结合nginx,用docker部署Vue应用</h4><p><strong>编写Dockerfile</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># build阶段 docker在17.05版本之后出的多阶段构建(解决构建臃肿问题)</span><br><span class="line">FROM node:9.11.1-apline as build-stage</span><br><span class="line"># 设置工作目录</span><br><span class="line">WORKDIR /app</span><br><span class="line"># 复制package.json以及package-lock.json</span><br><span class="line">COPY package*.json ./</span><br><span class="line"># 安装依赖</span><br><span class="line">RUN npm install</span><br><span class="line"># 复制项目文件到当前工作目录</span><br><span class="line">COPY . .</span><br><span class="line"># 构建项目</span><br><span class="line">RUN npm run build</span><br><span class="line"></span><br><span class="line"># 生产阶段(用nginx简洁版镜像)</span><br><span class="line">from nginx:1.13.12-alpine as production-stage</span><br><span class="line"># 直接复制构建阶段生成在dist的代码到nginx的html目录下</span><br><span class="line">COPY --from=build-stage /app/dist /usr/share/nginx/html</span><br><span class="line"># 对外暴露nginx端口</span><br><span class="line">EXPOSE 80</span><br><span class="line"># 运行nginx</span><br><span class="line">CMD [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]</span><br></pre></td></tr></table></figure></p>
+<p><strong>构建镜像</strong><br><code>docker build -t my-project/my-dockerize-vuejs-app-with-nginx-0.1.1 .</code></p>
+<p><strong>在docker容器中运行我们的app</strong><br><code>docker run -it -p 8080:80 --rm --name dockerize-vuejs-app-with-nginx-0.1.1 my-project/my-dockerize-vuejs-app-with-nginx-0.1.1</code></p>
+<p>好了，现在你可以在<a href="http://localhost:8080" target="_blank" rel="noopener">localhost:8080</a>查看你的Vue.js 应用了</p>
+<p><strong>[完]</strong></p>
 
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
+      
+    </div>
 
-        locatePost = locatePost.next();
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
     }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
 
-    
-</div>
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="conan's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        conanskyforce@gmail.com
-        <b class="caret"></b>
-    </a>
-</div>
-
-
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="#" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
-
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                首頁
-            </a>
-        </li>
-        
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    過往
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">三月 2016<span class="sidebar_archives-count">1</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Categories  -->
-    
-
-    <!-- Pages  -->
-    
-
-    <!-- Article Number  -->
-    
-</ul>
-
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-    <div class="sidebar-divider"></div>
-
-
-<!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主題 - Material
-            <span class="sidebar-badge badge-circle">i</span>
         </div>
-    </a>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">conan</p>
+  <div class="site-description" itemprop="description">柯南君,Full Stack</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
+</div>
 
 
-<!-- Help & Support -->
-<!--
 
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
+      </div>
 
     </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    <!-- Sidebar Image -->
-    
 
-</aside>
+      </div>
+    </main>
 
-                    
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">conan</span>
 </div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
 
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/kevinconan" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Facebook -->
-    
-        <a href="https://www.facebook.com/facebook" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Google + -->
-    
-        <a href="https://www.google.com/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
-                <span class="visuallyhidden">Google Plus</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Telegram -->
-    
-    
-    <!-- V2EX -->
-    
-</div>
-
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>柯南的日常
-            
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
-</footer>
-
-
-                    <!-- Import JS File -->
-
-    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+        
 
 
 
-    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
 
 
 
-    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
 
 
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
 
 
 
@@ -1302,78 +923,12 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-    <!-- Swiftye -->
-    
-
-    <!-- Local Search-->
-    
-
-
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
-
-<!-- Import prettify js  -->
 
 
 
-<!-- Window Load -->
-<!-- add class for prettify -->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
+  
 
-    
-    
-</script>
+  
 
-<!-- MathJax Load-->
-
-
-<!-- Bing Background -->
-
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Custom Footer -->
-
-
-
-<script>
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
-        }
-    })()
-console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
-
-                </main>
-            </div>
-        </body>
-    
+</body>
 </html>
