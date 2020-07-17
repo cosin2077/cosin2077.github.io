@@ -151,6 +151,131 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/05/15/实现bind的两种方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/05/15/实现bind的两种方法/" class="post-title-link" itemprop="url">实现bind的两种方法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-05-15 22:57:26" itemprop="dateCreated datePublished" datetime="2017-05-15T22:57:26+08:00">2017-05-15</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>ES5中新增了一个bind方法，用于绑定函数this，使得调用栈更改之后this仍然不变，看个例子</strong></p>
+<p><pre>function f(x,y){return this.x+this.y};<br>var a = {x:4,y:16};<br>f.bind(a);//=&gt;bind方法返回的是函数，即：function f(x,y){return this.x+this.y}<br>f.bind(a)();//函数调用,结果为20</pre><br><strong>bind方法返回的是函数，他与call,apply都能改变函数内this的指向，但是返回不同，call、apply返回的是结果</strong></p>
+<p><strong>bind是绑定this指向，call、apply可以理解为获取将函数扩展到某个对象上来的结果</strong></p>
+<p><pre>Math.pow.call(null,2,3);//&lt;=&gt;Math.pow(2,3)，也等价于下边<br>Math.pow.apply(null,[2,3]);//&lt;=&gt;Math.pow(2,3)<br>function add(){return this.x+this.y};<br>var a = {x:3,y:7,z:false};<br>add.bind(a)();//10<br>add.call(a);//10<br>add.apply(a);//10</pre><br>实现bind的两种方法</p>
+<p>1.</p>
+<p><pre>if(!Function.prototype.bind){<br>  Function.prototype.bind = function(o){<br>    var self = this,//第一层函数this保存为self<br>      args,<br>      args1=Array.prototype.slice.call(arguments,1);//获取传入bind函数除第一个参数外的所有参数<br>    return function(){//返回的应该是一个函数<br>      args2 = Array.prototype.slice.call(arguments);//获取传入返回函数的所有参数<br>      args = args1.concat(args2)<br>      self.apply(o,args);//应用到第一层函数<br>    };<br>  };<br>};<br></pre><br>2.</p>
+<p><pre>if(!Function.prototype.bind){<br>  Function.prototype.bind = function(o){<br>    var self = this,<br>      args,<br>      args1=Array.prototype.slice.call(arguments,1),<br>      fNOP = function(){},<br>      fBound = function(){<br>        return self.apply(this instanceof fNOP<br>            ?this<br>            :o,<br>            args1.concat(Array.prototype.slice.call(arguments)));<br>      };<br>    if (this.prototype){<br>      fNOP.prototype = this.prototype;<br>    }<br>    fBound.prototype = new fNOP();<br>    return fBound;<br>  };<br>}</pre></p>
+<p><br>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/05/10/JavaScript对象继承（2）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/05/10/JavaScript对象继承（2）/" class="post-title-link" itemprop="url">JavaScript对象继承（2）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-05-10 21:07:39" itemprop="dateCreated datePublished" datetime="2017-05-10T21:07:39+08:00">2017-05-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <div>对象序列化</div><br><div>JSON.stringify(obj);对象转换为满足JSON格式的字符串</div><br><div>JSON.parse(str);将字符串解析为对象</div><br><div></div><br><div>扩展union方法</div><br><div>//extend方法</div><br><div><br><div>function extend(o,p){</div><br><div>     for(prop in p){</div><br><div>          o[prop]=p[prop];</div><br><div>     }</div><br><div>     return o;</div><br></div><br><div>}</div><br><div>//union方法</div><br><div><br><div>function union(o,p){</div><br><div>     return extend(extend({},o),p);</div><br></div><br><div>}</div><br><div>//任意数量数组合并</div><br><div>someArray.reduce(union)</div><br><div></div><br><div></div><br><div>数组的方法</div><br><div><br><div>forEach()</div><br><div>map()</div><br><div>filter()</div><br><div>reduce()</div><br><div>every(),some()</div><br></div><br><div>indexOf()</div><br><div></div><br><div>//查找一个数组中含有该元素的所有索引</div><br><div></div><br><div>function findAll(a,x){</div><br><div>var len = a.length,</div><br><div>pos = 0,</div><br><div>res = [];</div><br><div>while(pos&lt;len){</div><br><div>pos = a.indexOf(x,pos);</div><br><div>if(pos==-1) break;</div><br><div>res.push(pos);</div><br><div>pos+=1;</div><br><div>}</div><br><div>return res;</div><br><div>}</div><br><div>findAll([1,2,3,55,2,1,2,3,4,1],1)</div><br><div>//[0, 5, 9]</div><br><div></div><br><div>Array.isArray(arr);//判断arr是不是数组</div><br><div></div><br><div>closure闭包</div><br><div>函数在它所在那个作用域内被定义，则能够访问它所在那个作用域的变量</div><br><div></div><br><div>函数申明，会被提前</div><br><div>function myFunc(){}</div><br><div>函数表达式，赋值不会被提前</div><br><div>var myFunc = function(){}</div><br><div></div><br><div>函数调用的几种方式</div><br><div>- 作为函数</div><br><div>- 作为方法</div><br><div>- 作为构造函数</div><br><div>- call和apply被间接调用</div><br><div></div><br><div>方法调用和函数调用重大的区别就是上下文</div><br><div>方法调用this指向调用方法的对象</div><br><div>函数调用非严格模式下指向全局对象，严格模式下指向undefined</div>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="/2017/05/07/一键SHELL脚本/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -663,126 +788,6 @@ chmod +x name.sh  //or sh name.sh
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="/2017/04/25/ES6之Number.EPSILON/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="conan">
-      <meta itemprop="description" content="柯南君,Full Stack">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="柯南的日常">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/04/25/ES6之Number.EPSILON/" class="post-title-link" itemprop="url">ES6之Number.EPSILON</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2017-04-25 15:24:13" itemprop="dateCreated datePublished" datetime="2017-04-25T15:24:13+08:00">2017-04-25</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>ES6在Number对象上扩展了不少属性<br>其中一个就是Number.EPSILON，<br>这是个极小的常量，<br>Number.EPSILON=2.220446049250313e-16<br>目的就是为了浮点数计算误差提供一个标准，<br>如果误差在这个范围内，<br>那么就可以算作精确的</p>
-<p>我们可以定义个函数来判断计算结果是否精确,如果两者误差小于Number.EPSILON，那么就返回true，反之亦然</p>
-<p>function withinErrorRange(left,right){<br>  return Math.abs(left-right)&lt;Number.EPSILON;<br>}<br>withinErrorRange(0.1+0.2,0.3);<br>//true</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="/2017/04/09/《活着》/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="conan">
-      <meta itemprop="description" content="柯南君,Full Stack">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="柯南的日常">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/04/09/《活着》/" class="post-title-link" itemprop="url">《活着》</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2017-04-09 17:09:11" itemprop="dateCreated datePublished" datetime="2017-04-09T17:09:11+08:00">2017-04-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>两三天的加急，确实也就看完了《活着》，<br>不得不说，这是一部让人看了窒息，甚至绝望的书。<br>作者用平铺直叙的文风描述了发生在福贵身上的一个个杯具。<br>因为自己赌博倾家荡产，<br>爷爷可以说被自己气死，<br>进城被抓壮丁，回家发现奶奶也死了，<br>儿子被献血献死，<br>女儿产后大出血死了，<br>女婿出意外，<br>终于老伴也卧病多年后去世，</p>
-<p>当所有的一切都离你远去是时候，还剩下什么呢？<br>————昏花的老眼，僵硬的身体，沟壑纵横的一双手，还有和自己一般老的那头牛。</p>
-<p>2017.4.5<br>突然脑子里的灵光一闪是什么？<br>好似这小说告诉我的道理！！！<br>金钱，富贵，荣耀，悲伤，痛苦，烦恼，这些都不过是过眼云烟，随着时间的流逝，一切都将归于湮灭。<br>只有把握现在，把握这个时刻，这才是生命的真正意义所在！<br>而生死有命富贵在天，其实更多的时候，环境,也就是命运是我们根本无法掌控的。<br>所以我们应该做的就是，千万不要忘记享受生命的过程，这才是生活的本真！！！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -852,7 +857,7 @@ chmod +x name.sh  //or sh name.sh
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

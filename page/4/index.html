@@ -151,6 +151,126 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/04/25/ES6之Number.EPSILON/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/04/25/ES6之Number.EPSILON/" class="post-title-link" itemprop="url">ES6之Number.EPSILON</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-04-25 15:24:13" itemprop="dateCreated datePublished" datetime="2017-04-25T15:24:13+08:00">2017-04-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>ES6在Number对象上扩展了不少属性<br>其中一个就是Number.EPSILON，<br>这是个极小的常量，<br>Number.EPSILON=2.220446049250313e-16<br>目的就是为了浮点数计算误差提供一个标准，<br>如果误差在这个范围内，<br>那么就可以算作精确的</p>
+<p>我们可以定义个函数来判断计算结果是否精确,如果两者误差小于Number.EPSILON，那么就返回true，反之亦然</p>
+<p>function withinErrorRange(left,right){<br>  return Math.abs(left-right)&lt;Number.EPSILON;<br>}<br>withinErrorRange(0.1+0.2,0.3);<br>//true</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/04/09/《活着》/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/04/09/《活着》/" class="post-title-link" itemprop="url">《活着》</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-04-09 17:09:11" itemprop="dateCreated datePublished" datetime="2017-04-09T17:09:11+08:00">2017-04-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>两三天的加急，确实也就看完了《活着》，<br>不得不说，这是一部让人看了窒息，甚至绝望的书。<br>作者用平铺直叙的文风描述了发生在福贵身上的一个个杯具。<br>因为自己赌博倾家荡产，<br>爷爷可以说被自己气死，<br>进城被抓壮丁，回家发现奶奶也死了，<br>儿子被献血献死，<br>女儿产后大出血死了，<br>女婿出意外，<br>终于老伴也卧病多年后去世，</p>
+<p>当所有的一切都离你远去是时候，还剩下什么呢？<br>————昏花的老眼，僵硬的身体，沟壑纵横的一双手，还有和自己一般老的那头牛。</p>
+<p>2017.4.5<br>突然脑子里的灵光一闪是什么？<br>好似这小说告诉我的道理！！！<br>金钱，富贵，荣耀，悲伤，痛苦，烦恼，这些都不过是过眼云烟，随着时间的流逝，一切都将归于湮灭。<br>只有把握现在，把握这个时刻，这才是生命的真正意义所在！<br>而生死有命富贵在天，其实更多的时候，环境,也就是命运是我们根本无法掌控的。<br>所以我们应该做的就是，千万不要忘记享受生命的过程，这才是生活的本真！！！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="/2017/04/02/哥德尔埃舍尔巴赫集异璧之大成/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -769,126 +889,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="/2016/10/15/相识易，别离难/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="conan">
-      <meta itemprop="description" content="柯南君,Full Stack">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="柯南的日常">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/10/15/相识易，别离难/" class="post-title-link" itemprop="url">相识易，别离难</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2016-10-15 02:31:37" itemprop="dateCreated datePublished" datetime="2016-10-15T02:31:37+08:00">2016-10-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在IRUAN待的这几天，感觉比一个月都要久。<br>因为印象中有好多很好的事，能让人记住，时间的流逝，自然也就觉得有价值点了。<br>与这里的人事相处，完全没有之前被告知的那种感觉，大家都还是挺纯粹的，挺友善的。<br>而正是这份羁绊，让人觉得物质条件其实并不是那么的重要，重要的还是人与人之间的感情。<br>可是，中旬回上海，估计会去后就然并卵了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="/2016/10/15/千万不要太投入/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="conan">
-      <meta itemprop="description" content="柯南君,Full Stack">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="柯南的日常">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/10/15/千万不要太投入/" class="post-title-link" itemprop="url">千万不要太投入</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2016-10-15 00:54:26" itemprop="dateCreated datePublished" datetime="2016-10-15T00:54:26+08:00">2016-10-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>但你越是投入的时候，就越是脆弱，越是容易被伤害，甚至是别人一个举手投足就能把你打入深渊。<br>变成这样， 简直比中毒还可怕，这就是人性最脆弱的地方了。<br>习惯一个人久了，就好了。<br>总比，一不留神就被伤死要好太多太多了。</p>
-<p>今天又和她们一起出去玩了，感觉和这么多同事出去玩还是挺别扭了。<br>其实内心就想一两个知心朋友出去玩，就完全足够了，多人了，只会让我觉得别扭，放不开。<br>到处都是拘拘束束的，很是有种不自在的感觉。</p>
-<p>现在IRUAN年轻的一代可能对巴列维没有太多的印象，因为当他们刚出生的时候，霍梅尼早就上台了。</p>
-<p>政府的极端宣传，完全能让好的变成坏的，坏的变成好的。而且他的人民还对此深信不疑。<br>我作为第三方来看，可能很多事情，就看的比较客观了，而在IRUAN现在政府宣传下，想知道真相也许就并不是那么容易了。<br>可是岁数稍长或学历稍微高点的人，对巴列维还是有比较深的认识的。虽然现在30+的人没有60、70+的人那么擅长英语，但是从他们口中简单的几个字，还是能听出一些端倪的，Pahlavi is very very good，指指这座大桥，Pahlavi，指指这条高速，Pahlavi，指指那个工业区，Pahlavi，一切不言而喻。那可是人家30+年前做的事啊。</p>
-<p>要说这样的结果怪谁，也许最终也只有怪自己吧，不是自己当初觉得Pahlavi不行，要推翻他们吗，结果就推翻了呗。<br>纵观任何一个强国的崛起，从来靠的都是国民艰苦卓越的奋斗，美国，日本，韩国，新加坡，无不如此。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -958,7 +958,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

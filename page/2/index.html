@@ -540,6 +540,167 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/09/17/something-about-fetch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/09/17/something-about-fetch/" class="post-title-link" itemprop="url">something-about-fetch</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-09-17 13:35:20" itemprop="dateCreated datePublished" datetime="2017-09-17T13:35:20+08:00">2017-09-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="FormData-表单格式（可以包含file对象）"><a href="#FormData-表单格式（可以包含file对象）" class="headerlink" title="FormData 表单格式（可以包含file对象）"></a>FormData 表单格式（可以包含file对象）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> form = <span class="keyword">new</span> FormData([form])</span><br><span class="line"></span><br><span class="line">form.append(name,value)</span><br><span class="line"></span><br><span class="line">form.append(name,file(blob),filename)</span><br></pre></td></tr></table></figure>
+<h3 id="fetch-传递-二进制对象（blob）"><a href="#fetch-传递-二进制对象（blob）" class="headerlink" title="fetch 传递 二进制对象（blob）"></a>fetch 传递 二进制对象（blob）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> blob = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>canvas.toBlob(resolve,<span class="string">'image/png'</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> response = <span class="keyword">await</span> fetch(url,&#123;</span><br><span class="line">  method:<span class="string">'post'</span>,</span><br><span class="line">  body:blob</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">await</span> response.blob()</span><br><span class="line"><span class="keyword">await</span> response.arrayBuffer()</span><br></pre></td></tr></table></figure>
+<h3 id="fetch的body（精度控制返回字节流）"><a href="#fetch的body（精度控制返回字节流）" class="headerlink" title="fetch的body（精度控制返回字节流）"></a>fetch的body（精度控制返回字节流）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Step 1：启动 fetch，并获得一个 reader</span></span><br><span class="line"><span class="keyword">let</span> response = <span class="keyword">await</span> fetch(<span class="string">'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits?per_page=100'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> reader = response.body.getReader();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Step 2：获得总长度（length）</span></span><br><span class="line"><span class="keyword">const</span> contentLength = +response.headers.get(<span class="string">'Content-Length'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Step 3：读取数据</span></span><br><span class="line"><span class="keyword">let</span> receivedLength = <span class="number">0</span>; <span class="comment">// 当前接收到了这么多字节</span></span><br><span class="line"><span class="keyword">let</span> chunks = []; <span class="comment">// 接收到的二进制块的数组（包括 body）</span></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123;done, value&#125; = <span class="keyword">await</span> reader.read();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (done) &#123;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  chunks.push(value);</span><br><span class="line">  receivedLength += value.length;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Received <span class="subst">$&#123;receivedLength&#125;</span> of <span class="subst">$&#123;contentLength&#125;</span>`</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Step 4：将块连接到单个 Uint8Array</span></span><br><span class="line"><span class="keyword">let</span> chunksAll = <span class="keyword">new</span> <span class="built_in">Uint8Array</span>(receivedLength); <span class="comment">// (4.1)</span></span><br><span class="line"><span class="keyword">let</span> position = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> chunk <span class="keyword">of</span> chunks) &#123;</span><br><span class="line">  chunksAll.set(chunk, position); <span class="comment">// (4.2)</span></span><br><span class="line">  position += chunk.length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Step 5：解码成字符串</span></span><br><span class="line"><span class="keyword">let</span> result = <span class="keyword">new</span> TextDecoder(<span class="string">"utf-8"</span>).decode(chunksAll);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 我们完成啦！</span></span><br><span class="line"><span class="keyword">let</span> commits = <span class="built_in">JSON</span>.parse(result);</span><br><span class="line">alert(commits[<span class="number">0</span>].author.login);</span><br></pre></td></tr></table></figure>
+<h3 id="转换成blob"><a href="#转换成blob" class="headerlink" title="转换成blob"></a>转换成blob</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> blob = <span class="keyword">new</span> Blob([<span class="string">"Hello, world!"</span>], &#123;<span class="attr">type</span>: <span class="string">'text/plain'</span>&#125;);</span><br><span class="line">link.href = URL.createObjectURL(blob);</span><br><span class="line"><span class="keyword">let</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">link.download = <span class="string">'hello.txt'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> blob = <span class="keyword">new</span> Blob([<span class="string">'Hello, world!'</span>], &#123;<span class="attr">type</span>: <span class="string">'text/plain'</span>&#125;);</span><br><span class="line">link.href = URL.createObjectURL(blob);</span><br><span class="line">link.click();</span><br><span class="line">URL.revokeObjectURL(link.href);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">link.download = <span class="string">'hello.txt'</span>;</span><br><span class="line"><span class="keyword">let</span> blob = <span class="keyword">new</span> Blob([<span class="string">'Hello, world!'</span>], &#123;<span class="attr">type</span>: <span class="string">'text/plain'</span>&#125;);</span><br><span class="line"><span class="keyword">let</span> reader = <span class="keyword">new</span> FileReader();</span><br><span class="line">reader.readAsDataURL(blob); <span class="comment">// 将 Blob 转换为 base64 并调用 onload</span></span><br><span class="line">reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  link.href = reader.result; <span class="comment">// data url</span></span><br><span class="line">  link.click();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/07/17/this解析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/07/17/this解析/" class="post-title-link" itemprop="url">this解析</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-07-17 13:33:47" itemprop="dateCreated datePublished" datetime="2017-07-17T13:33:47+08:00">2017-07-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>this 是在运行时绑定的</p>
+</blockquote>
+<h2 id="this-的几种场景"><a href="#this-的几种场景" class="headerlink" title="this 的几种场景"></a>this 的几种场景</h2><ul>
+<li><ol>
+<li>默认绑定<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a) <span class="comment">// 2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">2</span></span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>隐式绑定<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a) <span class="comment">// 23</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  foo,</span><br><span class="line">  a: <span class="string">'23'</span></span><br><span class="line">&#125;</span><br><span class="line">obj.foo()</span><br><span class="line"><span class="comment">// 隐式绑定绑到的最顶层</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log( <span class="keyword">this</span>.a );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj2 = &#123; <span class="attr">a</span>: <span class="number">42</span>, <span class="attr">foo</span>: foo &#125;;</span><br><span class="line"><span class="keyword">var</span> obj1 = &#123; <span class="attr">a</span>: <span class="number">2</span>, <span class="attr">obj2</span>: obj2 &#125;;</span><br><span class="line">obj1.obj2.foo(); <span class="comment">// 42</span></span><br><span class="line"><span class="comment">// 隐式绑定丢失this</span></span><br><span class="line"><span class="keyword">var</span> c = obj1.obj2.foo;</span><br><span class="line">c() <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>显式绑定<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a) <span class="comment">// 23</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  a: <span class="string">'23'</span></span><br><span class="line">&#125;</span><br><span class="line">foo.call(obj) <span class="comment">// 23</span></span><br><span class="line">foo.apply(obj) <span class="comment">// 23</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// forEach 的 上下文(?thisArg)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">el</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( el, <span class="keyword">this</span>.id );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">id: <span class="string">"awesome"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 调用 foo(..) 时把 this 绑定到 obj [1, 2, 3].forEach( foo, obj );</span></span><br><span class="line"><span class="comment">// 1 awesome 2 awesome 3 awesome</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>new绑定<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a)</span><br><span class="line">  <span class="keyword">this</span>.a = <span class="string">'foo'</span> <span class="comment">// 2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> bar = <span class="keyword">new</span> foo()</span><br><span class="line">bar.a <span class="comment">// foo</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bind</td>
+<td>apply</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="实现一个bind方法"><a href="#实现一个bind方法" class="headerlink" title="实现一个bind方法"></a>实现一个bind方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  id: <span class="string">"awesome"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bind</span> (<span class="params">fn, obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    fn.apply(obj,<span class="built_in">arguments</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.id,name)</span><br><span class="line">&#125;</span><br><span class="line">bind(foo,obj)(<span class="string">'conan'</span>) <span class="comment">//awesome conan</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Function</span>.prototype.bind = <span class="function"><span class="keyword">function</span> (<span class="params">oThis</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> toBind = <span class="keyword">this</span>,</span><br><span class="line">      argsOne = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>,<span class="number">1</span>),</span><br><span class="line">      noop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,</span><br><span class="line">      bindFn = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> toBind.apply(</span><br><span class="line">          <span class="keyword">this</span> <span class="keyword">instanceof</span> noop &amp;&amp; oThis ? <span class="keyword">this</span>: oThis,argsOne.concat(<span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>)))</span><br><span class="line">      &#125;;</span><br><span class="line">  noop.prototype = <span class="keyword">this</span>.prototype;</span><br><span class="line">  bindFn.prototype = <span class="keyword">new</span> noop()</span><br><span class="line">  <span class="keyword">return</span> bindFn</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.xxx = a + b</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a = foo.bind(<span class="literal">null</span>,<span class="string">'a'</span>)</span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> a(<span class="string">'b'</span>)</span><br><span class="line">b.xxx <span class="comment">// 'ab'</span></span><br></pre></td></tr></table></figure>
+<h3 id="给对象实现迭代器属性"><a href="#给对象实现迭代器属性" class="headerlink" title="给对象实现迭代器属性"></a>给对象实现迭代器属性</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;</span><br><span class="line">  a: <span class="number">1</span>,</span><br><span class="line">  b: <span class="number">3</span>,</span><br><span class="line">  c: <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(a, <span class="built_in">Symbol</span>.iterator, &#123;</span><br><span class="line">  configurable: <span class="literal">true</span>,</span><br><span class="line">  writable: <span class="literal">true</span>,</span><br><span class="line">  enumerable: <span class="literal">true</span>,</span><br><span class="line">  value: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> idx = <span class="number">0</span></span><br><span class="line">    <span class="keyword">let</span> keys = <span class="built_in">Object</span>.keys(a)</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      value: a[keys[idx]],</span><br><span class="line">      done: idx &gt;= keys.length</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="/2017/07/12/mongodb学一学/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -822,131 +983,6 @@ DBAdminAbyDatabase
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="/2017/05/15/实现bind的两种方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="conan">
-      <meta itemprop="description" content="柯南君,Full Stack">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="柯南的日常">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/05/15/实现bind的两种方法/" class="post-title-link" itemprop="url">实现bind的两种方法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2017-05-15 22:57:26" itemprop="dateCreated datePublished" datetime="2017-05-15T22:57:26+08:00">2017-05-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>ES5中新增了一个bind方法，用于绑定函数this，使得调用栈更改之后this仍然不变，看个例子</strong></p>
-<p><pre>function f(x,y){return this.x+this.y};<br>var a = {x:4,y:16};<br>f.bind(a);//=&gt;bind方法返回的是函数，即：function f(x,y){return this.x+this.y}<br>f.bind(a)();//函数调用,结果为20</pre><br><strong>bind方法返回的是函数，他与call,apply都能改变函数内this的指向，但是返回不同，call、apply返回的是结果</strong></p>
-<p><strong>bind是绑定this指向，call、apply可以理解为获取将函数扩展到某个对象上来的结果</strong></p>
-<p><pre>Math.pow.call(null,2,3);//&lt;=&gt;Math.pow(2,3)，也等价于下边<br>Math.pow.apply(null,[2,3]);//&lt;=&gt;Math.pow(2,3)<br>function add(){return this.x+this.y};<br>var a = {x:3,y:7,z:false};<br>add.bind(a)();//10<br>add.call(a);//10<br>add.apply(a);//10</pre><br>实现bind的两种方法</p>
-<p>1.</p>
-<p><pre>if(!Function.prototype.bind){<br>  Function.prototype.bind = function(o){<br>    var self = this,//第一层函数this保存为self<br>      args,<br>      args1=Array.prototype.slice.call(arguments,1);//获取传入bind函数除第一个参数外的所有参数<br>    return function(){//返回的应该是一个函数<br>      args2 = Array.prototype.slice.call(arguments);//获取传入返回函数的所有参数<br>      args = args1.concat(args2)<br>      self.apply(o,args);//应用到第一层函数<br>    };<br>  };<br>};<br></pre><br>2.</p>
-<p><pre>if(!Function.prototype.bind){<br>  Function.prototype.bind = function(o){<br>    var self = this,<br>      args,<br>      args1=Array.prototype.slice.call(arguments,1),<br>      fNOP = function(){},<br>      fBound = function(){<br>        return self.apply(this instanceof fNOP<br>            ?this<br>            :o,<br>            args1.concat(Array.prototype.slice.call(arguments)));<br>      };<br>    if (this.prototype){<br>      fNOP.prototype = this.prototype;<br>    }<br>    fBound.prototype = new fNOP();<br>    return fBound;<br>  };<br>}</pre></p>
-<p><br>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="/2017/05/10/JavaScript对象继承（2）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="conan">
-      <meta itemprop="description" content="柯南君,Full Stack">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="柯南的日常">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/05/10/JavaScript对象继承（2）/" class="post-title-link" itemprop="url">JavaScript对象继承（2）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2017-05-10 21:07:39" itemprop="dateCreated datePublished" datetime="2017-05-10T21:07:39+08:00">2017-05-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <div>对象序列化</div><br><div>JSON.stringify(obj);对象转换为满足JSON格式的字符串</div><br><div>JSON.parse(str);将字符串解析为对象</div><br><div></div><br><div>扩展union方法</div><br><div>//extend方法</div><br><div><br><div>function extend(o,p){</div><br><div>     for(prop in p){</div><br><div>          o[prop]=p[prop];</div><br><div>     }</div><br><div>     return o;</div><br></div><br><div>}</div><br><div>//union方法</div><br><div><br><div>function union(o,p){</div><br><div>     return extend(extend({},o),p);</div><br></div><br><div>}</div><br><div>//任意数量数组合并</div><br><div>someArray.reduce(union)</div><br><div></div><br><div></div><br><div>数组的方法</div><br><div><br><div>forEach()</div><br><div>map()</div><br><div>filter()</div><br><div>reduce()</div><br><div>every(),some()</div><br></div><br><div>indexOf()</div><br><div></div><br><div>//查找一个数组中含有该元素的所有索引</div><br><div></div><br><div>function findAll(a,x){</div><br><div>var len = a.length,</div><br><div>pos = 0,</div><br><div>res = [];</div><br><div>while(pos&lt;len){</div><br><div>pos = a.indexOf(x,pos);</div><br><div>if(pos==-1) break;</div><br><div>res.push(pos);</div><br><div>pos+=1;</div><br><div>}</div><br><div>return res;</div><br><div>}</div><br><div>findAll([1,2,3,55,2,1,2,3,4,1],1)</div><br><div>//[0, 5, 9]</div><br><div></div><br><div>Array.isArray(arr);//判断arr是不是数组</div><br><div></div><br><div>closure闭包</div><br><div>函数在它所在那个作用域内被定义，则能够访问它所在那个作用域的变量</div><br><div></div><br><div>函数申明，会被提前</div><br><div>function myFunc(){}</div><br><div>函数表达式，赋值不会被提前</div><br><div>var myFunc = function(){}</div><br><div></div><br><div>函数调用的几种方式</div><br><div>- 作为函数</div><br><div>- 作为方法</div><br><div>- 作为构造函数</div><br><div>- call和apply被间接调用</div><br><div></div><br><div>方法调用和函数调用重大的区别就是上下文</div><br><div>方法调用this指向调用方法的对象</div><br><div>函数调用非严格模式下指向全局对象，严格模式下指向undefined</div>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1016,7 +1052,7 @@ DBAdminAbyDatabase
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
