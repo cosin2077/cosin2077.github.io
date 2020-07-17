@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.7.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="基础ord() 获取字符的整数表示chr() 把编码转换为对应的字符 计算机内存中, 统一使用unicode编码,需要保存到硬盘或者传说的时候,就转换为utf-8编码 b&amp;#39;ABC&amp;#39; 以字节为单位的bytes(网络传输，保存磁盘,只能包含ascii编码) 保存为指定的bytes12&apos;asd&apos;.encode(&apos;ascii&apos;)&apos;asd&apos;.encode(&apos;utf-8&apos;) 以指定编码解码字节">
+<meta name="keywords" content="conanskyforce Front-End Full-Stack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python小记">
+<meta property="og:url" content="/2016/10/23/python小记/index.html">
+<meta property="og:site_name" content="柯南的日常">
+<meta property="og:description" content="基础ord() 获取字符的整数表示chr() 把编码转换为对应的字符 计算机内存中, 统一使用unicode编码,需要保存到硬盘或者传说的时候,就转换为utf-8编码 b&amp;#39;ABC&amp;#39; 以字节为单位的bytes(网络传输，保存磁盘,只能包含ascii编码) 保存为指定的bytes12&apos;asd&apos;.encode(&apos;ascii&apos;)&apos;asd&apos;.encode(&apos;utf-8&apos;) 以指定编码解码字节">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:updated_time" content="2020-07-17T05:31:59.989Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python小记">
+<meta name="twitter:description" content="基础ord() 获取字符的整数表示chr() 把编码转换为对应的字符 计算机内存中, 统一使用unicode编码,需要保存到硬盘或者传说的时候,就转换为utf-8编码 b&amp;#39;ABC&amp;#39; 以字节为单位的bytes(网络传输，保存磁盘,只能包含ascii编码) 保存为指定的bytes12&apos;asd&apos;.encode(&apos;ascii&apos;)&apos;asd&apos;.encode(&apos;utf-8&apos;) 以指定编码解码字节">
+
+<link rel="canonical" href="/2016/10/23/python小记/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>python小记 | 柯南的日常</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">柯南的日常</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Full Stack Hobbist</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2016/10/23/python小记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python小记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2016-10-23 18:20:54" itemprop="dateCreated datePublished" datetime="2016-10-23T18:20:54+08:00">2016-10-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p><code>ord()</code> 获取字符的整数表示<br><code>chr()</code> 把编码转换为对应的字符</p>
+<p>计算机内存中, 统一使用<code>unicode</code>编码,需要保存到硬盘或者<br>传说的时候,就转换为<code>utf-8</code>编码</p>
+<p><code>b&#39;ABC&#39;</code> 以字节为单位的<code>bytes</code>(网络传输，保存磁盘,只能包含ascii编码)</p>
+<p>保存为指定的<code>bytes</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'asd'</span>.encode(<span class="string">'ascii'</span>)</span><br><span class="line"><span class="string">'asd'</span>.encode(<span class="string">'utf-8'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>以指定编码解码字节流<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">b'as'</span>.decode(<span class="string">'ascii'</span>,errors=<span class="string">'ignore'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>包含多少个字符<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">len(<span class="string">'真好'</span>)</span><br><span class="line"><span class="comment">#2</span></span><br><span class="line">转换成`bytes`, 计算的就是字节数</span><br><span class="line">len(<span class="string">'明天会更好'</span>.encode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="comment">#15</span></span><br></pre></td></tr></table></figure></p>
+<p>格式化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;%s,真好-分数-%d-%.2f&quot; %(&apos;试试&apos;,2,23.333))</span><br></pre></td></tr></table></figure></p>
+<h2 id="list-和-tuple"><a href="#list-和-tuple" class="headerlink" title="list 和 tuple"></a>list 和 tuple</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">classmates = [<span class="string">'kevin'</span>,<span class="string">'lili'</span>,<span class="string">'jobs'</span>]</span><br><span class="line">追加</span><br><span class="line">classmates.append(<span class="string">'coco'</span>)</span><br><span class="line">插入</span><br><span class="line">classmates.insert(<span class="number">2</span>,<span class="string">'stella'</span>)</span><br><span class="line">删除</span><br><span class="line">classmates.pop(<span class="number">1</span>)</span><br><span class="line">修改</span><br><span class="line">classmates[<span class="number">0</span>] = <span class="string">'kevin.conan'</span></span><br><span class="line"></span><br><span class="line">tp = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">tp2 = (<span class="number">1</span>,)</span><br><span class="line">tp3 = ()</span><br></pre></td></tr></table></figure>
+<p>条件判断</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> a&gt;<span class="number">10</span>:</span><br><span class="line">  print(<span class="string">'a&gt;10'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'a&lt;=10'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> b%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">  print(<span class="string">'b is even'</span>)</span><br><span class="line"><span class="keyword">elif</span> b%<span class="number">3</span> == <span class="number">0</span>:</span><br><span class="line">  print(<span class="string">'b % 3 == 0'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  print(<span class="string">'''whats' ever...'''</span>)</span><br></pre></td></tr></table></figure>
+<p>强制类型转换<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int(<span class="string">'233'</span>)</span><br><span class="line"></span><br><span class="line">str(<span class="string">'233'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>循环</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="keyword">in</span> [tuple <span class="keyword">or</span> list]:</span><br><span class="line"></span><br><span class="line">range(<span class="number">100</span>)</span><br><span class="line">生成<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3.</span>.<span class="number">.99</span>的list</span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">  sum += x</span><br><span class="line">print(sum)</span><br><span class="line"></span><br><span class="line">sum = <span class="number">0</span></span><br><span class="line">x = <span class="number">100</span></span><br><span class="line"><span class="keyword">while</span> x&gt;<span class="number">0</span>:</span><br><span class="line">	sum += x</span><br><span class="line">	x = x - <span class="number">1</span></span><br><span class="line">print(sum)</span><br><span class="line"></span><br><span class="line">dict 和 set</span><br><span class="line"></span><br><span class="line">d = &#123;<span class="string">"conan"</span>:<span class="number">27</span>,<span class="string">'steve'</span>:<span class="number">49</span>,<span class="string">'coco'</span>:<span class="number">31</span>&#125;</span><br><span class="line">d[<span class="string">'conan'</span>]</span><br><span class="line">d[<span class="string">'stella'</span>] = <span class="number">21</span></span><br><span class="line"></span><br><span class="line"><span class="string">'conan'</span> <span class="keyword">in</span> d</span><br><span class="line"><span class="comment"># True</span></span><br><span class="line"></span><br><span class="line">d.get(<span class="string">'cssonan'</span>)</span><br><span class="line"><span class="comment"># 不存在则返回None</span></span><br><span class="line"></span><br><span class="line">d.get(<span class="string">'sss'</span>,<span class="number">-1</span>)</span><br><span class="line"><span class="comment"># 自定义找不到时候的返回值</span></span><br><span class="line"></span><br><span class="line">d.pop(<span class="string">'stella'</span>)</span><br><span class="line">删除一个键</span><br><span class="line"></span><br><span class="line">s = set(range(<span class="number">10</span>))</span><br><span class="line">s.add(<span class="number">222</span>)</span><br><span class="line">s.remove(<span class="number">222</span>)</span><br><span class="line"></span><br><span class="line">s2 = set(range(<span class="number">20</span>))</span><br><span class="line">s2 &amp; s 交集</span><br><span class="line">s2 | s 并集</span><br></pre></td></tr></table></figure>
+<p>函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_min</span><span class="params">(list)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> min(list)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nop</span><span class="params">()</span>:</span></span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></p>
+<p>返回多个值,实际上返回的是tuple</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rttp</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span></span><br><span class="line">x,y,z = rttp();</span><br></pre></td></tr></table></figure>
+<p>内置类型检测函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">isinstance(type(<span class="number">1</span>),type)</span><br><span class="line">isinstance(<span class="number">1</span>,(float,int))</span><br><span class="line">isinstance(<span class="keyword">True</span>,(float,int,bool))</span><br></pre></td></tr></table></figure></p>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>一般参数:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(x,y,z)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x+y+z</span><br></pre></td></tr></table></figure></p>
+<p>默认参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span><span class="params">(x,y=<span class="number">2</span>,z=<span class="number">3</span>)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x+y+z</span><br></pre></td></tr></table></figure>
+<p>可变参数(内部tuple)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span><span class="params">(x,y=<span class="number">2</span>,*z)</span>:</span></span><br><span class="line">	sum = <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> a <span class="keyword">in</span> z:</span><br><span class="line">		sum += a</span><br><span class="line">	<span class="keyword">return</span> x+y+sum</span><br><span class="line">func3(<span class="number">1</span>,<span class="number">1</span>,*[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br></pre></td></tr></table></figure></p>
+<p>关键字参数(内部dict)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun4</span><span class="params">(x,y=<span class="number">3</span>,*z,**kw)</span>:</span></span><br><span class="line">	print(x,y,z,kw);</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">fun4(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,**&#123;<span class="string">'css'</span>:<span class="string">'asd'</span>&#125;)</span><br><span class="line"><span class="comment">#1 2 (3,) &#123;'css': 'asd'&#125;</span></span><br><span class="line">*args是可变参数，args接收的是一个tuple</span><br><span class="line"></span><br><span class="line">**kw是关键字参数，kw接收的是一个dict</span><br><span class="line"></span><br><span class="line">定义命名的关键字参数在没有可变参数的情况下不要忘了写分隔符*，否则定义的将是位置参数。</span><br></pre></td></tr></table></figure></p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">factorial</span><span class="params">(n)</span>:</span></span><br><span class="line">	<span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		<span class="keyword">return</span> n*factorial(n<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
+<p>切片(含头不含尾)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">L = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">L[:] 复制一遍</span><br><span class="line">L[<span class="number">0</span>:<span class="number">10</span>]</span><br><span class="line">L[:<span class="number">-1</span>] 不包含最后一个</span><br><span class="line">L[<span class="number">1</span>:] 不包含第一个</span><br><span class="line"></span><br><span class="line">L[::<span class="number">2</span>] 每<span class="number">2</span>个取一个</span><br></pre></td></tr></table></figure></p>
+<p>可迭代对象<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</span><br><span class="line"></span><br><span class="line">isinstance([],Iterable)</span><br><span class="line"><span class="comment"># True</span></span><br><span class="line"></span><br><span class="line">list,tuple,字符串,dict,</span><br><span class="line"></span><br><span class="line">dict迭代的时候</span><br><span class="line">迭代key</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dict:</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">迭代value</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> dict.values():</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">一起迭代</span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> dict.items():</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">enumerate 将list变成索引-元素对</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i,v <span class="keyword">in</span> enumerate([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]):</span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">list(range(<span class="number">1</span>,<span class="number">11</span>));</span><br><span class="line"><span class="comment">#[1,2,3,4,5,6,7,8,9,10]</span></span><br><span class="line"></span><br><span class="line">[x*x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">11</span>)]</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">g = ( x * x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>))</span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> g:</span><br><span class="line">	print(n)</span><br><span class="line"></span><br><span class="line">迭代器</span><br><span class="line">可直接用<span class="keyword">for</span>循环的数据:</span><br><span class="line">list,tuple,dict,set,str,</span><br><span class="line">generator,包括生成器和带<span class="keyword">yield</span>的generator函数</span><br><span class="line">这些可用<span class="keyword">for</span>循环迭代的对象统称 Iterable 对象</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterable</span><br><span class="line"></span><br><span class="line">isinstance([],Iterable)</span><br><span class="line">isinstance(&#123;&#125;,Iterable)</span><br><span class="line">isinstance(<span class="string">''</span>,Iterable)</span><br><span class="line">isinstance((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)),Iterable)</span><br><span class="line"><span class="comment">#All Are True</span></span><br><span class="line"></span><br><span class="line">Iterator 对象(能被next()调用迭代)</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Iterator</span><br><span class="line">isinstance((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)),Iterator)</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line">isinstance(iter(<span class="string">'sad'</span>),Iterator)</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line">isinstance(iter([]),Iterator)</span><br><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure>
+<h2 id="map-和-reduce"><a href="#map-和-reduce" class="headerlink" title="map 和 reduce"></a>map 和 reduce</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">list(map(str,(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)))</span><br><span class="line"><span class="comment">#['1','2','3','4','5']</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">list(map(<span class="keyword">lambda</span> x:x*x,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]))</span><br><span class="line"><span class="comment">#[1, 4, 9, 16, 25, 36, 49, 64, 81]</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x+y;</span><br><span class="line">reduce(add,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"></span><br><span class="line">filter 和 sorted</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ft</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x%<span class="number">2</span> == <span class="number">0</span></span><br><span class="line">list(filter(ft,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]))</span><br><span class="line"><span class="comment"># [2, 4]</span></span><br><span class="line"></span><br><span class="line">sorted([<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">24</span>,<span class="number">2</span>,<span class="number">23</span>,<span class="number">5</span>])</span><br><span class="line"><span class="comment"># [1, 2, 2, 3, 5, 23, 24]</span></span><br><span class="line"></span><br><span class="line">sorted([<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">24</span>,<span class="number">2</span>,<span class="number">23</span>,<span class="number">5</span>],reverse=<span class="keyword">True</span>)</span><br><span class="line"><span class="comment"># [24, 23, 5, 3, 2, 2, 1]</span></span><br><span class="line"></span><br><span class="line">sorted([<span class="string">'bob'</span>, <span class="string">'about'</span>, <span class="string">'Zoo'</span>, <span class="string">'Credit'</span>], key=str.lower)</span><br><span class="line"><span class="comment"># ['about', 'bob', 'Credit', 'Zoo']</span></span><br></pre></td></tr></table></figure>
+<h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">lambda</span> x: x*x</span><br><span class="line">等价于</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x * x</span><br><span class="line"></span><br><span class="line">list(map(<span class="keyword">lambda</span> x:x*x,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]))</span><br></pre></td></tr></table></figure>
+<h2 id="装饰器-代码运行期间，动态增加功能的方式"><a href="#装饰器-代码运行期间，动态增加功能的方式" class="headerlink" title="装饰器(代码运行期间，动态增加功能的方式)"></a>装饰器(代码运行期间，动态增加功能的方式)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line"><span class="meta">	@functools.wraps(func)</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args,**kw)</span>:</span></span><br><span class="line">		print(<span class="string">"call %s()"</span> % func.__name__)</span><br><span class="line">		<span class="keyword">return</span> func(*args,**kw)</span><br><span class="line">	<span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line">带参数的装饰器</span><br><span class="line"><span class="keyword">import</span> functools</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(text)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(func)</span>:</span></span><br><span class="line"><span class="meta">		@functools.wraps(func)</span></span><br><span class="line">		<span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args,**kw)</span>:</span></span><br><span class="line">			print(<span class="string">'%s %s():'</span>%(text,func.__name__))</span><br><span class="line">			<span class="keyword">return</span> func(*args,**kw)</span><br><span class="line">		<span class="keyword">return</span> wrapper</span><br><span class="line">	<span class="keyword">return</span> decorator</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">now</span><span class="params">()</span>:</span></span><br><span class="line">	print(<span class="string">'2028-12-3'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> functools</span><br><span class="line">int2 = functools.partial(int,base=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">conan = Student()</span><br><span class="line">isinstance(conan,Student)</span><br><span class="line"><span class="comment">#True</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age)</span>:</span></span><br><span class="line">		self.__name = name</span><br><span class="line">		self.__age = age</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">get_name</span><span class="params">(self)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> self.__name</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">get_age</span><span class="params">(self)</span>:</span></span><br><span class="line">		<span class="keyword">return</span> self.__age</span><br><span class="line">bart = Student(<span class="string">'bart'</span>,<span class="number">32</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="获取对象信息"><a href="#获取对象信息" class="headerlink" title="获取对象信息"></a>获取对象信息</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">type()</span><br><span class="line">type(<span class="string">'123'</span>) == str</span><br><span class="line">type(<span class="number">234</span>) == int</span><br><span class="line">type(<span class="number">23.2</span>) == float</span><br><span class="line">type(<span class="number">24</span>+<span class="number">3j</span>) == complex</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> types</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">pass</span></span><br><span class="line">type(fn) == types.FunctionType</span><br><span class="line">type(abs) == types.BuiltinFuncitonType</span><br><span class="line">type(<span class="keyword">lambda</span> x:x*x) == types.LambdaType</span><br><span class="line">type((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>))) == types.GeneratorType</span><br><span class="line"></span><br><span class="line">isinstance(Child,Parent)</span><br></pre></td></tr></table></figure>
+<h2 id="获得对象的所有属性和方法"><a href="#获得对象的所有属性和方法" class="headerlink" title="获得对象的所有属性和方法"></a>获得对象的所有属性和方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dir()</span><br><span class="line"></span><br><span class="line">dir(<span class="string">"ABC"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="直接操作一个对象的状态"><a href="#直接操作一个对象的状态" class="headerlink" title="直接操作一个对象的状态"></a>直接操作一个对象的状态</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">getattr(obj,key,<span class="keyword">None</span>)</span><br><span class="line">setattr(obj,key,value)</span><br><span class="line">hasattr(obj,key)</span><br><span class="line"></span><br><span class="line">__slots__</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">	__slots__ = (<span class="string">'name'</span>,<span class="string">'score'</span>)</span><br><span class="line"></span><br><span class="line">s = Student()</span><br></pre></td></tr></table></figure>
+<h2 id="定制类"><a href="#定制类" class="headerlink" title="定制类"></a>定制类</h2><p>class Student(object):<br>    def <strong>init</strong>(self, name):<br>        self.name = name<br>    def <strong>str</strong>(self):<br>        return ‘Student object (name=%s)’ % self.name<br>    <strong>repr</strong> = <strong>str</strong></p>
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p>from enum import Enum</p>
+<p>Month = Enum(‘Month’,(‘Jan’, ‘Feb’, ‘Mar’, ‘Apr’, ‘May’, ‘Jun’, ‘Jul’, ‘Aug’, ‘Sep’, ‘Oct’, ‘Nov’, ‘Dec’))</p>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><p>try:<br>    r = 10/0<br>except Exception as e:<br>    print(e.message)<br>finally:<br>    print(‘finally…’)</p>
+<p>记录错误<br>import logging</p>
+<p>try:<br>    someFunc()<br>except Exception as e:<br>    logging.exception(e)</p>
+<h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><p>try:<br>    f = open(‘/path/to/file’,’r’)<br>    print(f.read())<br>finally:<br>    if f:<br>        f.close()</p>
+<p>等价于:<br>with open(‘/path/to/file’,’r’) as f:<br>    print(f.read())</p>
+<p>逐行读取<br>for line in f.readlines():<br>    print(line.strip())</p>
+<p>读取二进制文件<br>f = open(path,’rb’)</p>
+<p>指定非utf8编码的文本文件<br>f = open(path,’r’,encoding=”gbk”)</p>
+<p>忽略错误<br>f = open(path,’r’,encoding=’gbk’,errors=’ignore’)</p>
+<p>写文件<br>f = open(path,’w’)<br>写二进制文件<br>f = open(path,’wb’)</p>
+<p>f.write(‘xxx’)<br>f.close()</p>
+<p>便捷方法:<br>with open(path,’w’) as f:<br>    f.write(‘xxx’)</p>
+<p>##os 模块<br>import os<br>os.name</p>
+<p>os.environ.get(‘HOME’)</p>
+<p>创建 删除文件夹<br>os.mkdir(‘path’)<br>os.rmdir(‘path’)</p>
+<p>路径拼接<br>os.path.join(‘x’,’s’)<br>路径拆分<br>os.path.split(‘a/b/c’)<br>(‘a/b’,’c’)<br>获取后缀名<br>os.path.splitext(‘xxx/xx/xas/xsd.xt’)<br>重命名<br>os.rename(name1,name2)<br>os.remove(name1)</p>
+<p>列出当前目录的文件夹<br>[x for x in os.listdir(‘.’) if os.path.isdir(x)]</p>
+<p>列出当前目录的文件<br>[x for x in os.listdir(‘.’) if os.path.isfile(x)]</p>
+<p>列出当前目录的py文件<br>[x for x in os.listdir(‘.’) if os.path.isfile(x) and os.path.splitext(x)[1]==’.py’]</p>
+<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>import pickle<br>d = dict(name=’bob’,age=20,score=80)<br>pickle.dumps(d)<br>将对象序列化成bytes<br>or<br>f = open(‘dump.txt’,’wb’)<br>pickle.dump(d,f)<br>d.close()</p>
+<p>f = open(‘dump.txt’,’r’)<br>pickle.loads(f.read())</p>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p>import json<br>d = dict(name=’conan’,age=27,gender=’male’)<br>jsonstr = json.dumps(d)</p>
+<p>new_dict = json.loads(jsonstr)</p>
+<p>Class 转换为json对象<br>class Student(object):<br>    def <strong>init</strong>(self,name,age,gender):<br>        self.name = name<br>        self.age = age<br>        self.gender = gender<br>def student2dict(st):<br>    return {<br>        ‘name’:st.name,<br>        ‘age’:st.age,<br>        ‘gender’:st.gender,<br>    }<br>json.dumps(s,default=student2dict)</p>
+<p>json.dumps(s, default=lambda obj: obj.<strong>dict</strong>)</p>
+<p>反序列化<br>def dict2student(d):<br>  return Student(d[‘name’], d[‘age’], d[‘score’])<br>json_str = ‘{“age”: 20, “score”: 88, “name”: “Bob”}’<br>json.loads(json_str, object_hook=dict2student)</p>
+<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><h2 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h2><p>import re</p>
+<p>m = re.match(r’^([a-zA-Z][a-zA-Z0-9.]*)@[a-zA-Z0-9]+.[a-zA-Z]+’,<a href="mailto:&#39;xxx@w21.com">&#39;xxx@w21.com</a>‘)<br>m.group(0)<br>原始字符串<br>m.group(1)<br>匹配的第一个分组<br>m.groups()<br>匹配到的结果元祖表示</p>
+<p>re.split(r’\s+’,’a b  v’)</p>
+<p>编译使用<br>re_num_3 = re.compile(r’(\d{3})-‘)<br>re_num_3.match(‘332-12123’).groups()<br>(‘332’,)</p>
+<h2 id="常见内建模块"><a href="#常见内建模块" class="headerlink" title="常见内建模块"></a>常见内建模块</h2><p>datetime<br>from datetime import datetime<br>now = datetime.now()<br>dt = datetime(2018,10,20,20,20)<br>now.timestamp()<br>datetime.fromtimestamp(now.timestamp())# 本地时间<br>datetime.utcfromtimestamp(now.timestamp())# UTC时间</p>
+<p>字符串 datetime 互相转换<br>datetime.strptime(‘2018-10-20 18:22:22’,’%Y-%m-%d %H:%M:%S’)<br>now.strftime(‘%a, %b %d %H:%M’)</p>
+<p>collections<br>from collections import namedtuple<br>Point = namedtuple(‘Point’,[‘x’,’y’])<br>p = Point(1,2)</p>
+<p>from collections import deque<br>q = deque([‘a’,’b’,’c’])<br>q.append(‘x’)<br>q.appendLeft(‘y’)<br>q</p>
+<p> #deque([‘y’, ‘a’, ‘b’, ‘c’, ‘x’])</p>
+<p>from collections import defaultdict<br>dd = defaultdict(lambda: ‘N/A’)<br>dd[‘key1’] = ‘abc’</p>
+<p>dd[‘key2’]</p>
+<p> #’N/A’</p>
+<p>from collections import OrderDict<br>OrderDict([(‘a’, 1), (‘b’, 2), (‘c’, 3)])</p>
+<p> #key 是有序的</p>
+<p>base64<br>import base64</p>
+<p>c = base64.b64encode(b’binary content’)<br>d = base64.b64decode(c)<br>d.decode(‘utf-8’)</p>
+<p>base64.urlsafe_b64encode(d)<br>base64.urlsafe_b64decode(c)</p>
+<p>hashlib<br>import hashlib</p>
+<p>md5 = hashlib.md5()<br>md5.update(‘that”s pretty awesome…’.encode(‘utf-8’))<br>md5.hexdigest()</p>
+<p>sha1 = hashlib.sha1()<br>sha1.update(‘that”s pretty awesome…’.encode(‘utf-8’))<br>sha1.hexdigest()</p>
+<p>hmac<br>import hmac<br>message = b’hello monkey’;<br>key = b’conan666’;<br>h = hmac.new(key,message,digestmod=”MD5”)<br>h.hexdigest()</p>
+<h2 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h2><p>pillow<br>requests<br>chardet<br>psutil</p>
+<p> #chardet<br>data = chardet.detect(‘锄禾日当午’.encode(‘utf-8’))</p>
+<p> #{‘encoding’: ‘GB2312’, ‘confidence’: 0.7407407407407407, ‘language’: ‘Chinese’}</p>
+<p>import psutil<br>psutil.cpu_count()<br>psutil.virtual_memory()<br>psutil.swap_memory()</p>
+<h2 id="收发邮件"><a href="#收发邮件" class="headerlink" title="收发邮件"></a>收发邮件</h2><p>from email import encoders<br>from email.header import Header<br>from email.mime.text import MIMEText<br>from email.utils import parseaddr, formataddr</p>
+<p>import smtplib</p>
+<p>def _format_addr(s):<br>    name, addr = parseaddr(s)<br>    return formataddr(Header(name,’utf-8’).encode(),addr)</p>
+<p>from_addr = <a href="mailto:&#39;conankyforce@163.com">&#39;conankyforce@163.com</a>‘<br>password = ‘xxxx’<br>to_addr = <a href="mailto:&#39;xxx@22.com">&#39;xxx@22.com</a>‘<br>smtp_server = ‘smtp.163.com’</p>
+<p>msg = MIMEText(‘hello,send by python…’,’plain’,’utf-8’)<br>msg[‘From’] = _format_addr(‘Python爱好者 &lt;%s&gt;’ % from_addr)<br>msg[‘To’] = _format_addr(‘管理员 &lt;%s&gt;’ % to_addr)<br>msg[‘Subject’] = Header(‘来自SMTP的问候……’, ‘utf-8’).encode()</p>
+<p>server = smtplib.SMTP(smtp_server, 25)<br>server.set_debuglevel(1)<br>server.login(from_addr,password)<br>server.sendmail(from_addr,[to_addr],msg.as_string())<br>server.quit()</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/10/15/相识易，别离难/" rel="prev" title="相识易，别离难">
+      <i class="fa fa-chevron-left"></i> 相识易，别离难
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/11/19/how can i conquer my fear/" rel="next" title="how can i conquer my fear">
+      how can i conquer my fear <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list-和-tuple"><span class="nav-number">2.</span> <span class="nav-text">list 和 tuple</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数"><span class="nav-number">3.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-number">4.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成器"><span class="nav-number">5.</span> <span class="nav-text">生成器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-和-reduce"><span class="nav-number">6.</span> <span class="nav-text">map 和 reduce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名函数"><span class="nav-number">7.</span> <span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装饰器-代码运行期间，动态增加功能的方式"><span class="nav-number">8.</span> <span class="nav-text">装饰器(代码运行期间，动态增加功能的方式)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏函数"><span class="nav-number">9.</span> <span class="nav-text">偏函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类"><span class="nav-number">10.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取对象信息"><span class="nav-number">11.</span> <span class="nav-text">获取对象信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获得对象的所有属性和方法"><span class="nav-number">12.</span> <span class="nav-text">获得对象的所有属性和方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#直接操作一个对象的状态"><span class="nav-number">13.</span> <span class="nav-text">直接操作一个对象的状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定制类"><span class="nav-number">14.</span> <span class="nav-text">定制类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#枚举"><span class="nav-number">15.</span> <span class="nav-text">枚举</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理"><span class="nav-number">16.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件读写"><span class="nav-number">17.</span> <span class="nav-text">文件读写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化"><span class="nav-number">18.</span> <span class="nav-text">序列化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON"><span class="nav-number">19.</span> <span class="nav-text">JSON</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程和线程"><span class="nav-number">20.</span> <span class="nav-text">进程和线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则"><span class="nav-number">21.</span> <span class="nav-text">正则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见内建模块"><span class="nav-number">22.</span> <span class="nav-text">常见内建模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三方模块"><span class="nav-number">23.</span> <span class="nav-text">第三方模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收发邮件"><span class="nav-number">24.</span> <span class="nav-text">收发邮件</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">conan</p>
+  <div class="site-description" itemprop="description">柯南君,Full Stack</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">conan</span>
+</div>
+  <div class="powered-by">由 <a href="https://conanskyforce.github.io" class="theme-link" rel="noopener" target="_blank">Conan</a> & <a href="https://github.com/conanskyforce" class="theme-link" rel="noopener" target="_blank">@conanskyforce</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+    </div>
+</body>
+</html>

@@ -151,64 +151,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="/2017/05/10/JavaScript对象继承（2）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="conan">
-      <meta itemprop="description" content="柯南君,Full Stack">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="柯南的日常">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/05/10/JavaScript对象继承（2）/" class="post-title-link" itemprop="url">JavaScript对象继承（2）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2017-05-10 21:07:39" itemprop="dateCreated datePublished" datetime="2017-05-10T21:07:39+08:00">2017-05-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <div>对象序列化</div><br><div>JSON.stringify(obj);对象转换为满足JSON格式的字符串</div><br><div>JSON.parse(str);将字符串解析为对象</div><br><div></div><br><div>扩展union方法</div><br><div>//extend方法</div><br><div><br><div>function extend(o,p){</div><br><div>     for(prop in p){</div><br><div>          o[prop]=p[prop];</div><br><div>     }</div><br><div>     return o;</div><br></div><br><div>}</div><br><div>//union方法</div><br><div><br><div>function union(o,p){</div><br><div>     return extend(extend({},o),p);</div><br></div><br><div>}</div><br><div>//任意数量数组合并</div><br><div>someArray.reduce(union)</div><br><div></div><br><div></div><br><div>数组的方法</div><br><div><br><div>forEach()</div><br><div>map()</div><br><div>filter()</div><br><div>reduce()</div><br><div>every(),some()</div><br></div><br><div>indexOf()</div><br><div></div><br><div>//查找一个数组中含有该元素的所有索引</div><br><div></div><br><div>function findAll(a,x){</div><br><div>var len = a.length,</div><br><div>pos = 0,</div><br><div>res = [];</div><br><div>while(pos&lt;len){</div><br><div>pos = a.indexOf(x,pos);</div><br><div>if(pos==-1) break;</div><br><div>res.push(pos);</div><br><div>pos+=1;</div><br><div>}</div><br><div>return res;</div><br><div>}</div><br><div>findAll([1,2,3,55,2,1,2,3,4,1],1)</div><br><div>//[0, 5, 9]</div><br><div></div><br><div>Array.isArray(arr);//判断arr是不是数组</div><br><div></div><br><div>closure闭包</div><br><div>函数在它所在那个作用域内被定义，则能够访问它所在那个作用域的变量</div><br><div></div><br><div>函数申明，会被提前</div><br><div>function myFunc(){}</div><br><div>函数表达式，赋值不会被提前</div><br><div>var myFunc = function(){}</div><br><div></div><br><div>函数调用的几种方式</div><br><div>- 作为函数</div><br><div>- 作为方法</div><br><div>- 作为构造函数</div><br><div>- call和apply被间接调用</div><br><div></div><br><div>方法调用和函数调用重大的区别就是上下文</div><br><div>方法调用this指向调用方法的对象</div><br><div>函数调用非严格模式下指向全局对象，严格模式下指向undefined</div>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="/2017/05/07/一键SHELL脚本/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -781,6 +723,66 @@ chmod +x name.sh  //or sh name.sh
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="/2017/04/09/《活着》/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="conan">
+      <meta itemprop="description" content="柯南君,Full Stack">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柯南的日常">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/04/09/《活着》/" class="post-title-link" itemprop="url">《活着》</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2017-04-09 17:09:11" itemprop="dateCreated datePublished" datetime="2017-04-09T17:09:11+08:00">2017-04-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>两三天的加急，确实也就看完了《活着》，<br>不得不说，这是一部让人看了窒息，甚至绝望的书。<br>作者用平铺直叙的文风描述了发生在福贵身上的一个个杯具。<br>因为自己赌博倾家荡产，<br>爷爷可以说被自己气死，<br>进城被抓壮丁，回家发现奶奶也死了，<br>儿子被献血献死，<br>女儿产后大出血死了，<br>女婿出意外，<br>终于老伴也卧病多年后去世，</p>
+<p>当所有的一切都离你远去是时候，还剩下什么呢？<br>————昏花的老眼，僵硬的身体，沟壑纵横的一双手，还有和自己一般老的那头牛。</p>
+<p>2017.4.5<br>突然脑子里的灵光一闪是什么？<br>好似这小说告诉我的道理！！！<br>金钱，富贵，荣耀，悲伤，痛苦，烦恼，这些都不过是过眼云烟，随着时间的流逝，一切都将归于湮灭。<br>只有把握现在，把握这个时刻，这才是生命的真正意义所在！<br>而生死有命富贵在天，其实更多的时候，环境,也就是命运是我们根本无法掌控的。<br>所以我们应该做的就是，千万不要忘记享受生命的过程，这才是生活的本真！！！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
@@ -850,7 +852,7 @@ chmod +x name.sh  //or sh name.sh
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-count">62</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
